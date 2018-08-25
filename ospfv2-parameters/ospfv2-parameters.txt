@@ -4,7 +4,7 @@
            2007-04-25
 
    Last Updated
-           2017-12-18
+           2018-06-06
 
    Note
 
@@ -195,21 +195,24 @@ Path Computation Element (PCE) Capability Flags
            [IMG]
            CSV
 
-    Bit                    Capability Description                    Reference
-     0   Path computation with GMPLS link constraints                [RFC5088]
-     1   Bidirectional path computation                              [RFC5088]
-     2   Diverse path computation                                    [RFC5088]
-     3   Load-balanced path computation                              [RFC5088]
-     4   Synchronized paths computation                              [RFC5088]
-     5   Support for multiple objective functions                    [RFC5088]
-     6   Support for additive path constraints (max hop count, etc.) [RFC5088]
-     7   Support for request prioritization                          [RFC5088]
-     8   Support for multiple requests per message                   [RFC5088]
-     9   Global Concurrent Optimization (GCO)                        [RFC5557]
-    10   P2MP path computation                                       [RFC8306]
-    11   Active stateful PCE capability                              [RFC8231]
-    12   Passive stateful PCE capability                             [RFC8231]
-   13-31 Unassigned
+    Bit                                   Capability Description                                               Reference
+     0   Path computation with GMPLS link constraints                                              [RFC5088]
+     1   Bidirectional path computation                                                            [RFC5088]
+     2   Diverse path computation                                                                  [RFC5088]
+     3   Load-balanced path computation                                                            [RFC5088]
+     4   Synchronized paths computation                                                            [RFC5088]
+     5   Support for multiple objective functions                                                  [RFC5088]
+     6   Support for additive path constraints (max hop count, etc.)                               [RFC5088]
+     7   Support for request prioritization                                                        [RFC5088]
+     8   Support for multiple requests per message                                                 [RFC5088]
+     9   Global Concurrent Optimization (GCO)                                                      [RFC5557]
+    10   P2MP path computation                                                                     [RFC8306]
+    11   Active stateful PCE capability                                                            [RFC8231]
+    12   Passive stateful PCE capability                                                           [RFC8231]
+    13   Active Stateful PCE with P2MP (TEMPORARY - registered 2018-04-23, expires 2019-04-23)     [draft-ietf-pce-stateful-pce-p2mp]
+    14   Passive Stateful PCE with P2MP (TEMPORARY - registered 2018-04-23, expires 2019-04-23)    [draft-ietf-pce-stateful-pce-p2mp]
+    15   Stateful PCE Initiation with P2MP (TEMPORARY - registered 2018-04-23, expires 2019-04-23) [draft-ietf-pce-stateful-pce-p2mp]
+   16-31 Unassigned
 
 OSPFv2 Instance IDs
 
@@ -265,18 +268,16 @@ OSPFv2 Extended Prefix TLV Sub-TLVs
            [IMG]
            CSV
 
-      Value                                         Description                                                         Reference
-        0      Reserved                                                                               [RFC7684]
-        1      SID/Label Sub-TLV                                                                      [RFC-ietf-ospf-segment-routing-extensions-24]
-        2      Prefix SID Sub-TLV                                                                     [RFC-ietf-ospf-segment-routing-extensions-24]
+      Value              Description                             Reference
+        0      Reserved                        [RFC7684]
+        1      SID/Label Sub-TLV               [RFC-ietf-ospf-segment-routing-extensions-24]
+        2      Prefix SID Sub-TLV              [RFC-ietf-ospf-segment-routing-extensions-24]
        3-8     Unassigned
-        9      BIER Sub-TLV (TEMPORARY - registered 2017-06-29, expires 2018-06-29)                   [draft-ietf-bier-ospf-bier-extensions]
-       10      BIER MPLS Encapsulation Sub-TLV (TEMPORARY - registered 2017-06-29, expires            [draft-ietf-bier-ospf-bier-extensions]
-               2018-06-29)
-       11      BIER Tree Type Sub-TLV (TEMPORARY - registered 2017-06-29, expires 2018-06-29)         [draft-ietf-bier-ospf-bier-extensions]
-    12-32767   Unassigned
-   32768-33023 Reserved for Experimental Use                                                          [RFC7684]
-   33024-65535 Reserved                                                                               [RFC7684]
+        9      BIER Sub-TLV                    [RFC-ietf-bier-ospf-bier-extensions-18]
+       10      BIER MPLS Encapsulation Sub-TLV [RFC-ietf-bier-ospf-bier-extensions-18]
+    11-32767   Unassigned
+   32768-33023 Reserved for Experimental Use   [RFC7684]
+   33024-65535 Reserved                        [RFC7684]
 
 OSPFv2 Extended Prefix TLV Flags
 
@@ -336,10 +337,24 @@ OSPFv2 Extended Link TLV Sub-TLVs
         4      Network-to-Router Metric Sub-TLV                                                       [RFC8042]
         5      RTM Capability                                                                         [RFC8169]
         6      Link MSD sub-TLV (TEMPORARY - registered 2017-06-01, expires 2018-06-01)               [draft-ietf-ospf-segment-routing-msd]
-        7      Link-Overload Sub-TLV (TEMPORARY - registered 2017-12-18, expires 2018-12-18)          [draft-ietf-ospf-link-overload]
-        8      Remote IPv4 Address Sub-TLV (TEMPORARY - registered 2017-12-18, expires 2018-12-18)    [draft-ietf-ospf-link-overload]
-        9      Local/Remote Interface ID Sub-TLV (TEMPORARY - registered 2017-12-18, expires          [draft-ietf-ospf-link-overload]
-               2018-12-18)
-    10-32767   Unassigned
+        7      Graceful-Link-Shutdown Sub-TLV                                                         [RFC8379]
+        8      Remote IPv4 Address Sub-TLV                                                            [RFC8379]
+        9      Local/Remote Interface ID Sub-TLV                                                      [RFC8379]
+       10      Extended Link Attribute (TEMPORARY - registered 2018-06-06, expires 2019-06-06)        [draft-ietf-ospf-te-link-attr-reuse]
+       11      Shared Risk Link Group (TEMPORARY - registered 2018-06-06, expires 2019-06-06)         [draft-ietf-ospf-te-link-attr-reuse]
+       12      Unidirectional Link Delay (TEMPORARY - registered 2018-06-06, expires 2019-06-06)      [draft-ietf-ospf-te-link-attr-reuse]
+       13      Min/Max Unidirectional Link Delay (TEMPORARY - registered 2018-06-06, expires          [draft-ietf-ospf-te-link-attr-reuse]
+               2019-06-06)
+       14      Unidirectional Delay Variation (TEMPORARY - registered 2018-06-06, expires 2019-06-06) [draft-ietf-ospf-te-link-attr-reuse]
+       15      Unidirectional Link Loss (TEMPORARY - registered 2018-06-06, expires 2019-06-06)       [draft-ietf-ospf-te-link-attr-reuse]
+       16      Unidirectional Residual Bandwidth (TEMPORARY - registered 2018-06-06, expires          [draft-ietf-ospf-te-link-attr-reuse]
+               2019-06-06)
+       17      Unidirectional Available Bandwidth (TEMPORARY - registered 2018-06-06, expires         [draft-ietf-ospf-te-link-attr-reuse]
+               2019-06-06)
+       18      Unidirectional Utilized Bandwidth (TEMPORARY - registered 2018-06-06, expires          [draft-ietf-ospf-te-link-attr-reuse]
+               2019-06-06)
+       19      Administrative Group (TEMPORARY - registered 2018-06-06, expires 2019-06-06)           [draft-ietf-ospf-te-link-attr-reuse]
+       20      Extended Administrative Group (TEMPORARY - registered 2018-06-06, expires 2019-06-06)  [draft-ietf-ospf-te-link-attr-reuse]
+    21-32767   Unassigned
    32768-33023 Reserved for Experimental Use                                                          [RFC7684]
    33024-65535 Reserved                                                                               [RFC7684]

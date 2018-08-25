@@ -5,7 +5,7 @@
   <title>Session Description Protocol (SDP) Parameters</title>
   <category>Session Description Protocol (SDP) Parameters</category>
   <created>2001-06-15</created>
-  <updated>2017-11-03</updated>
+  <updated>2018-07-10</updated>
 
   
   <registry id="sdp-parameters-1">
@@ -1127,6 +1127,12 @@ Advanced Networking (TISPAN); IMS-based IPTV stage 3 specification"</xref>
       <mux>IDENTICAL</mux>
       <xref type="rfc" data="rfc8285"/>
     </record>
+    <record date="2018-07-05">
+      <type>att-field (both session and media level)</type>
+      <name>end-of-candidates</name>
+      <mux>IDENTICAL</mux>
+      <xref type="draft" data="RFC-ietf-mmusic-trickle-ice-sip-18"/>
+    </record>
   </registry>
   
   
@@ -1988,15 +1994,6 @@ Advanced Networking (TISPAN); IMS-based IPTV stage 3 specification"</xref>
     </record>
     <record date="2011-12-07">
       <type>att-field (media level only)</type>
-      <name>g.3gpp.cat</name>
-      <mux>NORMAL</mux>
-      <xref type="uri" data="http://www.3gpp.org/ftp/Specs/html-info/24182.htm">3GPP TS 24.182
-        v9.8.0 annex B</xref>
-      <xref type="person" data="Frederic_Firmin"/>
-      <xref type="draft" data="RFC-ietf-mmusic-sdp-mux-attributes-16"/>
-    </record>
-    <record date="2011-12-07">
-      <type>att-field (media level only)</type>
       <name>g.3gpp.crs</name>
       <mux>NORMAL</mux>
       <xref type="uri" data="http://www.3gpp.org/ftp/specs/html-info/24183.htm">3GPP TS 24.183
@@ -2304,6 +2301,36 @@ Advanced Networking (TISPAN); IMS-based IPTV stage 3 specification"</xref>
       <mux>IDENTICAL</mux>
       <xref type="draft" data="RFC-ietf-mmusic-dtls-sdp-32"/>
     </record>
+    <record date="2018-02-22">
+      <type>att-field (media level only)</type>
+      <name>hlang-recv</name>
+      <mux>NORMAL</mux>
+      <xref type="rfc" data="rfc8373"/>
+    </record>
+    <record date="2018-02-22">
+      <type>att-field (media level only)</type>
+      <name>hlang-send</name>
+      <mux>NORMAL</mux>
+      <xref type="rfc" data="rfc8373"/>
+    </record>
+    <record date="2018-05-17">
+      <type>att-field (media level only)</type>
+      <name>rid</name>
+      <mux>SPECIAL</mux>
+      <xref type="draft" data="RFC-ietf-mmusic-rid-15"/>
+    </record>
+    <record date="2018-06-18">
+      <type>att-field (media level only)</type>
+      <name>bundle-only</name>
+      <mux>NORMAL</mux>
+      <xref type="draft" data="RFC-ietf-mmusic-sdp-bundle-negotiation-52"/>
+    </record>
+    <record date="2018-07-10">
+      <type>att-field (media level only)</type>
+      <name>simulcast</name>
+      <mux>NORMAL</mux>
+      <xref type="draft" data="RFC-ietf-mmusic-sdp-simulcast-13"/>
+    </record>
 
     <footnote anchor="2">historic; use fmtp as per <xref type="rfc" data="rfc2198"/></footnote>
 
@@ -2408,6 +2435,14 @@ Advanced Networking (TISPAN); IMS-based IPTV stage 3 specification"</xref>
       <xref type="rfc" data="rfc4796"/>
       <xref type="draft" data="RFC-ietf-mmusic-sdp-mux-attributes-16"/>
     </record>
+    <record date="2018-01-16">
+      <type>content</type>
+      <name>g.3gpp.cat</name>
+      <description>Stream associated with the 3GPP Customized Alerting Ringtone (CAT) service</description>
+      <mux>NORMAL</mux>
+      <xref type="uri" data="http://www.3gpp.org/ftp/Specs/html-info/24182.htm">3GPP TS 24.182 v11.2.0</xref>
+      <xref type="person" data="Frederic_Firmin"/>
+    </record>
   </registry>
   
   
@@ -2485,6 +2520,12 @@ Advanced Networking (TISPAN); IMS-based IPTV stage 3 specification"</xref>
       <mux>TBD</mux>
       <xref type="rfc" data="rfc8286"/>
       <xref type="draft" data="RFC-ietf-mmusic-sdp-mux-attributes-16"/>
+    </record>
+    <record date="2018-06-18">
+      <description>Media bundling</description>
+      <name>BUNDLE</name>
+      <mux>NORMAL</mux>
+      <xref type="draft" data="RFC-ietf-mmusic-sdp-bundle-negotiation-52"/>
     </record>
   </registry>
   
@@ -3051,6 +3092,49 @@ Advanced Networking (TISPAN); IMS-based IPTV stage 3 specification"</xref>
       <controller>IESG</controller>
     </record>
   </registry>
+  
+  <registry id="rid-attribute">
+    <title>RID Attribute Parameters</title>
+    <xref type="draft" data="RFC-ietf-mmusic-rid-15"/>
+    <registration_rule>Specification Required</registration_rule>
+    <expert>Unassigned</expert>
+    <record date="2018-05-17">
+      <value>pt</value>
+      <xref type="draft" data="RFC-ietf-mmusic-rid-15"/>
+    </record>
+    <record date="2018-05-17">
+      <value>max-width</value>
+      <xref type="draft" data="RFC-ietf-mmusic-rid-15"/>
+    </record>
+    <record date="2018-05-17">
+      <value>max-height</value>
+      <xref type="draft" data="RFC-ietf-mmusic-rid-15"/>
+    </record>
+    <record date="2018-05-17">
+      <value>max-fps</value>
+      <xref type="draft" data="RFC-ietf-mmusic-rid-15"/>
+    </record>
+    <record date="2018-05-17">
+      <value>max-fs</value>
+      <xref type="draft" data="RFC-ietf-mmusic-rid-15"/>
+    </record>
+    <record date="2018-05-17">
+      <value>max-br</value>
+      <xref type="draft" data="RFC-ietf-mmusic-rid-15"/>
+    </record>
+    <record date="2018-05-17">
+      <value>max-pps</value>
+      <xref type="draft" data="RFC-ietf-mmusic-rid-15"/>
+    </record>
+    <record date="2018-05-17">
+      <value>max-bpp</value>
+      <xref type="draft" data="RFC-ietf-mmusic-rid-15"/>
+    </record>
+    <record date="2018-05-17">
+      <value>depend</value>
+      <xref type="draft" data="RFC-ietf-mmusic-rid-15"/>
+    </record>
+  </registry>
  
   <people>
      <person id="_3GPP_Specifications_Manager">
@@ -3071,7 +3155,7 @@ Advanced Networking (TISPAN); IMS-based IPTV stage 3 specification"</xref>
     <person id="Frederic_Firmin">
       <name>Frederic Firmin</name>
       <uri>mailto:frederic.firmin&amp;etsi.org</uri>
-      <updated>2017-01-05</updated>
+      <updated>2018-01-16</updated>
     </person>
     <person id="Ozgur_Oyman">
       <name>Ozgur Oyman</name>

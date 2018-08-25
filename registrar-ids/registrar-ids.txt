@@ -1,7 +1,7 @@
                                                                     Registrar IDs
 
    Last Updated
-           2017-12-21
+           2018-08-17
 
    Available Formats
            [IMG]
@@ -202,7 +202,7 @@ Registrar IDs
      408   Cydian Technologies, LLC                                                                 Terminated
      409   DevelopersNetwork.com., Inc. dba DomainInvestigator.com (Canada)                         Terminated
      410   Apex Registry, Inc.                                                                      Terminated
-     411   Fabulous.com Pty Ltd                                                                     Accredited
+     411   Sea Wasp, LLC                                                                            Accredited
      412   Domain-It!, Inc.                                                                         Accredited
      413   Domain Pro, LLC                                                                          Accredited
      414   Eastern Counties Newspaper Group Ltd. d/b/a Eastern Counties Network                     Terminated
@@ -211,7 +211,7 @@ Registrar IDs
      417   ExtremeNames.com                                                                         Terminated
      418   CommuniGal Communication Ltd.                                                            Accredited
      419   HDFC WebNet Services Ltd.                                                                Terminated
-     420   HiChina Zhicheng Technology Limited                                                      Accredited
+     420   Alibaba Cloud Computing (Beijing) Co., Ltd.                                              Accredited
      421   InfoNetworks, Inc.                                                                       Terminated
      422   InfoUSA.com                                                                              Terminated
      423   Internetplaza City Co., Ltd.                                                             Terminated
@@ -291,13 +291,13 @@ Registrar IDs
      624   Name122, Inc.                                                                            Accredited
      625   Name.com, Inc.                                                                           Accredited
      626   NeoNIC OY                                                                                Accredited
-     627   Name Trance LLC                                                                          Accredited
+     627   Name Trance LLC                                                                          Terminated
      628   Vedacore.com, Inc.                                                                       Accredited
      629   Domainz Limited                                                                          Terminated
      630   Answerable.com (I) Pvt Ltd                                                               Terminated
      631   Web.com Holding Company, Inc.                                                            Terminated
      632   Asadal, Inc.                                                                             Terminated
-     633   Beijing Innovative Linkage Technology Ltd. dba dns.com.cn                                Accredited
+     633   Beijing Innovative Linkage Software Service Co. Ltd                                      Accredited
      634   NetTuner Corp. dba Webmasters.com                                                        Accredited
      635   SNAPNAMES 72, INC.                                                                       Accredited
      636   BRANDON GRAY INTERNET SERVICES INC. (dba "NameJuice.com”)                                Accredited
@@ -307,7 +307,7 @@ Registrar IDs
      640   Mobile Name Services, Inc.                                                               Accredited
      641   H. J. Linnen Associates Ltd.                                                             Terminated
      642   Ladas Domains LLC d/b/a Principium Strategies                                            Accredited
-     643   DNS:NET Internet Service GmbH                                                            Accredited
+     643   DNS:NET Internet Service GmbH                                                            Terminated
      644   Aim High!, Inc.                                                                          Terminated
      645   GMO-Z.com Pte. Ltd.                                                                      Accredited
      646   SNAPNAMES 73, INC.                                                                       Accredited
@@ -350,14 +350,14 @@ Registrar IDs
      684   Domainscape.ca Inc.                                                                      Terminated
      685   Domainscostless.com Inc.                                                                 Terminated
      686   PriceDomain.ca Internet Services Corporation                                             Terminated
-     687   GoName-WA.com, Inc.                                                                      Accredited
+     687   GoName-WA.com, Inc.                                                                      Terminated
      688   PrimeDomain.ca Inc.                                                                      Terminated
      689   Domains2be.com Inc.                                                                      Terminated
      690   GotNames.ca Inc.                                                                         Terminated
      691   DomainMarketPlace.ca Inc.                                                                Terminated
      693   IPXcess.com Sdn Bhd                                                                      Terminated
      694   Whoistoolbar Corp.                                                                       Terminated
-     695   !#No1Registrar, LLC                                                                      Accredited
+     695   MOBIKAPP Limited                                                                         Accredited
      696   Entorno Digital, S.A.                                                                    Accredited
      697   Todaynic.com, Inc.                                                                       Accredited
      698   Dagnabit, Incorporated                                                                   Accredited
@@ -384,7 +384,7 @@ Registrar IDs
      719   NamePal.com #8001                                                                        Accredited
      720   PopularDomains.ca Inc.                                                                   Terminated
      721   LuckyDomains.ca Inc.                                                                     Terminated
-     722   GoName-FL.com, Inc.                                                                      Accredited
+     722   GoName-FL.com, Inc.                                                                      Terminated
      723   SecureDomain.ca Internet Services Corporation                                            Terminated
      724   South America Domains Ltd. dba namefrog.com.                                             Terminated
      725   NameStream.com, Inc.                                                                     Accredited
@@ -401,14 +401,14 @@ Registrar IDs
      737   Matchnames.ca Inc.                                                                       Terminated
      738   DomainMall.ca Inc.                                                                       Terminated
      739   DomainAuthority.ca Inc.                                                                  Terminated
-     740   GoName-HI.com, Inc.                                                                      Accredited
+     740   GoName-HI.com, Inc.                                                                      Terminated
      741   Abdomainations.ca Inc.                                                                   Terminated
      742   DomainStreet.ca Inc.                                                                     Terminated
      743   NamePal.com #8002                                                                        Accredited
      744   Crazy8Domains.com Inc.                                                                   Terminated
      745   Domains2Go.ca Inc.                                                                       Terminated
      746   MyNameOnline.ca Inc                                                                      Terminated
-     747   Intersolved-WA.com Inc.                                                                  Accredited
+     747   Intersolved-WA.com Inc.                                                                  Terminated
      748   NamePal.com #8023                                                                        Accredited
      749   DomainCentral.ca Inc.                                                                    Terminated
      750   Nerd Names Corporation                                                                   Accredited
@@ -421,13 +421,13 @@ Registrar IDs
      757   3349608 Canada Inc. dba GetYourDotInfo.com Inc.                                          Terminated
      758   6230644 Canada Inc. dba Megabyte.ca Internet Services Corp.                              Terminated
      759   AvailableDomains.ca Inc.                                                                 Terminated
-     760   Intersolved-TX.com, Inc.                                                                 Accredited
+     760   Intersolved-TX.com, Inc.                                                                 Terminated
      761   Coolhosting.ca Inc.                                                                      Terminated
      762   NamePal.com #8024                                                                        Accredited
      763   NamePal.com #8025                                                                        Accredited
      764   Domainestic.com Inc.                                                                     Terminated
      765   Domainfighter.ca Inc.                                                                    Terminated
-     766   Intersolved-TN.com, Inc.                                                                 Accredited
+     766   Intersolved-TN.com, Inc.                                                                 Terminated
      767   DomainHeadz.ca Inc.                                                                      Terminated
      768   DomainIdeas.ca Inc.                                                                      Terminated
      769   Domainlink.ca Inc.                                                                       Terminated
@@ -448,7 +448,7 @@ Registrar IDs
      784   Hipsearch.com Inc.                                                                       Terminated
      785   NamePal.com #8009                                                                        Accredited
      786   Maindomain.ca Inc.                                                                       Terminated
-     787   GoName-TN.com, Inc.                                                                      Accredited
+     787   GoName-TN.com, Inc.                                                                      Terminated
      788   Name.cc Inc                                                                              Accredited
      789   Notablenames.ca Inc.                                                                     Terminated
      790   Premierename.ca Inc.                                                                     Accredited
@@ -488,9 +488,9 @@ Registrar IDs
      826   Name.net, Inc.                                                                           Accredited
      827   Mouzz Interactive, Inc.                                                                  Terminated
      828   Hetzner Online GmbH                                                                      Accredited
-     829   Anytime Sites, Inc.                                                                      Accredited
+     829   Anytime Sites, LLC                                                                       Accredited
      830   IPNIC, Inc.                                                                              Terminated
-     831   Crisp Names, Inc.                                                                        Accredited
+     831   Crisp Names, LLC                                                                         Accredited
      832   EstDomains, Inc.                                                                         Terminated
      833   Dotted Ventures, Inc.                                                                    Terminated
      834   Domain Jingles, Inc.                                                                     Terminated
@@ -554,7 +554,7 @@ Registrar IDs
      892   Netfirms, Inc.                                                                           Terminated
      893   NetraCorp LLC dba Global Internet                                                        Accredited
      894   Domain Jamboree, LLC                                                                     Accredited
-     895   Google Inc.                                                                              Accredited
+     895   Google LLC                                                                               Accredited
      896   Aruba SpA                                                                                Accredited
      897   21Company, Inc. dba 21-domain.com                                                        Terminated
      898   Alantron Bilisim Ltd Sti.                                                                Accredited
@@ -594,11 +594,11 @@ Registrar IDs
      932   FindUAName.com LLC                                                                       Accredited
      933   YouDamain.com LLC                                                                        Accredited
      934   GoServeYourDomain.com LLC                                                                Accredited
-     935   Commerce Island, Inc.                                                                    Accredited
+     935   Commerce Island, LLC                                                                     Accredited
      936   Ground Internet, Inc.                                                                    Terminated
-     937   Blue Fractal, Inc.                                                                       Accredited
+     937   Blue Fractal, LLC                                                                        Accredited
      938   Sibername Internet and Software Technologies Inc.                                        Accredited
-     939   Desert Devil, Inc.                                                                       Accredited
+     939   Desert Devil, LLC                                                                        Accredited
      940   Above.com Pty Ltd.                                                                       Accredited
      941   Dynamic Dolphin, Inc.                                                                    Terminated
      942   Autica Domain Services Inc.                                                              Terminated
@@ -616,11 +616,11 @@ Registrar IDs
      954   INDOM SAS                                                                                Terminated
      955   Launchpad.com Inc.                                                                       Accredited
      956   Hosting365 Inc.                                                                          Terminated
-     957   Titanic Hosting, Inc.                                                                    Accredited
+     957   Titanic Hosting, LLC                                                                     Accredited
      958   Virtual Registrar, Inc.                                                                  Terminated
      959   Tropic Management Systems, Inc.                                                          Accredited
      960   WebZero, Inc.                                                                            Terminated
-     961   Rank USA, Inc.                                                                           Accredited
+     961   Rank USA, LLC                                                                            Accredited
      962   Red Register, Inc.                                                                       Terminated
      963   Nom d'un Net ! Sarl                                                                      Terminated
      965   Domain Central Australia Pty Ltd.                                                        Accredited
@@ -644,7 +644,7 @@ Registrar IDs
      983   ! #1 Host Malaysia, Inc.                                                                 Terminated
      984   ID Genesis, LLC                                                                          Terminated
      985   Own Identity, Inc.                                                                       Accredited
-     986   Mighty Bay, Inc.                                                                         Accredited
+     986   Mighty Bay, LLC                                                                          Accredited
      987   Imperial Registrations, Inc.                                                             Accredited
      988   R.B. Data Net LTD.                                                                       Terminated
      989   Tarton Domain Names Ltd.                                                                 Terminated
@@ -678,8 +678,8 @@ Registrar IDs
     1017   Black Ice Domains, Inc.                                                                  Terminated
     1018   Backslap Domains, Inc.                                                                   Accredited
     1019   Threadagent.com, Inc.                                                                    Accredited
-    1020   Threadwalker.com, Inc.                                                                   Accredited
-    1021   Threadwatch.com, Inc.                                                                    Accredited
+    1020   Threadwalker.com, Inc.                                                                   Terminated
+    1021   Threadwatch.com, Inc.                                                                    Terminated
     1022   NamePal.com #8010                                                                        Accredited
     1023   NamePal.com #8011                                                                        Accredited
     1024   NamePal.com #8012                                                                        Accredited
@@ -688,7 +688,7 @@ Registrar IDs
     1027   NamePal.com #8015                                                                        Accredited
     1028   NamePal.com #8016                                                                        Accredited
     1029   NamePal.com #8017                                                                        Accredited
-    1030   Threadwise.com, Inc.                                                                     Accredited
+    1030   Threadwise.com, Inc.                                                                     Terminated
     1031   NamePal.com #8018                                                                        Accredited
     1032   DNGLOBE LLC                                                                              Terminated
     1033   SNAPNAMES 13, INC.                                                                       Accredited
@@ -741,9 +741,9 @@ Registrar IDs
     1080   Locaweb Servicos de Internet S/A dba Locaweb                                             Terminated
     1081   Bargin Register, Inc.                                                                    Terminated
     1082   Register4Less, Inc.                                                                      Accredited
-    1083   Curious Net, Inc.                                                                        Accredited
+    1083   Curious Net, LLC                                                                         Accredited
     1084   AsiaRegister, Inc.                                                                       Accredited
-    1085   Click Registrar, Inc. d/b/a publicdomainregistry.com                                     Accredited
+    1085   Click Registrar, LLC dba publicdomainregistry.com                                        Accredited
     1086   Marcaria.com International, Inc.                                                         Accredited
     1087   MOOZOOY MEDIA INC.                                                                       Terminated
     1088   Globe Hosting, Inc.                                                                      Terminated
@@ -751,44 +751,44 @@ Registrar IDs
     1090   Active Registrar, Inc.                                                                   Terminated
     1091   IHS Telekom, Inc.                                                                        Accredited
     1092   Best Bulk Register, Inc.                                                                 Terminated
-    1093   Cool Ocean, Inc.                                                                         Accredited
+    1093   Cool Ocean, LLC                                                                          Accredited
     1094   HooYoo (US) Inc.                                                                         Terminated
     1095   European NIC Inc.                                                                        Terminated
-    1096   Find Good Domains, Inc.                                                                  Accredited
+    1096   Find Good Domains, LLC                                                                   Accredited
     1097   Nettica Domains, Inc.                                                                    Terminated
-    1098   Domain Mantra, Inc.                                                                      Accredited
-    1099   Domain Band, Inc.                                                                        Accredited
-    1100   Net Juggler, Inc.                                                                        Accredited
-    1101   Power Carrier, Inc.                                                                      Accredited
-    1102   Network Savior, Inc.                                                                     Accredited
+    1098   Domain Mantra, LLC                                                                       Accredited
+    1099   Domain Band, LLC                                                                         Accredited
+    1100   Net Juggler, LLC                                                                         Accredited
+    1101   Power Carrier, LLC                                                                       Accredited
+    1102   Network Savior, LLC                                                                      Accredited
     1103   Name For Name, Inc.                                                                      Terminated
-    1104   Name To Fame, Inc.                                                                       Accredited
-    1105   Unpower, Inc.                                                                            Accredited
-    1106   Unified Servers, Inc.                                                                    Accredited
-    1107   Tech Tyrants, Inc.                                                                       Accredited
-    1108   Ultra Registrar, Inc.                                                                    Accredited
-    1109   Trade Starter, Inc.                                                                      Accredited
+    1104   Name To Fame, LLC                                                                        Accredited
+    1105   Unpower, LLC                                                                             Accredited
+    1106   Unified Servers, LLC                                                                     Accredited
+    1107   Tech Tyrants, LLC                                                                        Accredited
+    1108   Ultra Registrar, LLC                                                                     Accredited
+    1109   Trade Starter, LLC                                                                       Accredited
     1110   FBS Inc.                                                                                 Accredited
     1111   DomainContext, Inc.                                                                      Accredited
     1112   Internet Invest, Ltd. dba Imena.ua                                                       Accredited
-    1113   Instinct Solutions, Inc.                                                                 Accredited
+    1113   Instinct Solutions, LLC                                                                  Accredited
     1114   Media Elite Holdings Limited                                                             Accredited
-    1115   Visual Monster, Inc.                                                                     Accredited
-    1116   Domerati, Inc.                                                                           Accredited
-    1117   Platinum Registrar, Inc.                                                                 Accredited
-    1118   Crystal Coal, Inc.                                                                       Accredited
-    1119   Extremely Wild                                                                           Accredited
-    1120   Game For Names, Inc.                                                                     Accredited
-    1121   Go Full House, Inc.                                                                      Accredited
-    1122   Key Registrar, Inc.                                                                      Accredited
-    1123   Magic Friday, Inc.                                                                       Accredited
-    1124   Need Servers, Inc.                                                                       Accredited
-    1125   Name Perfections, Inc.                                                                   Accredited
-    1126   Yellow Start, Inc.                                                                       Accredited
-    1127   Zone Casting, Inc.                                                                       Accredited
-    1128   Power Namers, Inc.                                                                       Accredited
-    1129   Extend Names, Inc.                                                                       Accredited
-    1130   Ever Ready Names, Inc.                                                                   Accredited
+    1115   Visual Monster, LLC                                                                      Accredited
+    1116   Domerati, Inc.                                                                           Terminated
+    1117   Platinum Registrar, LLC                                                                  Accredited
+    1118   Crystal Coal, LLC                                                                        Accredited
+    1119   Extremely Wild, LLC                                                                      Accredited
+    1120   Game For Names, LLC                                                                      Accredited
+    1121   Go Full House, LLC                                                                       Accredited
+    1122   Key Registrar, LLC                                                                       Accredited
+    1123   Magic Friday, LLC                                                                        Accredited
+    1124   Need Servers, LLC                                                                        Accredited
+    1125   Name Perfections, LLC                                                                    Accredited
+    1126   Yellow Start, LLC                                                                        Accredited
+    1127   Zone Casting, LLC                                                                        Accredited
+    1128   Power Namers, LLC                                                                        Accredited
+    1129   Extend Names, LLC                                                                        Accredited
+    1130   Ever Ready Names, LLC                                                                    Accredited
     1131   Experian Services Corp.                                                                  Terminated
     1132   Dotname Korea Corp.                                                                      Accredited
     1133   The Names Registration, Inc.                                                             Terminated
@@ -801,12 +801,12 @@ Registrar IDs
     1140   Global Names Online, Inc.                                                                Terminated
     1141   Get Real Names, Inc.                                                                     Terminated
     1142   Genuine Names, Inc.                                                                      Terminated
-    1143   Your Domain King, Inc.                                                                   Accredited
-    1144   The Registrar Service, Inc.                                                              Accredited
-    1145   Big Domain Shop, Inc.                                                                    Accredited
+    1143   Your Domain King, LLC                                                                    Accredited
+    1144   The Registrar Service, LLC                                                               Accredited
+    1145   Big Domain Shop, LLC                                                                     Accredited
     1146   Western United Domains, Inc.                                                             Terminated
-    1147   Super Name World, Inc.                                                                   Accredited
-    1148   Jumbo Name, Inc.                                                                         Accredited
+    1147   Super Name World, LLC                                                                    Accredited
+    1148   Jumbo Name, LLC                                                                          Accredited
     1149   Go China Domains, LLC                                                                    Accredited
     1150   Go Canada Domains, LLC                                                                   Accredited
     1151   Go Australia Domains, LLC                                                                Accredited
@@ -900,13 +900,13 @@ Registrar IDs
     1239   CPS-Datensysteme GmbH                                                                    Accredited
     1240   Digirati Informatica Servicos e Telecomunicacoes LTDA dba Hostnet.com                    Terminated
     1241   Alfena, LLC                                                                              Accredited
-    1242   Ignitela, LLC                                                                            Accredited
-    1243   yenkos, LLC                                                                              Accredited
-    1244   Intersolved-HI.com, Inc.                                                                 Accredited
+    1242   Ignitela, LLC                                                                            Terminated
+    1243   yenkos, LLC                                                                              Terminated
+    1244   Intersolved-HI.com, Inc.                                                                 Terminated
     1245   WhiteCowDomains.com Inc.                                                                 Terminated
     1246   Dontaskwhy.ca Inc.                                                                       Terminated
-    1247   Intersolved-FL.com, Inc.                                                                 Accredited
-    1248   GoName-TX.com, Inc.                                                                      Accredited
+    1247   Intersolved-FL.com, Inc.                                                                 Terminated
+    1248   GoName-TX.com, Inc.                                                                      Terminated
     1249   DotAlliance Inc.                                                                         Accredited
     1250   OwnRegistrar, Inc.                                                                       Accredited
     1251   Nameshield SAS                                                                           Accredited
@@ -915,7 +915,7 @@ Registrar IDs
     1254   NEUDOMAIN LLC                                                                            Accredited
     1255   MISTERNIC LLC                                                                            Accredited
     1256   INSTANTNAMES LLC                                                                         Accredited
-    1257   Variomedia AG dba puredomain.com                                                         Accredited
+    1257   Variomedia AG                                                                            Accredited
     1258   Namehouse, Inc.                                                                          Terminated
     1259   SBNames Ltd.                                                                             Terminated
     1260   ISPREG LTD                                                                               Terminated
@@ -1051,18 +1051,18 @@ Registrar IDs
     1390   Mesh Digital Limited                                                                     Accredited
     1391   Azdomainz, LLC                                                                           Accredited
     1392   Azprivatez, LLC                                                                          Accredited
-    1393   New Great Domains, Inc.                                                                  Accredited
+    1393   New Great Domains, Inc.                                                                  Terminated
     1394   Names In Motion, Inc.                                                                    Accredited
     1395   www.com                                                                                  Terminated
     1396   Abansys & Hostytec, S.L.                                                                 Accredited
-    1397   HooYoo Information Technology Co. Ltd.                                                   Accredited
+    1397   HooYoo Information Technology Co. Ltd.                                                   Terminated
     1398   Net Enforcers, Inc.                                                                      Terminated
     1399   Clertech.com Inc.                                                                        Terminated
-    1401   domainfactory GmbH                                                                       Accredited
+    1401   domainfactory GmbH                                                                       Terminated
     1402   Hu Yi Global Information Resources (Holding) Company                                     Terminated
     1403   10dencehispahard, S.L.                                                                   Accredited
     1404   Web Site Source, Inc.                                                                    Terminated
-    1405   Internet NAYANA Inc.                                                                     Accredited
+    1405   Internet NAYANA Inc.                                                                     Terminated
     1406   Thought Convergence, Inc.                                                                Terminated
     1407   SW Hosting & Communications Technologies SL dba Serveisweb                               Accredited
     1408   united-domains AG                                                                        Accredited
@@ -1084,7 +1084,7 @@ Registrar IDs
     1426   Registrar R01 LLC                                                                        Accredited
     1427   Zog Media, Inc. DBA Zog Names                                                            Terminated
     1428   Homestead Limited dba Namevault.com                                                      Terminated
-    1429   Hebei Guoji Maoyi (Shanghai) LTD dba HebeiDomains.com                                    Accredited
+    1429   Hebei Guoji Maoyi (Shanghai) LTD dba HebeiDomains.com                                    Terminated
     1430   Purenic Japan Inc.                                                                       Accredited
     1431   GLOBIX Kft.                                                                              Terminated
     1432   Alpine Domains Inc.                                                                      Accredited
@@ -1094,7 +1094,7 @@ Registrar IDs
     1436   Center of Ukrainian Internet Names (UKRNAMES)                                            Accredited
     1437   Sync Intertainment S.L.                                                                  Terminated
     1438   Beijing RITT - Net Technology Development Co., Ltd                                       Accredited
-    1439   Porting Access B.V.                                                                      Accredited
+    1439   Porting Access B.V.                                                                      Terminated
     1440   NetClient AS                                                                             Terminated
     1441   TurnCommerce, Inc. DBA NameBright.com                                                    Accredited
     1442   Internet Networks S.A. De C.V.                                                           Terminated
@@ -1109,7 +1109,7 @@ Registrar IDs
     1451   iWelt AG                                                                                 Terminated
     1452   Site Matrix LLC                                                                          Accredited
     1453   Directi Web Services Pvt. Ltd.                                                           Terminated
-    1454   Nics Telekomünikasyon Tic Ltd. Şti.                                                      Accredited
+    1454   Nics Telekomunikasyon A.S.                                                               Accredited
     1455   Mijndomein.nl BV                                                                         Terminated
     1456   NetArt Sp z o.o                                                                          Accredited
     1457   Times Internet Limited                                                                   Terminated
@@ -1126,7 +1126,7 @@ Registrar IDs
     1468   Virtucom Networks S.A.                                                                   Terminated
     1469   Jiangsu Bangning Science & technology Co. Ltd.                                           Accredited
     1470   Shanghai Yovole Networks, Inc.                                                           Accredited
-    1471   Astutium Limited                                                                         Accredited
+    1471   Astutium Limited                                                                         Terminated
     1472   LiquidNet Ltd.                                                                           Accredited
     1473   Jungbonet Co., Ltd                                                                       Terminated
     1474   WIXI Incorporated                                                                        Accredited
@@ -1145,7 +1145,7 @@ Registrar IDs
     1488   Demys Limited                                                                            Accredited
     1489   Megazone Corp., dba HOSTING.KR                                                           Accredited
     1490   dm3 Digital Media Marketing and Monitoring FZ-LLC                                        Terminated
-    1491   Koreacenter.com co., Ltd.                                                                Accredited
+    1491   Koreacenter co., Ltd.                                                                    Accredited
     1492   Neen Srl                                                                                 Accredited
     1493   Ilait AB                                                                                 Accredited
     1494   Beijing Guoxu Network Technology Co., Ltd.                                               Accredited
@@ -1170,7 +1170,7 @@ Registrar IDs
     1513   Name104, Inc.                                                                            Accredited
     1514   Name111, Inc.                                                                            Accredited
     1515   123-Reg Limited                                                                          Accredited
-    1516   Guangzhou Ehost Tech. Co. Ltd.                                                           Accredited
+    1516   Zhengzhou Yi Fang Electronics Co., Ltd.                                                  Accredited
     1517   HOAPDI INC.                                                                              Accredited
     1518   Shanghai Best Oray Information S&T Co., Ltd.                                             Accredited
     1519   NETIM SARL                                                                               Accredited
@@ -1186,7 +1186,7 @@ Registrar IDs
     1529   DomainLocal LLC                                                                          Accredited
     1530   Pacific Online Inc.                                                                      Terminated
     1531   Automattic Inc.                                                                          Accredited
-    1532   KINX Co., Ltd.                                                                           Accredited
+    1532   KINX Co., Ltd.                                                                           Terminated
     1533   Good Domain Registry Pvt Ltd.                                                            Accredited
     1534   Aerotek Bilisim Sanayi ve Ticaret AS                                                     Accredited
     1535   TheNameCo LLC                                                                            Accredited
@@ -1208,7 +1208,7 @@ Registrar IDs
     1551   Name107, Inc.                                                                            Accredited
     1552   Name106, Inc.                                                                            Accredited
     1553   Small World Communications, Inc.                                                         Accredited
-    1554   DomainSnap, LLC                                                                          Accredited
+    1554   DomainSnap, LLC                                                                          Terminated
     1555   22net, Inc.                                                                              Accredited
     1556   Chengdu West Dimension Digital Technology Co., Ltd.                                      Accredited
     1557   Netowl, Inc.                                                                             Accredited
@@ -1275,18 +1275,18 @@ Registrar IDs
     1621   Shanghai Meicheng Technology Information Development Co., Ltd.                           Accredited
     1622   Swedish Domains AB                                                                       Terminated
     1623   Registrar Manager Inc.                                                                   Accredited
-    1624   Shanghai Oweb Network Co., Ltd                                                           Accredited
+    1624   Shanghai Oweb Network Co., Ltd                                                           Terminated
     1625   LEMARIT GmbH                                                                             Accredited
     1626   Domainbox Limited                                                                        Accredited
     1627   Domainmonster Limited                                                                    Accredited
-    1628   ZNet Technologies Pvt Ltd.                                                               Accredited
-    1629   Hangzhou Duomai E-Commerce Co., Ltd                                                      Accredited
+    1628   ZNet Technologies Pvt Ltd.                                                               Terminated
+    1629   Hangzhou Duomai E-Commerce Co., Ltd                                                      Terminated
     1630   Ligne Web Services SARL dba LWS                                                          Accredited
     1631   Fujian Litian Network Technology Co.,Ltd                                                 Accredited
-    1632   Century Oriental International Co., Ltd.                                                 Accredited
+    1632   Chengdu Century Oriental Network Communication Co., Ltd.                                 Accredited
     1633   NamePal.com #8027                                                                        Accredited
     1634   Netnames Pty Ltd.                                                                        Accredited
-    1635   Beijing Midwest Taian Technology Services Ltd.                                           Accredited
+    1635   Beijing Midwest Taian Technology Services Ltd.                                           Terminated
     1636   Hostinger, UAB                                                                           Accredited
     1637   Dynadot0 LLC                                                                             Accredited
     1638   Dynadot1 LLC                                                                             Accredited
@@ -1306,15 +1306,15 @@ Registrar IDs
     1654   Ourdomains Limited                                                                       Accredited
     1655   Xiamen Nawang Technology Co., Ltd                                                        Accredited
     1656   Kagoya Japan Inc.                                                                        Accredited
-    1657   WHT Co., Ltd                                                                             Accredited
-    1658   Rethem Hosting LLC                                                                       Accredited
+    1657   WHT Co., Ltd                                                                             Terminated
+    1658   Rethem Hosting LLC                                                                       Terminated
     1659   Uniregistrar Corp                                                                        Accredited
-    1660   Domainshype.com, Inc.                                                                    Accredited
-    1661   Domdrill.com, Inc.                                                                       Accredited
+    1660   Domainshype.com, LLC                                                                     Accredited
+    1661   Domdrill.com, LLC                                                                        Accredited
     1662   Enset                                                                                    Accredited
-    1663   Hotdomaintrade.com, Inc.                                                                 Accredited
-    1664   Namware.com, Inc.                                                                        Accredited
-    1665   Vertex names.com, Inc.                                                                   Accredited
+    1663   Hotdomaintrade.com, LLC                                                                  Accredited
+    1664   Namware.com, LLC                                                                         Accredited
+    1665   Vertex names.com, LLC                                                                    Accredited
     1666   OpenTLD B.V.                                                                             Accredited
     1667   Seymour Domains, LLC                                                                     Accredited
     1668   EastEndDomains, LLC                                                                      Accredited
@@ -1351,9 +1351,9 @@ Registrar IDs
     1699   Hostserver GmbH                                                                          Terminated
     1700   Ingenit GmbH & Co. KG                                                                    Accredited
     1701   DOMAINOO SAS                                                                             Accredited
-    1702   Alexander the Great, LLC                                                                 Accredited
-    1703   Cyrus the Great, LLC                                                                     Accredited
-    1704   Julius Caesar, LLC                                                                       Accredited
+    1702   Alexander the Great, LLC                                                                 Terminated
+    1703   Cyrus the Great, LLC                                                                     Terminated
+    1704   Julius Caesar, LLC                                                                       Terminated
     1705   Network Information Center, S. A. de C. V.                                               Accredited
     1708   Nominet Registrar Services Limited                                                       Accredited
     1710   Nhan Hoa Software Company Ltd.                                                           Accredited
@@ -1503,7 +1503,7 @@ Registrar IDs
     1856   DropCatch.com 445 LLC                                                                    Accredited
     1857   Alpnames Limited                                                                         Accredited
     1858   NameCentral, Inc.                                                                        Terminated
-    1859   Namemaster RC GmbH                                                                       Accredited
+    1859   Namemaster RC GmbH                                                                       Terminated
     1860   Paragon Internet Group Ltd t/a Paragon Names                                             Accredited
     1861   Porkbun LLC                                                                              Accredited
     1862   Onlide Inc                                                                               Accredited
@@ -1517,26 +1517,26 @@ Registrar IDs
     1871   DOMAINNAME FWY, INC.                                                                     Accredited
     1872   FLAPPY DOMAIN, INC.                                                                      Accredited
     1873   MAFF AVENUE, INC.                                                                        Accredited
-    1874   AXC BV                                                                                   Accredited
+    1874   AXC BV                                                                                   Terminated
     1875   Intracom Middle East FZE                                                                 Accredited
     1876   NCC Group Secure Registrar, Inc.                                                         Accredited
-    1877   Attila the Hun, LLC                                                                      Accredited
-    1878   Charlemagne 888, LLC                                                                     Accredited
-    1879   Douglas MacArthur, LLC                                                                   Accredited
-    1880   Dwight D. Eisenhower, LLC                                                                Accredited
-    1881   Genghis Khan, LLC                                                                        Accredited
-    1882   George S. Patton, LLC                                                                    Accredited
-    1883   George Washington 888, LLC                                                               Accredited
-    1884   Hannibal Barca, LLC                                                                      Accredited
-    1885   Isoroku Yamamoto, LLC                                                                    Accredited
-    1886   Karl Von Clausewitz, LLC                                                                 Accredited
-    1887   Napoleon Bonaparte, LLC                                                                  Accredited
-    1888   Robert E. Lee 888, LLC                                                                   Accredited
-    1889   Scipio Africanus, LLC                                                                    Accredited
-    1890   Sun Tzu 888, LLC                                                                         Accredited
-    1891   Ulysses S. Grant, LLC                                                                    Accredited
-    1892   Vo Nguyen Giap, LLC                                                                      Accredited
-    1893   William the Conqueror, LLC                                                               Accredited
+    1877   Attila the Hun, LLC                                                                      Terminated
+    1878   Charlemagne 888, LLC                                                                     Terminated
+    1879   Douglas MacArthur, LLC                                                                   Terminated
+    1880   Dwight D. Eisenhower, LLC                                                                Terminated
+    1881   Genghis Khan, LLC                                                                        Terminated
+    1882   George S. Patton, LLC                                                                    Terminated
+    1883   George Washington 888, LLC                                                               Terminated
+    1884   Hannibal Barca, LLC                                                                      Terminated
+    1885   Isoroku Yamamoto, LLC                                                                    Terminated
+    1886   Karl Von Clausewitz, LLC                                                                 Terminated
+    1887   Napoleon Bonaparte, LLC                                                                  Terminated
+    1888   Robert E. Lee 888, LLC                                                                   Terminated
+    1889   Scipio Africanus, LLC                                                                    Terminated
+    1890   Sun Tzu 888, LLC                                                                         Terminated
+    1891   Ulysses S. Grant, LLC                                                                    Terminated
+    1892   Vo Nguyen Giap, LLC                                                                      Terminated
+    1893   William the Conqueror, LLC                                                               Terminated
     1894   DOMAIN TRAIN, INC.                                                                       Accredited
     1895   Namespro Solutions Inc.                                                                  Accredited
     1896   ATI                                                                                      Accredited
@@ -1921,7 +1921,7 @@ Registrar IDs
     2277   White Rhino Domains, LLC                                                                 Accredited
     2278   Wild Bunch Domains, LLC                                                                  Accredited
     2279   Your Domain Casa, LLC                                                                    Accredited
-    2280   Fan Domains Ltd                                                                          Accredited
+    2280   Fan Domains Ltd                                                                          Terminated
     2281   VentraIP Australia Pty Ltd                                                               Accredited
     2282   Dynadot13 LLC                                                                            Accredited
     2283   Dynadot14 LLC                                                                            Accredited
@@ -1930,20 +1930,20 @@ Registrar IDs
     2286   Dynadot17 LLC                                                                            Accredited
     2287   DNS Africa Ltd                                                                           Accredited
     2288   Metaregistrar BV                                                                         Accredited
-    2289   Abraham Lincoln, LLC                                                                     Accredited
-    2290   Achilles 888, LLC                                                                        Accredited
-    2291   Annam, LLC                                                                               Accredited
-    2292   Apollo 888, LLC                                                                          Accredited
-    2293   Ares 888, LLC                                                                            Accredited
-    2294   Aristotle 888, LLC                                                                       Accredited
-    2295   Arthur Pendragon, LLC                                                                    Accredited
-    2296   Benjamin Franklin 888, LLC                                                               Accredited
+    2289   Abraham Lincoln, LLC                                                                     Terminated
+    2290   Achilles 888, LLC                                                                        Terminated
+    2291   Annam, LLC                                                                               Terminated
+    2292   Apollo 888, LLC                                                                          Terminated
+    2293   Ares 888, LLC                                                                            Terminated
+    2294   Aristotle 888, LLC                                                                       Terminated
+    2295   Arthur Pendragon, LLC                                                                    Terminated
+    2296   Benjamin Franklin 888, LLC                                                               Terminated
     2297   Billy the Kid, LLC                                                                       Terminated
     2298   Buddha, LLC                                                                              Terminated
     2299   Charles Darwin, LLC                                                                      Terminated
     2300   Confucius, LLC                                                                           Terminated
     2301   Constantine the Great, LLC                                                               Terminated
-    2302   Dainam, LLC                                                                              Accredited
+    2302   Dainam, LLC                                                                              Terminated
     2303   Dalai Lama, LLC                                                                          Terminated
     2304   Eric the Red, LLC                                                                        Terminated
     2305   Erwin Rommel, LLC                                                                        Terminated
@@ -1956,14 +1956,14 @@ Registrar IDs
     2312   Leonardo da Vinci, LLC                                                                   Terminated
     2313   Leonidas, LLC                                                                            Terminated
     2314   Mahatma Gandhi, LLC                                                                      Terminated
-    2315   Mailinh, LLC                                                                             Accredited
+    2315   Mailinh, LLC                                                                             Terminated
     2316   Odysseus 888, LLC                                                                        Terminated
     2317   Omni 888, LLC                                                                            Terminated
     2318   Perseus 888, LLC                                                                         Terminated
     2319   Peter the Great, LLC                                                                     Terminated
     2320   Plato 888, LLC                                                                           Terminated
     2321   Poseidon 888, LLC                                                                        Terminated
-    2322   Radu Damian, LLC                                                                         Accredited
+    2322   Radu Damian, LLC                                                                         Terminated
     2323   Ramses II, LLC                                                                           Terminated
     2324   Richard the Lionheart 888, LLC                                                           Terminated
     2325   Maximus, LLC                                                                             Terminated
@@ -1995,7 +1995,7 @@ Registrar IDs
     2351   Rally Cry Domains, LLC                                                                   Accredited
     2352   Straight 8 Domains, LLC                                                                  Accredited
     2353   V12 Domains, LLC                                                                         Accredited
-    2354   Tan Tran, LLC                                                                            Accredited
+    2354   Tan Tran, LLC                                                                            Terminated
     2355   Theseus 888, LLC                                                                         Terminated
     2356   Thomas Edison, LLC                                                                       Terminated
     2357   Thomas Jefferson, LLC                                                                    Terminated
@@ -2864,7 +2864,7 @@ Registrar IDs
     3224   Registrator Domenov LLC                                                                  Accredited
     3225   Knet Registrar Co., Ltd                                                                  Accredited
     3226   PE Overseas Limited                                                                      Accredited
-    3227   Ejee Group Beijing Limited                                                               Accredited
+    3227   EJEE Group Beijing Limited                                                               Accredited
     3228   Alibrother Technology Limited                                                            Accredited
     3229   Aboss Technology Limited                                                                 Accredited
     3230   4X                                                                                       Accredited
@@ -3391,7 +3391,7 @@ Registrar IDs
     3753   DropCatch.com 1544 LLC                                                                   Accredited
     3754   DropCatch.com 1545 LLC                                                                   Accredited
     3755   Tencent Cloud Computing (Beijing) Limited Liability Company                              Accredited
-    3756   Shanghai, People's Republic of China Corporation                                         Accredited
+    3756   SHANGHAI XIAOLAN NETWORK TECHNOLOGY CO., LTD.                                            Terminated
     3757   Digivity B.V.                                                                            Accredited
     3758   Hefei Juming Network Technology Co., Ltd                                                 Accredited
     3759   Mfro Inc.                                                                                Accredited
@@ -3425,7 +3425,10 @@ Registrar IDs
     3787   RegistrarBrand, LLC                                                                      Accredited
     3788   RegistrarGuard, LLC                                                                      Accredited
     3789   RegistrarSecure, LLC                                                                     Accredited
+    3790   Shenzhen Domain Protection Technology Co., Ltd.                                          Accredited
+    3791   Shenzhen Qianhai Premium Domain Technology Co., Ltd.                                     Accredited
     3792   Global Domain Name Trading Center Ltd                                                    Accredited
+    3793   Guangzhou Tencent Technology Co., Ltd.                                                   Accredited
     3794   AF Proxy Services Ltd                                                                    Accredited
     3795   Hangzhou Newdun Network Technology Co., Ltd.                                             Accredited
     3796   Abbey Road Domains LLC                                                                   Accredited
@@ -3434,6 +3437,21 @@ Registrar IDs
     3799   Adriatic Domains LLC                                                                     Accredited
     3800   Aegean Domains LLC                                                                       Accredited
     3801   Buzinessware FZCO                                                                        Accredited
+    3802   Ubilibet S.L.                                                                            Accredited
+    3803   Zoho Corporation Private Limited                                                         Accredited
+    3804   Edomains LLC                                                                             Accredited
+    3805   Topnets Group Limited                                                                    Accredited
+    3806   Beget LLC                                                                                Accredited
+    3807   Alboran Domains LLC                                                                      Accredited
+    3808   Alpha Beta Domains LLC                                                                   Accredited
+    3809   Annapurna Domains LLC                                                                    Accredited
+    3810   Aquila Domains LLC                                                                       Accredited
+    3811   Australe Domains LLC                                                                     Accredited
+    3812   Innovadeus Pvt. Ltd.                                                                     Accredited
+    3813   ShangYu Internet Technology (Guangzhou) Co., Ltd.                                        Accredited
+    3814   Zunyi Brandma Network Technology Ltd.                                                    Accredited
+    3817   Wix.com Ltd.                                                                             Accredited
+    3820   Qinghai Yunnet Electronics Technology Co., Ltd                                           Accredited
     9995   Reserved for Pre-Delegation Testing transactions #1 reporting                            Reserved
     9996   Reserved for Pre-Delegation Testing transactions #2 reporting                            Reserved
     9997   Reserved for ICANN's Registry SLA Monitoring System transactions reporting               Reserved

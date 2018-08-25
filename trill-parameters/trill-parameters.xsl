@@ -11,10 +11,21 @@
       <xsl:when test="@id = 'trill-parameters-2'">
         <tr><th>Address</th><th>Description</th><th>Reference</th></tr>
       </xsl:when>
+      <xsl:when test="@id = 'trill-ethertypes'">
+        <tr>
+          <th>Value</th>
+          <th>Mnemonic</th>
+          <th>Explanation</th>
+          <th>Reference</th>
+        </tr>
+      </xsl:when>
       <xsl:when test="@id = 'extended-header-flags'">
         <tr><th>Bits</th><th>Purpose</th><th>Reference</th></tr>
       </xsl:when>
       <xsl:when test="@id = 'rbridge-channel-protocol'">
+        <tr><th>Protocol</th><th>Description</th><th>Reference</th></tr>
+      </xsl:when>
+      <xsl:when test="@id = 'trill-address-flush-tlv-types'">
         <tr><th>Protocol</th><th>Description</th><th>Reference</th></tr>
       </xsl:when>
       <xsl:when test="@id = 'extended-rbridge-channel-payload-types'">
@@ -31,6 +42,9 @@
       </xsl:when>
       <xsl:when test="@id = 'rbridge-channel-suberror-codes'">
         <tr><th>Err</th><th>SubERR</th><th>Meaning</th><th>Reference</th></tr>
+      </xsl:when>
+      <xsl:when test="@id = 'vendor-rbridge-channel-error-codes'">
+        <tr><th>Code</th><th>Description</th><th>Reference</th></tr>
       </xsl:when>
       <xsl:when test="@id = 'trill-ver-capability'">
         <tr><th>Bit</th><th>Description</th><th>Reference</th></tr>
@@ -102,6 +116,14 @@
           <td><xsl:apply-templates select="iana:xref"/></td>
         </tr>
       </xsl:when>
+      <xsl:when test="../@id = 'trill-ethertypes'">
+        <tr>
+          <td align="center"><xsl:value-of select="iana:value"/></td>
+          <td><xsl:value-of select="iana:mnemonic"/></td>
+          <td><xsl:value-of select="iana:description"/></td>
+          <td><xsl:apply-templates select="iana:xref"/></td>
+        </tr>
+      </xsl:when>
       <xsl:when test="../@id = 'extended-header-flags'">
         <tr>
           <td align="center"><xsl:value-of select="iana:bits"/></td>
@@ -111,6 +133,13 @@
       </xsl:when>
       
       <xsl:when test="../@id = 'rbridge-channel-protocol'">
+        <tr>
+          <td align="center"><xsl:value-of select="iana:name"/></td>
+          <td><xsl:value-of select="iana:description"/></td>
+          <td><xsl:apply-templates select="iana:xref"/></td>
+        </tr>
+      </xsl:when>
+      <xsl:when test="../@id = 'trill-address-flush-tlv-types'">
         <tr>
           <td align="center"><xsl:value-of select="iana:name"/></td>
           <td><xsl:value-of select="iana:description"/></td>
@@ -136,6 +165,13 @@
         <tr>
           <td align="center"><xsl:value-of select="iana:value"/></td>
           <td align="center"><xsl:value-of select="iana:subvalue"/></td>
+          <td><xsl:value-of select="iana:description"/></td>
+          <td><xsl:apply-templates select="iana:xref"/></td>
+        </tr>
+      </xsl:when>
+      <xsl:when test="../@id = 'vendor-rbridge-channel-error-codes'">
+        <tr>
+          <td align="center"><xsl:value-of select="iana:value"/></td>
           <td><xsl:value-of select="iana:description"/></td>
           <td><xsl:apply-templates select="iana:xref"/></td>
         </tr>

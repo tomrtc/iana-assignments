@@ -3,7 +3,7 @@
 <?oxygen RNGSchema="icmpv6-parameters.rng" type="xml"?>
 <registry xmlns="http://www.iana.org/assignments" id="icmpv6-parameters">
   <title>Internet Control Message Protocol version 6 (ICMPv6) Parameters</title>
-  <updated>2017-12-05</updated>
+  <updated>2018-08-20</updated>
  
  
   <registry id="icmpv6-parameters-2">
@@ -40,6 +40,10 @@
       <value>4</value>
       <name>Parameter Problem</name>
       <xref type="rfc" data="rfc4443"/>
+    </record>
+    <record>
+      <value>5-99</value>
+      <name>Unassigned</name>
     </record>
     <record>
       <value>100</value>
@@ -113,7 +117,7 @@
     <record date="1999-04">
       <value>138</value>
       <name>Router Renumbering</name>
-      <xref type="person" data="Matt_Crawford"/>
+      <xref type="rfc" data="rfc2894"/>
     </record>
     <record>
       <value>139</value>
@@ -221,8 +225,18 @@ mobility protocols such as Seamoby</name>
       <name>MPL Control Message</name>
       <xref type="rfc" data="rfc7731"/>
     </record>
+    <record date="2018-01-25">
+      <value>160</value>
+      <name>Extended Echo Request</name>
+      <xref type="rfc" data="rfc8335"/>
+    </record>
+    <record date="2018-01-25">
+      <value>161</value>
+      <name>Extended Echo Reply</name>
+      <xref type="rfc" data="rfc8335"/>
+    </record>
     <record>
-      <value>160-199</value>
+      <value>162-199</value>
       <name>Unassigned</name>
     </record>
     <record>
@@ -247,13 +261,15 @@ messages</name>
   <registry id="icmpv6-parameters-3">
     <title>ICMPv6 "Code" Fields</title>
     <xref type="rfc" data="rfc4443"/>
-    <registration_rule>Standards Action or IESG Approval</registration_rule>
+    
     <registry id="icmpv6-parameters-codes-1">
       <title>Type 0 - Reserved</title>
     </registry>
+    
     <registry id="icmpv6-parameters-codes-2">
       <title>Type 1 - Destination Unreachable</title>
       <xref type="rfc" data="rfc4443"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
         <name>no route to destination</name>
@@ -296,6 +312,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-3">
       <title>Type 2 - Packet Too Big</title>
       <xref type="rfc" data="rfc4443"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -304,6 +321,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-4">
       <title>Type 3 - Time Exceeded</title>
       <xref type="rfc" data="rfc4443"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
         <name>hop limit exceeded in transit</name>
@@ -317,6 +335,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-5">
       <title>Type 4 - Parameter Problem</title>
       <xref type="rfc" data="rfc4443"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
         <name>erroneous header field encountered</name>
@@ -335,10 +354,11 @@ messages</name>
         <xref type="rfc" data="rfc7112"/>
       </record>
     </registry>
-    
+      
     <registry id="icmpv6-parameters-codes-6">
       <title>Type 128 - Echo Request</title>
       <xref type="rfc" data="rfc4443"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -347,6 +367,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-7">
       <title>Type 129 - Echo Reply</title>
       <xref type="rfc" data="rfc4443"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -355,6 +376,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-8">
       <title>Type 130 - Multicast Listener Query</title>
       <xref type="rfc" data="rfc2710"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -363,6 +385,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-9">
       <title>Type 131 - Multicast Listener Report</title>
       <xref type="rfc" data="rfc2710"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -371,6 +394,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-10">
       <title>Type 132 - Multicast Listener Done</title>
       <xref type="rfc" data="rfc2710"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -379,6 +403,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-11">
       <title>Type 133 - Router Solicitation</title>
       <xref type="rfc" data="rfc4861"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -387,6 +412,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-12">
       <title>Type 134 - Router Advertisement</title>
       <xref type="rfc" data="rfc4861"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -395,6 +421,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-13">
       <title>Type 135 - Neighbor Solicitation</title>
       <xref type="rfc" data="rfc4861"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -403,6 +430,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-14">
       <title>Type 136 - Neighbor Advertisement</title>
       <xref type="rfc" data="rfc4861"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -411,6 +439,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-15">
       <title>Type 137 - Redirect Message</title>
       <xref type="rfc" data="rfc4861"/>
+      <registration_rule>Standards Action or IESG Approval</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -418,7 +447,8 @@ messages</name>
     
     <registry id="icmpv6-parameters-codes-16">
       <title>Type 138 - Router Renumbering</title>
-      <xref type="person" data="Matt_Crawford"/>
+      <xref type="rfc" data="rfc2894"/>
+      <registration_rule>IETF Review</registration_rule>
       <record>
         <value>0</value>
         <name>Router Renumbering Command</name>
@@ -436,6 +466,8 @@ messages</name>
     <registry id="icmpv6-parameters-codes-17">
       <title>Type 139 - ICMP Node Information Query</title>
       <xref type="rfc" data="rfc4620"/>
+      <registration_rule>Specification Required</registration_rule>
+      <expert>Unassigned</expert>
       <record>
         <value>0</value>
         <name>The Data field contains an IPv6 address which is the Subject of this Query.</name>
@@ -456,6 +488,8 @@ messages</name>
     <registry id="icmpv6-parameters-codes-18">
       <title>Type 140 - ICMP Node Information Response</title>
       <xref type="rfc" data="rfc4620"/>
+      <registration_rule>Specification Required</registration_rule>
+      <expert>Unassigned</expert>
       <record>
         <value>0</value>
         <name>A successful reply.  The Reply Data field may or may not be empty.</name>
@@ -476,6 +510,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-19">
       <title>Type 141 - Inverse Neighbor Discovery</title>
       <xref type="rfc" data="rfc3122"/>
+      <registration_rule>Standards Action</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -484,6 +519,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-20">
       <title>Type 142 - Inverse Neighbor Discovery</title>
       <xref type="rfc" data="rfc3122"/>
+      <registration_rule>Standards Action</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -492,6 +528,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-21">
       <title>Type 144 - Home Agent Address Discovery</title>
       <xref type="rfc" data="rfc3775"/>
+      <registration_rule>Not Defined</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -500,6 +537,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-22">
       <title>Type 145 - Home Agent Address Discovery</title>
       <xref type="rfc" data="rfc3775"/>
+      <registration_rule>Not Defined</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -508,6 +546,7 @@ messages</name>
     <registry id="icmpv6-parameters-codes-23">
       <title>Type 146 - Mobile Prefix Solicitation</title>
       <xref type="rfc" data="rfc3775"/>
+      <registration_rule>Not Defined</registration_rule>
       <record>
         <value>0</value>
       </record>
@@ -516,6 +555,127 @@ messages</name>
     <registry id="icmpv6-parameters-codes-24">
       <title>Type 147 - Mobile Prefix Advertisement</title>
       <xref type="rfc" data="rfc3775"/>
+      <registration_rule>Not Defined</registration_rule>
+    </registry>
+    
+    <registry id="icmpv6-parameters-codes-type-157-code-suffix">
+      <title>Type 157 - Duplicate Address Request Code Suffix</title>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+      <registration_rule>IETF Review or IESG Approval</registration_rule>
+      <record date="2018-08-20">
+        <value>0</value>
+        <name><xref type="rfc" data="rfc6775"/> DAR message</name>
+        <xref type="rfc" data="rfc6775"/>
+      </record>
+      <record date="2018-08-20">
+        <value>1</value>
+        <name>EDAR message with 64-bit ROVR field</name>
+        <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+      </record>
+      <record date="2018-08-20">
+        <value>2</value>
+        <name>EDAR message with 128-bit ROVR field</name>
+        <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+      </record>
+      <record date="2018-08-20">
+        <value>3</value>
+        <name>EDAR message with 192-bit ROVR field</name>
+        <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+      </record>
+      <record date="2018-08-20">
+        <value>4</value>
+        <name>EDAR message with 256-bit ROVR field</name>
+        <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+      </record>
+      <record>
+        <value>5-15</value>
+        <name>Unassigned</name>
+      </record>
+    </registry>
+    
+    <registry id="icmpv6-parameters-codes-type-158-code-suffix">
+      <title>Type 158 - Duplicate Address Confirmation Code Suffix</title>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+      <registration_rule>IETF Review or IESG Approval</registration_rule>
+      <record date="2018-08-20">
+        <value>0</value>
+        <name><xref type="rfc" data="rfc6775"/> DAC message</name>
+        <xref type="rfc" data="rfc6775"/>
+      </record>
+      <record date="2018-08-20">
+        <value>1</value>
+        <name>EDAC message with 64-bit ROVR field</name>
+        <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+      </record>
+      <record date="2018-08-20">
+        <value>2</value>
+        <name>EDAC message with 128-bit ROVR field</name>
+        <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+      </record>
+      <record date="2018-08-20">
+        <value>3</value>
+        <name>EDAC message with 192-bit ROVR field</name>
+        <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+      </record>
+      <record date="2018-08-20">
+        <value>4</value>
+        <name>EDAC message with 256-bit ROVR field</name>
+        <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+      </record>
+      <record>
+        <value>5-15</value>
+        <name>Unassigned</name>
+      </record>
+    </registry>
+    
+    <registry id="icmpv6-parameters-codes-type-160">
+      <title>Type 160 - Extended Echo Request</title>
+      <xref type="rfc" data="rfc8335"/>
+      <registration_rule>First Come First Served</registration_rule>
+      <record date="2018-01-25">
+        <value>0</value>
+        <name>No Error</name>
+        <xref type="rfc" data="rfc8335"/>
+      </record>
+      <record>
+        <value>1-255</value>
+        <name>Unassigned</name>
+      </record>
+    </registry>
+    
+    <registry id="icmpv6-parameters-codes-type-161">
+      <title>Type 161 - Extended Echo Reply</title>
+      <xref type="rfc" data="rfc8335"/>
+      <registration_rule>First Come First Served</registration_rule>
+      <record date="2018-01-25">
+        <value>0</value>
+        <name>No Error</name>
+        <xref type="rfc" data="rfc8335"/>
+      </record>
+      <record date="2018-01-25">
+        <value>1</value>
+        <name>Malformed Query</name>
+        <xref type="rfc" data="rfc8335"/>
+      </record>
+      <record date="2018-01-25">
+        <value>2</value>
+        <name>No Such Interface</name>
+        <xref type="rfc" data="rfc8335"/>
+      </record>
+      <record date="2018-01-25">
+        <value>3</value>
+        <name>No Such Table Entry</name>
+        <xref type="rfc" data="rfc8335"/>
+      </record>
+      <record date="2018-01-25">
+        <value>4</value>
+        <name>Multiple Interfaces Satisfy Query</name>
+        <xref type="rfc" data="rfc8335"/>
+      </record>
+      <record>
+        <value>5-255</value>
+        <name>Unassigned</name>
+      </record>
     </registry>
     
   </registry>
@@ -565,7 +725,11 @@ messages</name>
   <registry id="icmpv6-parameters-5">
     <title>IPv6 Neighbor Discovery Option Formats</title>
     <xref type="rfc" data="rfc4861"/>
-    <registration_rule>IETF RFC publication</registration_rule>
+    <registration_rule>RFC Required</registration_rule>
+    <note>IETF working groups with working group consensus and area director approval 
+can request reclaimable Neighbor Discovery option type assignments from IANA. 
+See Section 13 of <xref type="rfc" data="rfc4861"/>.
+    </note>
     <record>
       <value>1</value>
       <description>Source Link-layer Address</description>
@@ -667,8 +831,13 @@ messages</name>
 Option</description>
       <xref type="rfc" data="rfc5568"/>
     </record>
+    <record date="2018-03-09">
+      <value>21</value>
+      <description>PvD ID Router Advertisement Option (reclaimable in future)</description>
+      <xref type="draft" data="draft-ietf-intarea-provisioning-domains"/>
+    </record>
     <record>
-      <value>21-22</value>
+      <value>22</value>
       <description>Unassigned</description>
     </record>
     <record>
@@ -1015,14 +1184,54 @@ Option</description>
       <description>Neighbor Cache Full</description>
       <xref type="rfc" data="rfc6775"/>
     </record>
+    <record date="2018-08-20">
+      <value>3</value>
+      <description>Moved</description>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+    <record date="2018-08-20">
+      <value>4</value>
+      <description>Removed</description>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+    <record date="2018-08-20">
+      <value>5</value>
+      <description>Validation Requested</description>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+    <record date="2018-08-20">
+      <value>6</value>
+      <description>Duplicate Source Address</description>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+    <record date="2018-08-20">
+      <value>7</value>
+      <description>Invalid Source Address</description>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+    <record date="2018-08-20">
+      <value>8</value>
+      <description>Registered Address topologically incorrect</description>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+    <record date="2018-08-20">
+      <value>9</value>
+      <description>6LBR Registry saturated</description>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+    <record date="2018-08-20">
+      <value>10</value>
+      <description>Validation Failed</description>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
     <record>
-      <value>3-255</value>
+      <value>11-255</value>
       <description>Unassigned</description>
     </record>
   </registry>
   
   <registry id="sixlowpan-capability-bits">
-    <title>6LoWPAN capability Bits</title>
+    <title>6LoWPAN Capability Bits</title>
     <xref type="rfc" data="rfc7400"/>
     <registration_rule>IETF Review or IESG Approval</registration_rule>
     <record>
@@ -1031,8 +1240,33 @@ Option</description>
       <xref type="rfc" data="rfc7400"/>
     </record>
     <record>
-      <value>8-14</value>
+      <value>8-9</value>
       <description>Unassigned</description>
+    </record>
+    <record date="2018-08-20">
+      <value>10</value>
+      <description>EDA  Support (D bit)</description>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+    <record date="2018-08-20">
+      <value>11</value>
+      <description>6LR  capable (L bit)</description>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+    <record date="2018-08-20">
+      <value>12</value>
+      <description>6LBR capable (B bit)</description>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+    <record date="2018-08-20">
+      <value>13</value>
+      <description>Routing Registrar (P bit)</description>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+    <record date="2018-08-20">
+      <value>14</value>
+      <description>EARO support (E bit)</description>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
     </record>
     <record>
       <value>15</value>
@@ -1045,11 +1279,65 @@ Option</description>
     </record>
   </registry>
   
-  <people>
-    <person id="Matt_Crawford">
-      <name>Matt Crawford</name>
-      <uri>mailto:crawdad&amp;gungnir.fnal.gov</uri>
-      <updated>1999-04</updated>
-    </person>
-  </people>
+  <registry id="ipv6-neighbor-discovery-prefix-information-options">
+    <title>IPv6 Neighbor Discovery Prefix Information Option Flags</title>
+    <xref type="rfc" data="rfc8425"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record date="2018-05-22">
+      <value>0</value>
+      <description>L - On-link Flag</description>
+      <xref type="rfc" data="rfc4861"/>
+    </record>
+    <record date="2018-05-22">
+      <value>1</value>
+      <description>A - Autonomous Address Configuration Flag</description>
+      <xref type="rfc" data="rfc4861"/>
+    </record>
+    <record date="2018-05-22">
+      <value>2</value>
+      <description>R - Router Address Flag</description>
+      <xref type="rfc" data="rfc6275"/>
+    </record>
+    <record date="2018-05-22">
+      <value>3-7</value>
+      <description>Reserved</description>
+    </record>
+  </registry>
+  
+  <registry id="icmpv6-adress-registration-option-flags">
+    <title>Address Registration Option Flags</title>
+    <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    <registration_rule>IETF Review or IESG Approval</registration_rule>
+    <record>
+      <value>0-5</value>
+      <name>Unassigned</name>
+    </record>
+    <record date="2018-08-20">
+      <value>6</value>
+      <name>'R' Flag</name>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+    <record date="2018-08-20">
+      <value>7</value>
+      <name>'T' Flag</name>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+  </registry>
+  
+  <registry id="icmpv6-adress-registration-option-i-field">
+    <title>Address Registration Option I-Field</title>
+    <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    <registration_rule>IETF Review or IESG Approval</registration_rule>
+    <record date="2018-08-20">
+      <value>0</value>
+      <name>Abstract Index for Topology Selection</name>
+      <xref type="draft" data="RFC-ietf-6lo-rfc6775-update-21"/>
+    </record>
+    <record>
+      <value>1-3</value>
+      <name>Unassigned</name>
+    </record>
+  </registry>
+  
+  <people/>
 </registry>

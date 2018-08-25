@@ -1,7 +1,7 @@
                                      Structure of Management Information (SMI) Numbers (MIB Module Registrations)
 
    Last Updated
-           2017-12-15
+           2018-08-15
 
    Note
 
@@ -206,6 +206,7 @@
 
      * SMI Features
      * SMI Network Management Private Enterprise Codes (PEN)
+     * SMI Security for Cryptographic Algorithms
 
 SMI Network Management Directory Codes
 
@@ -887,6 +888,10 @@ Decimal             Name                           Description                  
   288   docsCableNdr                  Cable Narrowband Digital Return       [http://www.cablelabs.com/wp-content/uploads/specdocs/CM-SP-R-OOB-I04-160923.pdf][Brian_Hedstrom]
   289   ptm                           Packet Transfer Mode                  [ITU-T G.993.1, Annex H][ITU-T G.993.2][ITU-T G.9701][William_Lupton]
   290   ghn                           G.hn port                             [ITU-T G.9961][William_Lupton]
+  291   otnOtsi                       Optical Tributary Signal              [ITU-T G.959.1][Koteswara_Boyapati]
+  292   otnOtuc                       OTN OTUCn                             [ITU-T G.709/Y.1331][Koteswara_Boyapati]
+  293   otnOduc                       OTN ODUC                              [ITU-T G.709][Koteswara_Boyapati]
+  294   otnOtsig                      OTN OTUC Signal                       [ITU-T G.709][Koteswara_Boyapati]
 
   Internet-standard MIB - mib-2.interface.ifTable.ifEntry.ifType.tunnelType
 
@@ -1053,6 +1058,10 @@ Internet-standard MIB - Transmission Group
      275   VPLS-LDP-MIB     VPLS-LDP-MIB                          [RFC7257]
      276   VPLS-BGP-MIB MIB VPLS-BGP-MIB                          [RFC7257]
    277-290 Reserved         Reserved
+     291   otnOtsi          Optical Tributary Signal              [ITU-T G.959.1][Koteswara_Boyapati]
+     292   otnOtuc          OTN OTUCn                             [ITU-T G.709/Y.1331][Koteswara_Boyapati]
+     293   otnOduc          OTN ODUC                              [ITU-T G.709][Koteswara_Boyapati]
+     294   otnOtsig         OTN OTUC Signal                       [ITU-T G.709][Koteswara_Boyapati]
 
   MIB Transmission Group - Point-to-Point Protocol
 
@@ -1790,7 +1799,7 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal              Description                              References
+   Decimal              Description                          References
       1    id-mod-cms                             [RFC2630]
       2    id-mod-ess                             [RFC2634]
       3    id-mod-oid                             [Reserved and Obsolete]
@@ -1857,7 +1866,7 @@ SMI Security Codes
      64    id-mod-mts-hashsig-2013                [draft-housley-cms-mts-hash-sig]
      65    mod-sMimeSecureHeadersV1               [RFC7508]
      66    id-mod-CMS-AEADChaCha20Poly1305        [RFC8103]
-     67    id-mod-cms-ecdh-alg-2017               [RFC-ietf-curdle-cms-ecdh-new-curves-09]
+     67    id-mod-cms-ecdh-alg-2017               [RFC8418]
 
   SMI Security for S/MIME CMS Content Type (1.2.840.113549.1.9.16.1)
 
@@ -1876,7 +1885,7 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal        Description                  References
+   Decimal        Description                References
       0    id-ct-anyContentType       [RFC6010]
       1    id-ct-receipt              [RFC2634]
       2    id-ct-authData             [RFC2630]
@@ -1914,7 +1923,11 @@ SMI Security Codes
      34    id-ct-trustAnchorList      [RFC5914]
      35    id-ct-rpkiGhostbusters     [RFC6493]
      36    id-ct-resourceTaggedAttest [Reserved and Obsolete]
-     37    id-ct-utf8TextWithCRLF     [draft-housley-id-sig-update]
+     37    id-ct-utf8TextWithCRLF     [RFC8358]
+     38    id-ct-htmlWithCRLF         [RFC8358]
+     39    id-ct-epub                 [RFC8358]
+     40    id-ct-animaJSONVoucher     [RFC8366]
+     41    id-ct-mudtype              [RFC-ietf-opsawg-mud-25]
 
   SMI Security for S/MIME Attributes (1.2.840.113549.1.9.16.2)
 
@@ -2015,7 +2028,7 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal              Description                             References
+   Decimal              Description                         References
       1    id-alg-ESDHwith3DES                   [Reserved and Obsolete]
       2    id-alg-ESDHwithRC2                    [Reserved and Obsolete]
       3    id-alg-3DESwrap                       [Reserved and Obsolete]
@@ -2034,9 +2047,9 @@ SMI Security Codes
      16    id-alg-authEnc-256                    [RFC6476]
      17    id-alg-mts-hashsig                    [draft-housley-cms-mts-hash-sig]
      18    id-alg-AEADChaCha20Poly1305           [RFC8103]
-     19    dhSinglePass-stdDH-hkdf-sha256-scheme [RFC-ietf-curdle-cms-ecdh-new-curves-09]
-     20    dhSinglePass-stdDH-hkdf-sha384-scheme [RFC-ietf-curdle-cms-ecdh-new-curves-09]
-     21    dhSinglePass-stdDH-hkdf-sha512-scheme [RFC-ietf-curdle-cms-ecdh-new-curves-09]
+     19    dhSinglePass-stdDH-hkdf-sha256-scheme [RFC8418]
+     20    dhSinglePass-stdDH-hkdf-sha384-scheme [RFC8418]
+     21    dhSinglePass-stdDH-hkdf-sha512-scheme [RFC8418]
 
   SMI Security for S/MIME Certificate Distribution Mechanisms (1.2.840.113549.1.9.16.4)
 
@@ -2392,97 +2405,100 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal                                               Description                                                          References
-      1    id-pkix1-explicit-88                                                                                     [RFC2459]
-      2    id-pkix1-implicit-88                                                                                     [RFC2459]
-      3    id-pkix1-explicit-93                                                                                     [RFC2459]
-      4    id-pkix1-implicit-93                                                                                     [RFC2459]
-      5    id-mod-crmf                                                                                              [RFC2511]
-      6    id-mod-cmc                                                                                               [RFC2797]
-      7    id-mod-kea-profile-88                                                                                    [RFC2528]
-      8    id-mod-kea-profile-93                                                                                    [RFC2528]
-      9    id-mod-cmp                                                                                               [RFC2510]
-     10    id-mod-qualified-cert-88                                                                                 [RFC3039]
-     11    id-mod-qualified-cert-93                                                                                 [RFC3039]
-     12    id-mod-attribute-cert                                                                                    [RFC3281]
-     13    id-mod-tsp                                                                                               [RFC3161]
-     14    id-mod-ocsp                                                                                              [RFC3029]
-     15    id-mod-dvcs                                                                                              [RFC3029]
-     16    id-mod-cmp2000                                                                                           [RFC4210]
-     17    id-mod-pkix1-algorithms                                                                                  [RFC3279]
-     18    id-mod-pkix1-explicit                                                                                    [RFC3280]
-     19    id-mod-pkix1-implicit                                                                                    [RFC3280]
-     20    id-mod-user-group                                                                                        [Reserved and Obsolete]
-     21    id-mod-scvp                                                                                              [RFC5055]
-     22    id-mod-logotype                                                                                          [RFC3709]
-     23    id-mod-cmc2002                                                                                           [RFC5272]
-     24    id-mod-wlan-extns                                                                                        [RFC3770]
-     25    id-mod-proxy-cert-extns                                                                                  [RFC3820]
-     26    id-mod-ac-policies                                                                                       [RFC4476]
-     27    id-mod-warranty-extn                                                                                     [RFC4059]
-     28    id-mod-perm-id-88                                                                                        [RFC4043]
-     29    id-mod-perm-id-93                                                                                        [RFC4043]
-     30    id-mod-ip-addr-and-as-ident                                                                              [RFC3779]
-     31    id-mod-qualified-cert                                                                                    [RFC3739]
-     32    id-mod-crmf2003                                                                                          [Reserved and Obsolete]
-     33    id-mod-pkix1-rsa-pkalgs                                                                                  [RFC4055]
-     34    id-mod-cert-bundle                                                                                       [RFC4306]
-     35    id-mod-qualified-cert-97                                                                                 [RFC3739]
-     36    id-mod-crmf2005                                                                                          [RFC4210]
-     37    id-mod-wlan-extns2005                                                                                    [RFC4334]
-     38    id-mod-sim2005                                                                                           [RFC4683]
-     39    id-mod-dns-srv-name-88                                                                                   [RFC4985]
-     40    id-mod-dns-srv-name-93                                                                                   [RFC4985]
-     41    id-mod-cmsContentConstr-88                                                                               [RFC6010]
-     42    id-mod-cmsContentConstr-93                                                                               [RFC6010]
-     43    id-mod-pkixCommon                                                                                        [Reserved and Obsolete]
-     44    id-mod-pkixOtherCerts                                                                                    [RFC5697]
-     45    id-mod-pkix1-algorithms2008                                                                              [RFC5480]
-     46    id-mod-clearanceConstraints                                                                              [RFC5913]
-     47    id-mod-attribute-cert-02                                                                                 [RFC5912]
-     48    id-mod-ocsp-02                                                                                           [RFC5912]
-     49    id-mod-v1AttrCert-02                                                                                     [RFC5912]
-     50    id-mod-cmp2000-02                                                                                        [RFC5912]
-     51    id-mod-pkix1-explicit-02                                                                                 [RFC5912]
-     52    id-mod-scvp-02                                                                                           [RFC5912]
-     53    id-mod-cmc2002-02                                                                                        [RFC5912]
-     54    id-mod-pkix1-rsa-pkalgs-02                                                                               [RFC5912]
-     55    id-mod-crmf2005-02                                                                                       [RFC5912]
-     56    id-mod-pkix1-algorithms2008-02                                                                           [RFC5912]
-     57    id-mod-pkixCommon-02                                                                                     [RFC5912]
-     58    id-mod-algorithmInformation-02                                                                           [RFC5912]
-     59    id-mod-pkix1-implicit-02                                                                                 [RFC5912]
-     60    id-mod-pkix1-x400address-02                                                                              [RFC5912]
-     61    id-mod-attribute-cert-v2                                                                                 [RFC5755]
-     62    id-mod-sip-domain-extns2007                                                                              [RFC5924]
-     63    id-mod-cms-otherRIs-2009-88                                                                              [RFC5940]
-     64    id-mod-cms-otherRIs-2009-93                                                                              [RFC5940]
-     65    id-mod-ecprivatekey                                                                                      [RFC5915]
-     66    id-mod-ocsp-agility-2009-93                                                                              [RFC6277]
-     67    id-mod-ocsp-agility-2009-88                                                                              [RFC6277]
-     68    id-mod-logotype-certimage                                                                                [RFC6170]
-     69    id-mod-pkcs10-2009                                                                                       [RFC5912]
-     70    id-mod-dns-resource-record                                                                               [RFC7958]
-     71    id-mod-send-cert-extns                                                                                   [RFC6494]
-     72    id-mod-ip-addr-and-as-ident-2                                                                            [RFC6268]
-     73    id-mod-wlan-extns-2                                                                                      [RFC6268]
-     74    id-mod-hmac                                                                                              [RFC6268]
-     75    id-mod-enrollMsgSyntax-2011-88                                                                           [RFC6402][RFC Errata 3860]
-     76    id-mod-enrollMsgSyntax-2011-08                                                                           [RFC6402]
-     77    id-mod-pubKeySMIMECaps-88                                                                                [RFC6664]
-     78    id-mod-pubKeySMIMECaps-08                                                                                [RFC6664]
-     79    id-mod-dhSign-2012-88                                                                                    [RFC6955]
-     80    id-mod-dhSign-2012-08                                                                                    [RFC6955]
-     81    id-mod-ocsp-2013-88                                                                                      [RFC6960]
-     82    id-mod-ocsp-2013-08                                                                                      [RFC6960]
-     83    id-mod-TEST-certPolicies                                                                                 [RFC7229]
-     84    id-mod-bgpsec-eku                                                                                        [RFC8209]
-     85    id-mod-nai-realm-08                                                                                      [RFC7585]
-     86    id-mod-tls-feature-2015                                                                                  [RFC7633]
-     87    id-mod-EST-Alt-Challenge                                                                                 [RFC7894]
-     88    id-mod-mudURLExtn2016 (TEMPORARY - registered 2016-12-06, extension registered 2017-10-02, expires       [draft-ietf-opsawg-mud]
-           2018-12-06)
-     89    id-mod-tn-module                                                                                         [RFC-ietf-stir-certificates-17]
+   Decimal           Description                   References
+      1    id-pkix1-explicit-88            [RFC2459]
+      2    id-pkix1-implicit-88            [RFC2459]
+      3    id-pkix1-explicit-93            [RFC2459]
+      4    id-pkix1-implicit-93            [RFC2459]
+      5    id-mod-crmf                     [RFC2511]
+      6    id-mod-cmc                      [RFC2797]
+      7    id-mod-kea-profile-88           [RFC2528]
+      8    id-mod-kea-profile-93           [RFC2528]
+      9    id-mod-cmp                      [RFC2510]
+     10    id-mod-qualified-cert-88        [RFC3039]
+     11    id-mod-qualified-cert-93        [RFC3039]
+     12    id-mod-attribute-cert           [RFC3281]
+     13    id-mod-tsp                      [RFC3161]
+     14    id-mod-ocsp                     [RFC3029]
+     15    id-mod-dvcs                     [RFC3029]
+     16    id-mod-cmp2000                  [RFC4210]
+     17    id-mod-pkix1-algorithms         [RFC3279]
+     18    id-mod-pkix1-explicit           [RFC3280]
+     19    id-mod-pkix1-implicit           [RFC3280]
+     20    id-mod-user-group               [Reserved and Obsolete]
+     21    id-mod-scvp                     [RFC5055]
+     22    id-mod-logotype                 [RFC3709]
+     23    id-mod-cmc2002                  [RFC5272]
+     24    id-mod-wlan-extns               [RFC3770]
+     25    id-mod-proxy-cert-extns         [RFC3820]
+     26    id-mod-ac-policies              [RFC4476]
+     27    id-mod-warranty-extn            [RFC4059]
+     28    id-mod-perm-id-88               [RFC4043]
+     29    id-mod-perm-id-93               [RFC4043]
+     30    id-mod-ip-addr-and-as-ident     [RFC3779]
+     31    id-mod-qualified-cert           [RFC3739]
+     32    id-mod-crmf2003                 [Reserved and Obsolete]
+     33    id-mod-pkix1-rsa-pkalgs         [RFC4055]
+     34    id-mod-cert-bundle              [RFC4306]
+     35    id-mod-qualified-cert-97        [RFC3739]
+     36    id-mod-crmf2005                 [RFC4210]
+     37    id-mod-wlan-extns2005           [RFC4334]
+     38    id-mod-sim2005                  [RFC4683]
+     39    id-mod-dns-srv-name-88          [RFC4985]
+     40    id-mod-dns-srv-name-93          [RFC4985]
+     41    id-mod-cmsContentConstr-88      [RFC6010]
+     42    id-mod-cmsContentConstr-93      [RFC6010]
+     43    id-mod-pkixCommon               [Reserved and Obsolete]
+     44    id-mod-pkixOtherCerts           [RFC5697]
+     45    id-mod-pkix1-algorithms2008     [RFC5480]
+     46    id-mod-clearanceConstraints     [RFC5913]
+     47    id-mod-attribute-cert-02        [RFC5912]
+     48    id-mod-ocsp-02                  [RFC5912]
+     49    id-mod-v1AttrCert-02            [RFC5912]
+     50    id-mod-cmp2000-02               [RFC5912]
+     51    id-mod-pkix1-explicit-02        [RFC5912]
+     52    id-mod-scvp-02                  [RFC5912]
+     53    id-mod-cmc2002-02               [RFC5912]
+     54    id-mod-pkix1-rsa-pkalgs-02      [RFC5912]
+     55    id-mod-crmf2005-02              [RFC5912]
+     56    id-mod-pkix1-algorithms2008-02  [RFC5912]
+     57    id-mod-pkixCommon-02            [RFC5912]
+     58    id-mod-algorithmInformation-02  [RFC5912]
+     59    id-mod-pkix1-implicit-02        [RFC5912]
+     60    id-mod-pkix1-x400address-02     [RFC5912]
+     61    id-mod-attribute-cert-v2        [RFC5755]
+     62    id-mod-sip-domain-extns2007     [RFC5924]
+     63    id-mod-cms-otherRIs-2009-88     [RFC5940]
+     64    id-mod-cms-otherRIs-2009-93     [RFC5940]
+     65    id-mod-ecprivatekey             [RFC5915]
+     66    id-mod-ocsp-agility-2009-93     [RFC6277]
+     67    id-mod-ocsp-agility-2009-88     [RFC6277]
+     68    id-mod-logotype-certimage       [RFC6170]
+     69    id-mod-pkcs10-2009              [RFC5912]
+     70    id-mod-dns-resource-record      [RFC7958]
+     71    id-mod-send-cert-extns          [RFC6494]
+     72    id-mod-ip-addr-and-as-ident-2   [RFC6268]
+     73    id-mod-wlan-extns-2             [RFC6268]
+     74    id-mod-hmac                     [RFC6268]
+     75    id-mod-enrollMsgSyntax-2011-88  [RFC6402][RFC Errata 3860]
+     76    id-mod-enrollMsgSyntax-2011-08  [RFC6402]
+     77    id-mod-pubKeySMIMECaps-88       [RFC6664]
+     78    id-mod-pubKeySMIMECaps-08       [RFC6664]
+     79    id-mod-dhSign-2012-88           [RFC6955]
+     80    id-mod-dhSign-2012-08           [RFC6955]
+     81    id-mod-ocsp-2013-88             [RFC6960]
+     82    id-mod-ocsp-2013-08             [RFC6960]
+     83    id-mod-TEST-certPolicies        [RFC7229]
+     84    id-mod-bgpsec-eku               [RFC8209]
+     85    id-mod-nai-realm-08             [RFC7585]
+     86    id-mod-tls-feature-2015         [RFC7633]
+     87    id-mod-EST-Alt-Challenge        [RFC7894]
+     88    id-mod-mudURLExtn2016           [RFC-ietf-opsawg-mud-25]
+     89    id-mod-tn-module                [RFC8226]
+     90    id-mod-ip-addr-and-as-ident-v2  [RFC8360]
+     91    id-mod-ip-addr-and-as-ident-2v2 [RFC8360]
+     92    id-mod-lamps-eai-addresses-2016 [RFC8398]
+     93    id-mod-safecurves-pkix          [RFC8410]
 
   SMI Security for PKIX Certificate Extension
 
@@ -2505,34 +2521,38 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal                                              Description                                                         References
-      1    id-pe-authorityInfoAccess                                                                              [RFC2459]
-      2    id-pe-biometricInfo                                                                                    [RFC3039]
-      3    id-pe-qcStatements                                                                                     [RFC3039]
-      4    id-pe-ac-auditIdentity                                                                                 [RFC3281]
-      5    id-pe-ac-targeting                                                                                     [Reserved and Obsolete]
-      6    id-pe-aaControls                                                                                       [RFC3281]
-      7    id-pe-ipAddrBlocks                                                                                     [RFC3779]
-      8    id-pe-autonomousSysIds                                                                                 [RFC3779]
-      9    id-pe-sbgp-routerIdentifier                                                                            [Reserved and Obsolete]
-     10    id-pe-ac-proxying                                                                                      [RFC3281]
-     11    id-pe-subjectInfoAccess                                                                                [RFC3280]
-     12    id-pe-logotype                                                                                         [RFC3709]
-     13    id-pe-wlanSSID                                                                                         [RFC4334]
-     14    id-pe-proxyCertInfo                                                                                    [RFC3820]
-     15    id-pe-acPolicies                                                                                       [RFC4476]
-     16    id-pe-warranty                                                                                         [RFC4059]
-     17    id-pe-sim                                                                                              [Reserved and Obsolete]
-     18    id-pe-cmsContentConstraints                                                                            [RFC6010]
-     19    id-pe-otherCerts                                                                                       [RFC5697]
-     20    id-pe-wrappedApexContinKey                                                                             [RFC5934]
-     21    id-pe-clearanceConstraints                                                                             [RFC5913]
-     22    id-pe-skiSemantics                                                                                     [Reserved and Obsolete]
-     23    id-pe-nsa                                                                                              [RFC7169]
-     24    id-pe-tlsfeature                                                                                       [RFC7633]
-     25    id-pe-mud-url (TEMPORARY - registered 2016-12-06, extension registered 2017-10-02, expires 2018-12-06) [draft-ietf-opsawg-mud]
-     26    id-pe-TNAuthList                                                                                       [RFC-ietf-stir-certificates-17]
-     27    id-pe-JWTClaimConstraints                                                                              [RFC-ietf-stir-certificates-17]
+   Decimal         Description                 References
+      1    id-pe-authorityInfoAccess   [RFC2459]
+      2    id-pe-biometricInfo         [RFC3039]
+      3    id-pe-qcStatements          [RFC3039]
+      4    id-pe-ac-auditIdentity      [RFC3281]
+      5    id-pe-ac-targeting          [Reserved and Obsolete]
+      6    id-pe-aaControls            [RFC3281]
+      7    id-pe-ipAddrBlocks          [RFC3779]
+      8    id-pe-autonomousSysIds      [RFC3779]
+      9    id-pe-sbgp-routerIdentifier [Reserved and Obsolete]
+     10    id-pe-ac-proxying           [RFC3281]
+     11    id-pe-subjectInfoAccess     [RFC3280]
+     12    id-pe-logotype              [RFC3709]
+     13    id-pe-wlanSSID              [RFC4334]
+     14    id-pe-proxyCertInfo         [RFC3820]
+     15    id-pe-acPolicies            [RFC4476]
+     16    id-pe-warranty              [RFC4059]
+     17    id-pe-sim                   [Reserved and Obsolete]
+     18    id-pe-cmsContentConstraints [RFC6010]
+     19    id-pe-otherCerts            [RFC5697]
+     20    id-pe-wrappedApexContinKey  [RFC5934]
+     21    id-pe-clearanceConstraints  [RFC5913]
+     22    id-pe-skiSemantics          [Reserved and Obsolete]
+     23    id-pe-nsa                   [RFC7169]
+     24    id-pe-tlsfeature            [RFC7633]
+     25    id-pe-mud-url               [RFC-ietf-opsawg-mud-25]
+     26    id-pe-TNAuthList            [RFC8226]
+     27    id-pe-JWTClaimConstraints   [RFC8226]
+     28    id-pe-ipAddrBlocks-v2       [RFC8360]
+     29    id-pe-autonomousSysIds-v2   [RFC8360]
+     30    id-pe-mudsigner             [RFC-ietf-opsawg-mud-25]
+     31    id-pe-acmeIdentifier        [draft-ietf-acme-tls-alpn]
 
   SMI Security for PKIX Policy Qualifier
 
@@ -2583,37 +2603,38 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal        Description               References
-      1    id-kp-serverAuth           [RFC2459]
-      2    id-kp-clientAuth           [RFC2459]
-      3    id-kp-codeSigning          [RFC2459]
-      4    id-kp-emailProtection      [RFC2459]
-      5    id-kp-ipsecEndSystem       [Reserved and Obsolete]
-      6    id-kp-ipsecTunnel          [Reserved and Obsolete]
-      7    id-kp-ipsecUser            [Reserved and Obsolete]
-      8    id-kp-timeStamping         [RFC2459]
-      9    id-kp-OCSPSigning          [RFC2560]
-     10    id-kp-dvcs                 [RFC3029]
-     11    id-kp-sbgpCertAAServerAuth [Reserved and Obsolete]
-     12    id-kp-scvp-responder       [Reserved and Obsolete]
-     13    id-kp-eapOverPPP           [RFC4334]
-     14    id-kp-eapOverLAN           [RFC4334]
-     15    id-kp-scvpServer           [RFC5055]
-     16    id-kp-scvpClient           [RFC5055]
-     17    id-kp-ipsecIKE             [RFC4945]
-     18    id-kp-capwapAC             [RFC5415]
-     19    id-kp-capwapWTP            [RFC5415]
-     20    id-kp-sipDomain            [RFC5924]
-     21    id-kp-secureShellClient    [RFC6187]
-     22    id-kp-secureShellServer    [RFC6187]
-     23    id-kp-sendRouter           [RFC6494]
-     24    id-kp-sendProxiedRouter    [RFC6494]
-     25    id-kp-sendOwner            [RFC6494]
-     26    id-kp-sendProxiedOwner     [RFC6494]
-     27    id-kp-cmcCA                [RFC6402]
-     28    id-kp-cmcRA                [RFC6402]
-     29    id-kp-cmcArchive           [RFC6402]
-     30    id-kp-bgpsec-router        [RFC8209]
+   Decimal                 Description                            References
+      1    id-kp-serverAuth                             [RFC2459]
+      2    id-kp-clientAuth                             [RFC2459]
+      3    id-kp-codeSigning                            [RFC2459]
+      4    id-kp-emailProtection                        [RFC2459]
+      5    id-kp-ipsecEndSystem                         [Reserved and Obsolete]
+      6    id-kp-ipsecTunnel                            [Reserved and Obsolete]
+      7    id-kp-ipsecUser                              [Reserved and Obsolete]
+      8    id-kp-timeStamping                           [RFC2459]
+      9    id-kp-OCSPSigning                            [RFC2560]
+     10    id-kp-dvcs                                   [RFC3029]
+     11    id-kp-sbgpCertAAServerAuth                   [Reserved and Obsolete]
+     12    id-kp-scvp-responder                         [Reserved and Obsolete]
+     13    id-kp-eapOverPPP                             [RFC4334]
+     14    id-kp-eapOverLAN                             [RFC4334]
+     15    id-kp-scvpServer                             [RFC5055]
+     16    id-kp-scvpClient                             [RFC5055]
+     17    id-kp-ipsecIKE                               [RFC4945]
+     18    id-kp-capwapAC                               [RFC5415]
+     19    id-kp-capwapWTP                              [RFC5415]
+     20    id-kp-sipDomain                              [RFC5924]
+     21    id-kp-secureShellClient                      [RFC6187]
+     22    id-kp-secureShellServer                      [RFC6187]
+     23    id-kp-sendRouter                             [RFC6494]
+     24    id-kp-sendProxiedRouter                      [RFC6494]
+     25    id-kp-sendOwner                              [RFC6494]
+     26    id-kp-sendProxiedOwner                       [RFC6494]
+     27    id-kp-cmcCA                                  [RFC6402]
+     28    id-kp-cmcRA                                  [RFC6402]
+     29    id-kp-cmcArchive                             [RFC6402]
+     30    id-kp-bgpsec-router                          [RFC8209]
+     31    id-kp-BrandIndicatorforMessageIdentification [draft-chuang-bimi-certificate]
 
   SMI Security for PKIX CMP Information Types
 
@@ -2895,7 +2916,7 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal        Description                   References
+   Decimal        Description              References
       1    id-on-personalData        [Reserved and Obsolete]
       2    id-on-userGroup           [Reserved and Obsolete]
       3    id-on-permanentIdentifier [RFC4043]
@@ -2904,7 +2925,7 @@ SMI Security Codes
       6    id-on-SIM                 [RFC4683]
       7    id-on-dnsSRV              [RFC4985]
       8    id-on-naiRealm            [RFC7585]
-      9    id-on-smtputf8Name        [draft-ietf-lamps-eai-addresses]
+      9    id-on-SmtpUTF8Mailbox     [RFC8398]
 
   SMI Security for PKIX Personal Data Attributes
 
@@ -3077,6 +3098,7 @@ SMI Security Codes
    Decimal         Description               References
       1    id-cp-sbgpCertificatePolicy [Reserved and Obsolete]
       2    id-cp-ipAddr-asNumber       [RFC6484]
+      3    id-cp-ipAddr-asNumber-v2    [RFC8360]
 
   SMI Security for PKIX CMC Error Types
 
@@ -3454,7 +3476,7 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal         Description                    References
+   Decimal         Description                References
       1    id-ad-ocsp                   [RFC2459]
       2    id-ad-caIssuers              [RFC2459]
       3    id-ad-timestamping           [RFC3161]
@@ -3468,7 +3490,7 @@ SMI Security Codes
      11    id-ad-signedObject           [RFC6487]
      12    id-ad-cmc                    [RFC6402]
      13    id-ad-rpkiNotify             [RFC8182]
-     14    id-ad-stirTNList             [RFC-ietf-stir-certificates-17]
+     14    id-ad-stirTNList             [RFC8226]
 
   SMI Security for PKIX Online Certificate Status Protocol (OCSP)
 
@@ -4571,6 +4593,40 @@ SMI Network Management Private Enterprise Codes (PEN)
 
    Registry is empty.
 
+SMI Security for Cryptographic Algorithms
+
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Unassigned
+
+   Description
+
+ iso.org.thawte (1.3.101)
+
+   Reference
+           [RFC8411]
+
+   Available Formats
+           [IMG]
+           CSV
+
+    Decimal            Description                  References
+   0-99       Retained by DigiCert          [RFC8411]
+   100        Reserved for child reg        [RFC8411]
+   101-109    Unassigned
+   110        id-X25519                     [RFC8410]
+   111        id-X448                       [RFC8410]
+   112        id-EdDSA25519                 [RFC8410]
+   113        id-EdDSA448                   [RFC8410]
+   114        Reserved for id-EdDSA25519-ph [draft-ietf-curdle-pkix-03]
+   115        Reserved for id-EdDSA448-ph   [draft-ietf-curdle-pkix-03]
+   116-127    Unassigned
+   128 and up Retained by DigiCert          [RFC8411]
+
                                                                         People
 
              ID                          Name                                    Contact URI                    Last Updated
@@ -4681,6 +4737,7 @@ SMI Network Management Private Enterprise Codes (PEN)
    [Kenji_Fujisawa]       Kenji Fujisawa                      mailto:fujisawa&sm.sony.co.jp                     1998-09
    [Kevin_Baughman]       Kevin Baughman                      mailto:klb&eng.paradyne.com                       2000-12
    [Kevin_Lingle]         Kevin Lingle                        mailto:klingle&cisco.com                          1997-06
+   [Koteswara_Boyapati]   Koteswara Boyapati                  mailto:koteswara.boyapati&us.fujitsu.com          2018-06-11
    [Ladd_Wardani]         Ladd Wardani                        mailto:lwardani&entropic.com                      2006-07-25
    [Les_Bell]             Les Bell                            mailto:Les_Bell&eur.3com.com                      1999-10
    [Lizzie_Cheung]        Lizzie Cheung                       mailto:lcheungb&cisco.com                         2006-06-14

@@ -4,11 +4,12 @@
 <registry xmlns="http://www.iana.org/assignments" id="yang-parameters">
   <title>YANG Parameters</title>
   <created>2010-06-10</created>
-  <updated>2017-12-21</updated>
+  <updated>2018-08-09</updated>
   
   <registry id="yang-parameters-1">
     <title>YANG Module Names</title>
     <xref type="rfc" data="rfc6020"/>
+    <xref type="draft" data="RFC-ietf-netmod-rfc6087bis-20"/>
     <registration_rule>RFC Required</registration_rule>
     <record date="2017-11-03">
       <name>ietf-netconf-partial-lock</name>
@@ -51,7 +52,7 @@
       <notes/>
     </record>
     <record>
-      <name>ietf-template (not for implementation)</name>
+      <name>ietf-template</name>
       <iana>N</iana>
       <file type="yang">ietf-template@2010-05-18.yang</file>
       <namespace>urn:ietf:params:xml:ns:yang:ietf-template</namespace>
@@ -59,6 +60,16 @@
       <module/>
       <xref type="rfc" data="rfc6087"/>
       <notes/>
+    </record>
+    <record updated="2018-03-14">
+      <name>ietf-template</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-template</namespace>
+      <prefix>temp</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-netmod-rfc6087bis-20"/>
+      <notes><xref type="draft" data="RFC-ietf-netmod-rfc6087bis-20"/>'s module file will be posted upon document's publication as RFC.</notes>
     </record>
     <record>
       <name>ietf-netconf-with-defaults</name>
@@ -100,14 +111,24 @@
       <xref type="rfc" data="rfc6728"/>
       <notes/>
     </record>
-    <record updated="2017-12-13">
+    <record>
       <name>ietf-netconf-acm</name>
       <iana>N</iana>
       <file type="yang">ietf-netconf-acm@2012-02-22.yang</file>
       <namespace>urn:ietf:params:xml:ns:yang:ietf-netconf-acm</namespace>
       <prefix>nacm</prefix>
       <module/>
-      <xref type="draft" data="RFC-ietf-netconf-rfc6536bis-09"/>
+      <xref type="rfc" data="rfc6536"/>
+      <notes/>
+    </record>
+    <record updated="2018-02-23">
+      <name>ietf-netconf-acm</name>
+      <iana>N</iana>
+      <file type="yang">ietf-netconf-acm@2018-02-14.yang</file>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-netconf-acm</namespace>
+      <prefix>nacm</prefix>
+      <module/>
+      <xref type="rfc" data="rfc8341"/>
       <notes/>
     </record>
     <record>
@@ -130,10 +151,10 @@
       <xref type="rfc" data="rfc6643"/>
       <notes/>
     </record>
-    <record date="2014-01-27" updated="2015-11-01">
+    <record date="2014-01-27" updated="2018-07-03">
       <name>iana-if-type</name>
       <iana>Y</iana>
-      <file type="yang">iana-if-type@2017-03-30.yang</file>
+      <file type="yang">iana-if-type@2018-07-03.yang</file>
       <namespace>urn:ietf:params:xml:ns:yang:iana-if-type</namespace>
       <prefix>ianaift</prefix>
       <module/>
@@ -152,6 +173,16 @@ at <xref type="registry" data="smi-numbers"/>.</notes>
       <xref type="rfc" data="rfc7223"/>
       <notes/>
     </record>
+    <record date="2014-01-27" updated="2018-01-12">
+      <name>ietf-interfaces</name>
+      <iana>N</iana>
+      <file type="yang">ietf-interfaces@2018-02-20.yang</file>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-interfaces</namespace>
+      <prefix>if</prefix>
+      <module/>
+      <xref type="rfc" data="rfc8343"/>
+      <notes/>
+    </record>
     <record date="2014-04-14">
       <name>ietf-ip</name>
       <iana>N</iana>
@@ -160,6 +191,16 @@ at <xref type="registry" data="smi-numbers"/>.</notes>
       <prefix>ip</prefix>
       <module/>
       <xref type="rfc" data="rfc7277"/>
+      <notes/>
+    </record>
+    <record date="2014-04-14" updated="2018-03-23">
+      <name>ietf-ip</name>
+      <iana>N</iana>
+      <file type="yang">ietf-ip@2018-02-22.yang</file>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-ip</namespace>
+      <prefix>ip</prefix>
+      <module/>
+      <xref type="rfc" data="rfc8344"/>
       <notes/>
     </record>
     <record date="2014-06-03" updated="2015-11-01">
@@ -373,6 +414,16 @@ at <xref type="registry" data="smi-numbers"/>.</notes>
       <xref type="rfc" data="rfc8022"/>
       <notes/>
     </record>
+    <record date="2016-11-03" updated="2018-02-02">
+      <name>ietf-routing</name>
+      <iana>N</iana>
+      <file type="yang">ietf-routing@2018-03-13.yang</file>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-routing</namespace>
+      <prefix>rt</prefix>
+      <module/>
+      <xref type="rfc" data="rfc8349"/>
+      <notes/>
+    </record>
     <record date="2016-11-03">
       <name>ietf-ipv4-unicast-routing</name>
       <iana>N</iana>
@@ -381,6 +432,16 @@ at <xref type="registry" data="smi-numbers"/>.</notes>
       <prefix>v4ur</prefix>
       <module/>
       <xref type="rfc" data="rfc8022"/>
+      <notes/>
+    </record>
+    <record date="2016-11-03" updated="2018-02-02">
+      <name>ietf-ipv4-unicast-routing</name>
+      <iana>N</iana>
+      <file type="yang">ietf-ipv4-unicast-routing@2018-03-13.yang</file>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-ipv4-unicast-routing</namespace>
+      <prefix>v4ur</prefix>
+      <module/>
+      <xref type="rfc" data="rfc8349"/>
       <notes/>
     </record>
     <record date="2016-11-03">
@@ -393,6 +454,16 @@ at <xref type="registry" data="smi-numbers"/>.</notes>
       <xref type="rfc" data="rfc8022"/>
       <notes/>
     </record>
+    <record date="2016-11-03" updated="2018-02-02">
+      <name>ietf-ipv6-unicast-routing</name>
+      <iana>N</iana>
+      <file type="yang">ietf-ipv6-unicast-routing@2018-03-13.yang</file>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-ipv6-unicast-routing</namespace>
+      <prefix>v6ur</prefix>
+      <module/>
+      <xref type="rfc" data="rfc8349"/>
+      <notes/>
+    </record>
     <record date="2016-11-03">
       <name>ietf-ipv6-router-advertisements</name>
       <iana>N</iana>
@@ -403,14 +474,24 @@ at <xref type="registry" data="smi-numbers"/>.</notes>
       <xref type="rfc" data="rfc8022"/>
       <notes/>
     </record>
-    <record date="2016-12-02" updated="2017-12-13">
+    <record date="2016-11-03" updated="2018-02-02">
+      <name>ietf-ipv6-router-advertisements</name>
+      <iana>N</iana>
+      <file type="yang">ietf-ipv6-router-advertisements@2018-03-13.yang</file>
+      <namespace/>
+      <prefix/>
+      <module>ietf-ipv6-unicast-routing</module>
+      <xref type="rfc" data="rfc8349"/>
+      <notes/>
+    </record>
+    <record date="2016-12-02" updated="2018-03-09">
       <name>ietf-l3vpn-svc</name>
       <iana>N</iana>
-      <file type="yang">ietf-l3vpn-svc@2017-01-27.yang</file>
+      <file type="yang">ietf-l3vpn-svc@2018-01-19.yang</file>
       <namespace>urn:ietf:params:xml:ns:yang:ietf-l3vpn-svc</namespace>
       <prefix>l3vpn-svc</prefix>
       <module/>
-      <xref type="draft" data="RFC-wu-l3sm-rfc8049bis-11"/>
+      <xref type="rfc" data="rfc8299"/>
       <notes/>
     </record>
     <record date="2016-12-02">
@@ -466,21 +547,21 @@ at <xref type="registry" data="smi-numbers"/>.</notes>
     <record date="2017-10-25">
       <name>ietf-routing-types</name>
       <iana>N</iana>
-      <file type="yang">ietf-routing-types@2017-10-13.yang</file>
+      <file type="yang">ietf-routing-types@2017-12-04.yang</file>
       <namespace>urn:ietf:params:xml:ns:yang:ietf-routing-types</namespace>
       <prefix>rt-types</prefix>
       <module/>
-      <xref type="draft" data="RFC-ietf-rtgwg-routing-types-17"/>
+      <xref type="rfc" data="rfc8294"/>
       <notes/>
     </record>
     <record date="2017-10-25">
       <name>iana-routing-types</name>
       <iana>Y</iana>
-      <file type="yang">iana-routing-types@2017-09-19.yang</file>
+      <file type="yang">iana-routing-types@2017-12-04.yang</file>
       <namespace>urn:ietf:params:xml:ns:yang:iana-routing-types</namespace>
       <prefix>iana-rt-types</prefix>
       <module/>
-      <xref type="draft" data="RFC-ietf-rtgwg-routing-types-17"/>
+      <xref type="rfc" data="rfc8294"/>
       <notes>Address Families and Subsequent Address Families must not be 
 directly added to the iana-routing-types YANG module.  They must
 instead be respectively added to the <xref type="registry" data="address-family-numbers">Address Family Numbers</xref>
@@ -494,7 +575,7 @@ and <xref type="registry" data="safi-namespace">Subsequent Address Family Identi
       <prefix>lime</prefix>
       <module/>
       <xref type="draft" data="RFC-ietf-lime-yang-connectionless-oam-18"/>
-      <notes/>
+      <notes><xref type="draft" data="RFC-ietf-lime-yang-connectionless-oam-18"/>'s module file will be posted upon document's publication as RFC.</notes>
     </record>
     <record date="2017-11-22">
       <name>ietf-connectionless-oam</name>
@@ -504,7 +585,7 @@ and <xref type="registry" data="safi-namespace">Subsequent Address Family Identi
       <prefix>cl-oam</prefix>
       <module/>
       <xref type="draft" data="RFC-ietf-lime-yang-connectionless-oam-18"/>
-      <notes/>
+      <notes><xref type="draft" data="RFC-ietf-lime-yang-connectionless-oam-18"/>'s module file will be posted upon document's publication as RFC.</notes>
     </record>
     <record date="2017-11-22">
       <name>ietf-connectionless-oam-methods</name>
@@ -514,67 +595,404 @@ and <xref type="registry" data="safi-namespace">Subsequent Address Family Identi
       <prefix>cloam-methods</prefix>
       <module/>
       <xref type="draft" data="RFC-ietf-lime-yang-connectionless-oam-methods-13"/>
-      <notes/>
+      <notes><xref type="draft" data="RFC-ietf-lime-yang-connectionless-oam-methods-13"/>'s module file will be posted upon document's publication as RFC.</notes>
     </record>
     <record date="2017-12-18">
       <name>ietf-l3-unicast-topology</name>
       <iana>N</iana>
-      <file type="yang"/>
+      <file type="yang">ietf-l3-unicast-topology@2018-02-26.yang</file>
       <namespace>urn:ietf:params:xml:ns:yang:ietf-l3-unicast-topology</namespace>
       <prefix>l3t</prefix>
       <module/>
-      <xref type="draft" data="RFC-ietf-i2rs-yang-l3-topology-16"/>
+      <xref type="rfc" data="rfc8346"/>
       <notes/>
     </record>
     <record date="2017-12-18">
       <name>ietf-l3-unicast-topology-state</name>
       <iana>N</iana>
-      <file type="yang"/>
+      <file type="yang">ietf-l3-unicast-topology-state@2018-02-26.yang</file>
       <namespace>urn:ietf:params:xml:ns:yang:ietf-l3-unicast-topology-state</namespace>
       <prefix>l3t-s</prefix>
       <module/>
-      <xref type="draft" data="RFC-ietf-i2rs-yang-l3-topology-16"/>
+      <xref type="rfc" data="rfc8346"/>
       <notes/>
     </record>
     <record date="2017-12-21">
       <name>ietf-network</name>
       <iana>N</iana>
-      <file type="yang"/>
+      <file type="yang">ietf-network@2018-02-26.yang</file>
       <namespace>urn:ietf:params:xml:ns:yang:ietf-network</namespace>
       <prefix>nw</prefix>
       <module/>
-      <xref type="draft" data="RFC-ietf-i2rs-yang-network-topo-20"/>
+      <xref type="rfc" data="rfc8345"/>
       <notes/>
     </record>
     <record date="2017-12-21">
       <name>ietf-network-topology</name>
       <iana>N</iana>
-      <file type="yang"/>
+      <file type="yang">ietf-network-topology@2018-02-26.yang</file>
       <namespace>urn:ietf:params:xml:ns:yang:ietf-network-topology</namespace>
       <prefix>nt</prefix>
       <module/>
-      <xref type="draft" data="RFC-ietf-i2rs-yang-network-topo-20"/>
+      <xref type="rfc" data="rfc8345"/>
       <notes/>
     </record>
     <record date="2017-12-21">
       <name>ietf-network-state</name>
       <iana>N</iana>
-      <file type="yang"/>
+      <file type="yang">ietf-network-state@2018-02-26.yang</file>
       <namespace>urn:ietf:params:xml:ns:yang:ietf-network-state</namespace>
       <prefix>nw-s</prefix>
       <module/>
-      <xref type="draft" data="RFC-ietf-i2rs-yang-network-topo-20"/>
+      <xref type="rfc" data="rfc8345"/>
       <notes/>
     </record>
     <record date="2017-12-21">
       <name>ietf-network-topology-state</name>
       <iana>N</iana>
-      <file type="yang"/>
+      <file type="yang">ietf-network-topology-state@2018-02-26.yang</file>
       <namespace>urn:ietf:params:xml:ns:yang:ietf-network-topology-state</namespace>
       <prefix>nt-s</prefix>
       <module/>
-      <xref type="draft" data="RFC-ietf-i2rs-yang-network-topo-20"/>
+      <xref type="rfc" data="rfc8345"/>
       <notes/>
+    </record>
+    <record date="2018-01-18">
+      <name>ietf-rip</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-rip</namespace>
+      <prefix>rip</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-rtgwg-yang-rip-08"/>
+      <notes><xref type="draft" data="RFC-ietf-rtgwg-yang-rip-08"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-01-18">
+      <name>ietf-vrrp</name>
+      <iana>N</iana>
+      <file type="yang">ietf-vrrp@2018-03-13.yang</file>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-vrrp</namespace>
+      <prefix>vrrp</prefix>
+      <module/>
+      <xref type="rfc" data="rfc8347"/>
+      <notes/>
+    </record>
+    <record date="2018-01-18">
+      <name>ietf-datastores</name>
+      <iana>N</iana>
+      <file type="yang">ietf-datastores@2018-02-14.yang</file>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-datastores</namespace>
+      <prefix>ds</prefix>
+      <module/>
+      <xref type="rfc" data="rfc8342"/>
+      <notes/>
+    </record>
+    <record date="2018-01-18">
+      <name>ietf-origin</name>
+      <iana>N</iana>
+      <file type="yang">ietf-origin@2018-02-14.yang</file>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-origin</namespace>
+      <prefix>or</prefix>
+      <module/>
+      <xref type="rfc" data="rfc8342"/>
+      <notes/>
+    </record>
+    <record date="2018-02-08">
+      <name>iana-hardware</name>
+      <iana>Y</iana>
+      <file type="yang">iana-hardware@2018-03-13.yang</file>
+      <namespace>urn:ietf:params:xml:ns:yang:iana-hardware</namespace>
+      <prefix>ianahw</prefix>
+      <module/>
+      <xref type="rfc" data="rfc8348"/>
+      <notes>The "iana-hardware" YANG module is intended to reflect the
+        <xref type="uri" data="https://www.iana.org/assignments/ianaentity-mib/ianaentity-mib.xhtml">"IANA-ENTITY-MIB"</xref> MIB module so that if a new enumeration is added to
+        the "IANAPhysicalClass" textual convention, the same class is added as an identity derived from "ianahw:hardware-class".</notes>
+    </record>
+    <record date="2018-02-08">
+      <name>ietf-hardware</name>
+      <iana>N</iana>
+      <file type="yang">ietf-hardware@2018-03-13.yang</file>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-hardware</namespace>
+      <prefix>hw</prefix>
+      <module/>
+      <xref type="rfc" data="rfc8348"/>
+      <notes/>
+    </record>
+    <record date="2018-02-08">
+      <name>ietf-hardware-state</name>
+      <iana>N</iana>
+      <file type="yang">ietf-hardware-state@2018-03-13.yang</file>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-hardware-state</namespace>
+      <prefix>hw-state</prefix>
+      <module/>
+      <xref type="rfc" data="rfc8348"/>
+      <notes/>
+    </record>
+    <record date="2018-02-12">
+      <name>ietf-voucher</name>
+      <iana>N</iana>
+      <file type="yang">ietf-voucher@2018-04-06.yang</file>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-voucher</namespace>
+      <prefix>vch</prefix>
+      <module/>
+      <xref type="rfc" data="rfc8366"/>
+      <notes/>
+    </record>
+    <record date="2018-02-20">
+      <name>ietf-network-instance</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-network-instance</namespace>
+      <prefix>ni</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-rtgwg-ni-model-10"/>
+      <notes><xref type="draft" data="RFC-ietf-rtgwg-ni-model-10"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-02-27">
+      <name>ietf-connection-oriented-oam</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-connection-oriented-oam</namespace>
+      <prefix>co-oam</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-lime-yang-connection-oriented-oam-model-07"/>
+      <notes><xref type="draft" data="RFC-ietf-lime-yang-connection-oriented-oam-model-07"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-03-14">
+      <name>ietf-logical-network-element</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-logical-network-element</namespace>
+      <prefix>lne</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-rtgwg-lne-model-09"/>
+      <notes><xref type="draft" data="RFC-ietf-rtgwg-lne-model-09"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-03-19">
+      <name>ietf-syslog</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-syslog</namespace>
+      <prefix>ietf-syslog</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-netmod-syslog-model-26"/>
+      <notes><xref type="draft" data="RFC-ietf-netmod-syslog-model-26"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-05-14">
+      <name>ietf-i2rs-rib</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-i2rs-rib</namespace>
+      <prefix>iir</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-i2rs-rib-data-model-15"/>
+      <notes><xref type="draft" data="RFC-ietf-i2rs-rib-data-model-15"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-05-16">
+      <name>ietf-pim-base</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-pim-base</namespace>
+      <prefix>pim-base</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-pim-yang-16"/>
+      <notes><xref type="draft" data="RFC-ietf-pim-yang-16"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-05-16">
+      <name>ietf-pim-bidir</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-pim-bidir</namespace>
+      <prefix>pim-bidir</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-pim-yang-16"/>
+      <notes><xref type="draft" data="RFC-ietf-pim-yang-16"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-05-16">
+      <name>ietf-pim-dm</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-pim-dm</namespace>
+      <prefix>pim-dm</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-pim-yang-16"/>
+      <notes><xref type="draft" data="RFC-ietf-pim-yang-16"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-05-16">
+      <name>ietf-pim-rp</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-pim-rp</namespace>
+      <prefix>pim-rp</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-pim-yang-16"/>
+      <notes><xref type="draft" data="RFC-ietf-pim-yang-16"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-05-16">
+      <name>ietf-pim-sm</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-pim-sm</namespace>
+      <prefix>pim-sm</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-pim-yang-16"/>
+      <notes><xref type="draft" data="RFC-ietf-pim-yang-16"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-06-05">
+      <name>ietf-dslite</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-dslite</namespace>
+      <prefix>dslite</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-softwire-dslite-yang-17"/>
+      <notes><xref type="draft" data="RFC-ietf-softwire-dslite-yang-17"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-06-27">
+      <name>ietf-mud</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-mud</namespace>
+      <prefix>ietf-mud</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-opsawg-mud-25"/>
+      <notes><xref type="draft" data="RFC-ietf-opsawg-mud-25"/>'s module files will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-06-27">
+      <name>ietf-acldns</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-acldns</namespace>
+      <prefix>ietf-acldns</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-opsawg-mud-25"/>
+      <notes><xref type="draft" data="RFC-ietf-opsawg-mud-25"/>'s module files will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-06-27">
+      <name>ietf-l2vpn-svc</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-l2vpn-svc</namespace>
+      <prefix>l2vpn-svc</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-l2sm-l2vpn-service-model-10"/>
+      <notes><xref type="draft" data="RFC-ietf-l2sm-l2vpn-service-model-10"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-07-05">
+      <name>ietf-te-topology</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-te-topology</namespace>
+      <prefix>tet</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-teas-yang-te-topo-18"/>
+      <notes><xref type="draft" data="RFC-ietf-teas-yang-te-topo-18"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-07-05">
+      <name>ietf-te-topology-state</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-te-topology-state</namespace>
+      <prefix>tet-s</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-teas-yang-te-topo-18"/>
+      <notes><xref type="draft" data="RFC-ietf-teas-yang-te-topo-18"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-07-11">
+      <name>ietf-twamp</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-twamp</namespace>
+      <prefix>twamp</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-ippm-twamp-yang-13"/>
+      <notes><xref type="draft" data="RFC-ietf-ippm-twamp-yang-13"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-08-09">
+      <name>iana-bfd-types</name>
+      <iana>Y</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:iana-bfd-types</namespace>
+      <prefix>iana-bfd-types</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-bfd-yang-17"/>
+      <notes>
+        BFD Diagnostic Codes and BFD Authentication Types must not be added directly to 
+        the iana-bfd-types YANG module. They must first be added to 
+        <xref type="registry" data="bfd-parameters"/>, which it mirrors.
+        Note: the initial module file will be posted upon 
+        <xref type="draft" data="RFC-ietf-bfd-yang-17"/>'s publication as an RFC.</notes>
+    </record>
+    <record date="2018-08-09">
+      <name>ietf-bfd-types</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-bfd-types</namespace>
+      <prefix>bfd-types</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-bfd-yang-17"/>
+      <notes><xref type="draft" data="RFC-ietf-bfd-yang-17"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-08-09">
+      <name>ietf-bfd</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-bfd</namespace>
+      <prefix>bfd</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-bfd-yang-17"/>
+      <notes><xref type="draft" data="RFC-ietf-bfd-yang-17"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-08-09">
+      <name>ietf-bfd-ip-sh</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-bfd-ip-sh</namespace>
+      <prefix>bfd-ip-sh</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-bfd-yang-17"/>
+      <notes><xref type="draft" data="RFC-ietf-bfd-yang-17"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-08-09">
+      <name>ietf-bfd-ip-mh</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-bfd-ip-mh</namespace>
+      <prefix>bfd-ip-mh</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-bfd-yang-17"/>
+      <notes><xref type="draft" data="RFC-ietf-bfd-yang-17"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-08-09">
+      <name>ietf-bfd-lag</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-bfd-lag</namespace>
+      <prefix>bfd-lag</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-bfd-yang-17"/>
+      <notes><xref type="draft" data="RFC-ietf-bfd-yang-17"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-08-09">
+      <name>ietf-bfd-mpls</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-bfd-mpls</namespace>
+      <prefix>bfd-mpls</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-bfd-yang-17"/>
+      <notes><xref type="draft" data="RFC-ietf-bfd-yang-17"/>'s module file will be posted upon document's publication as RFC.</notes>
+    </record>
+    <record date="2018-08-09">
+      <name>ietf-bfd-mpls-te</name>
+      <iana>N</iana>
+      <file type="yang"/>
+      <namespace>urn:ietf:params:xml:ns:yang:ietf-bfd-mpls-te</namespace>
+      <prefix>bfd-mpls-te</prefix>
+      <module/>
+      <xref type="draft" data="RFC-ietf-bfd-yang-17"/>
+      <notes><xref type="draft" data="RFC-ietf-bfd-yang-17"/>'s module file will be posted upon document's publication as RFC.</notes>
     </record>
   </registry>
   <people/>

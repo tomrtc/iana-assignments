@@ -4,23 +4,27 @@
 <registry xmlns="http://www.iana.org/assignments" id="dscp-registry">
   <title>Differentiated Services Field Codepoints (DSCP)</title>
   <category>Differentiated Services Field Codepoints (DSCP)</category>
-  <updated>2017-05-12</updated>
-  <note>The DSCP field within the DS field is capable of conveying 64 distinct
-codepoints.  The codepoint space is divided into three pools for the
-purpose of codepoint assignment and management: a pool of 32
-codepoints (Pool 1) to be assigned by Standards Action as defined in
-<xref type="rfc" data="rfc2434"/>, a pool of 16 codepoints (Pool 2) to be reserved for
-experimental or Local Use (EXP/LU) as defined in <xref type="rfc" data="rfc2434"/>, and a pool
-of 16 codepoints (Pool 3) which are initially available for experimental
-or local use, but which should be preferentially utilized for
-standardized assignments if Pool 1 is ever exhausted.  The pools are
-defined in the following table (where 'x' refers to either '0' or
-'1').
+  <updated>2018-08-22</updated>
+  <note>The Differentiated Services (Diffserv) architecture specifies use 
+of the DS field in the IPv4 and IPv6 packet headers to carry one
+of 64 distict differentiated services field codepoint (DSCP) values. 
+The codepoint space is divided into three pools for the purpose of 
+codepoint assignment and management: a pool of 32 codepoints (Pool 1)
+to be assigned by Standards Action as defined in <xref type="rfc" data="rfc8126"/>, a pool of 
+16 codepoints (Pool 2) to be reserved for experimental or Local Use 
+(EXP/LU) as defined in <xref type="rfc" data="rfc8126"/>, and a pool of 16 codepoints (Pool 3) 
+which are initially available for experimental or local use, but 
+which should be preferentially utilized for standardized assignments 
+if Pool 1 is ever exhausted. Pool 3 codepoints are now utilized for 
+standardized assignments and are no longer available for experimental
+or local use, as specified by <xref type="rfc" data="rfc8436"/>. The pools are defined in the 
+following table (where 'x' refers to either '0' or '1').
   </note>
   
   <registry id="dscp-registry-1">
-    <title>Differentiated Services Field Codepoints</title>
+    <title>Differentiated Services Field Codepoints (DSCP)</title>
     <xref type="rfc" data="rfc2474"/>
+    <xref type="rfc" data="rfc3260">RFC3260, Section 4</xref>
     <record>
       <pool>1</pool>
       <space>xxxxx0</space>
@@ -35,13 +39,13 @@ defined in the following table (where 'x' refers to either '0' or
     <record>
       <pool>3</pool>
       <space>xxxx01</space>
-      <registration_rule>Experimental or Local Use</registration_rule>
-      <note>May be utilized for future Standards Action allocations as necessary</note>
+      <registration_rule>Standards Action</registration_rule>
     </record>
     
     <registry id="dscp-registry-2">
-      <title>Pool 1 Codepoints</title>
+      <title>DSCP Pool 1 Codepoints</title>
       <xref type="rfc" data="rfc2474"/>
+      <xref type="rfc" data="rfc3260">RFC3260, Section 4</xref>
       <registration_rule>Standards Action</registration_rule>
       <record>
         <name>CS0</name>
@@ -176,6 +180,43 @@ defined in the following table (where 'x' refers to either '0' or
         <xref type="rfc" data="rfc5865"/>
       </record>
     </registry>
+    
+    <registry id="dscp-registry-3">
+      <title>DSCP Pool 3 Codepoints</title>
+      <xref type="rfc" data="rfc2474"/>
+      <xref type="rfc" data="rfc3260">RFC3260, Section 4</xref>
+      <xref type="rfc" data="rfc8436"/>
+      <registration_rule>Standards Action</registration_rule>
+    </registry>
+  </registry>
+    
+  <registry id="ecn-field">
+    <title>ECN Field (Bits 6-7)</title>
+    <xref type="rfc" data="rfc3168"/>
+    <registration_rule>RFC Required</registration_rule>
+    <note>The registrations are identical for IPv4 and IPv6.
+    </note>
+    <record>
+      <value>00</value>
+      <description>Not-ECT (Not ECN-Capable Transport)</description>
+      <xref type="rfc" data="rfc3168"/>
+    </record>
+    <record>
+      <value>01</value>
+      <description>ECT(1) (ECN-Capable Transport(1))</description>
+      <xref type="rfc" data="rfc3168"/>
+    </record>
+    <record>
+      <value>10</value>
+      <description>ECT(0) (ECN-Capable Transport(0))</description>
+      <xref type="rfc" data="rfc3168"/>
+    </record>
+    <record>
+      <value>11</value>
+      <description>CE (Congestion Experienced)</description>
+      <xref type="rfc" data="rfc3168"/>
+    </record>
+    
   </registry>
   <people/>
 </registry>

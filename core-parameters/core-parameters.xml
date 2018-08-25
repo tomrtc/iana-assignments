@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="core-parameters">
   <title>Constrained RESTful Environments (CoRE) Parameters</title>
   <created>2012-06-08</created>
-  <updated>2017-12-22</updated>
+  <updated>2018-08-09</updated>
   
   <registry id="rt-link-target-att-value">
     <title>Resource Type (rt=) Link Target Attribute Values</title>
@@ -567,11 +567,11 @@
       <xref type="uri" data="http://www.openmobilealliance.org/tech/extref/OMA-TS-LightweightM2M-V1_0.zip">OMA-TS-LightweightM2M-V1_0</xref>
       <notes/>
     </record>
-    <record date="2017-11-30">
+    <record date="2017-11-30" updated="2018-05-21">
       <value>bbf.usp.endpoint</value>
       <description>Endpoint of the Broadband Forum USP protocol</description>
-      <xref type="uri" data="http://usp.technology/specification/mtp/coap"/>
-      <notes>Reference will be updated after specification is finalized.</notes>
+      <xref type="uri" data="https://usp.technology/specification/mtp/coap/"/>
+      <notes/>
     </record>
     <record date="2017-11-30">
       <value>oic.wk.col</value>
@@ -866,17 +866,17 @@
       <xref type="uri" data="https://openconnectivity.org/specs/OIC_Core_Specification_v1.1.0.pdf">OIC_Core_Specification_v1.1.0 section 7.5.3</xref>
       <notes/>
     </record>
-    <record date="2017-11-30">
+    <record date="2017-11-30" updated="2018-05-21">
       <value>bbf.usp.c</value>
       <description>USP Controller Endpoint of the Broadband Forum USP protocol</description>
-      <xref type="uri" data="http://usp.technology/specification/mtp/coap"/>
-      <notes>Reference will be updated after specification is finalized.</notes>
+      <xref type="uri" data="https://usp.technology/specification/mtp/coap/"/>
+      <notes/>
     </record>
-    <record date="2017-11-30">
+    <record date="2017-11-30" updated="2018-05-21">
       <value>bbf.usp.a</value>
       <description>USP Agent Endpoint of the Broadband Forum USP protocol</description>
-      <xref type="uri" data="http://usp.technology/specification/mtp/coap"/>
-      <notes>Reference will be updated after specification is finalized.</notes>
+      <xref type="uri" data="https://usp.technology/specification/mtp/coap/"/>
+      <notes/>
     </record>
   </registry>
   
@@ -1247,7 +1247,7 @@
       <value>23</value>
       <description>Block2</description>
       <xref type="rfc" data="rfc7959"/>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
     </record>  
     <record>
       <value>24-26</value>
@@ -1257,7 +1257,7 @@
       <value>27</value>
       <description>Block1</description>
       <xref type="rfc" data="rfc7959"/>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
     </record>
     <record date="2016-07-11">
       <value>28</value>
@@ -1482,10 +1482,16 @@
       <id>60</id>
       <xref type="rfc" data="rfc7049"/>
     </record>
+    <record date="2018-03-22">
+      <mediatype>application/cwt</mediatype>
+      <encoding/>
+      <id>61</id>
+      <xref type="rfc" data="rfc8392"/>
+    </record>
     <record>
       <mediatype>Unassigned</mediatype>
       <encoding/>
-      <id>61-95</id>
+      <id>62-95</id>
     </record>
     <record date="2017-01-11">
       <mediatype>application/cose; cose-type="cose-encrypt"</mediatype>
@@ -1525,7 +1531,48 @@
     <record>
       <mediatype>Unassigned</mediatype>
       <encoding/>
-      <id>103-255</id>
+      <id>103-109</id>
+    </record>
+    <record date="2018-06-01">
+      <mediatype>application/senml+json</mediatype>
+      <encoding/>
+      <id>110</id>
+      <xref type="draft" data="RFC-ietf-core-senml-16"/>
+    </record>
+    <record date="2018-06-01">
+      <mediatype>application/sensml+json</mediatype>
+      <encoding/>
+      <id>111</id>
+      <xref type="draft" data="RFC-ietf-core-senml-16"/>
+    </record>
+    <record date="2018-06-01">
+      <mediatype>application/senml+cbor</mediatype>
+      <encoding/>
+      <id>112</id>
+      <xref type="draft" data="RFC-ietf-core-senml-16"/>
+    </record>
+    <record date="2018-06-01">
+      <mediatype>application/sensml+cbor</mediatype>
+      <encoding/>
+      <id>113</id>
+      <xref type="draft" data="RFC-ietf-core-senml-16"/>
+    </record>
+    <record date="2018-06-01">
+      <mediatype>application/senml-exi</mediatype>
+      <encoding/>
+      <id>114</id>
+      <xref type="draft" data="RFC-ietf-core-senml-16"/>
+    </record>
+    <record date="2018-06-01">
+      <mediatype>application/sensml-exi</mediatype>
+      <encoding/>
+      <id>115</id>
+      <xref type="draft" data="RFC-ietf-core-senml-16"/>
+    </record>
+    <record>
+      <mediatype>Unassigned</mediatype>
+      <encoding/>
+      <id>116-255</id>
     </record>
     <record date="2016-06-24" updated="2017-07-12">
       <mediatype>application/coap-group+json</mediatype>
@@ -1536,7 +1583,90 @@
     <record>
       <mediatype>Unassigned</mediatype>
       <encoding/>
-      <id>257-1541</id>
+      <id>257-279</id>
+    </record>
+    <record>
+      <mediatype>application/pkcs7-mime; smime-type=server-generated-key
+      (TEMPORARY - registered 2018-08-09, expires 2019-08-09)</mediatype>
+      <encoding/>
+      <id>280</id>
+      <xref type="rfc" data="rfc5751"/>
+      <xref type="rfc" data="rfc7030"/>
+      <xref type="draft" data="draft-ietf-ace-coap-est"/>
+    </record>
+    <record>
+      <mediatype>application/pkcs7-mime; smime-type=certs-only
+        (TEMPORARY - registered 2018-08-09, expires 2019-08-09)</mediatype>
+      <encoding/>
+      <id>281</id>
+      <xref type="rfc" data="rfc5751"/>
+      <xref type="draft" data="draft-ietf-ace-coap-est"/>
+    </record>
+    <record>
+      <mediatype>application/pkcs7-mime; smime-type=CMC-Request
+        (TEMPORARY - registered 2018-08-09, expires 2019-08-09)</mediatype>
+      <encoding/>
+      <id>282</id>
+      <xref type="rfc" data="rfc5751"/>
+      <xref type="rfc" data="rfc5273"/>
+      <xref type="draft" data="draft-ietf-ace-coap-est"/>
+    </record>
+    <record>
+      <mediatype>application/pkcs7-mime; smime-type=CMC-Response
+        (TEMPORARY - registered 2018-08-09, expires 2019-08-09)</mediatype>
+      <encoding/>
+      <id>283</id>
+      <xref type="rfc" data="rfc5751"/>
+      <xref type="rfc" data="rfc5273"/>
+      <xref type="draft" data="draft-ietf-ace-coap-est"/>
+    </record>
+    <record>
+      <mediatype>application/pkcs8
+        (TEMPORARY - registered 2018-08-09, expires 2019-08-09)</mediatype>
+      <encoding/>
+      <id>284</id>
+      <xref type="rfc" data="rfc5751"/>
+      <xref type="rfc" data="rfc5958"/>
+      <xref type="draft" data="draft-ietf-ace-coap-est"/>
+    </record>
+    <record>
+      <mediatype>application/csrattrs
+        (TEMPORARY - registered 2018-08-09, expires 2019-08-09)</mediatype>
+      <encoding/>
+      <id>285</id>
+      <xref type="rfc" data="rfc7030"/>
+      <xref type="draft" data="draft-ietf-ace-coap-est"/>
+    </record>
+    <record>
+      <mediatype>application/pkcs10
+        (TEMPORARY - registered 2018-08-09, expires 2019-08-09)</mediatype>
+      <encoding/>
+      <id>286</id>
+      <xref type="rfc" data="rfc5751"/>
+      <xref type="rfc" data="rfc5967"/>
+      <xref type="draft" data="draft-ietf-ace-coap-est"/>
+    </record>
+    <record>
+      <mediatype>Unassigned</mediatype>
+      <encoding/>
+      <id>287-309</id>
+    </record>
+    <record date="2018-06-01">
+      <mediatype>application/senml+xml</mediatype>
+      <encoding/>
+      <id>310</id>
+      <xref type="draft" data="RFC-ietf-core-senml-16"/>
+    </record>
+    <record date="2018-06-01">
+      <mediatype>application/sensml+xml</mediatype>
+      <encoding/>
+      <id>311</id>
+      <xref type="draft" data="RFC-ietf-core-senml-16"/>
+    </record>
+    <record>
+      <mediatype>Unassigned</mediatype>
+      <encoding/>
+      <id>312-1541</id>
     </record>
     <record date="2016-12-07">
       <mediatype>Reserved, do not use</mediatype>
@@ -1587,7 +1717,7 @@
   
   <registry id="signaling-codes">
     <title>CoAP Signaling Codes</title>
-    <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+    <xref type="rfc" data="rfc8323"/>
     <registration_rule>IETF Review or IESG Approval</registration_rule>
     <record date="2017-12-22">
       <value>7.00</value>
@@ -1596,27 +1726,27 @@
     <record date="2017-12-22">
       <value>7.01</value>
       <description>CSM</description>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
     </record>
     <record date="2017-12-22">
       <value>7.02</value>
       <description>Ping</description>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
     </record>
     <record date="2017-12-22">
       <value>7.03</value>
       <description>Pong</description>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
     </record>
     <record date="2017-12-22">
       <value>7.04</value>
       <description>Release</description>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
     </record>
     <record date="2017-12-22">
       <value>7.05</value>
       <description>Abort</description>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
     </record>
     <record date="2017-12-22">
       <value>7.06-7.31</value>
@@ -1626,8 +1756,8 @@
   
   <registry id="signaling-option-numbers">
     <title>CoAP Signaling Option Numbers</title>
-    <expert>Unassigned</expert>
-    <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+    <expert>Klaus Hartke (primary), Alexander Pelov (secondary)</expert>
+    <xref type="rfc" data="rfc8323"/>
     <range>
       <value>0-255</value>
       <registration_rule>IETF Review or IESG Approval</registration_rule>
@@ -1652,37 +1782,37 @@
       <value>7.01</value>
       <number>2</number>
       <description>Max-Message-Size</description>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
     </record>
     <record date="2017-12-22">
       <value>7.01</value>
       <number>4</number>
       <description>Block-Wise-Transfer</description>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
     </record>
     <record date="2017-12-22">
       <value>7.02, 7.03</value>
       <number>2</number>
       <description>Custody</description>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
     </record>
     <record date="2017-12-22">
       <value>7.04</value>
       <number>2</number>
       <description>Alternative-Address</description>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
     </record>
     <record date="2017-12-22">
       <value>7.04</value>
       <number>4</number>
       <description>Hold-Off</description>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
     </record>
     <record date="2017-12-22">
       <value>7.05</value>
       <number>2</number>
       <description>Bad-CSM-Option</description>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
     </record>
   </registry>
   

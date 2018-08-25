@@ -3,7 +3,7 @@
 <?oxygen RNGSchema="uri-schemes.rng" type="xml"?>
 <registry xmlns="http://www.iana.org/assignments" id="uri-schemes">
   <title>Uniform Resource Identifier (URI) Schemes</title>
-  <updated>2017-12-23</updated>
+  <updated>2018-08-13</updated>
   
   <registry id="uri-schemes-1">
     <title>Uniform Resource Identifier (URI) Schemes</title>
@@ -145,6 +145,14 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
+    <record>
+      <file type="template">prov/bitcoincash</file>
+      <value>bitcoincash</value>
+      <description>bitcoincash</description>
+      <status>Provisional</status>
+      <xref type="person" data="Corentin_Mercier"/>
+      <notes/>
+    </record>
     <record date="2015-07-17">
       <file type="template">prov/blob</file>
       <value>blob</value>
@@ -219,14 +227,14 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>coap+tcp</value>
       <description>coap+tcp <xref type="note" data="1"/></description>
       <status>Permanent</status>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
       <notes/>
     </record>
     <record date="2017-12-22">
       <value>coap+ws</value>
       <description>coap+ws <xref type="note" data="1"/></description>
       <status>Permanent</status>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
       <notes/>
     </record>
     <record date="2013-07-25">
@@ -240,14 +248,14 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>coaps+tcp</value>
       <description>coaps+tcp <xref type="note" data="1"/></description>
       <status>Permanent</status>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
       <notes/>
     </record>
     <record date="2017-12-22">
       <value>coaps+ws</value>
       <description>coaps+ws <xref type="note" data="1"/></description>
       <status>Permanent</status>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
       <notes/>
     </record>
     <record>
@@ -318,6 +326,15 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <xref type="rfc" data="rfc2229"/>
       <notes/>
     </record>
+    <record date="2018-05-14">
+      <file type="template">prov/did</file>
+      <value>did</value>
+      <description>did</description>
+      <status>Provisional</status>
+      <xref type="person" data="W3C_Credentials_Community_Group"/>
+      <xref type="person" data="Manu_Sporny"/>
+      <notes/>
+    </record>
     <record date="2015-12-08">
       <file type="template">prov/dis</file>
       <value>dis</value>
@@ -377,6 +394,14 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <description>ed2k</description>
       <status>Provisional</status>
       <xref type="person" data="Dave_Thaler"/>
+      <notes/>
+    </record>
+    <record date="2018-06-06">
+      <file type="template">prov/elsi</file>
+      <value>elsi</value>
+      <description>elsi</description>
+      <status>Provisional</status>
+      <xref type="person" data="Kimmo_Lindholm"/>
       <notes/>
     </record>
     <record date="2015-04-22">
@@ -530,6 +555,14 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <description>ham</description>
       <status>Provisional</status>
       <xref type="rfc" data="rfc7046"/>
+      <notes/>
+    </record>
+    <record date="2018-08-03">
+      <file type="template">prov/hcap</file>
+      <value>hcap</value>
+      <description>hcap</description>
+      <status>Provisional</status>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
     <record>
@@ -836,6 +869,30 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
+    <record date="2018-03-08">
+      <file type="template">prov/microsoft.windows.camera</file>
+      <value>microsoft.windows.camera</value>
+      <description>microsoft.windows.camera</description>
+      <status>Provisional</status>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
+    <record date="2018-03-08">
+      <file type="template">prov/microsoft.windows.camera.multipicker</file>
+      <value>microsoft.windows.camera.multipicker</value>
+      <description>microsoft.windows.camera.multipicker</description>
+      <status>Provisional</status>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
+    <record date="2018-03-08">
+      <file type="template">prov/microsoft.windows.camera.picker</file>
+      <value>microsoft.windows.camera.picker</value>
+      <description>microsoft.windows.camera.picker</description>
+      <status>Provisional</status>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
     <record>
       <value>mid</value>
       <description>message identifier</description>
@@ -964,10 +1021,26 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
+    <record date="2018-01-12">
+      <file type="template">prov/ms-lockscreencomponent-config</file>
+      <value>ms-lockscreencomponent-config</value>
+      <description>ms-lockscreencomponent-config</description>
+      <status>Provisional</status>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
     <record date="2015-09-29">
       <file type="template">prov/ms-media-stream-id</file>
       <value>ms-media-stream-id</value>
       <description>ms-media-stream-id</description>
+      <status>Provisional</status>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
+    <record date="2017-12-25">
+      <file type="template">prov/ms-mixedrealitycapture</file>
+      <value>ms-mixedrealitycapture</value>
+      <description>ms-mixedrealitycapture</description>
       <status>Provisional</status>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
@@ -1012,7 +1085,31 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
-      <record date="2015-10-05">
+    <record date="2018-01-12">
+      <file type="template">prov/ms-restoretabcompanion</file>
+      <value>ms-restoretabcompanion</value>
+      <description>ms-restoretabcompanion</description>
+      <status>Provisional</status>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
+    <record date="2018-07-26">
+      <file type="template">prov/ms-screenclip</file>
+      <value>ms-screenclip</value>
+      <description>ms-screenclip</description>
+      <status>Provisional</status>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
+    <record date="2018-07-26">
+      <file type="template">prov/ms-screensketch</file>
+      <value>ms-screensketch</value>
+      <description>ms-screensketch</description>
+      <status>Provisional</status>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
+    <record date="2015-10-05">
       <file type="template">prov/ms-search-repair</file>
       <value>ms-search-repair</value>
       <description>ms-search-repair</description>
@@ -1220,6 +1317,14 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
+    <record date="2018-01-12">
+      <file type="template">prov/ms-useractivityset</file>
+      <value>ms-useractivityset</value>
+      <description>ms-useractivityset</description>
+      <status>Provisional</status>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
     <record date="2016-08-15">
       <file type="template">prov/ms-virtualtouchpad</file>
       <value>ms-virtualtouchpad</value>
@@ -1400,6 +1505,14 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <description>opaquelocktokent</description>
       <status>Permanent</status>
       <xref type="rfc" data="rfc4918"/>
+      <notes/>
+    </record>
+    <record date="2018-05-31">
+      <file type="template">prov/openpgp4fpr</file>
+      <value>openpgp4fpr</value>
+      <description>openpgp4fpr</description>
+      <status>Provisional</status>
+      <xref type="person" data="Wiktor_Kwapisiewicz"/>
       <notes/>
     </record>
     <record>
@@ -1646,6 +1759,14 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <xref type="rfc" data="rfc5804"/>
       <notes/>
     </record>
+    <record date="2018-07-27">
+      <file type="template">prov/simpleledger</file>
+      <value>simpleledger</value>
+      <description>simpleledger</description>
+      <status>Provisional</status>
+      <xref type="person" data="James_Cramer"/>
+      <notes/>
+    </record>
     <record>
       <value>sip</value>
       <description>session initiation protocol</description>
@@ -1725,6 +1846,14 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <description>soldat</description>
       <status>Provisional</status>
       <xref type="person" data="Dave_Thaler"/>
+      <notes/>
+    </record>
+    <record date="2018-02-23">
+      <file type="template">prov/spiffe</file>
+      <value>spiffe</value>
+      <description>spiffe</description>
+      <status>Provisional</status>
+      <xref type="person" data="Evan_Gilman"/>
       <notes/>
     </record>
     <record>
@@ -2099,10 +2228,10 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <xref type="rfc" data="rfc2056"/>
       <notes/>
     </record>
-    <footnote anchor="1">The CoAP protocol registers different URI schemes for accessing CoAP resources 
+    <footnote anchor="1">CoAP registers different URI schemes for accessing CoAP resources 
 via different protocols. This approach runs counter to the WWW principle that a 
-URI identifies a resource, and that multiple URIs for identifying the same 
-resource should be avoided <xref type="uri" data="http://www.w3.org/TR/webarch/#avoid-uri-aliases"/>).
+URI identifies a resource and that multiple URIs for identifying the same 
+resource should be avoided <xref type="uri" data="http://www.w3.org/TR/webarch/#avoid-uri-aliases"/>.
     </footnote>
   </registry>
 
@@ -2142,6 +2271,11 @@ resource should be avoided <xref type="uri" data="http://www.w3.org/TR/webarch/#
       <uri>mailto:uri-review&amp;ditp.org</uri>
       <updated>2015-12-08</updated>
     </person>
+    <person id="Corentin_Mercier">
+      <name>Corentin Mercier</name>
+      <uri>mailto:corentin&amp;mercier.link</uri>
+      <updated>2018-08-13</updated>
+    </person>
     <person id="Dave_Thaler">
       <name>Dave Thaler</name>
       <uri>mailto:dthaler&amp;microsoft.com</uri>
@@ -2167,10 +2301,20 @@ resource should be avoided <xref type="uri" data="http://www.w3.org/TR/webarch/#
       <uri>mailto:elzi&amp;kb.dk</uri>
       <updated>2016-12-01</updated>
     </person>
+    <person id="Evan_Gilman">
+      <name>Evan Gilman</name>
+      <uri>mailto:evan&amp;scytale.io</uri>
+      <updated>2018-02-23</updated>
+    </person>
     <person id="Ignacio_Losiggio">
       <name>Ignacio Losiggio</name>
       <uri>mailto:iglosiggio&amp;gmail.com</uri>
       <updated>2017-05-09</updated>
+    </person>
+    <person id="James_Cramer">
+      <name>James Cramer</name>
+      <uri>mailto:jcramer&amp;deskviz.com</uri>
+      <updated>2018-07-27</updated>
     </person>
     <person id="Jan_Pokorny">
       <name>Jan Pokorny</name>
@@ -2181,6 +2325,16 @@ resource should be avoided <xref type="uri" data="http://www.w3.org/TR/webarch/#
       <name>Joe Hildebrand</name>
       <uri>mailto:jhildebrand&amp;mozilla.com</uri>
       <updated>2017-01-20</updated>
+    </person>
+    <person id="Kimmo_Lindholm">
+      <name>Kimmo Lindholm</name>
+      <uri>mailto:kimmo.lindholm&amp;eke.fi</uri>
+      <updated>2018-06-06</updated>
+    </person>
+    <person id="Manu_Sporny">
+      <name>Manu Sporny</name>
+      <uri>mailto:msporny&amp;digitalbazaar.com</uri>
+     <updated>2018-05-14</updated>
     </person>
     <person id="Matthias_Merkel">
       <name>Matthias Merkel</name>
@@ -2240,12 +2394,22 @@ resource should be avoided <xref type="uri" data="http://www.w3.org/TR/webarch/#
     <person id="urischemeowners_at_microsoft.com">
       <name>urischemeowners at microsoft.com</name>
       <uri>mailto:urischemeowners&amp;microsoft.com</uri>
-      <updated>2017-06-01</updated>
+      <updated>2018-08-03</updated>
     </person>
     <person id="W3C_WebApps_Working_Group">
       <name>W3C WebApps Working Group</name>
       <uri>mailto:public-webapps&amp;w3.org</uri>
       <updated>2015-07-17</updated>
+    </person>
+    <person id="W3C_Credentials_Community_Group">
+      <name>W3C Credentials Community Group</name>
+      <uri>mailto:public-credentials&amp;w3.org</uri>
+      <updated>2018-05-14</updated>
+    </person>
+    <person id="Wiktor_Kwapisiewicz">
+      <name>Wiktor Kwapisiewicz</name>
+      <uri>mailto:wiktor&amp;metacode.biz</uri>
+      <updated>2018-05-31</updated>
     </person>
   </people>
 </registry>

@@ -4,7 +4,7 @@
            2002-07-15
 
    Last Updated
-           2017-08-01
+           2018-04-06
 
    Available Formats
            [IMG]
@@ -96,8 +96,6 @@ Attributes
            CSV
 
  Collection                        Name                                 Member Attribute                 Sub-member Attribute                Syntax                Reference
-Document      compression                                                                                                          type2 keyword               [PWG5100.5]
-Description
 Document      document-metadata                                                                                                    1setOf octetString(MAX)     [PWG5100.13]
 Description
 Document      document-name                                                                                                        name(MAX)                   [PWG5100.5]
@@ -155,6 +153,8 @@ Description
 Document      attributes-charset                                                                                                   charset                     [PWG5100.5]
 Status
 Document      attributes-natural-language                                                                                          naturalLanguage             [PWG5100.5]
+Status
+Document      compression                                                                                                          type2 keyword               [PWG5100.5]
 Status
 Document      copies-actual                                                                                                        1setOf integer(1:MAX)       [PWG5100.5]
 Status
@@ -1129,6 +1129,8 @@ Operation     job-media-sheets                                                  
 Operation     job-media-sheets-col                                                                                                 collection                  [APRIL2015F2F]
 Operation     job-message-from-operator                                                                                            text(127)                   [RFC3380]
 Operation     job-name                                                                                                             name(MAX)                   [RFC8011]
+Operation     job-pages                                                                                                            integer(0:MAX)              [PWG5100.13]
+Operation     job-pages-col                                                                                                        collection                  [APRIL2015F2F]
 Operation     job-password                                                                                                         octetString(255)            [PWG5100.11]
 Operation     job-password-encryption                                                                                              type2 keyword | name(MAX)   [PWG5100.11]
 Operation     job-state                                                                                                            type1 enum                  [RFC8011]
@@ -1494,6 +1496,10 @@ Printer       job-phone-number-default                                          
 Description
 Printer       job-phone-number-supported                                                                                           boolean                     [PWG5100.11]
 Description
+Printer       job-presets-supported                                                                                                1setOf collection           [IPPPRESET]
+Description
+Printer       job-presets-supported                          preset-name                                                           keyword | name(MAX)         [IPPPRESET]
+Description
 Printer       job-priority-default                                                                                                 integer(1:100)              [RFC8011]
 Description
 Printer       job-priority-supported                                                                                               integer(1:100)              [RFC8011]
@@ -1522,6 +1528,10 @@ Description
 Printer       job-sheets-supported                                                                                                 1setOf (type2 keyword |     [RFC8011]
 Description                                                                                                                        name(MAX))
 Printer       job-spooling-supported                                                                                               type2 keyword               [PWG5100.11]
+Description
+Printer       job-triggers-supported                                                                                               1setOf collection           [IPPPRESET]
+Description
+Printer       job-triggers-supported                         preset-name                                                           keyword | name(MAX)         [IPPPRESET]
 Description
 Printer       jpeg-features-supported                                                                                              1setOf type2 keyword        [APPLE20151021]
 Description
@@ -2672,8 +2682,8 @@ Keyword Attribute Values
                                                                                                     keyword
    finishing-template                         jog-offset                                            name(MAX) | type2            [PWG5100.1]
                                                                                                     keyword
-   finishing-template                         jog-offset(deprecated)                                type2 keyword |              [IPP-JOG-OFFSET]
-                                                                                                    name(MAX)
+   finishing-template                         jog-offset(deprecated)                                name(MAX) | type2            [IPP-JOG-OFFSET]
+                                                                                                    keyword
    finishing-template                         laminate                                              name(MAX) | type2            [PWG5100.1]
                                                                                                     keyword
    finishing-template                         punch                                                 name(MAX) | type2            [PWG5100.1]
@@ -2690,14 +2700,14 @@ Keyword Attribute Values
                                                                                                     keyword
    finishing-template                         punch-dual-top                                        name(MAX) | type2            [PWG5100.1]
                                                                                                     keyword
-   finishing-template                         punch-multiple-bottom                                 type2 keyword |              [CANON-PUNCHING]
-                                                                                                    name(MAX)
-   finishing-template                         punch-multiple-left                                   type2 keyword |              [CANON-PUNCHING]
-                                                                                                    name(MAX)
-   finishing-template                         punch-multiple-right                                  type2 keyword |              [CANON-PUNCHING]
-                                                                                                    name(MAX)
-   finishing-template                         punch-multiple-top                                    type2 keyword |              [CANON-PUNCHING]
-                                                                                                    name(MAX)
+   finishing-template                         punch-multiple-bottom                                 name(MAX) | type2            [CANON-PUNCHING]
+                                                                                                    keyword
+   finishing-template                         punch-multiple-left                                   name(MAX) | type2            [CANON-PUNCHING]
+                                                                                                    keyword
+   finishing-template                         punch-multiple-right                                  name(MAX) | type2            [CANON-PUNCHING]
+                                                                                                    keyword
+   finishing-template                         punch-multiple-top                                    name(MAX) | type2            [CANON-PUNCHING]
+                                                                                                    keyword
    finishing-template                         punch-quad-bottom                                     name(MAX) | type2            [PWG5100.1]
                                                                                                     keyword
    finishing-template                         punch-quad-left                                       name(MAX) | type2            [PWG5100.1]
@@ -3955,6 +3965,10 @@ Keyword Attribute Values
                                                                                                     name(MAX)
    media                                      iso_dl_110x220mm                                      type2 keyword |   size name  [PWG5101.1]
                                                                                                     name(MAX)
+   media                                      iso_id-1_53.98x85.6mm                                 type2 keyword |   size name  [CANON20180329]
+                                                                                                    name(MAX)
+   media                                      iso_id-3_88x125mm                                     type2 keyword |   size name  [CANON20180329]
+                                                                                                    name(MAX)
    media                                      iso_ra0_860x1220mm                                    type2 keyword |   size name  [PWG5101.1]
                                                                                                     name(MAX)
    media                                      iso_ra1_610x860mm                                     type2 keyword |   size name  [PWG5101.1]
@@ -4080,6 +4094,8 @@ Keyword Attribute Values
    media                                      jpn_hagaki_100x148mm                                  type2 keyword |   size name  [PWG5101.1]
                                                                                                     name(MAX)
    media                                      jpn_kahu_240x322.1mm                                  type2 keyword |   size name  [PWG5101.1]
+                                                                                                    name(MAX)
+   media                                      jpn_kaku1_270x382mm                                   type2 keyword |   size name  [APPLE20171002]
                                                                                                     name(MAX)
    media                                      jpn_kaku2_240x332mm                                   type2 keyword |   size name  [PWG5101.1]
                                                                                                     name(MAX)
@@ -4303,7 +4319,11 @@ Keyword Attribute Values
                                                                                                     name(MAX)
    media                                      om_16k_195x270mm                                      type2 keyword |   size name  [HP-MEDIA]
                                                                                                     name(MAX)
+   media                                      om_card_54x86mm                                       type2 keyword |   size name  [CANON20180329]
+                                                                                                    name(MAX)
    media                                      om_dai-pa-kai_275x395mm                               type2 keyword |   size name  [PWG5101.1]
+                                                                                                    name(MAX)
+   media                                      om_dsc-photo_89x119mm                                 type2 keyword |   size name  [CANON20180329]
                                                                                                     name(MAX)
    media                                      om_folio-sp_215x315mm                                 type2 keyword |   size name  [PWG5101.1]
                                                                                                     name(MAX)
@@ -5090,31 +5110,38 @@ Keyword Attribute Values
                                                                                                     keyword
    notify-events                              document-stopped                                      1setOf type2                 [PWG5100.18]
                                                                                                     keyword
-   notify-events                              job-completed                                         type2 keyword     Job Events [RFC3995]
-   notify-events                              job-config-changed                                    type2 keyword     Job Events [RFC3995]
-   notify-events                              job-created                                           type2 keyword     Job Events [RFC3995]
+   notify-events                              job-completed                                         1setOf type2      Job Events [RFC3995]
+                                                                                                    keyword
+   notify-events                              job-config-changed                                    1setOf type2      Job Events [RFC3995]
+                                                                                                    keyword
+   notify-events                              job-created                                           1setOf type2      Job Events [RFC3995]
+                                                                                                    keyword
    notify-events                              job-fetchable                                         1setOf type2                 [PWG5100.18]
                                                                                                     keyword
-   notify-events                              job-progress                                          type2 keyword     Job Events [RFC3995]
-   notify-events                              job-state-changed                                     type2 keyword     Job Events [RFC3995]
-   notify-events                              job-stopped                                           type2 keyword     Job Events [RFC3995]
-   notify-events                              none                                                  type2 keyword     No Events  [RFC3995]
-   notify-events                              printer-config-changed                                type2 keyword     Printer    [RFC3995]
-                                                                                                                      Events
-   notify-events                              printer-finishings-changed                            type2 keyword     Printer    [RFC3995]
-                                                                                                                      Events
-   notify-events                              printer-media-changed                                 type2 keyword     Printer    [RFC3995]
-                                                                                                                      Events
-   notify-events                              printer-queue-order-changed                           type2 keyword     Printer    [RFC3995]
-                                                                                                                      Events
-   notify-events                              printer-restarted                                     type2 keyword     Printer    [RFC3995]
-                                                                                                                      Events
-   notify-events                              printer-shutdown                                      type2 keyword     Printer    [RFC3995]
-                                                                                                                      Events
-   notify-events                              printer-state-changed                                 type2 keyword     Printer    [RFC3995]
-                                                                                                                      Events
-   notify-events                              printer-stopped                                       type2 keyword     Printer    [RFC3995]
-                                                                                                                      Events
+   notify-events                              job-progress                                          1setOf type2      Job Events [RFC3995]
+                                                                                                    keyword
+   notify-events                              job-state-changed                                     1setOf type2      Job Events [RFC3995]
+                                                                                                    keyword
+   notify-events                              job-stopped                                           1setOf type2      Job Events [RFC3995]
+                                                                                                    keyword
+   notify-events                              none                                                  1setOf type2      No Events  [RFC3995]
+                                                                                                    keyword
+   notify-events                              printer-config-changed                                1setOf type2      Printer    [RFC3995]
+                                                                                                    keyword           Events
+   notify-events                              printer-finishings-changed                            1setOf type2      Printer    [RFC3995]
+                                                                                                    keyword           Events
+   notify-events                              printer-media-changed                                 1setOf type2      Printer    [RFC3995]
+                                                                                                    keyword           Events
+   notify-events                              printer-queue-order-changed                           1setOf type2      Printer    [RFC3995]
+                                                                                                    keyword           Events
+   notify-events                              printer-restarted                                     1setOf type2      Printer    [RFC3995]
+                                                                                                    keyword           Events
+   notify-events                              printer-shutdown                                      1setOf type2      Printer    [RFC3995]
+                                                                                                    keyword           Events
+   notify-events                              printer-state-changed                                 1setOf type2      Printer    [RFC3995]
+                                                                                                    keyword           Events
+   notify-events                              printer-stopped                                       1setOf type2      Printer    [RFC3995]
+                                                                                                    keyword           Events
    notify-events-default                                                                            1setOf type2                 [RFC3995]
                                                                                                     keyword
    notify-events-default                      <Any "notify-events" keyword value>                   1setOf type2                 [RFC3995]
@@ -5333,6 +5360,7 @@ Keyword Attribute Values
    print-base                                 standard                                              type2 keyword                [PWG5100.21]
    print-color-mode                                                                                 type2 keyword                [PWG5100.13]
    print-color-mode                           auto                                                  type2 keyword                [PWG5100.13]
+   print-color-mode                           auto-monochrome                                       type2 keyword                [APPLE20171101]
    print-color-mode                           bi-level                                              type2 keyword                [PWG5100.13]
    print-color-mode                           color                                                 type2 keyword                [PWG5100.13]
    print-color-mode                           highlight                                             type2 keyword                [PWG5100.13]
@@ -5535,6 +5563,8 @@ Keyword Attribute Values
    printer-state-reasons                      camera-failure                                        1setOf type2                 [PWG5100.21]
                                                                                                     keyword
    printer-state-reasons                      chamber-cooling                                       1setOf type2                 [PWG5100.21]
+                                                                                                    keyword
+   printer-state-reasons                      chamber-failure                                       1setOf type2                 [PWG5100.21]
                                                                                                     keyword
    printer-state-reasons                      chamber-heating                                       1setOf type2                 [PWG5100.21]
                                                                                                     keyword
@@ -6146,6 +6176,16 @@ Keyword Attribute Values
                                                                                                     keyword
    printer-state-reasons                      perforater-warming-up                                 1setOf type2                 [PWG5100.9]
                                                                                                     keyword
+   printer-state-reasons                      platform-cooling                                      1setOf type2                 [PWG5100.21]
+                                                                                                    keyword
+   printer-state-reasons                      platform-failure                                      1setOf type2                 [PWG5100.21]
+                                                                                                    keyword
+   printer-state-reasons                      platform-heating                                      1setOf type2                 [PWG5100.21]
+                                                                                                    keyword
+   printer-state-reasons                      platform-temperature-high                             1setOf type2                 [PWG5100.21]
+                                                                                                    keyword
+   printer-state-reasons                      platform-temperature-low                              1setOf type2                 [PWG5100.21]
+                                                                                                    keyword
    printer-state-reasons                      power-down                                            1setOf type2                 [PWG5100.9]
                                                                                                     keyword
    printer-state-reasons                      power-up                                              1setOf type2                 [PWG5100.9]
@@ -6677,6 +6717,8 @@ Keyword Attribute Values
    printer-state-reasons                      subunit-at-limit                                      1setOf type2                 [PWG5100.9]
                                                                                                     keyword
    printer-state-reasons                      subunit-closed                                        1setOf type2                 [PWG5100.9]
+                                                                                                    keyword
+   printer-state-reasons                      subunit-cooling-down                                  1setOf type2                 [HPINC20180215]
                                                                                                     keyword
    printer-state-reasons                      subunit-empty                                         1setOf type2                 [PWG5100.9]
                                                                                                     keyword
@@ -7363,10 +7405,14 @@ Enum Attribute Values
                                                                                                                      enum
    finishings                            85                                         punch-quad-bottom                1setOf type2 [PWG5100.1]
                                                                                                                      enum
-   finishings                            86                                         punch-multiple-left              type2 enum   [CANON-PUNCHING]
-   finishings                            87                                         punch-multiple-top               type2 enum   [CANON-PUNCHING]
-   finishings                            88                                         punch-multiple-right             type2 enum   [CANON-PUNCHING]
-   finishings                            89                                         punch-multiple-bottom            type2 enum   [CANON-PUNCHING]
+   finishings                            86                                         punch-multiple-left              1setOf type2 [CANON-PUNCHING]
+                                                                                                                     enum
+   finishings                            87                                         punch-multiple-top               1setOf type2 [CANON-PUNCHING]
+                                                                                                                     enum
+   finishings                            88                                         punch-multiple-right             1setOf type2 [CANON-PUNCHING]
+                                                                                                                     enum
+   finishings                            89                                         punch-multiple-bottom            1setOf type2 [CANON-PUNCHING]
+                                                                                                                     enum
    finishings                            90                                         fold-accordion                   1setOf type2 [PWG5100.1]
                                                                                                                      enum
    finishings                            91                                         fold-double-gate                 1setOf type2 [PWG5100.1]
@@ -7603,6 +7649,8 @@ Enum Attribute Values
    operations-supported                  0x0049                                     Update-Output-Device-Attributes  1setOf type2 [PWG5100.18]
                                                                                                                      enum
    operations-supported                  0x004A                                     Get-Next-Document-Data           1setOf type2 [PWG5100.17]
+                                                                                                                     enum
+   operations-supported                  0x0066                                     Get-User-Printer-Attributes      1setOf type2 [IPPGUPA]
                                                                                                                      enum
    orientation-requested                                                                                             type2 enum   [RFC8011]
    orientation-requested                 3                                          portrait                         type2 enum   [RFC8011]
@@ -7887,6 +7935,7 @@ Operations
    Get-Subscription-Attributes             [RFC3995]
    Get-Subscriptions                       [RFC3995]
    Get-Subscriptions(extension)            [PWG5100.13]
+   Get-User-Printer-Attributes             [IPPGUPA]
    Hold-Job                                [RFC8011]
    Hold-Job(extension)                     [RFC3380]
    Hold-Job(extension)                     [PWG5100.5]

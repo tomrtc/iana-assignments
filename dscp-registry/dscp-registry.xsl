@@ -15,6 +15,12 @@
       <xsl:when test="@id = 'dscp-registry-2'">
         <tr><th>Name</th><th>Value (Binary)</th><th>Value (Decimal)</th><th>Reference</th></tr>
       </xsl:when>
+      <xsl:when test="@id = 'dscp-registry-3'">
+        <tr><th>Name</th><th>Value (Binary)</th><th>Value (Decimal)</th><th>Reference</th></tr>
+      </xsl:when>
+      <xsl:when test="@id = 'ecn-field'">
+        <tr><th>Binary</th><th>Keyword</th><th>Reference</th></tr>
+      </xsl:when>
     </xsl:choose>
   </xsl:template>
 
@@ -36,6 +42,21 @@
           <td><xsl:apply-templates select="iana:xref"/></td>
         </tr>
       </xsl:when>
+      <xsl:when test="../@id = 'dscp-registry-3'">
+        <tr>
+          <td><xsl:value-of select="iana:name"/></td>
+          <td style="font-family:monospace"><xsl:value-of select="iana:space"/></td>
+          <td><xsl:value-of select="iana:decimal_space"/></td>
+          <td><xsl:apply-templates select="iana:xref"/></td>
+        </tr>
+      </xsl:when>
+      <xsl:otherwise>
+        <tr>
+          <td><xsl:value-of select="iana:value"/></td>
+          <td><xsl:value-of select="iana:description"/></td>
+          <td><xsl:apply-templates select="iana:xref"/></td>
+        </tr>
+      </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
 

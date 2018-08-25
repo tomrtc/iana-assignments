@@ -3,7 +3,7 @@
 <?oxygen RNGSchema="message-headers.rng" type="xml"?>
 <registry xmlns="http://www.iana.org/assignments" id="message-headers">
   <title>Message Headers</title>
-  <updated>2017-12-12</updated>
+  <updated>2018-07-13</updated>
   
   
   
@@ -275,13 +275,13 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <value>Cancel-Key</value>
       <protocol>netnews</protocol>
       <status>standard</status>
-      <xref type="draft" data="RFC-baeuerle-netnews-cancel-lock-09"/>
+      <xref type="rfc" data="rfc8315"/>
     </record>
     <record date="2016-10-25" updated="2017-12-12">
       <value>Cancel-Lock</value>
       <protocol>netnews</protocol>
       <status>standard</status>
-      <xref type="draft" data="RFC-baeuerle-netnews-cancel-lock-09"/>
+      <xref type="rfc" data="rfc8315"/>
     </record>
     <record>
       <value>Cc</value>
@@ -764,6 +764,12 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <xref type="rfc" data="rfc5504"/>
       <xref type="rfc" data="rfc6857"/>
     </record>
+    <record date="2018-07-02">
+      <value>Early-Data</value>
+      <protocol>http</protocol>
+      <status>standard</status>
+      <xref type="draft" data="RFC-ietf-httpbis-replay-04"/>
+    </record>
     <record>
       <value>Encoding</value>
       <protocol>mail</protocol>
@@ -930,6 +936,12 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <protocol>mail</protocol>
       <status>standard</status>
       <xref type="rfc" data="rfc5322"/>
+    </record>
+    <record date="2018-07-13">
+      <value>Include-Referred-Token-Binding-ID</value>
+      <protocol>http</protocol>
+      <status>standard</status>
+      <xref type="draft" data="RFC-ietf-tokbind-https-18"/>
     </record>
     <record>
       <value>Incomplete-Copy</value>
@@ -1606,6 +1618,12 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <status>standard</status>
       <xref type="rfc" data="rfc6638"/>
     </record>
+    <record date="2018-07-13">
+      <value>Sec-Token-Binding</value>
+      <protocol>http</protocol>
+      <status>standard</status>
+      <xref type="draft" data="RFC-ietf-tokbind-https-18"/>
+    </record>
     <record>
       <value>Sec-WebSocket-Accept</value>
       <protocol>http</protocol>
@@ -1775,6 +1793,18 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <protocol>http</protocol>
       <status>standard</status>
       <xref type="rfc" data="rfc4918"/>
+    </record>
+    <record date="2018-06-14">
+      <value>TLS-Report-Domain</value>
+      <protocol>mail</protocol>
+      <status>standard</status>
+      <xref type="draft" data="RFC-ietf-uta-smtp-tlsrpt-23"/>
+    </record>
+    <record date="2018-06-14">
+      <value>TLS-Report-Submitter</value>
+      <protocol>mail</protocol>
+      <status>standard</status>
+      <xref type="draft" data="RFC-ietf-uta-smtp-tlsrpt-23"/>
     </record>
     <record>
       <value>To</value>

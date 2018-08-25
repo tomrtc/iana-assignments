@@ -4,7 +4,7 @@
            2011-06-09
 
    Last Updated
-           2012-08-06
+           2018-07-24
 
    Available Formats
            [IMG]
@@ -25,7 +25,7 @@ ICE Options
 
    Expert(s)
 
- Unassigned
+ Ari Keranen
 
    Reference
            [RFC6336]
@@ -34,8 +34,13 @@ ICE Options
            [IMG]
            CSV
 
-    Name   Reference
-   rtp+ecn [RFC6679]
+    Name                                       Description                                      Contact Change Controller         Reference
+   rtp+ecn Indicates that ICE agent has the capability to perform ECN path testing for          [IESG]  [IESG]            [RFC6679]
+           RTP-over-UDP flows.
+    ice2   The ICE option indicates that the ICE agent using the ICE option is implemented      [IESG]  [IESG]            [RFC8445]
+           according to [RFC8445].
+   trickle An ICE option of "trickle" indicates support for incremental communication of ICE    [IESG]  [IESG]            [RFC-ietf-ice-trickle-21]
+           candidates.
 
 ICE Transport Protocols
 
@@ -53,3 +58,8 @@ ICE Transport Protocols
    Token Reference
     TCP  [RFC6544]
     UDP  [RFC5245]
+
+                                                                        People
+
+     ID   Name     Contact URI      Last Updated
+   [IESG] IESG mailto:iesg&ietf.org

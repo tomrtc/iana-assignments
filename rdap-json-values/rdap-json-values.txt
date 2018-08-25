@@ -4,7 +4,7 @@
            2015-01-12
 
    Last Updated
-           2017-01-18
+           2018-02-16
 
    Available Formats
            [IMG]
@@ -14,7 +14,7 @@
 
    Registry included below
 
-     * RDAP JSON Values
+     * RDAP JSON Values
 
 RDAP JSON Values
 
@@ -196,7 +196,7 @@ RDAP JSON Values
                                                   In some registries, this is known as a maintainer.
    technical                    role              The entity object instance is a technical contact for the          [IESG]               [RFC7483]
                                                   registration.
-   adminstrative                role              The entity object instance is an administrative contact for the    [IESG]               [RFC7483]
+   administrative               role              The entity object instance is an administrative contact for the    [IESG]               [RFC7483]
                                                   registration.
    abuse                        role              The entity object instance handles network abuse issues on behalf  [IESG]               [RFC7483]
                                                   of the registrant of the registration.

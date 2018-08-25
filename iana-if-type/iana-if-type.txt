@@ -4,7 +4,7 @@
            2014-01-27
 
    Last Updated
-           2017-03-30
+           2018-07-03
 
    Registration Procedure(s)
 
@@ -16,7 +16,7 @@
  module. They must instead be added to the "ifType definitions" registry
  at [IANA registry smi-numbers].
 
- Module: [iana-if-type@2017-03-30.yang]
+ Module: [iana-if-type@2018-07-03.yang]
 
 
    Reference

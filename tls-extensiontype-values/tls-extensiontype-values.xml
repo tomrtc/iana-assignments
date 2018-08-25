@@ -5,167 +5,376 @@
   <title>Transport Layer Security (TLS) Extensions</title>
   <category>Transport Layer Security (TLS)</category>
   <created>2005-11-15</created>
-  <updated>2017-12-22</updated>
+  <updated>2018-08-16</updated>
   
   
   <registry id="tls-extensiontype-values-1">
-    <title>ExtensionType Values</title>
+    <title>TLS ExtensionType Values</title>
     <category>Transport Layer Security (TLS)</category>
-    <xref type="rfc" data="rfc5246"/>
-    <registration_rule>IETF Review</registration_rule>
+    <xref type="rfc" data="rfc8446"/>
+    <xref type="rfc" data="rfc8447"/>
+    <expert>Yoav Nir, Rich Salz, Nick Sullivan</expert>
+    <registration_rule>Specification Required</registration_rule>
+    <note>The role of the designated expert is described in <xref type="rfc" data="rfc8447"/>.
+The designated expert <xref type="rfc" data="rfc8126"/> ensures that the specification is
+publicly available.  It is sufficient to have an Internet-Draft
+(that is posted and never published as an RFC) or a document from
+another standards body, industry consortium, university site, etc.
+The expert may provide more in-depth reviews, but their approval
+should not be taken as an endorsement of the extension.  
+    </note>
+    <note>As specified in <xref type="rfc" data="rfc8126"/>, assignments made in the Private Use
+space are not generally useful for broad interoperability.  It is
+the responsibility of those making use of the Private Use range to
+ensure that no conflicts occur (within the intended scope of use).
+For widespread experiments, temporary reservations are available.
+    </note>
+    <note>If an item is not marked as "Recommended", it does not
+necessarily mean that it is flawed; rather, it indicates that the
+item either has not been through the IETF consensus process, has
+limited applicability, or is intended only for specific use cases.
+    </note>
     <record>
       <value>0</value>
       <name>server_name</name>
+      <tls13>CH, EE</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc6066"/>
     </record>
-    <record>
+    <record updated="2018-07-02">
       <value>1</value>
       <name>max_fragment_length</name>
+      <tls13>CH, EE</tls13>
+      <rec>N</rec>
       <xref type="rfc" data="rfc6066"/>
+      <xref type="rfc" data="rfc8449"/>
     </record>
     <record>
       <value>2</value>
       <name>client_certificate_url</name>
+      <tls13>-</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc6066"/>
     </record>
     <record>
       <value>3</value>
       <name>trusted_ca_keys</name>
+      <tls13>-</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc6066"/>
     </record>
-    <record>
+    <record updated="2018-08-16">
       <value>4</value>
       <name>truncated_hmac</name>
+      <tls13>-</tls13>
+      <rec>N</rec>
       <xref type="rfc" data="rfc6066"/>
     </record>
     <record>
       <value>5</value>
       <name>status_request</name>
+      <tls13>CH, CR, CT</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc6066"/>
     </record>
     <record>
       <value>6</value>
       <name>user_mapping</name>
+      <tls13>-</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc4681"/>
     </record>
     <record>
       <value>7</value>
       <name>client_authz</name>
+      <tls13>-</tls13>
+      <rec>N</rec>
       <xref type="rfc" data="rfc5878"/>
     </record>
     <record>
       <value>8</value>
       <name>server_authz</name>
+      <tls13>-</tls13>
+      <rec>N</rec>
       <xref type="rfc" data="rfc5878"/>
     </record>
     <record>
       <value>9</value>
       <name>cert_type</name>
+      <tls13>-</tls13>
+      <rec>N</rec>
       <xref type="rfc" data="rfc6091"/>
     </record>
     <record updated="2015-06-18">
       <value>10</value>
       <name>supported_groups (renamed from "elliptic_curves")</name>
-      <xref type="draft" data="RFC-ietf-tls-rfc4492bis-17"/>
+      <tls13>CH, EE</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8422"/>
       <xref type="rfc" data="rfc7919"/>
     </record>
     <record>
       <value>11</value>
       <name>ec_point_formats</name>
-      <xref type="draft" data="RFC-ietf-tls-rfc4492bis-17"/>
+      <tls13>-</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8422"/>
     </record>
     <record>
       <value>12</value>
       <name>srp</name>
+      <tls13>-</tls13>
+      <rec>N</rec>
       <xref type="rfc" data="rfc5054"/>
     </record>
     <record>
       <value>13</value>
       <name>signature_algorithms</name>
-      <xref type="rfc" data="rfc5246"/>
+      <tls13>CH, CR</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8446"/>
     </record>
     <record>
       <value>14</value>
       <name>use_srtp</name>
+      <tls13>CH, EE</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc5764"/>
     </record>
     <record>
       <value>15</value>
       <name>heartbeat</name>
+      <tls13>CH, EE</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc6520"/>
     </record>    
     <record>
       <value>16</value>
       <name>application_layer_protocol_negotiation</name>
+      <tls13>CH, EE</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc7301"/>
     </record>    
     <record>
       <value>17</value>
       <name>status_request_v2</name>
+      <tls13>-</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc6961"/>
     </record>
     <record>
     <value>18</value>
       <name>signed_certificate_timestamp</name>
+      <tls13>CH, CR, CT</tls13>
+      <rec>N</rec>
       <xref type="rfc" data="rfc6962"/>
     </record>
     <record date="2014-02-10">
       <value>19</value>
       <name>client_certificate_type</name>
+      <tls13>CH, EE</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc7250"/>
     </record>
     <record date="2014-02-10">
       <value>20</value>
       <name>server_certificate_type</name>
+      <tls13>CH, EE</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc7250"/>
     </record>
     <record date="2014-03-14" updated="2015-09-17">
       <value>21</value>
       <name>padding</name>
+      <tls13>CH</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc7685"/>
     </record>
     <record date="2014-06-05">
       <value>22</value>
       <name>encrypt_then_mac</name>
+      <tls13>-</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc7366"/>
     </record>
     <record date="2014-09-26" updated="2015-09-17">
       <value>23</value>
       <name>extended_master_secret</name>
+      <tls13>-</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc7627"/>
     </record>
-    <record date="2016-02-04" updated="2017-01-12">
+    <record date="2016-02-04" updated="2018-07-23">
       <value>24</value>
-      <name>token_binding (TEMPORARY - registered 2016-02-04, extension registered 
-        2017-01-12, expires 2018-02-04)</name>
-      <xref type="draft" data="draft-ietf-tokbind-negotiation"/>
+      <name>token_binding</name>
+      <tls13>-</tls13>
+      <rec>Y</rec>
+      <xref type="draft" data="RFC-ietf-tokbind-negotiation-14"/>
     </record>
     <record date="2016-05-20">
       <value>25</value>
       <name>cached_info</name>
+      <tls13>-</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc7924"/>
     </record>
     <record>
-      <value>26-34</value>
+      <value>26</value>
       <name>Unassigned</name>
+      <tls13/>
+    </record>
+    <record date="2018-05-23" updated="2018-05-31">
+      <value>27</value>
+      <name>compress_certificate 
+        (TEMPORARY - registered 2018-05-23, expires 2019-05-23)</name>
+      <tls13>CH, CR</tls13>
+      <rec>Y</rec>
+      <xref type="draft" data="draft-ietf-tls-certificate-compression"/>
+    </record>
+    <record date="2018-05-31">
+      <value>28</value>
+      <name>record_size_limit</name>
+      <tls13>CH, EE</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8449"/>
+    </record>
+    <record date="2018-07-26">
+      <value>29</value>
+      <name>pwd_protect</name>
+      <tls13>CH</tls13>
+      <rec>N</rec>
+      <xref type="draft" data="RFC-harkins-tls-dragonfly-03"/>
+    </record>
+    <record date="2018-07-26">
+      <value>30</value>
+      <name>pwd_clear</name>
+      <tls13>CH</tls13>
+      <rec>N</rec>
+      <xref type="draft" data="RFC-harkins-tls-dragonfly-03"/>
+    </record>
+    <record date="2018-07-26">
+      <value>31</value>
+      <name>password_salt</name>
+      <tls13>CH, SH, HRR</tls13>
+      <rec>N</rec>
+      <xref type="draft" data="RFC-harkins-tls-dragonfly-03"/>
     </record>
     <record>
+      <value>32-34</value>
+      <name>Unassigned</name>
+      <tls13/>
+    </record>
+    <record updated="2018-05-29">
       <value>35</value>
-      <name>SessionTicket TLS</name>
-      <xref type="rfc" data="rfc4507"/>
+      <name>session_ticket (renamed from "SessionTicket TLS")</name>
+      <tls13>-</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc5077"/>
+      <xref type="rfc" data="rfc8447"/>
     </record>
     <record>
-      <value>36-65280</value>
+      <value>36-40</value>
       <name>Unassigned</name>
+      <tls13/>
+    </record>
+    <record date="2018-05-18">
+      <value>41</value>
+      <name>pre_shared_key</name>
+      <tls13>CH, SH</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8446"/>
+    </record>
+    <record date="2018-05-18">
+      <value>42</value>
+      <name>early_data</name>
+      <tls13>CH, EE, NST</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8446"/>
+    </record>
+    <record date="2018-05-18">
+      <value>43</value>
+      <name>supported_versions</name>
+      <tls13>CH, SH, HRR</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8446"/>
+    </record>
+    <record date="2018-05-18">
+      <value>44</value>
+      <name>cookie</name>
+      <tls13>CH, HRR</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8446"/>
+    </record>
+    <record date="2018-05-18">
+      <value>45</value>
+      <name>psk_key_exchange_modes</name>
+      <tls13>CH</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8446"/>
+    </record>
+    <record>
+      <value>46</value>
+      <name>Unassigned</name>
+      <tls13/>
+    </record>
+    <record date="2018-05-18">
+      <value>47</value>
+      <name>certificate_authorities</name>
+      <tls13>CH, CR</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8446"/>
+    </record>
+    <record date="2018-05-18">
+      <value>48</value>
+      <name>oid_filters</name>
+      <tls13>CR</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8446"/>
+    </record>
+    <record date="2018-05-18">
+      <value>49</value>
+      <name>post_handshake_auth</name>
+      <tls13>CH</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8446"/>
+    </record>
+    <record date="2018-05-18">
+      <value>50</value>
+      <name>signature_algorithms_cert</name>
+      <tls13>CH, CR</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8446"/>
+    </record>
+    <record date="2018-05-18">
+      <value>51</value>
+      <name>key_share</name>
+      <tls13>CH, SH, HRR</tls13>
+      <rec>Y</rec>
+      <xref type="rfc" data="rfc8446"/>
+    </record>
+    <record>
+      <value>52-65279</value>
+      <name>Unassigned</name>
+      <tls13/>
+    </record>
+    <record>
+      <value>65280</value>
+      <name>Reserved for Private Use</name>
+      <tls13/>
+      <xref type="rfc" data="rfc8446"/>
     </record>
     <record>
       <value>65281</value>
       <name>renegotiation_info</name>
+      <tls13>-</tls13>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc5746"/>
     </record>
     <record>
       <value>65282-65535</value>
-      <name>Unassigned</name>
+      <name>Reserved for Private Use</name>
+      <tls13/>
+      <xref type="rfc" data="rfc8446"/>
     </record>
   </registry>
 
@@ -174,27 +383,42 @@
     <title>TLS Certificate Types</title>
     <category>Transport Layer Security (TLS)</category>
     <xref type="rfc" data="rfc6091"/>
-    <range>
-      <value>0-223</value>
-      <registration_rule>RFC Required</registration_rule>
-    </range>
-    <range>
-      <value>224-255</value>
-      <registration_rule>Reserved for Private Use</registration_rule>
-    </range>
+    <xref type="rfc" data="rfc8446"/>
+    <xref type="rfc" data="rfc8447"/>
+    <registration_rule>Specification Required</registration_rule>
+    <expert>Yoav Nir, Rich Salz, Nick Sullivan</expert>
+    <note>The role of the designated expert is described in <xref type="rfc" data="rfc8447"/>.
+The designated expert <xref type="rfc" data="rfc8126"/> ensures that the specification is
+publicly available.  It is sufficient to have an Internet-Draft
+(that is posted and never published as an RFC) or a document from
+another standards body, industry consortium, university site, etc.
+The expert may provide more in-depth reviews, but their approval
+should not be taken as an endorsement of the certificate type.
+    </note>
+    <note>If an item is not marked as "Recommended", it does not
+necessarily mean that it is flawed; rather, it indicates that
+the item either has not been through the IETF consensus process,
+has limited applicability, or is intended only for specific use
+cases.
+    </note>
     <record>
       <value>0</value>
       <description>X.509</description>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc6091"/>
     </record>
     <record>
       <value>1</value>
-      <description>OpenPGP</description>
+      <description>OpenPGP_RESERVED</description>
+      <rec>N</rec>
       <xref type="rfc" data="rfc6091"/>
+      <xref type="rfc" data="rfc8446"/>
+      <comment>Used in TLS versions prior to 1.3.</comment>
     </record>
     <record date="2014-02-10">
       <value>2</value>
       <description>Raw Public Key</description>
+      <rec>Y</rec>
       <xref type="rfc" data="rfc7250"/>
     </record>
     <record>
@@ -212,6 +436,7 @@
   <registry id="certificate-status">
     <title>TLS Certificate Status Types</title>
     <xref type="rfc" data="rfc6961"/>
+    <xref type="rfc" data="rfc8446"/>
     <registration_rule>IETF Review</registration_rule>    
     <record>
       <value>0</value>
@@ -225,8 +450,10 @@
     </record>    
     <record>
       <value>2</value>
-      <description>ocsp_multi</description>
+      <description>ocsp_multi_RESERVED</description>
       <xref type="rfc" data="rfc6961"/>
+      <xref type="rfc" data="rfc8446"/>
+      <comment>Used in TLS versions prior to 1.3.</comment>
     </record>    
     <record>
       <value>3-255</value>
@@ -235,10 +462,21 @@
   </registry>
 
   <registry id="alpn-protocol-ids">
-    <title>Application-Layer Protocol Negotiation (ALPN) Protocol IDs</title>
+    <title>TLS Application-Layer Protocol Negotiation (ALPN) Protocol IDs</title>
     <xref type="rfc" data="rfc7301"/>
+    <xref type="rfc" data="rfc8447"/>
     <registration_rule>Expert Review</registration_rule>
-    <expert>Joe Salowey</expert>    
+    <expert>Yoav Nir, Rich Salz, Nick Sullivan</expert>   
+    <record date="2018-06-25">
+      <value>HTTP/0.9</value>
+      <description>0x68 0x74 0x74 0x70 0x2f 0x30 0x2e 0x39 ("http/0.9")</description>
+      <xref type="rfc" data="rfc1945"/>
+    </record>
+    <record date="2018-06-25">
+      <value>HTTP/1.0</value>
+      <description>0x68 0x74 0x74 0x70 0x2f 0x31 0x2e 0x30 ("http/1.0")</description>
+      <xref type="rfc" data="rfc1945"/>
+    </record>
     <record>
       <value>HTTP/1.1</value>
       <description>0x68 0x74 0x74 0x70 0x2f 0x31 0x2e 0x31 ("http/1.1")</description>
@@ -314,7 +552,17 @@
     <record date="2017-12-22">
       <value>CoAP</value>
       <description>0x63 0x6f 0x61 0x70 ("coap")</description>
-      <xref type="draft" data="RFC-ietf-core-coap-tcp-tls-11"/>
+      <xref type="rfc" data="rfc8323"/>
+    </record>
+    <record date="2018-03-13">
+      <value>XMPP jabber:client namespace</value>
+      <description>0x78 0x6d 0x70 0x70 0x2d 0x63 0x6c 0x69 0x65 0x6e 0x74 ("xmpp-client")</description>
+      <xref type="uri" data="https://xmpp.org/extensions/xep-0368.html"/>
+    </record>
+    <record date="2018-03-13">
+      <value>XMPP jabber:server namespace</value>
+      <description>0x78 0x6d 0x70 0x70 0x2d 0x73 0x65 0x72 0x76 0x65 0x72 ("xmpp-server")</description>
+      <xref type="uri" data="https://xmpp.org/extensions/xep-0368.html"/>
     </record>
     <footnote anchor="1">This entry reserves an identifier for use within a cleartext version 
 of a protocol and is not allowed to appear in a TLS ALPN negotiation.
@@ -332,7 +580,7 @@ of a protocol and is not allowed to appear in a TLS ALPN negotiation.
       <value>64-223</value>
       <registration_rule>Specification Required</registration_rule>
     </range>
-    <expert>Unassigned</expert>   
+    <expert>Yoav Nir, Rich Salz, Nick Sullivan</expert>   
     <record>
       <value>0</value>
       <description>Reserved</description>

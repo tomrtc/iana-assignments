@@ -4,7 +4,7 @@
            2010-03-26
 
    Last Updated
-           2017-10-02
+           2018-08-02
 
    Available Formats
            [IMG]
@@ -16,14 +16,19 @@
 
      * TRILL Nicknames
      * TRILL Multicast Addresses
+     * TRILL Ethertypes
      * TRILL Extended Header Flags
      * RBridge Channel Protocols
+
+          * TRILL Address Flush TLV Types
+
      * Extended RBridge Channel Payload Types
      * Extended RBridge Channel Security Types
      * RBridge Channel Header Flags
      * RBridge Channel Error Codes
 
           * RBridge Channel SubError Codes
+          * Vendor RBridge Channel Error Codes
 
      * TRILL-VER Sub-TLV Capability Flags
      * PORT-TRILL-VER Sub-TLV Capability Flags
@@ -94,6 +99,39 @@ TRILL Multicast Addresses
              01-80-C2-00-00-47            TRILL-ES-IS                            [RFC8171]
    01-80-C2-00-00-48 to 01-80-C2-00-00-4F Unassigned
 
+TRILL Ethertypes
+
+   Registration Procedure(s)
+
+ Ethertypes are assigned by the IEEE Registration Authority.
+ Updates to this registry are coordinated with the designated expert.
+
+   Expert(s)
+
+ Unassigned
+
+   Reference
+           [RFC8377]
+
+   Note
+
+ This registry provides centralized documentation of
+ Ethertypes that were assigned by the IEEE for initial use
+ with TRILL. In some cases, particularly L2-IS-IS and MT,
+ they may be used with other protocols.
+
+
+   Available Formats
+           [IMG]
+           CSV
+
+   Value  Mnemonic      Explanation      Reference
+   0x22F3 TRILL    TRILL data            [RFC6325]
+   0x22F4 L2-IS-IS IS-IS                 [RFC6325]
+   0x893B FGL      Fine Grained Labeling [RFC7172]
+   0x8946 -        TRILL RBridge Channel [RFC7178]
+   0x9A22 MT       Multi-Topology        [RFC8377]
+
 TRILL Extended Header Flags
 
    Registration Procedure(s)
@@ -107,15 +145,17 @@ TRILL Extended Header Flags
            [IMG]
            CSV
 
-   Bits                     Purpose                         Reference
+   Bits                     Purpose                                Reference
     0-2  Critical Summary Bits                          [RFC7179]
     3-6  available critical hop-by-hop flags            [RFC7179]
      7   Critical Channel Alert Flag                    [RFC7179]
      8   Non-critical Channel Alert Flag                [RFC7179]
-   9-13  available non-critical hop-by-hop flags        [RFC7179]
+   9-11  available non-critical hop-by-hop flags        [RFC7179]
+   12-13 TRILL-ECN (Explicit Congestion Notification)   [RFC-ietf-trill-ecn-support-07]
    14-16 Extended Hop Count                             [RFC7780]
    17-20 available non-critical reserved flags          [RFC7179]
-   21-26 available critical ingress-to-egress flags     [RFC7179]
+   21-25 available critical ingress-to-egress flags     [RFC7179]
+    26   Critical Congestion Experienced (CCE)          [RFC-ietf-trill-ecn-support-07]
    27-28 Extended Color                                 [RFC7780]
    29-31 available non-critical ingress-to-egress flags [RFC7179][RFC7780]
 
@@ -133,17 +173,46 @@ RBridge Channel Protocols
    0x100-0xFF7 RFC Required            allocation of a single value
    0x100-0xFF7 IESG Approval           allocation of multiple values
 
-    Protocol          Description        Reference
-      0x000    Reserved                  [RFC7178]
-      0x001    RBridge Channel Error     [RFC7178]
-      0x002    BFD Control               [RFC7175]
-      0x003    BFD Echo                  [RFC7175]
-      0x004    RBridge Channel Extension [RFC7978]
-      0x005    Pull Directory Services   [RFC8171]
-      0x006    Port-Shutdown             [RFC8139]
-   0x007-0xFF7 Unassigned
-   0xFF8-0xFFE Reserved for Private Use  [RFC7178]
-      0xFFF    Reserved                  [RFC7178]
+    Protocol             Description                    Reference
+      0x000    Reserved                        [RFC7178]
+      0x001    RBridge Channel Error           [RFC7178]
+      0x002    BFD Control                     [RFC7175]
+      0x003    BFD Echo                        [RFC7175]
+      0x004    RBridge Channel Extension       [RFC7978]
+      0x005    Pull Directory Services         [RFC8171]
+      0x006    Port-Shutdown                   [RFC8139]
+      0x007    P2MP BFD Control                [RFC-ietf-trill-p2mp-bfd-09]
+      0x008    Vendor-Specific RBridge Channel [RFC8381]
+      0x009    Address Flush                   [RFC8383]
+   0x00A-0xFF7 Unassigned
+   0xFF8-0xFFE Reserved for Private Use        [RFC7178]
+      0xFFF    Reserved                        [RFC7178]
+
+  TRILL Address Flush TLV Types
+
+   Registration Procedure(s)
+
+ IETF Review
+
+   Reference
+           [RFC8383]
+
+   Available Formats
+           [IMG]
+           CSV
+
+   Protocol    Description     Reference
+      0     Reserved           [RFC8383]
+      1     Blocks of VLANs    [RFC8383]
+      2     Bit Map of VLANs   [RFC8383]
+      3     Blocks of FGLs     [RFC8383]
+      4     List of FGLs       [RFC8383]
+      5     Bit Map of FGLs    [RFC8383]
+      6     All Data Labels    [RFC8383]
+      7     MAC Address List   [RFC8383]
+      8     MAC Address Blocks [RFC8383]
+    9-254   Unassigned
+     255    Reserved           [RFC8383]
 
 Extended RBridge Channel Payload Types
 
@@ -267,6 +336,29 @@ RBridge Channel Error Codes
    7-14        (no suberrors assigned)                            [RFC7978]
     15         Reserved                                           [RFC7978]
 
+  Vendor RBridge Channel Error Codes
+
+   Registration Procedure(s)
+
+ Standards Action
+
+   Reference
+           [RFC8381]
+
+   Available Formats
+           [IMG]
+           CSV
+
+     Code          Description       Reference
+     0x00    No error                [RFC8381]
+     0x01    Message too short       [RFC8381]
+     0x02    Unknown OUI/CID         [RFC8381]
+     0x03    Unknown Sub-Protocol    [RFC8381]
+     0x04    Unknown Sub-Version     [RFC8381]
+   0x05-0x0F Unassigned
+   0x10-0xFE Reserved for vendor use [RFC8381]
+     0xFF    Reserved                [RFC8381]
+
 TRILL-VER Sub-TLV Capability Flags
 
    Registration Procedure(s)
@@ -280,19 +372,20 @@ TRILL-VER Sub-TLV Capability Flags
            [IMG]
            CSV
 
-    Bit                 Description                     Reference
-     0   Affinity sub-TLV support                   [RFC7783]
-     1   FGL-safe                                   [RFC7172]
-     2   OAM capable                                [RFC7455]
-     3   Backwards-compatible OAM                   [RFC7455]
-     4   E-L1FS FS-LSP support                      [RFC7780][RFC7356]
-   5-13  Unassigned
-    14   Extended Hop Count support                 [RFC7780]
+    Bit                  Description                      Reference
+     0   Affinity sub-TLV support                     [RFC7783]
+     1   FGL-safe                                     [RFC7172]
+     2   OAM capable                                  [RFC7455]
+     3   Backwards-compatible OAM                     [RFC7455]
+     4   E-L1FS FS-LSP support                        [RFC7780][RFC7356]
+     5   Able to handle the NickBlockFlags APPsub-TLV [RFC8397]
+   6-13  Unassigned
+    14   Extended Hop Count support                   [RFC7780]
    15-16 Unassigned
-   17-20 available non-critical reserved flags      [RFC7179]
-   21-26 available critical ingress-to-egress flags [RFC7179]
-   27-28 Extended Color support                     [RFC7780]
-   29-31 Extended header flag support               [RFC7179][RFC7780]
+   17-20 available non-critical reserved flags        [RFC7179]
+   21-26 available critical ingress-to-egress flags   [RFC7179]
+   27-28 Extended Color support                       [RFC7780]
+   29-31 Extended header flag support                 [RFC7179][RFC7780]
 
 PORT-TRILL-VER Sub-TLV Capability Flags
 
@@ -311,7 +404,8 @@ PORT-TRILL-VER Sub-TLV Capability Flags
      0   Hello reduction support.          [RFC8139]
     1-2  Unassigned
    3-13  Hop-by-hop extended flag support. [RFC7179]
-   14-31 Unassigned
+   14-15 Topology labeling support.        [RFC8377]
+   16-31 Unassigned
 
 TRILL Neighbor TLV NEIGHBOR RECORD Flags
 
@@ -442,7 +536,10 @@ TRILL APPsub-TLV Types under IS-IS TLV 251 Application Identifier 1
       19     FGL-VLAN-Bitmap            [RFC8139]
       20     FGL-VLAN-Pairs             [RFC8139]
       21     originatingSNPBufferSize   [RFC8249]
-    22-251   Unassigned
+      22     Smart-Parameters           [RFC8384]
+      23     Smart-MAC                  [RFC8384]
+      24     NickBlockFlags             [RFC8397]
+    25-251   Unassigned
       252    AA-LAALP-GROUP-RBRIDGES    [RFC7782]
       253    AA-LAALP-GROUP-MAC         [RFC7782]
       254    EXTENDED-RBRIDGE-CAP       [RFC7782]
@@ -481,10 +578,12 @@ TRILL APPsub-TLV Types under IS-IS TLV 251 Application Identifier 1
            [IMG]
            CSV
 
-   Bit  Mnemonic     Description     Reference
-    0   IN       Used as ingress     [RFC7780]
-    1   SE       Inter-Subnet Egress [RFC7956]
-   2-15          Unassigned
+   Bit  Mnemonic     Description      Reference
+    0   IN       Used as ingress      [RFC7780]
+    1   SE       Inter-Subnet Egress  [RFC7956]
+    2   R        Replication Nickname [RFC8361]
+    3   C        Special RPF Check    [RFC8361]
+   4-15          Unassigned
 
   Interface Addresses APPsub-TLV Sub-sub-TLVs
 

@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="ikev2-parameters">
   <title>Internet Key Exchange Version 2 (IKEv2) Parameters</title>
   <created>2005-01-18</created>
-  <updated>2017-09-14</updated>
+  <updated>2018-08-21</updated>
   
   
   
@@ -583,8 +583,32 @@
           <xref type="rfc" data="rfc7634"/>
         </ikev2>
       </record>
+      <record date="2018-04-09">
+        <value>29</value>
+        <description>ENCR_AES_CCM_8_IIV</description>
+        <esp>
+          <xref type="draft" data="draft-ietf-ipsecme-implicit-iv"/>
+        </esp>
+        <ikev2>Not allowed</ikev2>
+      </record>
+      <record date="2018-04-09">
+        <value>30</value>
+        <description>ENCR_AES_GCM_16_IIV</description>
+        <esp>
+          <xref type="draft" data="draft-ietf-ipsecme-implicit-iv"/>
+        </esp>
+        <ikev2>Not allowed</ikev2>
+      </record>
+      <record date="2018-04-09">
+        <value>31</value>
+        <description>ENCR_CHACHA20_POLY1305_IIV</description>
+        <esp>
+          <xref type="draft" data="draft-ietf-ipsecme-implicit-iv"/>
+        </esp>
+        <ikev2>Not allowed</ikev2>
+      </record>
       <record>
-        <value>29-1023</value>
+        <value>32-1023</value>
         <description>Unassigned</description>
       </record>
       <record>
@@ -1644,8 +1668,23 @@
       <description>PUZZLE</description>
       <xref type="rfc" data="rfc8019"/>
     </record>
+    <record date="2018-02-07">
+      <value>16435</value>
+      <description>USE_PPK</description>
+      <xref type="draft" data="draft-ietf-ipsecme-qr-ikev2"/>
+    </record>
+    <record date="2018-02-07">
+      <value>16436</value>
+      <description>PPK_IDENTITY</description>
+      <xref type="draft" data="draft-ietf-ipsecme-qr-ikev2"/>
+    </record>
+    <record date="2018-02-07">
+      <value>16437</value>
+      <description>NO_PPK_AUTH</description>
+      <xref type="draft" data="draft-ietf-ipsecme-qr-ikev2"/>
+    </record>
     <record>
-      <value>16435-40959</value>
+      <value>16438-40959</value>
       <description>Unassigned</description>
     </record>
     <record>
@@ -2013,8 +2052,15 @@ multiple values were requested.</note>
       <length>0 or more</length>
       <xref type="draft" data="draft-pauly-ipsecme-split-dns"/>
     </record>
+    <record date="2018-02-06">
+      <value>26</value>
+      <description>INTERNAL_DNSSEC_TA</description>
+      <multi_valued>YES</multi_valued>
+      <length>0 or more</length>
+      <xref type="draft" data="draft-ietf-ipsecme-split-dns"/>
+    </record>
     <record>
-      <value>26-16383</value>
+      <value>27-16383</value>
       <description>Unassigned</description>
     </record>
     <record>
@@ -2187,7 +2233,7 @@ multiple values were requested.</note>
     <record date="2017-04-06">
       <value>5</value>
       <description>Identity</description>
-      <xref type="draft" data="draft-ietf-ipsecme-eddsa"/>
+      <xref type="rfc" data="rfc8420"/>
     </record>
     <record>
       <value>6-1023</value>

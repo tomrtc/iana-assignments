@@ -5,7 +5,7 @@
   <title>RDAP JSON Values</title>
   <category>Registration Data Access Protocol (RDAP)</category>
   <created>2015-01-12</created>
-  <updated>2017-01-18</updated>
+  <updated>2018-02-16</updated>
   
   <registry id="rdap-json-values-1">
     <title>RDAP JSON Values</title>
@@ -551,7 +551,7 @@
     </record>
     
     <record date="2015-01-12">
-      <value>adminstrative</value>
+      <value>administrative</value>
       <type>role</type>
       <description>The entity object instance is an administrative
            contact for the registration.</description>

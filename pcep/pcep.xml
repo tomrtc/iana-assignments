@@ -4,12 +4,19 @@
 <registry xmlns="http://www.iana.org/assignments" id="pcep">
   <title>Path Computation Element Protocol (PCEP) Numbers</title>
   <created>2008-12-19</created>
-  <updated>2017-12-08</updated>
+  <updated>2018-08-02</updated>
   
   <registry id="pcep-messages">
     <title>PCEP Messages</title>
     <xref type="rfc" data="rfc5440"/>
-    <registration_rule>IETF Review</registration_rule>
+    <range>
+      <value>0-251</value>
+      <registration_rule>IETF Review</registration_rule>
+    </range>
+    <range>
+      <value>252-255</value>
+      <registration_rule>Experimental Use</registration_rule>
+    </range>
     <record>
       <value>0</value>
       <description>Reserved</description>
@@ -73,7 +80,7 @@
     <record date="2016-07-27" updated="2017-10-18">
       <value>12</value>
       <description>LSP Initiate Request</description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
     </record>
     <record date="2017-09-07">
       <value>13</value>
@@ -81,8 +88,13 @@
       <xref type="rfc" data="rfc8253"/>
     </record>
     <record>
-      <value>14-255</value>
+      <value>14-251</value>
       <description>Unassigned</description>
+    </record>
+    <record>
+      <value>252-255</value>
+      <description>Experimental Use</description>
+      <xref type="rfc" data="rfc8356"/>
     </record>
   </registry>
   
@@ -90,7 +102,14 @@
     <title>PCEP Objects</title>
     <xref type="rfc" data="rfc5440"/>
     <xref type="rfc-errata" data="4956"/>
-    <registration_rule>IETF Review</registration_rule>
+    <range>
+      <value>0-247</value>
+      <registration_rule>IETF Review</registration_rule>
+    </range>
+    <range>
+      <value>248-255</value>
+      <registration_rule>Experimental Use</registration_rule>
+    </range>
     <record>
       <class-value>0</class-value>
       <class-description>Reserved</class-description>
@@ -876,14 +895,14 @@
       <class-description>INTER-LAYER</class-description>
       <type-value>0</type-value>
       <type-description>Reserved</type-description>
-      <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+      <xref type="rfc" data="rfc8282"/>
     </record>
     <record date="2017-03-20">
       <class-value>36</class-value>
       <class-description>INTER-LAYER</class-description>
       <type-value>1</type-value>
       <type-description>Inter-layer</type-description>
-      <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+      <xref type="rfc" data="rfc8282"/>
     </record>
     <record>
       <class-value>36</class-value>
@@ -896,14 +915,14 @@
       <class-description>SWITCH-LAYER</class-description>
       <type-value>0</type-value>
       <type-description>Reserved</type-description>
-      <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+      <xref type="rfc" data="rfc8282"/>
     </record>
     <record date="2017-03-20">
       <class-value>37</class-value>
       <class-description>SWITCH-LAYER</class-description>
       <type-value>1</type-value>
       <type-description>Switch-layer</type-description>
-      <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+      <xref type="rfc" data="rfc8282"/>
     </record>
     <record>
       <class-value>37</class-value>
@@ -916,14 +935,14 @@
       <class-description>REQ-ADAP-CAP</class-description>
       <type-value>0</type-value>
       <type-description>Reserved</type-description>
-      <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+      <xref type="rfc" data="rfc8282"/>
     </record>
     <record date="2017-03-20">
       <class-value>38</class-value>
       <class-description>REQ-ADAP-CAP</class-description>
       <type-value>1</type-value>
       <type-description>Req-Adap-Cap</type-description>
-      <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+      <xref type="rfc" data="rfc8282"/>
     </record>
     <record>
       <class-value>38</class-value>
@@ -936,14 +955,14 @@
       <class-description>SERVER-INDICATION</class-description>
       <type-value>0</type-value>
       <type-description>Reserved</type-description>
-      <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+      <xref type="rfc" data="rfc8282"/>
     </record>
     <record date="2017-03-20">
       <class-value>39</class-value>
       <class-description>SERVER-INDICATION</class-description>
       <type-value>1</type-value>
       <type-description>Server-indication</type-description>
-      <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+      <xref type="rfc" data="rfc8282"/>
     </record>
     <record>
       <class-value>39</class-value>
@@ -978,18 +997,49 @@
       <type-value>3-15</type-value>
       <type-description>Unassigned</type-description>
     </record>
+    <record date="2018-04-23">
+      <class-value>41</class-value>
+      <class-description>S2LS 
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</class-description>
+      <type-value>0</type-value>
+      <type-description>Reserved 
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</type-description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+    </record>
+    <record date="2018-04-23">
+      <class-value>41</class-value>
+      <class-description>S2LS 
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</class-description>
+      <type-value>1</type-value>
+      <type-description>S2LS 
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</type-description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+    </record>
     <record>
-      <class-value>41-255</class-value>
+      <class-value>41</class-value>
+      <class-description>S2LS</class-description>
+      <type-value>2-15</type-value>
+      <type-description>Unassigned</type-description>
+    </record>
+    <record>
+      <class-value>42-247</class-value>
       <class-description>Unassigned</class-description>
       <type-value>0</type-value>
       <type-description>Reserved</type-description>
       <xref type="rfc-errata" data="4956"/>
     </record>
     <record>
-      <class-value>41-255</class-value>
+      <class-value>41-247</class-value>
       <class-description>Unassigned</class-description>
       <type-value>1-15</type-value>
       <type-description>Unassigned</type-description>
+    </record>
+    <record>
+      <class-value>248-255</class-value>
+      <class-description>Experimental Use</class-description>
+      <type-value>0-15</type-value>
+      <type-description>Experimental Use</type-description>
+      <xref type="rfc" data="rfc8356"/>
     </record>
   </registry>
   
@@ -1188,7 +1238,7 @@
     </record>
     <record date="2015-08-14">
       <value>11</value>
-      <description>Segment-ID (SID) Depth. (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</description>
+      <description>Segment-ID (SID) Depth. (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</description>
       <xref type="draft" data="draft-ietf-pce-segment-routing"/>
     </record>
     <record date="2016-09-28">
@@ -1224,12 +1274,12 @@
     <record date="2017-03-20">
       <value>18</value>
       <description>Number of adaptations on a path</description>
-      <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+      <xref type="rfc" data="rfc8282"/>
     </record>
     <record date="2017-03-20">
       <value>19</value>
       <description>Number of layers on a path</description>
-      <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+      <xref type="rfc" data="rfc8282"/>
     </record>
     <record>
       <value>20-255</value>
@@ -1780,10 +1830,26 @@
       <value-description>LSP-DB-VERSION TLV missing</value-description>
       <xref type="rfc" data="rfc8232"/>
     </record>
+    <record date="2018-04-23">
+      <type-value>6</type-value>
+      <type-description>Mandatory Object missing</type-description>
+      <value-value>13</value-value>
+      <value-description>S2LS object missing
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+    </record>
+    <record date="2018-04-23">
+      <type-value>6</type-value>
+      <type-description>Mandatory Object missing</type-description>
+      <value-value>14</value-value>
+      <value-description>P2MP-LSP-IDENTIFIER TLV missing
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+    </record>
     <record>
       <type-value>6</type-value>
       <type-description>Mandatory Object missing</type-description>
-      <value-value>13-255</value-value>
+      <value-value>15-255</value-value>
       <value-description>Unassigned</value-description>
     </record>
     <record>
@@ -1825,42 +1891,42 @@
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>2</value-value>
-      <value-description>Bad label value (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</value-description>
+      <value-description>Bad label value (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
       <xref type="draft" data="draft-ietf-pce-segment-routing"/>
     </record>
     <record date="2015-08-14">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>3</value-value>
-      <value-description>Unsupported number of Segment ERO subobjects (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</value-description>
+      <value-description>Unsupported number of Segment ERO subobjects (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
       <xref type="draft" data="draft-ietf-pce-segment-routing"/>
     </record>
     <record date="2015-08-14">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>4</value-value>
-      <value-description>Bad label format (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</value-description>
+      <value-description>Bad label format (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
       <xref type="draft" data="draft-ietf-pce-segment-routing"/>
     </record>
     <record date="2015-08-14">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>5</value-value>
-      <value-description>Non-identical ERO subobjects (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</value-description>
+      <value-description>Non-identical ERO subobjects (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
       <xref type="draft" data="draft-ietf-pce-segment-routing"/>
     </record>
     <record date="2015-08-14">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>6</value-value>
-      <value-description>Both SID and NAI are absent in ERO subobject (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</value-description>
+      <value-description>Both SID and NAI are absent in ERO subobject (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
       <xref type="draft" data="draft-ietf-pce-segment-routing"/>
     </record>
     <record date="2015-08-14">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>7</value-value>
-      <value-description>Both SID and NAI are absent in RRO subobject (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</value-description>
+      <value-description>Both SID and NAI are absent in RRO subobject (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
       <xref type="draft" data="draft-ietf-pce-segment-routing"/>
     </record>
     <record date="2016-07-27" updated="2017-10-18">
@@ -1868,28 +1934,28 @@
       <type-description>Reception of an invalid object</type-description>
       <value-value>8</value-value>
       <value-description>SYMBOLIC-PATH-NAME TLV missing</value-description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
     </record>
     <record date="2015-08-14">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>9</value-value>
-      <value-description>Default MSD is specified for the PCEP session (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</value-description>
+      <value-description>Default MSD is specified for the PCEP session (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
       <xref type="draft" data="draft-ietf-pce-segment-routing"/>
     </record>
     <record date="2015-08-14">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>10</value-value>
-      <value-description>Non-identical RRO subjects (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</value-description>
+      <value-description>Non-identical RRO subjects (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
       <xref type="draft" data="draft-ietf-pce-segment-routing"/>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2018-05-11">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>11</value-value>
-      <value-description>Malformed object (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</value-description>
-      <xref type="draft" data="draft-ietf-pce-segment-routing"/>
+      <value-description>Malformed object</value-description>
+      <xref type="rfc" data="rfc8408"/>
     </record>
     <record>
       <type-value>10</type-value>
@@ -2074,10 +2140,34 @@
       <value-description>Fragmented request failure</value-description>
       <xref type="rfc" data="rfc8306"/>
     </record>
+    <record updated="2018-04-23">
+      <type-value>18</type-value>
+      <type-description>P2MP Fragmentation Error</type-description>
+      <value-value>2</value-value>
+      <value-description>Fragmented Report failure
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+    </record>
+    <record updated="2018-04-23">
+      <type-value>18</type-value>
+      <type-description>P2MP Fragmentation Error</type-description>
+      <value-value>3</value-value>
+      <value-description>Fragmented Update failure
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+    </record>
+    <record updated="2018-04-23">
+      <type-value>18</type-value>
+      <type-description>P2MP Fragmentation Error</type-description>
+      <value-value>4</value-value>
+      <value-description>Fragmented Instantiation failure
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+    </record>
     <record>
       <type-value>18</type-value>
       <type-description>P2MP Fragmentation Error</type-description>
-      <value-value>2-255</value-value>
+      <value-value>5-255</value-value>
       <value-description>Unassigned</value-description>
     </record>
     <record date="2016-07-27">
@@ -2130,40 +2220,68 @@
       <type-description>Invalid Operation</type-description>
       <value-value>6</value-value>
       <value-description>PCE-initiated LSP limit reached</value-description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
     </record>
     <record date="2016-07-27">
       <type-value>19</type-value>
       <type-description>Invalid Operation</type-description>
       <value-value>7</value-value>
       <value-description>Delegation for PCE-initiated LSP cannot be revoked</value-description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
     </record>
     <record date="2016-07-27">
       <type-value>19</type-value>
       <type-description>Invalid Operation</type-description>
       <value-value>8</value-value>
       <value-description>Non-zero PLSP-ID in LSP Initiate Request</value-description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
     </record>
     <record date="2016-07-27" updated="2017-11-24">
       <type-value>19</type-value>
       <type-description>Invalid Operation</type-description>
       <value-value>9</value-value>
       <value-description>LSP is not PCE initiated</value-description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
     </record>
     <record date="2016-07-27">
       <type-value>19</type-value>
       <type-description>Invalid Operation</type-description>
       <value-value>10</value-value>
       <value-description>PCE-initiated operation-frequency limit reached</value-description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
+    </record>
+    <record date="2018-04-23">
+      <type-value>19</type-value>
+      <type-description>Invalid Operation</type-description>
+      <value-value>11</value-value>
+      <value-description>Attempted LSP State Report
+        for P2MP if stateful PCE capability for P2MP was not advertised
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+    </record>
+    <record date="2018-04-23">
+      <type-value>19</type-value>
+      <type-description>Invalid Operation</type-description>
+      <value-value>12</value-value>
+      <value-description>Attempted LSP Update Request
+        for P2MP if active stateful PCE capability for P2MP was not advertised
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+    </record>
+    <record date="2018-04-23">
+      <type-value>19</type-value>
+      <type-description>Invalid Operation</type-description>
+      <value-value>13</value-value>
+      <value-description>Attempted LSP Instantiation
+        Request for P2MP if stateful PCE
+        instantiation capability for P2MP was not advertised
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
     </record>
     <record date="2016-07-27" updated="2017-06-26">
       <type-value>19</type-value>
       <type-description>Invalid Operation</type-description>
-      <value-value>11-255</value-value>
+      <value-value>14-255</value-value>
       <value-description>Unassigned</value-description>
     </record>
     <record date="2016-07-27">
@@ -2237,33 +2355,32 @@
       <value-value>8-255</value-value>
       <value-description>Unassigned</value-description>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2018-05-11">
       <type-value>21</type-value>
-      <type-description>Invalid traffic engineering path setup type (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</type-description>
+      <type-description>Invalid traffic engineering path setup type</type-description>
       <value-value>0</value-value>
       <value-description>Unassigned</value-description>
-      <xref type="draft" data="draft-ietf-pce-lsp-setup-type"/>
+      <xref type="rfc" data="rfc8408"/>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2018-05-11">
       <type-value>21</type-value>
       <type-description>Invalid traffic engineering path setup type</type-description>
       <value-value>1</value-value>
-      <value-description>Unsupported path setup type (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</value-description>
-      <xref type="draft" data="draft-ietf-pce-lsp-setup-type"/>
+      <value-description>Unsupported path setup type</value-description>
+      <xref type="rfc" data="rfc8408"/>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2018-05-11">
       <type-value>21</type-value>
       <type-description>Invalid traffic engineering path setup type</type-description>
       <value-value>2</value-value>
-      <value-description>Mismatched path setup type (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</value-description>
-      <xref type="draft" data="draft-ietf-pce-lsp-setup-type"/>
+      <value-description>Mismatched path setup type</value-description>
+      <xref type="rfc" data="rfc8408"/>
     </record>
     <record>
       <type-value>21</type-value>
       <type-description>Invalid traffic engineering path setup type</type-description>
       <value-value>3-255</value-value>
       <value-description>Unassigned</value-description>
-      <xref type="draft" data="draft-ietf-pce-lsp-setup-type"/>
     </record>
     <record>
       <type-value>22</type-value>
@@ -2282,14 +2399,14 @@
       <type-description>Bad parameter value</type-description>
       <value-value>1</value-value>
       <value-description>SYMBOLIC-PATH-NAME in use</value-description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
     </record>
     <record date="2016-07-27" updated="2017-11-24">
       <type-value>23</type-value>
       <type-description>Bad parameter value</type-description>
       <value-value>2</value-value>
       <value-description>Speaker identity included for an LSP that is not PCE initiated</value-description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
     </record>
     <record date="2016-07-27" updated="2017-10-18">
       <type-value>23</type-value>
@@ -2308,21 +2425,21 @@
       <type-description>LSP instantiation error</type-description>
       <value-value>1</value-value>
       <value-description>Unacceptable instantiation parameters</value-description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
     </record>
     <record date="2016-07-27" updated="2017-10-18">
       <type-value>24</type-value>
       <type-description>LSP instantiation error</type-description>
       <value-value>2</value-value>
       <value-description>Internal error</value-description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
     </record>
     <record date="2016-07-27">
       <type-value>24</type-value>
       <type-description>LSP instantiation error</type-description>
       <value-value>3</value-value>
       <value-description>Signaling error</value-description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
     </record>
     <record date="2016-07-27" updated="2017-10-18">
       <type-value>24</type-value>
@@ -2729,7 +2846,14 @@
   <registry id="pcep-tlv-type-indicators">
     <title>PCEP TLV Type Indicators</title>
     <xref type="rfc" data="rfc5440"/>
-    <registration_rule>IETF Review</registration_rule>
+    <range>
+      <value>0-65503</value>
+      <registration_rule>IETF Review</registration_rule>
+    </range>
+    <range>
+      <value>65504-65535</value>
+      <registration_rule>Experimental Use</registration_rule>
+    </range>
     <record>
       <value>0</value>
       <description>Reserved</description>
@@ -2824,17 +2948,17 @@
     </record>
     <record date="2015-08-14">
       <value>26</value>
-      <description>SR-PCE-CAPABILITY (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</description>
+      <description>SR-PCE-CAPABILITY (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</description>
       <xref type="draft" data="draft-ietf-pce-segment-routing"/>
     </record>
     <record>
       <value>27</value>
       <description>Unassigned</description>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2018-05-11">
       <value>28</value>
-      <description>PATH-SETUP-TYPE (TEMPORARY - registered 2015-08-14, extension registered 2017-08-04, expires 2018-08-14)</description>
-      <xref type="draft" data="draft-ietf-pce-lsp-setup-type"/>
+      <description>PATH-SETUP-TYPE</description>
+      <xref type="rfc" data="rfc8408"/>
     </record>
     <record date="2017-10-17">
       <value>29</value>
@@ -2851,9 +2975,31 @@
       <description>Extended Association Id (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</description>
       <xref type="draft" data="draft-ietf-pce-association-group"/>
     </record>
+    <record date="2018-04-23">
+      <value>32</value>
+      <description>P2MP-IPV4-LSP-IDENTIFIERS
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+    </record>
+    <record date="2018-04-23">
+      <value>33</value>
+      <description>P2MP-IPV6-LSP-IDENTIFIERS
+        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+    </record>
+    <record date="2018-05-11">
+      <value>34</value>
+      <description>PATH-SETUP-TYPE-CAPABILITY</description>
+      <xref type="rfc" data="rfc8408"/>
+    </record>
     <record>
-      <value>32-65535</value>
+      <value>35-65503</value>
       <description>Unassigned</description>
+    </record>
+    <record>
+      <value>65504-65535</value>
+      <description>Experimental Use</description>
+      <xref type="rfc" data="rfc8356"/>
     </record>
   </registry>
   
@@ -2998,7 +3144,7 @@
   
   <registry id="inter-layer-object-path-property-bits">
     <title>Inter-Layer Object Path Property Bits</title>
-    <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+    <xref type="rfc" data="rfc8282"/>
     <registration_rule>IETF Review</registration_rule>
     <record>
       <value>0-28</value>
@@ -3009,19 +3155,19 @@
       <value>29</value>
       <flag>T</flag>
       <description>Triggered Signaling Allowed</description>
-      <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+      <xref type="rfc" data="rfc8282"/>
     </record>
     <record date="2017-03-20">
       <value>30</value>
       <flag>M</flag>
       <description>Multi-Layer Requested</description>
-      <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+      <xref type="rfc" data="rfc8282"/>
     </record>
     <record date="2017-03-20">
       <value>31</value>
       <flag>I</flag>
       <description>Inter-Layer Allowed</description>
-      <xref type="draft" data="RFC-ietf-pce-inter-layer-ext-12"/>
+      <xref type="rfc" data="rfc8282"/>
     </record>
   </registry>
   
@@ -3031,13 +3177,23 @@
     <registration_rule>Standards Action</registration_rule>
     <note>Bits are numbered from bit 0 as the most significant bit.</note>
     <record date="2017-06-26" updated="2017-10-18">
-      <value>0-3</value>
+      <value>0-1</value>
       <description>Unassigned</description>
+    </record>
+    <record date="2018-04-23">
+      <value>2</value>
+      <description>Fragmentation (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+    </record>
+    <record date="2018-04-23">
+      <value>3</value>
+      <description>P2MP (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
+      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
     </record>
     <record date="2017-10-18">
       <value>4</value>
       <description>Create</description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
     </record>
     <record date="2017-06-26">
       <value>5-7</value>
@@ -3072,8 +3228,26 @@
       <registration_rule>Standards Action</registration_rule>
       <note>Bits are numbered from bit 0 as the most significant bit.</note>
       <record>
-        <value>0-25</value>
+        <value>0-22</value>
         <description>Unassigned</description>
+      </record>
+      <record date="2018-04-23">
+        <value>23</value>
+        <description>P2MP-LSP-INSTANTIATION-CAPABILITY
+          (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
+        <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      </record>
+      <record date="2018-04-23">
+        <value>24</value>
+        <description>P2MP-LSP-UPDATE-CAPABILITY
+          (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
+        <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      </record>
+      <record date="2018-04-23">
+        <value>25</value>
+        <description>P2MP-CAPABILITY
+          (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
+        <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
       </record>
       <record date="2017-06-29">
         <value>26</value>
@@ -3093,7 +3267,7 @@
       <record date="2017-10-18" updated="2017-10-19">
         <value>29</value>
         <description>LSP-INSTANTIATION-CAPABILITY (I)</description>
-        <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+        <xref type="rfc" data="rfc8281"/>
       </record>
       <record date="2017-06-29">
         <value>30</value>
@@ -3165,18 +3339,34 @@
   
   <registry id="srp-object-flag-field">
     <title>SRP Object Flag Field</title>
-    <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+    <xref type="rfc" data="rfc8281"/>
     <registration_rule>Standards Action</registration_rule>
     <note/>
     <record date="2017-10-18">
       <value>0-30</value>
       <description>Unassigned</description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
     </record> 
     <record date="2017-10-18">
       <value>31</value>
       <description>LSP-Remove</description>
-      <xref type="draft" data="RFC-ietf-pce-pce-initiated-lsp-11"/>
+      <xref type="rfc" data="rfc8281"/>
+    </record>
+  </registry>
+  
+  <registry id="pcep-path-setup-types">
+    <title>PCEP Path Setup Types</title>
+    <xref type="rfc" data="rfc8408"/>
+    <registration_rule>IETF Review</registration_rule>
+    <note/>
+    <record date="2018-05-11">
+      <value>0</value>
+      <description>Path is set up using the RSVP-TE signaling protocol</description>
+      <xref type="rfc" data="rfc8408"/>
+    </record> 
+    <record>
+      <value>1-255</value>
+      <description>Unassigned</description>
     </record>
   </registry>
 

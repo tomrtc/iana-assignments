@@ -4,12 +4,16 @@
 <registry xmlns="http://www.iana.org/assignments" id="ssh-parameters">
   <title>Secure Shell (SSH) Protocol Parameters</title>
   <created>2005-06-02</created>
-  <updated>2017-12-15</updated>
+  <updated>2018-07-13</updated>
 
   <registry id="ssh-parameters-1">
     <title>Message Numbers</title>
     <xref type="rfc" data="rfc4250"/>
     <registration_rule>Standards Action</registration_rule>
+    <record>
+      <value>0</value>
+      <description>Reserved</description>
+    </record>
     <record>
       <value>1</value>
       <description>SSH_MSG_DISCONNECT</description>
@@ -43,12 +47,12 @@
     <record>
       <value>7</value>
       <description>SSH_MSG_EXT_INFO</description>
-      <xref type="draft" data="RFC-ietf-curdle-ssh-ext-info-15"/>
+      <xref type="rfc" data="rfc8308"/>
     </record>
     <record>
       <value>8</value>
       <description>SSH_MSG_NEWCOMPRESS</description>
-      <xref type="draft" data="RFC-ietf-curdle-ssh-ext-info-15"/>
+      <xref type="rfc" data="rfc8308"/>
     </record>
     <record>
       <value>9-19</value>
@@ -203,7 +207,8 @@
   <registry id="ssh-parameters-3">
     <title>Disconnection Messages Reason Codes and Descriptions</title>
     <xref type="rfc" data="rfc4250"/>
-    <note>SSH_MSG_DISCONNECT 'description' and 'reason code' values</note>
+    <note>SSH_MSG_DISCONNECT 'description' and 'reason code' values
+    </note>
     <range>
       <value>0x00000001-0xFDFFFFFF</value>
       <registration_rule>IETF Review</registration_rule>
@@ -213,82 +218,86 @@
       <registration_rule>Reserved for Private Use</registration_rule>
     </range>
     <record>
-      <value>1</value>
+      <value>0x00000000</value>
+      <description>Reserved</description>
+    </record> 
+    <record>
+      <value>0x00000001</value>
       <description>SSH_DISCONNECT_HOST_NOT_ALLOWED_TO_CONNECT</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>2</value>
+      <value>0x00000002</value>
       <description>SSH_DISCONNECT_PROTOCOL_ERROR</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>3</value>
+      <value>0x00000003</value>
       <description>SSH_DISCONNECT_KEY_EXCHANGE_FAILED</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>4</value>
+      <value>0x00000004</value>
       <description>SSH_DISCONNECT_RESERVED</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>5</value>
+      <value>0x00000005</value>
       <description>SSH_DISCONNECT_MAC_ERROR</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>6</value>
+      <value>0x00000006</value>
       <description>SSH_DISCONNECT_COMPRESSION_ERROR</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>7</value>
+      <value>0x00000007</value>
       <description>SSH_DISCONNECT_SERVICE_NOT_AVAILABLE</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>8</value>
+      <value>0x00000008</value>
       <description>SSH_DISCONNECT_PROTOCOL_VERSION_NOT_SUPPORTED</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>9</value>
+      <value>0x00000009</value>
       <description>SSH_DISCONNECT_HOST_KEY_NOT_VERIFIABLE</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>10</value>
+      <value>0x0000000A</value>
       <description>SSH_DISCONNECT_CONNECTION_LOST</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>11</value>
+      <value>0x0000000B</value>
       <description>SSH_DISCONNECT_BY_APPLICATION</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>12</value>
+      <value>0x0000000C</value>
       <description>SSH_DISCONNECT_TOO_MANY_CONNECTIONS</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>13</value>
+      <value>0x0000000D</value>
       <description>SSH_DISCONNECT_AUTH_CANCELLED_BY_USER</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>14</value>
+      <value>0x0000000E</value>
       <description>SSH_DISCONNECT_NO_MORE_AUTH_METHODS_AVAILABLE</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>15</value>
+      <value>0x0000000F</value>
       <description>SSH_DISCONNECT_ILLEGAL_USER_NAME</description>
       <xref type="rfc" data="rfc4253"/>
     </record>
     <record>
-      <value>0x00000016-0xFDFFFFFF</value>
+      <value>0x00000010-0xFDFFFFFF</value>
       <description>Unassigned</description>
     </record>
     <record>
@@ -300,7 +309,8 @@
   <registry id="ssh-parameters-5">
     <title>Channel Connection Failure Reason Codes and Descriptions</title>
     <xref type="rfc" data="rfc4250"/>
-    <note>'reason code' values and 'description' values</note>
+    <note>'reason code' values and 'description' values
+    </note>
     <range>
       <value>0x00000001-0xFDFFFFFF</value>
       <registration_rule>IETF Review</registration_rule>
@@ -310,22 +320,26 @@
       <registration_rule>Reserved for Private Use</registration_rule>
     </range>
     <record>
-      <value>1</value>
+      <value>0x00000000</value>
+      <description>Reserved</description>
+    </record> 
+    <record>
+      <value>0x00000001</value>
       <description>SSH_OPEN_ADMINISTRATIVELY_PROHIBITED</description>
       <xref type="rfc" data="rfc4254"/>
     </record>
     <record>
-      <value>2</value>
+      <value>0x00000002</value>
       <description>SSH_OPEN_CONNECT_FAILED</description>
       <xref type="rfc" data="rfc4254"/>
     </record>
     <record>
-      <value>3</value>
+      <value>0x00000003</value>
       <description>SSH_OPEN_UNKNOWN_CHANNEL_TYPE</description>
       <xref type="rfc" data="rfc4254"/>
     </record>
     <record>
-      <value>4</value>
+      <value>0x00000004</value>
       <description>SSH_OPEN_RESOURCE_SHORTAGE</description>
       <xref type="rfc" data="rfc4254"/>
     </record>
@@ -342,7 +356,8 @@
   <registry id="ssh-parameters-7">
     <title>Extended Channel Data Transfer data_type_code and Data</title>
     <xref type="rfc" data="rfc4250"/>
-    <note>'data_type_code' values and 'data' values</note>
+    <note>'data_type_code' values and 'data' values
+    </note>
     <range>
       <value>0x00000001-0xFDFFFFFF</value>
       <registration_rule>IETF Review</registration_rule>
@@ -352,7 +367,11 @@
       <registration_rule>Reserved for Private Use</registration_rule>
     </range>
     <record>
-      <value>1</value>
+      <value>0x00000000</value>
+      <description>Reserved</description>
+    </record> 
+    <record>
+      <value>0x00000001</value>
       <description>SSH_EXTENDED_DATA_STDERR</description>
       <xref type="rfc" data="rfc4254"/>
     </record>
@@ -370,7 +389,8 @@
     <title>Pseudo-Terminal Encoded Terminal Modes</title>
     <xref type="rfc" data="rfc4250"/>
     <registration_rule>IETF Review</registration_rule>
-    <note>opcode and argument values which make up the "encoded terminal modes" values</note>
+    <note>opcode and argument values which make up the "encoded terminal modes" values
+    </note>
     <record>
       <value>0</value>
       <argument>TTY_OP_END</argument>
@@ -900,6 +920,7 @@ bits per second.</description>
       <note>Section 7.2</note>
     </record>
   </registry>
+
   <registry id="ssh-parameters-12">
     <title>Connection Protocol Global Request Names</title>
     <xref type="rfc" data="rfc4250"/>
@@ -915,6 +936,7 @@ bits per second.</description>
       <note>Section 7.1</note>
     </record>
   </registry>
+
   <registry id="ssh-parameters-13">
     <title>Connection Protocol Channel Request Names</title>
     <xref type="rfc" data="rfc4250"/>
@@ -979,6 +1001,7 @@ bits per second.</description>
       <xref type="rfc" data="rfc4335"/>
     </record>
   </registry>
+
   <registry id="ssh-parameters-14">
     <title>Signal Names</title>
     <xref type="rfc" data="rfc4250"/>
@@ -1036,6 +1059,7 @@ bits per second.</description>
       <xref type="rfc" data="rfc4254"/>
     </record>
   </registry>
+
   <registry id="ssh-parameters-15">
     <title>Connection Protocol Subsystem Names</title>
     <xref type="rfc" data="rfc4250"/>
@@ -1057,11 +1081,13 @@ bits per second.</description>
       <xref type="rfc" data="rfc6810"/>
     </record>
   </registry>
+
   <registry id="ssh-parameters-16">
     <title>Key Exchange Method Names</title>
     <xref type="rfc" data="rfc4250"/>
     <registration_rule>IETF Review</registration_rule>
-    <note>*All values beginning with the specified string and not containing "@".</note>
+    <note>*All values beginning with the specified string and not containing "@".
+    </note>
     <record>
       <value>diffie-hellman-group-exchange-sha1</value>
       <xref type="rfc" data="rfc4419"/>
@@ -1140,15 +1166,16 @@ bits per second.</description>
     </record>
     <record>
       <value>ext-info-s</value>
-      <xref type="draft" data="RFC-ietf-curdle-ssh-ext-info-15"/>
+      <xref type="rfc" data="rfc8308"/>
       <note>Section 2</note>
     </record>
     <record>
       <value>ext-info-c</value>
-      <xref type="draft" data="RFC-ietf-curdle-ssh-ext-info-15"/>
+      <xref type="rfc" data="rfc8308"/>
       <note>Section 2</note>
     </record>
   </registry>
+
   <registry id="ssh-parameters-17">
     <title>Encryption Algorithm Names</title>
     <xref type="rfc" data="rfc4250"/>
@@ -1309,6 +1336,7 @@ bits per second.</description>
       <note>Section 6.2</note>
     </record>
   </registry>
+
   <registry id="ssh-parameters-18">
     <title>MAC Algorithm Names</title>
     <xref type="rfc" data="rfc4250"/>
@@ -1359,67 +1387,94 @@ bits per second.</description>
       <note>Section 2</note>
     </record>
   </registry>
+
   <registry id="ssh-parameters-19">
     <title>Public Key Algorithm Names</title>
     <xref type="rfc" data="rfc4250"/>
     <registration_rule>IETF Review</registration_rule>
-    <note>*All values beginning with the specified string and not containing "@".</note>
+    <note>*All values beginning with the specified string and not containing "@".
+    </note>
     <record>
       <value>ssh-dss</value>
+      <format>ssh-dss</format>
       <xref type="rfc" data="rfc4253"/>
       <note>Section 6.6</note>
     </record>
     <record>
       <value>ssh-rsa</value>
+      <format>ssh-rsa</format>
       <xref type="rfc" data="rfc4253"/>
       <note>Section 6.6</note>
     </record>
+    <record date="2018-01-03">
+      <value>rsa-sha2-256</value>
+      <format>ssh-rsa</format>
+      <xref type="rfc" data="rfc8332"/>
+      <note>Section 3</note>
+    </record>
+    <record date="2018-01-03">
+      <value>rsa-sha2-512</value>
+      <format>ssh-rsa</format>
+      <xref type="rfc" data="rfc8332"/>
+      <note>Section 3</note>
+    </record>
     <record>
       <value>spki-sign-rsa</value>
+      <format>spki-sign-rsa</format>
       <xref type="rfc" data="rfc4253"/>
       <note>Section 6.6</note>
     </record>
     <record>
       <value>spki-sign-dss</value>
+      <format>spki-sign-dss</format>
       <xref type="rfc" data="rfc4253"/>
       <note>Section 6.6</note>
     </record>
     <record>
       <value>pgp-sign-rsa</value>
+      <format>pgp-sign-rsa</format>
       <xref type="rfc" data="rfc4253"/>
       <note>Section 6.6</note>
     </record>
     <record>
       <value>pgp-sign-dss</value>
+      <format>pgp-sign-dss</format>
       <xref type="rfc" data="rfc4253"/>
       <note>Section 6.6</note>
     </record>
     <record>
       <value>null</value>
+      <format>null</format>
       <xref type="rfc" data="rfc4462"/>
       <note>Section 5</note>
     </record>
     <record>
       <value>ecdsa-sha2-*</value>
+      <format>ecdsa-sha2-*</format>
       <xref type="rfc" data="rfc5656"/>
     </record>
     <record>
       <value>x509v3-ssh-dss</value>
+      <format>x509v3-ssh-dss</format>
       <xref type="rfc" data="rfc6187"/>
     </record>
     <record>
       <value>x509v3-ssh-rsa</value>
+      <format>x509v3-ssh-rsa</format>
       <xref type="rfc" data="rfc6187"/>
     </record>
     <record>
       <value>x509v3-rsa2048-sha256</value>
+      <format>x509v3-rsa2048-sha256</format>
       <xref type="rfc" data="rfc6187"/>
     </record>
     <record>
       <value>x509v3-ecdsa-sha2-*</value>
+      <format>x509v3-ecdsa-sha2-*</format>
       <xref type="rfc" data="rfc6187"/>
     </record>
   </registry>
+  
   <registry id="ssh-parameters-20">
     <title>Compression Algorithm Names</title>
     <xref type="rfc" data="rfc4250"/>
@@ -1435,11 +1490,13 @@ bits per second.</description>
       <note>Section 6.2</note>
     </record>
   </registry>
+  
   <registry id="ssh-parameters-21">
     <title>SSH Public-Key File Header Tags</title>
     <xref type="rfc" data="rfc4716"/>
     <registration_rule>IETF Review</registration_rule>
-    <note>Tags beginning with x- Reserved for Private Use</note>
+    <note>Tags beginning with x- Reserved for Private Use
+    </note>
     <record>
       <value>subject</value>
       <xref type="rfc" data="rfc4716"/>
@@ -1451,6 +1508,7 @@ bits per second.</description>
       <note>Section 3.3.2</note>
     </record>
   </registry>
+  
   <registry id="ssh-parameters-22">
     <title>Publickey Subsystem Request Names</title>
     <xref type="rfc" data="rfc4819"/>
@@ -1476,6 +1534,7 @@ bits per second.</description>
       <xref type="rfc" data="rfc4819"/>
     </record>
   </registry>
+  
   <registry id="ssh-parameters-23">
     <title>Publickey Subsystem Response Names</title>
     <xref type="rfc" data="rfc4819"/>
@@ -1497,6 +1556,7 @@ bits per second.</description>
       <xref type="rfc" data="rfc4819"/>
     </record>
   </registry>
+  
   <registry id="ssh-parameters-24">
     <title>Publickey Subsystem Attributes</title>
     <xref type="rfc" data="rfc4819"/>
@@ -1550,6 +1610,7 @@ bits per second.</description>
       <xref type="rfc" data="rfc4819"/>
     </record>
   </registry>
+  
   <registry id="ssh-parameters-26">
     <title>Publickey Subsystem Status Codes</title>
     <xref type="rfc" data="rfc4819"/>
@@ -1620,31 +1681,35 @@ bits per second.</description>
       <status>Reserved</status>
     </record>
   </registry>
+  
   <registry id="extension-names">
     <title>Extension Names</title>
-    <xref type="draft" data="RFC-ietf-curdle-ssh-ext-info-15"/>
+    <xref type="rfc" data="rfc8308"/>
     <registration_rule>IETF Review</registration_rule>
-    <note>Names in the Extension Names table MUST follow the Conventions for Names defined in <xref type="rfc" data="rfc4250"/>, Section 4.6.1.</note>
+    <note>Names in the Extension Names table MUST follow the Conventions for 
+Names defined in <xref type="rfc" data="rfc4250"/>, Section 4.6.1.
+    </note>
     <record>
       <value>server-sig-algs</value>
-      <xref type="draft" data="RFC-ietf-curdle-ssh-ext-info-15"/>
+      <xref type="rfc" data="rfc8308"/>
       <note>Section 3.1</note>
     </record>
     <record>
       <value>delay-compression</value>
-      <xref type="draft" data="RFC-ietf-curdle-ssh-ext-info-15"/>
+      <xref type="rfc" data="rfc8308"/>
       <note>Section 3.2</note>
     </record>
     <record>
       <value>no-flow-control</value>
-      <xref type="draft" data="RFC-ietf-curdle-ssh-ext-info-15"/>
+      <xref type="rfc" data="rfc8308"/>
       <note>Section 3.3</note>
     </record>
     <record>
       <value>elevation</value>
-      <xref type="draft" data="RFC-ietf-curdle-ssh-ext-info-15"/>
+      <xref type="rfc" data="rfc8308"/>
       <note>Section 3.4</note>
     </record>
   </registry>
+  
   <people/>
 </registry>

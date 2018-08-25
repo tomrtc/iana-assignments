@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="cbor-tags">
   <title>Concise Binary Object Representation (CBOR) Tags</title>
   <created>2013-09-19</created>
-  <updated>2017-09-08</updated>
+  <updated>2018-05-10</updated>
   <category>Concise Binary Object Representation (CBOR)</category>
   
   <registry id="tags">
@@ -221,7 +221,8 @@
       <value>61</value>
       <description>CBOR Web Token (CWT)</description>
       <semantics>CBOR Web Token (CWT)</semantics>
-      <xref type="draft" data="draft-ietf-ace-cbor-web-token"/>
+      <xref type="rfc" data="rfc8392"/>
+      <xref type="person" data="Michael_B._Jones"/>
     </record>
     <record>
       <value>62-95</value>
@@ -247,7 +248,31 @@
       <xref type="rfc" data="rfc8152"/>
     </record>
     <record>
-      <value>99-255</value>
+      <value>99-102</value>
+      <description>Unassigned</description>
+      <semantics/>
+    </record>
+    <record date="2018-04-17">
+      <value>103</value>
+      <description>array</description>
+      <semantics>Geographic Coordinates</semantics>
+      <xref type="uri" data="https://github.com/allthingstalk/cbor/blob/master/CBOR-Tag103-Geographic-Coordinates.md"/>
+      <xref type="person" data="Danilo_Vidovic"/>
+    </record>
+    <record>
+      <value>104-119</value>
+      <description>Unassigned</description>
+      <semantics/>
+    </record>
+    <record date="2018-04-17">
+      <value>120</value>
+      <description>multiple</description>
+      <semantics>Internet of Things Data Point</semantics>
+      <xref type="uri" data="https://github.com/allthingstalk/cbor/blob/master/CBOR-Tag120-Internet-of-Things-Data-Points.md"/>
+      <xref type="person" data="Danilo_Vidovic"/>
+    </record>
+    <record>
+      <value>121-255</value>
       <description>Unassigned</description>
       <semantics/>
     </record>
@@ -273,9 +298,37 @@
       <xref type="person" data="Alfredo_Di_Napoli"/>
     </record>
     <record>
-      <value>259-263</value>
+      <value>259</value>
       <description>Unassigned</description>
       <semantics/>
+    </record>
+    <record date="2018-03-06">
+      <value>260</value>
+      <description>byte string</description>
+      <semantics>Network Address (IPv4 or IPv6 or MAC Address)</semantics>
+      <xref type="uri" data="http://www.employees.org/~ravir/cbor-network.txt"/>
+      <xref type="person" data="Ravi_Raju"/>
+    </record>
+    <record date="2018-03-28">
+      <value>261</value>
+      <description>map (IPAddress + Mask Length)</description>
+      <semantics>Network Address Prefix (IPv4 or IPv6 Address + Mask Length)</semantics>
+      <xref type="uri" data="https://github.com/toravir/CBOR-Tag-Specs/blob/master/networkPrefix.md"/>
+      <xref type="person" data="Ravi_Raju"/>
+    </record>
+    <record date="2018-03-28">
+      <value>262</value>
+      <description>byte string</description>
+      <semantics>Embedded JSON Object</semantics>
+      <xref type="uri" data="https://github.com/toravir/CBOR-Tag-Specs/blob/master/embeddedJSON.md"/>
+      <xref type="person" data="Ravi_Raju"/>
+    </record>
+    <record date="2018-03-28">
+      <value>263</value>
+      <description>byte string</description>
+      <semantics>Hexadecimal string</semantics>
+      <xref type="uri" data="https://github.com/toravir/CBOR-Tag-Specs/blob/master/hexString.md"/>
+      <xref type="person" data="Ravi_Raju"/>
     </record>
     <record date="2014-05-30">
       <value>264</value>
@@ -367,6 +420,11 @@
       <uri>mailto:ietf&amp;trammell.ch</uri>
       <updated>2016-08-17</updated>
     </person>
+    <person id="Danilo_Vidovic">
+      <name>Danilo Vidovic</name>
+      <uri>mailto:cbor&amp;allthingstalk.com</uri>
+      <updated>2018-04-17</updated>
+    </person>
     <person id="Lucas_Clemente">
       <name>Lucas Clemente</name>
       <uri>mailto:lucas&amp;clemente.io</uri>
@@ -377,10 +435,20 @@
       <uri>mailto:cbor&amp;schmorp.de</uri>
       <updated>2013-11-26</updated>
     </person>
+    <person id="Michael_B._Jones">
+      <name>Michael B. Jones</name>
+      <uri>mailto:mbj&amp;microsoft.com</uri>
+      <updated>2018-05-04</updated>
+    </person>
     <person id="Peter_Occil">
       <name>Peter Occil</name>
       <uri>mailto:poccil14&amp;gmail.com</uri>
       <updated>2014-07-01</updated>
+    </person>
+    <person id="Ravi_Raju">
+      <name>Ravi Raju</name>
+      <uri>mailto:ravir&amp;employees.org</uri>
+      <updated>2018-03-06</updated>
     </person>
   </people>
   

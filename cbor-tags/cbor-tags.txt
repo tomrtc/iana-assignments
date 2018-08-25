@@ -4,7 +4,7 @@
            2013-09-19
 
    Last Updated
-           2017-09-08
+           2018-05-10
 
    Available Formats
            [IMG]
@@ -39,7 +39,7 @@ CBOR Tags
             24-255          Specification Required
    256-18446744073709551615 First Come First Served
 
-             Tag                Data Item        Semantics                                                  Reference
+             Tag                Data Item        Semantics                                                           Reference
                                             Standard date/time
 0                             UTF-8 string  string; see Section  [RFC7049]
                                             2.4.1
@@ -112,7 +112,7 @@ CBOR Tags
                                             string
 39                            multiple      Identifier           [https://github.com/lucas-clemente/cbor-specs/blob/master/id.md][Lucas_Clemente]
 40-60                         Unassigned
-61                            CBOR Web      CBOR Web Token (CWT) [draft-ietf-ace-cbor-web-token]
+61                            CBOR Web      CBOR Web Token (CWT) [RFC8392][Michael_B._Jones]
                               Token (CWT)
 62-95                         Unassigned
 96                            COSE_Encrypt  COSE Encrypted Data  [RFC8152]
@@ -121,13 +121,28 @@ CBOR Tags
                                             Object
 98                            COSE_Sign     COSE Signed Data     [RFC8152]
                                             Object
-99-255                        Unassigned
+99-102                        Unassigned
+103                           array         Geographic           [https://github.com/allthingstalk/cbor/blob/master/CBOR-Tag103-Geographic-Coordinates.md][Danilo_Vidovic]
+                                            Coordinates
+104-119                       Unassigned
+120                           multiple      Internet of Things   [https://github.com/allthingstalk/cbor/blob/master/CBOR-Tag120-Internet-of-Things-Data-Points.md][Danilo_Vidovic]
+                                            Data Point
+121-255                       Unassigned
 256                           multiple      mark value as having [http://cbor.schmorp.de/stringref][Marc_A._Lehmann]
                                             string references
 257                           byte string   Binary MIME message  [http://peteroupc.github.io/CBOR/binarymime.html][Peter_Occil]
 258                           array         Mathematical finite  [https://github.com/input-output-hk/cbor-sets-spec/blob/master/CBOR_SETS.md][Alfredo_Di_Napoli]
                                             set
-259-263                       Unassigned
+259                           Unassigned
+                                            Network Address
+260                           byte string   (IPv4 or IPv6 or MAC [http://www.employees.org/~ravir/cbor-network.txt][Ravi_Raju]
+                                            Address)
+                              map           Network Address
+261                           (IPAddress +  Prefix (IPv4 or IPv6 [https://github.com/toravir/CBOR-Tag-Specs/blob/master/networkPrefix.md][Ravi_Raju]
+                              Mask Length)  Address + Mask
+                                            Length)
+262                           byte string   Embedded JSON Object [https://github.com/toravir/CBOR-Tag-Specs/blob/master/embeddedJSON.md][Ravi_Raju]
+263                           byte string   Hexadecimal string   [https://github.com/toravir/CBOR-Tag-Specs/blob/master/hexString.md][Ravi_Raju]
                                             Decimal fraction
 264                           array         with arbitrary       [http://peteroupc.github.io/CBOR/bigfrac.html][Peter_Occil]
                                             exponent
@@ -154,6 +169,9 @@ CBOR Tags
            ID                Name                  Contact URI           Last Updated
    [Alfredo_Di_Napoli] Alfredo Di Napoli mailto:alfredo.dinapoli&iohk.io 2017-08-25
    [Brian_Trammell]    Brian Trammell    mailto:ietf&trammell.ch         2016-08-17
+   [Danilo_Vidovic]    Danilo Vidovic    mailto:cbor&allthingstalk.com   2018-04-17
    [Lucas_Clemente]    Lucas Clemente    mailto:lucas&clemente.io        2014-07-01
    [Marc_A._Lehmann]   Marc A. Lehmann   mailto:cbor&schmorp.de          2013-11-26
+   [Michael_B._Jones]  Michael B. Jones  mailto:mbj&microsoft.com        2018-05-04
    [Peter_Occil]       Peter Occil       mailto:poccil14&gmail.com       2014-07-01
+   [Ravi_Raju]         Ravi Raju         mailto:ravir&employees.org      2018-03-06

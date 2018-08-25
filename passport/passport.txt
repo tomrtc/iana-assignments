@@ -4,7 +4,7 @@
            2017-06-12
 
    Last Updated
-           2017-06-12
+           2018-07-13
 
    Available Formats
            [IMG]
@@ -12,11 +12,32 @@
            HTML [IMG]
            Plain text
 
-   Registry included below
+   Registries included below
 
-     * Personal Assertion Token (PASSporT) Extensions
+     * Personal Assertion Token (PASSporT) Extensions
+     * PASSporT Resource Priority Header (rph) Types
 
 Personal Assertion Token (PASSporT) Extensions
+
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Chris Wendt
+
+   Reference
+           [RFC8225]
+
+   Available Formats
+           [IMG]
+           CSV
+
+   ppt value       Reference
+   rph       [RFC-ietf-stir-rph-06]
+
+PASSporT Resource Priority Header (rph) Types
 
    Registration Procedure(s)
 
@@ -27,7 +48,11 @@ Personal Assertion Token (PASSporT) Extensions
  Unassigned
 
    Reference
-           [RFC-ietf-stir-passport-11]
+           [RFC-ietf-stir-rph-06]
 
-      ppt value      Reference
-   No registrations at this time.
+   Available Formats
+           [IMG]
+           CSV
+
+   Type       Reference
+   auth [RFC-ietf-stir-rph-06]

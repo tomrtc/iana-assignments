@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="trip-parameters">
   <title>Telephony Routing over IP (TRIP) Parameters</title>
   <created>2001-12-18</created>
-  <updated>2017-12-11</updated>
+  <updated>2018-04-10</updated>
 
   <registry id="trip-parameters-1">
     <title>TRIP Capabilities</title>
@@ -14541,6 +14541,34 @@ Clinton, SC 29325
 United States</description>
       <xref type="person" data="Robbie_Terrence_Campbell"/>
     </record>
+    <record date="2018-01-29">
+      <value>1974</value>
+      <description>Jörg Eichhorn
+Otto-Wels-Str. 9
+33102 Paderborn
+Nordrhein-Westfalen
+Germany</description>
+      <xref type="person" data="Jörg_Eichhorn"/>
+    </record>
+    <record date="2018-02-23">
+      <value>1975</value>
+      <description>Review Commit LLC
+1429 East Aloha Street
+Seattle, WA 98112
+United States</description>
+      <xref type="person" data="Mark_Atwood"/>
+    </record>
+    <record date="2018-04-10">
+      <value>1976</value>
+      <description>XyZ™
+Brouwersdijk 242
+Oud Krispijn
+Dordrecht
+Zuid-Holland
+3314 GX
+Netherlands</description>
+      <xref type="person" data="Erik_Jan_Uitenbroek"/>
+    </record>
   </registry>
   
   <people>
@@ -16792,6 +16820,11 @@ United States</description>
       <uri>mailto:erik.dobbelsteijn&amp;surfnet.nl</uri>
       <updated>2007-05-08</updated>
     </person>
+    <person id="Erik_Jan_Uitenbroek">
+      <name>Erik Jan Uitenbroek</name>
+      <uri>mailto:ejuitenbroek&amp;outlook.com</uri>
+      <updated>2018-04-10</updated>
+    </person>
     <person id="Erik_Perrohe">
       <name>Erik Perrohe</name>
       <uri>mailto:admin.itad&amp;emerald-forest.net</uri>
@@ -18444,6 +18477,11 @@ United States</description>
       <uri>mailto:jthurman&amp;nwresd.k12.or.us</uri>
       <updated>2009-08-21</updated>
     </person>
+    <person id="Jörg_Eichhorn">
+      <name>Jörg Eichhorn</name>
+      <uri>mailto:administrator&amp;unclej.de</uri>
+      <updated>2018-01-29</updated>
+    </person>
     <person id="Jorge_Kleber">
       <name>Jorge Kleber</name>
       <uri>mailto:n_netinho21&amp;hotmail.com</uri>
@@ -19311,6 +19349,11 @@ United States</description>
       <name>Mark Adams</name>
       <uri>mailto:mark&amp;keeptalking.co.uk</uri>
       <updated>2011-08-24</updated>
+    </person>
+    <person id="Mark_Atwood">
+      <name>Mark Atwood</name>
+      <uri>mailto:mark.atwood&amp;gmail.com</uri>
+      <updated>2018-02-23</updated>
     </person>
     <person id="Mark_Boolootian">
       <name>Mark Boolootian</name>

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" ns="http://www.iana.org/assignments">
-
+  
   <include href="../_support/iana-registry.rng"/>
-
+  
   
   <define name="desc">
     <element name="registry">
@@ -20,10 +20,66 @@
     </element>
   </define>
   
+  <define name="desc-rec">
+    <element name="registry">
+      <ref name="registryMeta"/>
+      <zeroOrMore>
+        <element name="record">
+          <optional><attribute name="date"><ref name="genericDate"/></attribute></optional>
+          <optional><attribute name="updated"><ref name="genericDate"/></attribute></optional>
+          <element name="value"><ref name="genericRange"/></element>
+          <element name="description"><ref name="text_with_references"/></element>
+          <optional><element name="dtls"><text/></element></optional>
+          <optional><element name="rec"><text/></element></optional>
+          <ref name="references"/>
+        </element>
+      </zeroOrMore>
+    </element>
+  </define>
   
-  <!-- this is for the TLS Extractor Label Registry -->
   
-  <define name="extractor">
+  <!-- Alerts, HandshakeType -->
+  
+  <define name="withcomment">
+    <element name="registry">
+      <ref name="registryMeta"/>
+      <zeroOrMore>
+        <element name="record">
+          <optional><attribute name="date"><ref name="genericDate"/></attribute></optional>
+          <optional><attribute name="updated"><ref name="genericDate"/></attribute></optional>
+          <element name="value"><text/></element>
+          <element name="description"><text/></element>
+          <optional><element name="dtls"><text/></element></optional>
+          <ref name="references"/>
+          <optional><element name="comment"><text/></element></optional>
+        </element>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <!-- SupportedGroups -->
+  
+  <define name="withcomment-rec">
+    <element name="registry">
+      <ref name="registryMeta"/>
+      <zeroOrMore>
+        <element name="record">
+          <optional><attribute name="date"><ref name="genericDate"/></attribute></optional>
+          <optional><attribute name="updated"><ref name="genericDate"/></attribute></optional>
+          <element name="value"><text/></element>
+          <element name="description"><text/></element>
+          <optional><element name="dtls"><text/></element></optional>
+          <optional><element name="rec"><text/></element></optional>
+          <ref name="references"/>
+          <optional><element name="comment"><text/></element></optional>
+        </element>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <!-- this is for TLS Exporter Labels -->
+  
+  <define name="exporter">
     <element name="registry">
       <ref name="registryMeta"/>
       <zeroOrMore>
@@ -32,14 +88,52 @@
           <optional><attribute name="updated"><ref name="genericDate"/></attribute></optional>
           <element name="description"><text/></element>
           <optional><element name="dtls"><text/></element></optional>
+          <optional><element name="rec"><text/></element></optional>
           <ref name="references"/>
           <optional><element name="note"><text/></element></optional>
         </element>
       </zeroOrMore>
     </element>
   </define>
-
-
+  
+  <!-- this is for the TLS SignatureScheme -->
+  
+  <define name="signaturescheme">
+    <element name="registry">
+      <ref name="registryMeta"/>
+      <zeroOrMore>
+        <element name="record">
+          <optional><attribute name="date"><ref name="genericDate"/></attribute></optional>
+          <optional><attribute name="updated"><ref name="genericDate"/></attribute></optional>
+          <element name="value"><text/></element>
+          <element name="description"><text/></element>
+          <optional><element name="recommended"><text/></element></optional>
+          <ref name="references"/>
+          <optional><element name="note"><text/></element></optional>
+        </element>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <!-- this is for the TLS PskKeyExchangeMode -->
+  
+  <define name="pskkeyexchangemode">
+    <element name="registry">
+      <ref name="registryMeta"/>
+      <zeroOrMore>
+        <element name="record">
+          <optional><attribute name="date"><ref name="genericDate"/></attribute></optional>
+          <optional><attribute name="updated"><ref name="genericDate"/></attribute></optional>
+          <element name="value"><text/></element>
+          <element name="description"><text/></element>
+          <optional><element name="recommended"><text/></element></optional>
+          <ref name="references"/>
+          <optional><element name="note"><text/></element></optional>
+        </element>
+      </zeroOrMore>
+    </element>
+  </define>
+  
   <start>
     <element name="registry">
       <ref name="registryMeta"/>
@@ -57,14 +151,15 @@
             </element>
             <element name="description"><ref name="text_with_references"/></element>
             <optional><element name="dtls"><text/></element></optional>
+            <optional><element name="rec"><text/></element></optional>
             <ref name="references"/>
           </element>
         </zeroOrMore>
       </element>
       <ref name="desc"/>
-      <ref name="desc"/>
-      <ref name="desc"/>
-      <ref name="desc"/>
+      <ref name="withcomment"/>
+      <ref name="withcomment"/>
+      <ref name="withcomment-rec"/>
       <ref name="desc"/>
       <ref name="desc"/>
       
@@ -75,13 +170,15 @@
       <ref name="desc"/>
       
       <ref name="desc"/>
-      <ref name="extractor"/>
+      <ref name="exporter"/>
       
       <ref name="desc"/>
       <ref name="desc"/> <!-- Heartbeat Message Types -->
       <ref name="desc"/>  <!-- Heartbeat Modes -->
+      <ref name="pskkeyexchangemode"/> <!-- TLS PskKeyExchangeMode -->
+      <ref name="signaturescheme"/> <!-- TLS SignatureScheme -->
       <ref name="people"/>
     </element>
   </start>
-
+  
 </grammar>
