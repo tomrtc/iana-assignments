@@ -5,7 +5,7 @@
   <title>Provisional Standard Media Type Registry</title>
   <category>Multipurpose Internet Mail Extensions (MIME) and Media Types</category>
   <created>2012-07-20</created>
-  <updated>2018-07-05</updated>
+  <updated>2020-04-04</updated>
 
   <registry id="provisional-standard-types">
     <title>Provisional Standard Media Type Registry</title>
@@ -16,65 +16,56 @@ only for temporary use. Entries in this registry are either
 finalized and moved to the main media types registry, or are
 abandoned and deleted. Entries in this registry are suitable for
 use for development and test purposes only.
+
+Media Types: <xref type="registry" data="media-types"/>
     </note>
     
-    <record date="2017-08-08">
-      <name>application/atsc-dwd+xml</name>
-      <org>Advanced Television Systems Committee (ATSC)</org>
-      <xref type="person" data="ATSC_Editor"/>
-    </record>
-    <record date="2017-08-08">
-      <name>application/atsc-held+xml</name>
-      <org>Advanced Television Systems Committee (ATSC)</org>
-      <xref type="person" data="ATSC_Editor"/>
-    </record>
-    <record date="2017-08-08">
-      <name>application/mmt-aei+xml</name>
-      <org>Advanced Television Systems Committee (ATSC)</org>
-      <xref type="person" data="ATSC_Editor"/>
+    <record date="2020-02-20">
+      <name>audio/sofa</name>
+      <org>AES</org>
+      <xref type="person" data="Christian_Hoene"/>
     </record>
     
-    <record date="2018-05-14">
-      <name>application/TETRA_ISI</name>
-      <org>ETSI</org>
-      <xref type="person" data="Miguel_Angel_Reina_Ortega"/>
-    </record>
-    <record date="2018-05-14">
-      <name>audio/TETRA_ACELP</name>
-      <org>ETSI</org>
-      <xref type="person" data="Miguel_Angel_Reina_Ortega"/>
+    <record date="2018-11-19">
+      <name>application/odm+json</name>
+      <org>CDISC</org>
+      <xref type="person" data="Sam_Hume"/>
     </record>
     
+    <record date="2019-10-04">
+      <name>application/dlmscosem</name>
+      <org>DLMS User Association, International Electrotechnical Commission (IEC)</org>
+      <xref type="person" data="Michael_Buss"/>
+    </record>
+    
+    <record date="2019-09-30">
+      <name>application/cert-chain+cbor</name>
+      <org>IETF</org>
+      <xref type="draft" data="draft-yasskin-http-origin-signed-responses"/>
+    </record>
     <record date="2017-06-28">
       <name>application/ion</name>
       <org>IETF</org>
       <xref type="person" data="Jonathan_Hohle"/>
     </record>
-    
-    <record date="2014-12-01">
-      <name>image/jxr</name>
-      <org>ISO/IEC JTC 1</org>
-      <xref type="person" data="Gary_J._Sullivan"/>
-      <xref type="person" data="Touradj_Ebrahimi"/>
+    <record date="2019-09-30">
+      <name>application/pkix-keyinfo</name>
+      <org>IETF</org>
+      <xref type="draft" data="draft-hallambaker-mesh-udf"/>
     </record>
-    <record date="2017-12-20">
-      <name>image/heif</name>
-      <org>ISO/IEC JTC 1</org>
-      <xref type="person" data="David_Singer"/>
+    <record date="2019-09-30">
+      <name>application/signed-exchange</name>
+      <org>IETF</org>
+      <xref type="draft" data="draft-yasskin-http-origin-signed-responses"/>
     </record>
-    <record date="2017-12-20">
-      <name>image/heic</name>
-      <org>ISO/IEC JTC 1</org>
-      <xref type="person" data="David_Singer"/>
+    <record date="2019-09-30">
+      <name>application/webbundle</name>
+      <org>IETF</org>
+      <xref type="draft" data="draft-yasskin-wpack-bundled-exchanges"/>
     </record>
     
     <record date="2014-10-02" updated="2014-12-12">
       <name>application/akn+xml</name>
-      <org>OASIS</org>
-      <xref type="person" data="Chet_Ensign"/>
-    </record>
-    <record date="2018-06-26">
-      <name>application/taxii+json</name>
       <org>OASIS</org>
       <xref type="person" data="Chet_Ensign"/>
     </record>
@@ -108,11 +99,6 @@ use for development and test purposes only.
   </registry>
   
   <people>
-    <person id="ATSC_Editor">
-      <name>Editor, Advanced Television Systems Committee</name>
-      <uri>mailto:jwhitaker&amp;atsc.org</uri>
-      <updated>2017-08-11</updated>
-    </person>
     <person id="Bradley_Nelson">
       <name>Bradley Nelson</name>
       <uri>mailto:bradnelson&amp;google.com</uri>
@@ -123,45 +109,40 @@ use for development and test purposes only.
       <uri>mailto:chet.ensign&amp;oasis-open.org</uri>
       <updated>2018-07-05</updated>
     </person>
-    <person id="David_Singer">
-      <name>David Singer</name>
-      <uri>mailto:singer&amp;apple.com</uri>
-      <updated>2017-12-20</updated>
+    <person id="Christian_Hoene">
+      <name>Christian Hoene</name>
+      <uri>mailto:christian.hoene&amp;symonics.com</uri>
+      <updated>2020-02-20</updated>
     </person>
     <person id="Douglas_Creager">
       <name>Douglas Creager</name>
       <uri>mailto:dcreager&amp;google.com</uri>
       <updated>2018-06-26</updated>
     </person>
-    <person id="Gary_J._Sullivan">
-      <name>Gary J. Sullivan</name>
-      <uri>mailto:garysull&amp;microsoft.com</uri>
-      <updated>2014-12-01</updated>
-    </person>
     <person id="Jonathan_Hohle">
       <name>Jonathan Hohle</name>
       <uri>mailto:jonhohle&amp;gmail.com</uri>
       <updated>2017-06-28</updated>
     </person>
-    <person id="Miguel_Angel_Reina_Ortega">
-      <name>Miguel Angel Reina Ortega</name>
-      <uri>mailto:miguelangel.reinaortega&amp;etsi.org</uri>
-      <updated>2018-05-14</updated>
+    <person id="Michael_Buss">
+      <name>Michael Buss</name>
+      <uri>mailto:technical&amp;dlms.com</uri>
+      <updated>2019-10-04</updated>
     </person>
     <person id="Roy_T._Fielding">
       <name>Roy T. Fielding</name>
       <uri>mailto:fielding&amp;gbiv.com</uri>
       <updated>2015-08-25</updated>
     </person>
+    <person id="Sam_Hume">
+      <name>Sam Hume</name>
+      <uri>mailto:shume&amp;cdisc.org</uri>
+      <updated>2018-10-31</updated>
+    </person>
     <person id="Sean_Leonard">
       <name>Sean Leonard</name>
       <uri>mailto:dev+ietf&amp;seantek.com</uri>
       <updated>2015-10-21</updated>
-    </person>
-    <person id="Touradj_Ebrahimi">
-      <name>Touradj Ebrahimi</name>
-      <uri>mailto:Touradj.Ebrahimi&amp;epfl.ch</uri>
-      <updated>2014-12-01</updated>
     </person>
   </people>
   

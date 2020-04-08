@@ -4,8 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="ikev2-parameters">
   <title>Internet Key Exchange Version 2 (IKEv2) Parameters</title>
   <created>2005-01-18</created>
-  <updated>2018-08-21</updated>
-  
+  <updated>2020-03-13</updated>
   
   
   <registry id="ikev2-parameters-1">
@@ -59,7 +58,16 @@
       <xref type="draft" data="draft-yeung-g-ikev2"/>
     </record>
     <record>
-      <value>42-239</value>
+      <value>42</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-12-12">
+      <value>43</value>
+      <description>IKE_INTERMEDIATE</description>
+      <xref type="draft" data="draft-ietf-ipsecme-ikev2-intermediate"/>
+    </record>
+    <record>
+      <value>44-239</value>
       <description>Unassigned</description>
     </record>
     <record>
@@ -318,6 +326,9 @@
       <xref type="rfc" data="rfc7296"/>
       <registration_rule>Expert Review</registration_rule>
       <expert>Tero Kivinen</expert>
+      <note>To find out requirement levels for encryption algorithms for
+ESP, see <xref type="rfc" data="rfc8221"/>. For IKEv2, see <xref type="rfc" data="rfc8247"/>.
+      </note>
       <record>
         <value>0</value>
         <description>Reserved</description>
@@ -587,7 +598,7 @@
         <value>29</value>
         <description>ENCR_AES_CCM_8_IIV</description>
         <esp>
-          <xref type="draft" data="draft-ietf-ipsecme-implicit-iv"/>
+          <xref type="rfc" data="rfc8750"/>
         </esp>
         <ikev2>Not allowed</ikev2>
       </record>
@@ -595,7 +606,7 @@
         <value>30</value>
         <description>ENCR_AES_GCM_16_IIV</description>
         <esp>
-          <xref type="draft" data="draft-ietf-ipsecme-implicit-iv"/>
+          <xref type="rfc" data="rfc8750"/>
         </esp>
         <ikev2>Not allowed</ikev2>
       </record>
@@ -603,12 +614,48 @@
         <value>31</value>
         <description>ENCR_CHACHA20_POLY1305_IIV</description>
         <esp>
-          <xref type="draft" data="draft-ietf-ipsecme-implicit-iv"/>
+          <xref type="rfc" data="rfc8750"/>
+        </esp>
+        <ikev2>Not allowed</ikev2>
+      </record>
+      <record date="2019-10-28">
+        <value>32</value>
+        <description>ENCR_KUZNYECHIK_MGM_KTREE</description>
+        <esp>
+          <xref type="draft" data="draft-smyslov-esp-gost"/>
+        </esp>
+        <ikev2>
+          <xref type="draft" data="draft-smyslov-esp-gost"/>
+        </ikev2>
+      </record>
+      <record date="2019-10-28">
+        <value>33</value>
+        <description>ENCR_MAGMA_MGM_KTREE</description>
+        <esp>
+          <xref type="draft" data="draft-smyslov-esp-gost"/>
+        </esp>
+        <ikev2>
+          <xref type="draft" data="draft-smyslov-esp-gost"/>
+        </ikev2>
+      </record>
+      <record date="2019-10-28">
+        <value>34</value>
+        <description>ENCR_KUZNYECHIK_MGM_MAC_KTREE</description>
+        <esp>
+          <xref type="draft" data="draft-smyslov-esp-gost"/>
+        </esp>
+        <ikev2>Not allowed</ikev2>
+      </record>
+      <record date="2019-10-28">
+        <value>35</value>
+        <description>ENCR_MAGMA_MGM_MAC_KTREE</description>
+        <esp>
+          <xref type="draft" data="draft-smyslov-esp-gost"/>
         </esp>
         <ikev2>Not allowed</ikev2>
       </record>
       <record>
-        <value>32-1023</value>
+        <value>36-1023</value>
         <description>Unassigned</description>
       </record>
       <record>
@@ -628,6 +675,8 @@
       <xref type="rfc" data="rfc7296"/>
       <registration_rule>Expert Review</registration_rule>
       <expert>Tero Kivinen</expert>
+      <note>To find out requirement levels for PRFs for IKEv2, see <xref type="rfc" data="rfc8247"/>.
+      </note>
       <record>
         <value>0</value>
         <description>Reserved</description>
@@ -673,8 +722,13 @@
         <description>PRF_AES128_CMAC</description>
         <xref type="rfc" data="rfc4615"/>
       </record>
+      <record date="2020-02-26">
+        <value>9</value>
+        <description>PRF_HMAC_STRIBOG_512</description>
+        <xref type="draft" data="draft-smyslov-ike2-gost-02"/>
+      </record>
       <record>
-        <value>9-1023</value>
+        <value>10-1023</value>
         <description>Unassigned</description>
       </record>
       <record>
@@ -689,6 +743,9 @@
       <xref type="rfc" data="rfc7296"/>
       <registration_rule>Expert Review</registration_rule>
       <expert>Tero Kivinen</expert>
+      <note>To find out requirement levels for encryption algorithms for
+ESP/AH, see <xref type="rfc" data="rfc8221"/>. For IKEv2, see <xref type="rfc" data="rfc8247"/>.
+      </note>
       <record>
         <value>0</value>
         <description>NONE</description>
@@ -783,6 +840,9 @@
       <xref type="rfc" data="rfc7296"/><xref type="rfc" data="rfc6989"/>
       <registration_rule>Expert Review</registration_rule>
       <expert>Tero Kivinen</expert>
+      <note>To find out requirement levels for Diffie-Hellman groups for
+IKEv2, see <xref type="rfc" data="rfc8247"/>.
+      </note>
       <record>
         <value>0</value>
         <description>NONE</description>
@@ -933,8 +993,20 @@
         <recipient><xref type="rfc" data="rfc8031"/>, Sec. 3.2</recipient>
         <xref type="rfc" data="rfc8031"/>
       </record>
+      <record date="2020-02-26">
+        <value>33</value>
+        <description>GOST3410_2012_256</description>
+        <recipient><xref type="draft" data="draft-smyslov-ike2-gost-02">draft-smyslov-ike2-gost-02, Sec. 6.1</xref></recipient>
+        <xref type="draft" data="draft-smyslov-ike2-gost-02"/>
+      </record>
+      <record date="2020-02-26">
+        <value>34</value>
+        <description>GOST3410_2012_512</description>
+        <recipient><xref type="draft" data="draft-smyslov-ike2-gost-02">draft-smyslov-ike2-gost-02, Sec. 6.1</xref></recipient>
+        <xref type="draft" data="draft-smyslov-ike2-gost-02"/>
+      </record>
       <record>
-        <value>33-1023</value>
+        <value>35-1023</value>
         <description>Unassigned</description>
         <recipient/>
       </record>
@@ -1152,6 +1224,9 @@
     <xref type="rfc" data="rfc7296"/>
     <registration_rule>Expert Review</registration_rule>
     <expert>Tero Kivinen</expert>
+    <note>To find out requirement levels for IKEv2 authentication
+methods, see <xref type="rfc" data="rfc8247"/>.
+    </note>
     <record>
       <value>0</value>
       <description>Reserved</description>
@@ -1668,23 +1743,28 @@
       <description>PUZZLE</description>
       <xref type="rfc" data="rfc8019"/>
     </record>
-    <record date="2018-02-07">
+    <record date="2018-02-07" updated="2020-01-21">
       <value>16435</value>
       <description>USE_PPK</description>
-      <xref type="draft" data="draft-ietf-ipsecme-qr-ikev2"/>
+      <xref type="draft" data="RFC-ietf-ipsecme-qr-ikev2-11"/>
     </record>
-    <record date="2018-02-07">
+    <record date="2018-02-07" updated="2020-01-21">
       <value>16436</value>
       <description>PPK_IDENTITY</description>
-      <xref type="draft" data="draft-ietf-ipsecme-qr-ikev2"/>
+      <xref type="draft" data="RFC-ietf-ipsecme-qr-ikev2-11"/>
     </record>
-    <record date="2018-02-07">
+    <record date="2018-02-07" updated="2020-01-21">
       <value>16437</value>
       <description>NO_PPK_AUTH</description>
-      <xref type="draft" data="draft-ietf-ipsecme-qr-ikev2"/>
+      <xref type="draft" data="RFC-ietf-ipsecme-qr-ikev2-11"/>
+    </record>
+    <record date="2019-12-12">
+      <value>16438</value>
+      <description>INTERMEDIATE_EXCHANGE_SUPPORTED</description>
+      <xref type="draft" data="draft-ietf-ipsecme-ikev2-intermediate"/>
     </record>
     <record>
-      <value>16438-40959</value>
+      <value>16439-40959</value>
       <description>Unassigned</description>
     </record>
     <record>
@@ -1701,6 +1781,8 @@
     <xref type="rfc" data="rfc7296"/>
     <registration_rule>Expert Review</registration_rule>
     <expert>Tero Kivinen</expert>
+    <note>To find out requirement levels for IPCOMP methods, see <xref type="rfc" data="rfc8221"/>.
+    </note>
     <record>
       <value>0</value>
       <description>Reserved</description>
@@ -2050,14 +2132,14 @@ multiple values were requested.</note>
       <description>INTERNAL_DNS_DOMAIN</description>
       <multi_valued>YES</multi_valued>
       <length>0 or more</length>
-      <xref type="draft" data="draft-pauly-ipsecme-split-dns"/>
+      <xref type="rfc" data="rfc8598"/>
     </record>
     <record date="2018-02-06">
       <value>26</value>
       <description>INTERNAL_DNSSEC_TA</description>
       <multi_valued>YES</multi_valued>
       <length>0 or more</length>
-      <xref type="draft" data="draft-ietf-ipsecme-split-dns"/>
+      <xref type="rfc" data="rfc8598"/>
     </record>
     <record>
       <value>27-16383</value>
@@ -2205,6 +2287,9 @@ multiple values were requested.</note>
     <xref type="rfc" data="rfc7427"/>
     <registration_rule>Expert Review</registration_rule>
     <expert>Tero Kivinen</expert>
+    <note>To find out requirement levels for IKEv2 hash algorithms, see
+<xref type="rfc" data="rfc8247"/>.
+    </note>
     <record date="2014-12-01">
       <value>0</value>
       <description>Reserved</description>
@@ -2235,8 +2320,18 @@ multiple values were requested.</note>
       <description>Identity</description>
       <xref type="rfc" data="rfc8420"/>
     </record>
+    <record date="2020-02-26">
+      <value>6</value>
+      <description>STRIBOG_256</description>
+      <xref type="draft" data="draft-smyslov-ike2-gost-02"/>
+    </record>
+    <record date="2020-02-26">
+      <value>7</value>
+      <description>STRIBOG_512</description>
+      <xref type="draft" data="draft-smyslov-ike2-gost-02"/>
+    </record>
     <record>
-      <value>6-1023</value>
+      <value>8-1023</value>
       <description>Unassigned</description>
     </record>
     <record>
@@ -2246,6 +2341,43 @@ multiple values were requested.</note>
     </record>
   </registry>
 
+  <registry id="ikev2-post-quantum-preshared-key-id-types">
+    <title>IKEv2 Post-quantum Preshared Key ID Types</title>
+    <xref type="draft" data="RFC-ietf-ipsecme-qr-ikev2-11"/>
+    <range>
+      <value>1-127</value>
+      <registration_rule>Expert Review</registration_rule>
+    </range>
+    <range>
+      <value>128-255</value>
+      <registration_rule>Private Use</registration_rule>
+    </range>
+    <expert>Unassigned</expert>
+    <record date="2020-01-21">
+      <value>0</value>
+      <description>Reserved</description>
+      <xref type="draft" data="RFC-ietf-ipsecme-qr-ikev2-11"/>
+    </record>
+    <record date="2020-01-21">
+      <value>1</value>
+      <description>PPK_ID_OPAQUE</description>
+      <xref type="draft" data="RFC-ietf-ipsecme-qr-ikev2-11"/>
+    </record>
+    <record date="2020-01-21">
+      <value>2</value>
+      <description>PPK_ID_FIXED</description>
+      <xref type="draft" data="RFC-ietf-ipsecme-qr-ikev2-11"/>
+    </record>
+    <record>
+      <value>3-127</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2020-01-21">
+      <value>128-255</value>
+      <description>Reserved for Private Use</description>
+      <xref type="draft" data="RFC-ietf-ipsecme-qr-ikev2-11"/>
+    </record>
+  </registry>
 
   <people>
     <person id="Frederic_Firmin">

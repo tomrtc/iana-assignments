@@ -1,7 +1,7 @@
                                                     Transmission Control Protocol (TCP) Parameters
 
    Last Updated
-           2018-06-25
+           2020-04-03
 
    Available Formats
            [IMG]
@@ -17,6 +17,9 @@
      * MPTCP Option Subtypes
      * MPTCP Handshake Algorithms
      * TCP Experimental Option Experiment Identifiers (TCP ExIDs)
+     * TCP Encryption Protocol Identifiers
+     * tcpcrypt AEAD Algorithms
+     * MPTCP MP_TCPRST Reason Codes
 
 TCP Option Kind Numbers
 
@@ -85,13 +88,13 @@ TCP Option Kind Numbers
    27     8        Quick-Start Response                                                        [RFC4782]
    28     4        User Timeout Option (also, other known unauthorized use) [***][1]           [RFC5482]
    29              TCP Authentication Option (TCP-AO)                                          [RFC5925]
-   30     N        Multipath TCP (MPTCP)                                                       [RFC6824]
+   30     N        Multipath TCP (MPTCP)                                                       [RFC8684]
    31              Reserved (known unauthorized use without proper IANA assignment) [**]
    32              Reserved (known unauthorized use without proper IANA assignment) [**]
    33              Reserved (known unauthorized use without proper IANA assignment) [**]
    34     variable TCP Fast Open Cookie                                                        [RFC7413]
    35-68           Reserved
-   69              Reserved (known unauthorized use without proper IANA assignment) [**]
+   69     N        Encryption Negotiation (TCP-ENO)                                            [RFC8547]
    70              Reserved (known unauthorized use without proper IANA assignment) [**]
    71-75           Reserved
    76              Reserved (known unauthorized use without proper IANA assignment) [**]
@@ -144,23 +147,30 @@ MPTCP Option Subtypes
  Standards Action
 
    Reference
-           [RFC6824]
+           [RFC8684]
+
+   Note
+
+ This registry specifies the MPTCP Option Subtypes for MPTCP v1,
+ which obsoletes the Experimental MPTCP v0.  For the MPTCP v0
+ subtypes, please refer to [RFC6824].
 
    Available Formats
            [IMG]
            CSV
 
     Value           Symbol                                    Name                                   Reference
-   0x0     MP_CAPABLE               Multipath Capable                                         [RFC6824], Section 3.1
-   0x1     MP_JOIN                  Join Connection                                           [RFC6824], Section 3.2
-   0x2     DSS                      Data Sequence Signal (Data ACK and Data Sequence Mapping) [RFC6824], Section 3.3
-   0x3     ADD_ADDR                 Add Address                                               [RFC6824], Section 3.4.1
-   0x4     REMOVE_ADDR              Remove Address                                            [RFC6824], Section 3.4.2
-   0x5     MP_PRIO                  Change Subflow Priority                                   [RFC6824], Section 3.3.8
-   0x6     MP_FAIL                  Fallback                                                  [RFC6824], Section 3.6
-   0x7     MP_FASTCLOSE             Fast Close                                                [RFC6824], Section 3.5
-   0x8-0xe Unassigned
-   0xf     Reserved for Private Use                                                           [RFC6824]
+   0x0     MP_CAPABLE               Multipath Capable                                         [RFC8684, Section 3.1]
+   0x1     MP_JOIN                  Join Connection                                           [RFC8684, Section 3.2]
+   0x2     DSS                      Data Sequence Signal (Data ACK and Data Sequence Mapping) [RFC8684, Section 3.3]
+   0x3     ADD_ADDR                 Add Address                                               [RFC8684, Section 3.4.1]
+   0x4     REMOVE_ADDR              Remove Address                                            [RFC8684, Section 3.4.2]
+   0x5     MP_PRIO                  Change Subflow Priority                                   [RFC8684, Section 3.3.8]
+   0x6     MP_FAIL                  Fallback                                                  [RFC8684, Section 3.7]
+   0x7     MP_FASTCLOSE             Fast Close                                                [RFC8684, Section 3.5]
+   0x8     MP_TCPRST                Subflow Reset                                             [RFC8684, Section 3.6]
+   0x9-0xe Unassigned
+   0xf     Reserved for Private Use                                                           [RFC8684]
 
 MPTCP Handshake Algorithms
 
@@ -169,17 +179,24 @@ MPTCP Handshake Algorithms
  Standards Action
 
    Reference
-           [RFC6824]
+           [RFC8684]
+
+   Note
+
+ This registry specifies the MPTCP Handshake Algorithms for
+ MPTCP v1, which obsoletes the Experimental MPTCP v0.  For the MPTCP
+ v0 subtypes, please refer to [RFC6824].
 
    Available Formats
            [IMG]
            CSV
 
-   Flag Bit      Meaning            Reference
-   A        Checksum required [RFC6824], Section 3.1
-   B        Extensibility     [RFC6824], Section 3.2
-   C-G      Unassigned
-   H        HMAC-SHA1         [RFC6824], Section 3.2
+   Flag Bit                             Meaning                                   Reference
+   A        Checksum required                                               [RFC8684, Section 3.1]
+   B        Extensibility                                                   [RFC8684, Section 3.1]
+   C        Do not attempt to establish new subflows to the source address. [RFC8684, Section 3.1]
+   D-G      Unassigned
+   H        HMAC-SHA256                                                     [RFC8684, Section 3.2]
 
 TCP Experimental Option Experiment Identifiers (TCP ExIDs)
 
@@ -205,13 +222,91 @@ TCP Experimental Option Experiment Identifiers (TCP ExIDs)
    0x0A0D     Autonomous System Compensation                                   [draft-donnerhacke-linktax]
    0x0CA0     TCP Capability Option                                            [draft-boucadair-tcpm-capability-option]
    0x0ED0     Extended Data Offset                                             [draft-ietf-tcpm-tcp-edo]
-   0x454E     TCP-ENO                                                          [draft-ietf-tcpinc-tcpeno]
+   0x454E     TCP-ENO [2]                                                      [RFC8547]
    0x5323     Service Number                                                   [draft-touch-tcpm-sno]
    0x75ECFFEE Timestamp Interval                                               [draft-trammell-tcpm-timestamp-interval]
    0xACCE     AccECN Experimental Option                                       [draft-kuehlewind-tcpm-accurate-ecn]
    0xE2D4C3D9 Shared Memory communications over RMDA protocol                  [RFC7609]
    0xF989     Fast Open (current and new implementations SHOULD use option 34) [RFC7413]
    0xF990     Low Latency                                                      [draft-wang-tcpm-low-latency-opt]
+
+TCP Encryption Protocol Identifiers
+
+   Registration Procedure(s)
+
+ IETF Review or Expert Review with RFC Required
+
+   Expert(s)
+
+ Unassigned
+
+   Reference
+           [RFC8547]
+
+   Available Formats
+           [IMG]
+           CSV
+
+     Value             Meaning            Reference
+   0x20      Experimental Use             [RFC8547]
+   0x21      TCPCRYPT_ECDHE_P256          [RFC8548]
+   0x22      TCPCRYPT_ECDHE_P521          [RFC8548]
+   0x23      TCPCRYPT_ECDHE_Curve25519    [RFC8548]
+   0x24      TCPCRYPT_ECDHE_Curve448      [RFC8548]
+   0x25-0x6f Unassigned
+   0x70-0x7f Reserved for extended values [RFC8547]
+
+tcpcrypt AEAD Algorithms
+
+   Registration Procedure(s)
+
+ IETF Review or Expert Review with RFC Required
+
+   Expert(s)
+
+ Unassigned
+
+   Reference
+           [RFC8548]
+
+   Available Formats
+           [IMG]
+           CSV
+
+       Value         AEAD Algorithm     Reference
+   0x0000        Reserved
+   0x0001        AEAD_AES_128_GCM       [RFC8548]
+   0x0002        AEAD_AES_256_GCM       [RFC8548]
+   0x0003-0x000f Unassigned
+   0x0010        AEAD_CHACHA20_POLY1305 [RFC8548]
+   0x0011-0xffff Unassigned
+
+MPTCP MP_TCPRST Reason Codes
+
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Unassigned
+
+   Reference
+           [RFC8684]
+
+   Available Formats
+           [IMG]
+           CSV
+
+     Code              Meaning                 Reference
+   0x00      Unspecified error           [RFC8684, Section 3.6]
+   0x01      MPTCP-specific error        [RFC8684, Section 3.6]
+   0x02      Lack of resources           [RFC8684, Section 3.6]
+   0x03      Administratively prohibited [RFC8684, Section 3.6]
+   0x04      Too much outstanding data   [RFC8684, Section 3.6]
+   0x05      Unacceptable performance    [RFC8684, Section 3.6]
+   0x06      Middlebox interference      [RFC8684, Section 3.6]
+   0x07-0xff Unassigned
 
                                                                         People
 
@@ -224,6 +319,7 @@ TCP Experimental Option Experiment Identifiers (TCP ExIDs)
    [Subbu_Subramaniam] Subbu Subramaniam mailto:subbu&cup.hp.com            1994-09
    [Vladimir_Sukonnik] Vladimir Sukonnik mailto:vladimir&sitaranetworks.com 1999-02
 
-                                                                       Footnote
+                                                                      Footnotes
 
    [1] [https://devcentral.f5.com/tech-tips/articles/accessing-tcp-options-from-irules]
+   [2] current and new TCP-ENO implementations MUST use TCP option kind 69.

@@ -36,7 +36,8 @@
           <th>Reference</th>
         </tr>
       </xsl:when>
-      <xsl:when test="@id = 'open-object-flag-field'">
+      <xsl:when test="@id = 'open-object-flag-field'
+        or @id = 'wa-object-flag-field'">
         <tr>
           <th>Bit</th>
           <th>Description</th>
@@ -144,7 +145,9 @@
           <th>Reference</th>
         </tr>
       </xsl:when>
-      <xsl:when test="@id = 'bu-object-type-field'">
+      <xsl:when test="@id = 'bu-object-type-field'
+        or @id = 'association-type-field'
+        or @id = 'auto-bandwidth-attributes-sub-tlv'">
         <tr>
           <th>Type</th>
           <th>Name</th>
@@ -166,17 +169,57 @@
           <th>Reference</th>
         </tr>
       </xsl:when>
-      <xsl:when test="@id = 'stateful-pce-capability-tlv'">
+      <xsl:when test="@id = 'generalized-endpoint-type'">
+        <tr>
+          <th>Value</th>
+          <th>Type</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </xsl:when>
+      <xsl:when test="@id = 'stateful-pce-capability-tlv'
+        or @id = 'sr-ero-flag-field'
+        or @id = 'sr-capability-flag-field'
+        or @id = 'wavelength-allocation-tlv-flag-field'
+        or @id = 's2ls-object-flag-field'
+        or @id = 'h-pce-capability-tlv-flag-field'
+        or @id = 'h-pce-flag-tlv-flag-field'
+        or @id = 'association-flag-field'
+        or @id = 'auto-bandwidth-capability-tlv-flag-field'">
         <tr>
           <th>Bit</th>
           <th>Description</th>
           <th>Reference</th>
         </tr>
       </xsl:when>
-      <xsl:when test="@id = 'lsp-error-code-tlv-error-code-field'">
+      <xsl:when test="@id = 'lsp-error-code-tlv-error-code-field'
+        or @id = 'path-setup-type-capability-sub-tlv-type-indicators'
+        or @id = 'wavelength-restriction-constraint-tlv-action-values'
+        or @id = 'domain-id-tlv-domain-type'">
         <tr>
           <th>Value</th>
           <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </xsl:when>
+      <xsl:when test="@id = 'path-protection-association-group-tlv-flag-field'">
+        <tr>
+          <th>Bit</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </xsl:when>
+      <xsl:when test="@id = 'disjointness-configuration-tlv-flag-field'">
+        <tr>
+          <th>Bit</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </xsl:when>
+      <xsl:when test="@id = 'gmpls-capability-tlv-flag-field'">
+        <tr>
+          <th>Bit</th>
+          <th>Capability Description</th>
           <th>Reference</th>
         </tr>
       </xsl:when>
@@ -239,6 +282,14 @@
         <tr>
           <td><xsl:value-of select="iana:value"/></td>
           <td><xsl:value-of select="iana:flag"/></td>
+          <td><xsl:value-of select="iana:description"/></td>
+          <td><xsl:apply-templates select="iana:xref"/></td>
+        </tr>
+      </xsl:when>
+      <xsl:when test="../@id = 'generalized-endpoint-type'">
+        <tr>
+          <td><xsl:value-of select="iana:value"/></td>
+          <td><xsl:value-of select="iana:type"/></td>
           <td><xsl:value-of select="iana:description"/></td>
           <td><xsl:apply-templates select="iana:xref"/></td>
         </tr>

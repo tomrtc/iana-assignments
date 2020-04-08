@@ -4,7 +4,7 @@
            2011-06-10
 
    Last Updated
-           2016-08-02
+           2019-05-16
 
    Note
 
@@ -18,11 +18,11 @@
 
    Registries included below
 
-     * vCard Properties
-     * vCard Parameters
-     * vCard Value Data Types
-     * vCard Property Values
-     * vCard Parameter Values
+     * vCard Properties
+     * vCard Parameters
+     * vCard Value Data Types
+     * vCard Property Values
+     * vCard Parameter Values
 
 vCard Properties
 
@@ -85,6 +85,7 @@ vCard Properties
              HOBBY         [RFC6715], Section 2.2
              INTEREST      [RFC6715], Section 2.3
              ORG-DIRECTORY [RFC6715], Section 2.4 [RFC Errata 3341]
+             CONTACT-URI   [RFC8605], Section 2.1
 
 vCard Parameters
 
@@ -118,6 +119,7 @@ vCard Parameters
              INDEX     [RFC6715], Section 3.1
              LEVEL     [RFC6715], Section 3.2
              GROUP     [RFC7095], Section 8.1
+             CC        [RFC8605], Section 3.1
 
 vCard Value Data Types
 

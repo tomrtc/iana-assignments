@@ -1,7 +1,7 @@
                                                    Resource Reservation Protocol (RSVP) Parameters
 
    Last Updated
-           2018-08-02
+           2019-12-11
 
    Note
 
@@ -182,7 +182,7 @@ Message Types
            CSV
 
     Range  Registration Procedures
-    0-239  Standards Action
+   0-239   Standards Action
    240-255 Expert Review
 
    Value     Message Type                                                           Reference
@@ -262,7 +262,7 @@ Class Names, Class Numbers, and Class Types
            CSV
 
     Range  Registration Procedures
-    0-119  Standards Action
+   0-119   Standards Action
    120-123 Expert Review
    124-127 Reserved for Private Use
    128-183 Standards Action
@@ -714,26 +714,26 @@ Class Names, Class Numbers, and Class Types
            [IMG]
            CSV
 
-   Value                                           Description                                                      Reference
-     1   IPv4 prefix                                                                                     [RFC3209]
-     2   IPv6 prefix                                                                                     [RFC3209]
-     3   Label                                                                                           [RFC3473]
-     4   Unnumbered Interface ID                                                                         [RFC3477]
-     5   4-byte AS number                                                                                [RFC7898][RFC7897]
-     6   OSPF Area ID                                                                                    [RFC7898][RFC7897]
-     7   IS-IS Area ID                                                                                   [RFC7898][RFC7897]
+   Value                    Description                        Reference
+     1   IPv4 prefix                                       [RFC3209]
+     2   IPv6 prefix                                       [RFC3209]
+     3   Label                                             [RFC3473]
+     4   Unnumbered Interface ID                           [RFC3477]
+     5   4-byte AS number                                  [RFC7898][RFC7897]
+     6   OSPF Area ID                                      [RFC7898][RFC7897]
+     7   IS-IS Area ID                                     [RFC7898][RFC7897]
    8-31  Unassigned (For explicit resource identification)
-    32   Autonomous system number                                                                        [RFC3209]
-    33   Explicit Exclusion Route subobject (EXRS)                                                       [RFC4874]
+    32   Autonomous system number                          [RFC3209]
+    33   Explicit Exclusion Route subobject (EXRS)         [RFC4874]
     34   Unassigned
-    35   Hop Attributes                                                                                  [RFC7570]
-    36   SR-ERO (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14) [draft-ietf-pce-segment-routing]
-    37   Reserved                                                                                        [RFC4873]
-    38   IPv4 Diversity                                                                                  [RFC8390]
-    39   IPv6 Diversity                                                                                  [RFC8390]
+    35   Hop Attributes                                    [RFC7570]
+    36   SR-ERO                                            [RFC8664]
+    37   Reserved                                          [RFC4873]
+    38   IPv4 Diversity                                    [RFC8390]
+    39   IPv6 Diversity                                    [RFC8390]
    40-63 Unassigned
-    64   Path Key with 32-bit PCE ID                                                                     [RFC5520][RFC5553]
-    65   Path Key with 128-bit PCE ID                                                                    [RFC5520][RFC5553]
+    64   Path Key with 32-bit PCE ID                       [RFC5520][RFC5553]
+    65   Path Key with 128-bit PCE ID                      [RFC5520][RFC5553]
 
   Class Types or C-Types ‒ 21 ROUTE_RECORD
 
@@ -756,22 +756,22 @@ Class Names, Class Numbers, and Class Types
            [IMG]
            CSV
 
-   Value                                           Description                                                      Reference
-     1   IPv4 address                                                                                    [RFC3209]
-     2   IPv6 address                                                                                    [RFC3209]
-     3   Label                                                                                           [RFC3473]
-     4   Unnumbered Interface ID                                                                         [RFC3477]
-     5   RRO Attributes                                                                                  [RFC5420]
+   Value           Description            Reference
+     1   IPv4 address                     [RFC3209]
+     2   IPv6 address                     [RFC3209]
+     3   Label                            [RFC3473]
+     4   Unnumbered Interface ID          [RFC3477]
+     5   RRO Attributes                   [RFC5420]
    6-33  Unassigned
-    34   SRLG sub-object                                                                                 [RFC8001]
-    35   Hop Attributes                                                                                  [RFC7570]
-    36   SR-RRO (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14) [draft-ietf-pce-segment-routing]
-    37   Reserved                                                                                        [RFC4873]
-    38   BYPASS_ASSIGNMENT IPv4 subobject                                                                [RFC8271]
-    39   BYPASS_ASSIGNMENT IPv6 subobject                                                                [RFC8271]
+    34   SRLG sub-object                  [RFC8001]
+    35   Hop Attributes                   [RFC7570]
+    36   SR-RRO                           [RFC8664]
+    37   Reserved                         [RFC4873]
+    38   BYPASS_ASSIGNMENT IPv4 subobject [RFC8271]
+    39   BYPASS_ASSIGNMENT IPv6 subobject [RFC8271]
    40-63 Unassigned
-    64   Path Key with 32-bit PCE ID                                                                     [RFC5553]
-    65   Path Key with 128-bit PCE ID                                                                    [RFC5553]
+    64   Path Key with 32-bit PCE ID      [RFC5553]
+    65   Path Key with 128-bit PCE ID     [RFC5553]
 
   Class Types or C-Types ‒ 22 HELLO
 
@@ -1776,9 +1776,9 @@ Virtual Destination Ports
            [RFC2207]
 
      Range    Registration Procedures            Note
-       0      Reserved                Illegal Value
-      1-10    Reserved                Contact RFC2207 Authors
-    11-8191   Not Defined             See section 5 of [RFC2207]
+   0          Reserved                Illegal Value
+   1-10       Reserved                Contact RFC2207 Authors
+   11-8191    Not Defined             See section 5 of [RFC2207]
    8192-65535 Dynamic
 
    Value Name Description Reference
@@ -1812,7 +1812,7 @@ Error Codes and Globally-Defined Error Value Sub-Codes
            CSV
 
     Range  Registration Procedures
-    0-239  Standards Action
+   0-239   Standards Action
    240-251 Expert Review
    252-255 Reserved for Private Use
 
@@ -2034,7 +2034,9 @@ Error Codes and Globally-Defined Error Value Sub-Codes
     67   Route Blocked by Exclude Route                                          [RFC4874]
     68   XRO Too Complex                                                         [RFC4874]
     69   EXRS Too Complex                                                        [RFC4874]
-   70-99 Unassigned
+    70   TE link label usage failure                                             [RFC8577]
+    71   Label stack imposition failure                                          [RFC8577]
+   72-99 Unassigned
     100  Diversity not available                                                 [RFC3476]
     101  Service level not available                                             [RFC3476]
     102  Invalid/Unknown connection ID                                           [RFC3476]

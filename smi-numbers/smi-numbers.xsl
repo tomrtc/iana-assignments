@@ -66,6 +66,7 @@
                         @id = 'security-smime-10' or
                         @id = 'security-smime-11' or
                         @id = 'security-smime-12' or
+                        @id = 'security-smime-13' or
                         @id = 'smi-numbers-1.3.6.1.5.5.7' or
                         @id = 'smi-numbers-1.3.6.1.5.5.7.0' or
                         @id = 'smi-numbers-1.3.6.1.5.5.7.1' or
@@ -97,6 +98,7 @@
                         @id = 'smi-numbers-1.3.6.1.5.5.7.21' or
                         @id = 'smi-numbers-1.3.6.1.5.5.7.22' or
                         @id = 'smi-numbers-1.3.6.1.5.5.7.23' or
+                        @id = 'smi-numbers-1.3.6.1.5.5.7.24' or
                         @id = 'smi-numbers-1.3.6.1.5.5.7.48' or
                         @id = 'smi-numbers-1.3.6.1.5.5.7.48.1' or
                         @id = 'smi-numbers-1.3.101'">

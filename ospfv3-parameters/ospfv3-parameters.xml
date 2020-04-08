@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="ospfv3-parameters">
   <title>Open Shortest Path First v3 (OSPFv3) Parameters</title>
   <created>2007-04-25</created>
-  <updated>2018-05-14</updated>
+  <updated>2019-12-09</updated>
   <note>Please also see: 
     <xref type="uri" data="http://www.iana.org/assignments/ospf-dd-packet-flags/ospf-dd-packet-flags.xml"/>
     <xref type="uri" data="http://www.iana.org/assignments/ospf-lls-tlvs"/>
@@ -181,8 +181,13 @@
       <description>OSPFv3 Autoconfiguration (AC) LSA</description>
       <xref type="rfc" data="rfc7503"/>
     </record>
+    <record date="2019-07-31">
+      <value>16</value>
+      <description>OSPFv3 Dynamic Flooding LSA (TEMPORARY - registered 2019-07-31, expires 2020-07-31)</description>
+      <xref type="draft" data="draft-ietf-lsr-dynamic-flooding"/>
+    </record>
     <record>
-      <value>16-32</value>
+      <value>17-32</value>
       <description>Unassigned</description>
     </record>
     <record date="2018-01-31">
@@ -290,6 +295,12 @@
       <value>0x20</value>
       <description>N-bit</description>
       <xref type="rfc" data="rfc8362"/>
+    </record>
+    <record date="2019-08-26">
+      <value>0x40</value>
+      <description>ELC-bit 
+        (TEMPORARY - registered 2019-08-26, expires 2020-08-26)</description>
+      <xref type="draft" data="draft-ietf-ospf-mpls-elc"/>
     </record>
   </registry>
 
@@ -525,10 +536,10 @@ applications other than the support of multiple address families.</note>
       <description>IPv4 Link-Local Address TLV</description>
       <xref type="rfc" data="rfc8362"/>
     </record>
-    <record date="2018-02-05">
+    <record date="2018-02-05" updated="2019-01-16">
       <value>9</value>
-      <description>OSPFv3 Extended Prefix Range TLV (TEMPORARY - registered 2018-02-05, expires 2019-02-05)</description>
-      <xref type="draft" data="draft-ietf-ospf-ospfv3-segment-routing-extensions"/>
+      <description>OSPFv3 Extended Prefix Range TLV</description>
+      <xref type="rfc" data="rfc8666"/>
     </record>
     <record>
       <value>10-32767</value>
@@ -581,33 +592,130 @@ applications other than the support of multiple address families.</note>
       <description>Route-Tag sub-TLV</description>
       <xref type="rfc" data="rfc8362"/>
     </record>
-    <record date="2018-02-05">
+    <record date="2018-02-05" updated="2019-01-16">
       <value>4</value>
-      <description>Prefix SID Sub-TLV (TEMPORARY - registered 2018-02-05, expires 2019-02-05)</description>
-      <xref type="draft" data="draft-ietf-ospf-ospfv3-segment-routing-extensions"/>
+      <description>Prefix SID sub-TLV</description>
+      <xref type="rfc" data="rfc8666"/>
     </record>
-    <record date="2018-02-05">
+    <record date="2018-02-05" updated="2019-01-16">
       <value>5</value>
-      <description>Adj-SID Sub-TLV (TEMPORARY - registered 2018-02-05, expires 2019-02-05)</description>
-      <xref type="draft" data="draft-ietf-ospf-ospfv3-segment-routing-extensions"/>
+      <description>Adj-SID sub-TLV</description>
+      <xref type="rfc" data="rfc8666"/>
     </record>
-    <record date="2018-02-05">
+    <record date="2018-02-05" updated="2019-01-16">
       <value>6</value>
-      <description>LAN Adj-SID Sub-TLV (TEMPORARY - registered 2018-02-05, expires 2019-02-05)</description>
-      <xref type="draft" data="draft-ietf-ospf-ospfv3-segment-routing-extensions"/>
+      <description>LAN Adj-SID sub-TLV</description>
+      <xref type="rfc" data="rfc8666"/>
     </record>
-    <record date="2018-02-05">
+    <record date="2018-02-05" updated="2019-01-16">
       <value>7</value>
-      <description>SID/Label Sub-TLV (TEMPORARY - registered 2018-02-05, expires 2019-02-05)</description>
-      <xref type="draft" data="draft-ietf-ospf-ospfv3-segment-routing-extensions"/>
+      <description>SID/Label sub-TLV</description>
+      <xref type="rfc" data="rfc8666"/>
     </record>
     <record date="2018-04-13">
       <value>8</value>
       <description>Graceful-Link-Shutdown sub-TLV</description>
       <xref type="rfc" data="rfc8379"/>
     </record>
+    <record date="2018-10-18">
+      <value>9</value>
+      <description>OSPFv3 Link MSD</description>
+      <xref type="rfc" data="rfc8476"/>
+    </record>
+    <record date="2019-07-31">
+      <value>10</value>
+      <description>OSPFv3 Link Attributes Bits Sub-TLV (TEMPORARY - registered 2019-07-31, expires 2020-07-31)</description>
+      <xref type="draft" data="draft-ietf-lsr-dynamic-flooding"/>
+    </record>
+    <record date="2019-08-21">
+      <value>11</value>
+      <description>Application Specific Link Attributes (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21">
+      <value>12</value>
+      <description>Shared Risk Link Group (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21">
+      <value>13</value>
+      <description>Unidirectional Link Delay (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21">
+      <value>14</value>
+      <description>Min/Max Unidirectional Link Delay (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21">
+      <value>15</value>
+      <description>Unidirectional Delay Variation (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21">
+      <value>16</value>
+      <description>Unidirectional Link Loss (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21">
+      <value>17</value>
+      <description>Unidirectional Residual Bandwidth (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21">
+      <value>18</value>
+      <description>Unidirectional Available Bandwidth (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21">
+      <value>19</value>
+      <description>Unidirectional Utilized Bandwidth (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21">
+      <value>20</value>
+      <description>Administrative Group (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21">
+      <value>21</value>
+      <description>Extended Administrative Group (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21">
+      <value>22</value>
+      <description>Traffic Engineering Metric (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21">
+      <value>23</value>
+      <description>Maximum Link Bandwidth (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21">
+      <value>24</value>
+      <description>Local Interface IPv6 Address Sub-TLV (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-08-21" updated="2019-09-18">
+      <value>25</value>
+      <description>Remote Interface IPv6 Address Sub-TLV (TEMPORARY - registered 2019-08-21, expires 2020-08-21)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-10-03">
+      <value>26</value>
+      <description>Flex-Algorithm Prefix Metric 
+        (TEMPORARY - registered 2019-10-03, expires 2020-10-03)</description>
+      <xref type="draft" data="draft-ietf-lsr-flex-algo"/>
+    </record>
+    <record date="2019-11-05">
+      <value>27</value>
+      <description>Prefix Source Router-ID 
+        (TEMPORARY - registered 2019-11-05, expires 2020-11-05)</description>
+      <xref type="draft" data="draft-ietf-lsr-ospf-prefix-originator"/>
+    </record>
     <record>
-      <value>9-32767</value>
+      <value>28-32767</value>
       <description>Unassigned</description>
     </record>
     <record date="2018-01-31">

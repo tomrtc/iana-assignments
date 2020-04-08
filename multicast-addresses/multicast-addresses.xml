@@ -3,7 +3,7 @@
 <?oxygen RNGSchema="multicast-addresses.rng" type="xml"?>
 <registry xmlns="http://www.iana.org/assignments" id="multicast-addresses">
   <title>IPv4 Multicast Address Space Registry</title>
-  <updated>2018-08-01</updated>
+  <updated>2020-01-21</updated>
   <expert>Stig Venaas</expert>
   <note>Host Extensions for IP Multicasting <xref type="rfc" data="rfc1112"/> specifies the extensions
 required of a host implementation of the Internet Protocol (IP) to
@@ -329,7 +329,17 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <xref type="draft" data="RFC-ietf-anima-grasp-15"/>
     </record>
     <record>
-      <addr>224.0.0.120-224.0.0.250</addr>
+      <addr>224.0.0.120-224.0.0.149</addr>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-03-13">
+      <addr>224.0.0.150</addr>
+      <description>Ramp AltitudeCDN MulticastPlus</description>
+      <xref type="person" data="Giovanni_Marzot"/>
+      <controller><xref type="person" data="Ramp_Holdings"/></controller>
+    </record>
+    <record>
+      <addr>224.0.0.151-224.0.0.250</addr>
       <description>Unassigned</description>
     </record>
     <record date="2000-04-01">
@@ -1118,9 +1128,11 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <description>8x8 Multicast</description>
       <xref type="person" data="Mike_Roper"/>
     </record>
-    <record>
+    <record date="2019-03-13">
       <addr>224.0.1.150</addr>
-      <description>Unassigned</description>
+      <description>Ramp AltitudeCDN MulticastPlus</description>
+      <xref type="person" data="Giovanni_Marzot"/>
+      <controller><xref type="person" data="Ramp_Holdings"/></controller>
     </record>
     <record date="2000-02-01">
       <addr>224.0.1.151</addr>
@@ -1308,8 +1320,14 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <description>All CoAP Nodes</description>
       <xref type="rfc" data="rfc7252"/>
     </record>
+    <record date="2019-02-20">
+      <addr>224.0.1.188</addr>
+      <description>BRSDP</description>
+      <xref type="person" data="Vanya_Levy"/>
+      <controller><xref type="person" data="Semtech_Corporation"/></controller>
+    </record>
     <record>
-      <addr>224.0.1.188-224.0.1.255</addr>
+      <addr>224.0.1.189-224.0.1.255</addr>
       <description>Unassigned</description>
     </record>
   </registry>
@@ -1368,8 +1386,32 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <description>swapapp_multicast</description>
       <xref type="person" data="Applykane"/>
     </record>
+    <record date="2018-10-17">
+      <addr>224.0.2.11</addr>
+      <description>LDA Discovery Service</description>
+      <xref type="person" data="Juan_Ayas"/>
+      <controller><xref type="person" data="LDA_Audio_Tech"/></controller>
+    </record>
+    <record date="2018-11-15">
+      <addr>224.0.2.12</addr>
+      <description>CNP-HD-PLC</description>
+      <xref type="person" data="Ernst_EDER"/>
+      <controller><xref type="person" data="LonMark_International"/></controller>
+    </record>
+    <record date="2019-01-17">
+      <addr>224.0.2.13</addr>
+      <description>BSE</description>
+      <xref type="person" data="Rami_Chalhoub"/>
+      <controller><xref type="person" data="BSE"/></controller>
+    </record>
+    <record date="2019-08-19">
+      <addr>224.0.2.14</addr>
+      <description>OPC Discovery</description>
+      <xref type="person" data="OPC_Foundation"/>
+      <controller><xref type="person" data="OPC_Foundation"/></controller>
+    </record>
     <record>
-      <addr>224.0.2.11-224.0.2.63</addr>
+      <addr>224.0.2.15-224.0.2.63</addr>
       <description>Unassigned</description>
     </record>
     <record date="1996-04" updated="2018-04-20">
@@ -1922,20 +1964,25 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <description>LLAFP</description>
       <xref type="person" data="Michael_Lyle"/>
     </record>
-    <record date="2010-02-04">
+    <record date="2010-02-04" updated="2019-07-01">
       <addr>224.0.23.172</addr>
       <description>UFMP</description>
-      <xref type="person" data="Albert_Berlovitch"/>
+      <xref type="person" data="Shachar_Dor"/>
+      <controller>
+        <xref type="person" data="Mellanox"/>
+      </controller>
     </record>
-    <record date="2010-02-26">
+    <record date="2010-02-26" updated="2019-02-07">
       <addr>224.0.23.173</addr>
       <description>PHILIPS-HEALTH</description>
-      <xref type="person" data="Anthony_Kandaya"/>
+      <xref type="person" data="Mike_King"/>
+      <controller><xref type="person" data="Philips_Healthcare"/></controller>
     </record>
-    <record date="2010-02-26">
+    <record date="2010-02-26" updated="2019-02-07">
       <addr>224.0.23.174</addr>
       <description>PHILIPS-HEALTH</description>
-      <xref type="person" data="Anthony_Kandaya"/>
+      <xref type="person" data="Mike_King"/>
+      <controller><xref type="person" data="Philips_Healthcare"/></controller>
     </record>
     <record date="2010-03-12">
       <addr>224.0.23.175</addr>
@@ -2035,10 +2082,11 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       </controller>
       <reviewed>2011-02-15</reviewed>
     </record>
-    <record date="2008-01-15">
+    <record date="2008-01-15" updated="2020-01-21">
       <addr>224.0.42.0-224.0.45.255</addr>
-      <description>MEDIAL</description>
-      <xref type="person" data="Media_Alliance_JSC"/>
+      <description>SINERGIYA</description>
+      <xref type="person" data="SINERGIYA_Ltd."/>
+      <controller><xref type="person" data="SINERGIYA_Ltd."/></controller>
     </record>
     <record date="2008-01-25">
       <addr>224.0.46.0-224.0.50.255</addr>
@@ -2058,10 +2106,13 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <xref type="person" data="Euronext_Admin"/>
       <reviewed>2014-11-24</reviewed>
     </record>
-    <record date="2008-08-20">
+    <record date="2008-08-20" updated="2019-08-29">
       <addr>224.0.54.0-224.0.57.255</addr>
-      <description>Get - BCN</description>
-      <xref type="person" data="Arne_Hvidsten"/>
+      <description>Telia Norway mcast</description>
+      <xref type="person" data="Henrik_Lans"/>
+      <controller>
+        <xref type="person" data="Telia-Norway-Get-NOC"/>
+      </controller>
     </record>
     <record date="2008-08-27" updated="2018-04-20">
       <addr>224.0.58.0-224.0.61.255</addr>
@@ -2170,13 +2221,19 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
     <record date="2014-06-12">
       <addr>224.0.102.128-224.0.102.255</addr>
       <description>MVS-IPTV-2</description>
-      <xref type="person" data="Andrew_Hoyos"/>
+      <xref type="person" data="Midwest_Video_Solutions"/>
+      <controller>
+        <xref type="person" data="Midwest_Video_Solutions"/>
+      </controller>
     </record>
     <record date="2011-04-20">
       <addr>224.0.103.0-224.0.104.255</addr>
       <description>MVS-IPTV</description>
+      <xref type="person" data="Midwest_Video_Solutions"/>
       <xref type="person" data="Adam_DeMinter"/>
-      <xref type="person" data="Andrew_Hoyos"/>
+      <controller>
+        <xref type="person" data="Midwest_Video_Solutions"/>
+      </controller>
     </record>
     <record date="2011-06-06" updated="2018-08-01">
       <addr>224.0.105.0-224.0.105.127</addr>
@@ -2188,6 +2245,9 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <addr>224.0.105.128-224.0.105.255</addr>
       <description>MVS-IPTV3</description>
       <xref type="person" data="Justin_Beaman"/>
+      <controller>
+        <xref type="person" data="Midwest_Video_Solutions"/>
+      </controller>
     </record>
     <record date="2011-06-16">
       <addr>224.0.106.0-224.0.106.255</addr>
@@ -2205,10 +2265,13 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <description>Zaklina_Petkovic</description>
       <xref type="person" data="David_Brett"/>
     </record>
-    <record date="2011-10-25" updated="2014-09-05"> 
+    <record date="2011-10-25" updated="2019-10-01"> 
       <addr>224.0.111.0-224.0.111.255</addr>
       <description>VoleraDataFeed</description>
       <xref type="person" data="Gerald_Hanweck"/>
+      <controller>
+        <xref type="person" data="Hanweck_Associates"/>
+      </controller>
     </record>
     <record date="2011-12-07">
       <addr>224.0.112.0-224.0.112.255</addr>
@@ -2244,10 +2307,13 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <description>czechbone iptv</description>
       <xref type="person" data="Jan_Vitek"/>
     </record>    
-    <record date="2013-05-13">
+    <record date="2013-05-13" updated="2019-08-28">
       <addr>224.0.121.0-224.0.121.255</addr>
       <description>AQUIS-EXCHANGE</description>
-      <xref type="person" data="Mark_Chester"/>
+      <xref type="person" data="Paul_Roberts"/>
+      <controller>
+        <xref type="person" data="Aquis_Exchange_PLC"/>
+      </controller>
     </record>    
     <record date="2013-05-25">
       <addr>224.0.122.0-224.0.123.255</addr>
@@ -2260,10 +2326,13 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <xref type="person" data="David_Wilson"/>
       <xref type="person" data="Michael_Caravetta_2"/>
     </record>    
-    <record date="2013-09-05">
+    <record date="2013-09-05" updated="2019-10-01">
       <addr>224.0.125.0-224.0.125.255</addr>
       <description>Hanweck Associates</description>
       <xref type="person" data="Gerald_Hanweck"/>
+      <controller>
+        <xref type="person" data="Hanweck_Associates"/>
+      </controller>
     </record>
     <record date="2013-10-31" updated="2018-04-20">
       <addr>224.0.126.0-224.0.129.255</addr>
@@ -2288,10 +2357,13 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <description>Aequitas Innovations Inc.</description>
       <xref type="person" data="Zaklina_Petkovic_2"/>
     </record>
-    <record date="2014-09-04">
+    <record date="2014-09-04" updated="2019-08-29">
       <addr>224.0.140.0-224.0.140.255</addr>
       <description>Instinet</description>
-      <xref type="person" data="Sam_Birru"/>
+      <xref type="person" data="Instinet"/>
+      <controller>
+        <xref type="person" data="Instinet"/>
+      </controller>
     </record>
     <record date="2015-06-30" updated="2018-08-01">
       <addr>224.0.141.0-224.0.141.255</addr>
@@ -2320,10 +2392,13 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <description>cse-md</description>
       <xref type="person" data="David_Brett_2"/>
     </record>
-    <record date="2016-05-24">
+    <record date="2016-05-24" updated="2019-08-29">
       <addr>224.0.153.0-224.0.156.255</addr>
-      <description>Get - BCN</description>
-      <xref type="person" data="Arne_Hvidsten"/>
+      <description>Telia Norway mcast</description>
+      <xref type="person" data="Henrik_Lans"/>
+      <controller>
+        <xref type="person" data="Telia-Norway-Get-NOC"/>
+      </controller>
     </record>
     <record date="2017-01-23">
       <addr>224.0.157.0-224.0.157.255</addr>
@@ -2354,11 +2429,15 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <addr>224.0.170.0-224.0.170.255</addr>
       <description>MVS-IPTV4</description>
       <xref type="person" data="Justin_Beaman"/>
+      <controller>
+        <xref type="person" data="Midwest_Video_Solutions"/>
+      </controller>
     </record>
-    <record>
+    <record date="2019-01-25">
       <addr>224.0.171.0-224.0.171.255</addr>
-      <description>Unassigned</description>
-      
+      <description>COINBASE-MARKETS</description>
+      <xref type="person" data="Gavin_McKee"/>
+      <controller><xref type="person" data="Coinbase"/></controller>
     </record>
     <record date="2018-06-19">
       <addr>224.0.172.0-224.0.175.255</addr>
@@ -2371,8 +2450,52 @@ implementations.  See <xref type="rfc" data="rfc3692"/> for details.</note>
       <xref type="person" data="Gamini_Karunaratne"/>
       <controller><xref type="person" data="MIAX"/></controller>
     </record>
+    <record date="2019-02-13">
+      <addr>224.0.180.0-224.0.181.255</addr>
+      <description>CBOE Europe</description>
+      <xref type="person" data="Jason_Ives"/>
+      <controller><xref type="person" data="CBOE_Europe"/></controller>
+    </record>
+    <record date="2019-02-28">
+      <addr>224.0.182.0-224.0.183.255</addr>
+      <description>ALCOM-TV</description>
+      <xref type="person" data="TV_System_Administrators"/>
+      <controller><xref type="person" data="Ålands_Telekommunikation_Ab"/></controller>
+    </record>
+    <record date="2019-08-28">
+      <addr>224.0.184.0-224.0.184.255</addr>
+      <description>AQUIS-EXCHANGE</description>
+      <xref type="person" data="Paul_Roberts"/>
+      <controller>
+        <xref type="person" data="Aquis_Exchange_PLC"/>
+      </controller>
+    </record>
+    <record date="2019-09-12" updated="2019-10-01">
+      <addr>224.0.185.0-224.0.185.255</addr>
+      <description>Hanweck Associates</description>
+      <xref type="person" data="Svetlana_Kachintseva"/>
+      <controller>
+        <xref type="person" data="Hanweck_Associates"/>
+      </controller>
+    </record>
+    <record date="2019-10-02">
+      <addr>224.0.186.0-224.0.186.255</addr>
+      <description>BOX Options Market</description>
+      <xref type="person" data="Alexandre_Gomes"/>
+      <controller>
+        <xref type="person" data="BOX_TECHNOLOGY_CANADA_INC."/>
+      </controller>
+    </record>
+    <record date="2019-11-13">
+      <addr>224.0.187.0-224.0.188.255</addr>
+      <description>MVS-IPTV5</description>
+      <xref type="person" data="Justin_Beaman"/>
+      <controller>
+        <xref type="person" data="Midwest_Video_Solutions"/>
+      </controller>
+    </record>
     <record>
-      <addr>224.0.180.0-224.0.249.255</addr>
+      <addr>224.0.189.0-224.0.249.255</addr>
       <description>Unassigned</description>
     </record>
     <record date="2009-09-01">
@@ -2811,12 +2934,7 @@ low-order bits of the IP Multicast address are placed in the low-order
     <person id="Ålands_Telekommunikation_Ab">
       <name>Ålands Telekommunikation Ab</name>
       <uri>mailto:tv-noc&amp;alcom.ax</uri>
-      <updated>2018-02-20</updated>
-    </person>
-    <person id="Albert_Berlovitch">
-      <name>Albert Berlovitch</name>
-      <uri>mailto:albertb&amp;voltaire.com</uri>
-      <updated>2010-02-04</updated>
+      <updated>2019-02-28</updated>
     </person>
     <person id="Alex_Lee">
       <name>Alex Lee</name>
@@ -2828,6 +2946,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:pzz&amp;pzz.msk.ru</uri>
       <updated>2006-03-17</updated>
     </person>
+    <person id="Alexandre_Gomes">
+      <name>Alexandre Gomes</name>
+      <uri>mailto:agomes&amp;boxtechnology.com</uri>
+      <updated>2019-10-02</updated>
+    </person>
     <person id="Andrew_Brown">
       <name>Andrew Brown</name>
       <uri>mailto:abrown&amp;batstrading.com</uri>
@@ -2836,11 +2959,6 @@ low-order bits of the IP Multicast address are placed in the low-order
     <person id="Andrew_Cherenson">
       <name>Andrew Cherenson</name>
       <uri>mailto:arc&amp;sgi.com</uri>
-    </person>
-    <person id="Andrew_Hoyos">
-      <name>Andrew Hoyos</name>
-      <uri>mailto:andrew&amp;hoyosconsulting.com</uri>
-      <updated>2011-04-20</updated>
     </person>
     <person id="Andrew_Rowley">
       <name>Andrew Rowley</name>
@@ -2862,11 +2980,6 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:anthony&amp;mksrc.com</uri>
       <updated>1999-06-01</updated>
     </person>
-    <person id="Anthony_Kandaya">
-      <name>Anthony Kandaya</name>
-      <uri>mailto:Anthony.kandaya&amp;philips.com</uri>
-      <updated>2012-05-23</updated>
-    </person>
     <person id="Antonio_Querubin">
       <name>Antonio Querubin</name>
       <uri>mailto:tony&amp;lava.net</uri>
@@ -2877,15 +2990,15 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:applykane&amp;gmail.com</uri>
       <updated>2017-05-19</updated>
     </person>
+    <person id="Aquis_Exchange_PLC">
+      <name>Aquis Exchange PLC</name>
+      <uri>mailto:networks&amp;aquis.eu</uri>
+      <updated>2019-08-28</updated>
+    </person>
     <person id="Architecture_Team">
       <name>Architecture Team</name>
       <uri>mailto:tech.arch&amp;quantifytechnology.com</uri>
       <updated>2018-01-31</updated>
-    </person>
-    <person id="Arne_Hvidsten">
-      <name>Arne Hvidsten</name>
-      <uri>mailto:arne.hvidsten&amp;get.no</uri>
-      <updated>2016-05-24</updated>
     </person>
     <person id="Arnoud_Zwemmer">
       <name>Arnoud Zwemmer</name>
@@ -2976,6 +3089,10 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:Boris.Garber&amp;tsx.com</uri>
       <updated>2012-06-12</updated>
     </person>
+    <person id="BOX_TECHNOLOGY_CANADA_INC.">
+      <name>BOX TECHNOLOGY CANADA INC.</name>
+      <updated>2019-10-04</updated>
+    </person>
     <person id="Brendan_Eic">
       <name>Brendan Eic</name>
       <uri>mailto:brendan&amp;illyria.wpd.sgi.com</uri>
@@ -3014,6 +3131,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:protocol&amp;opendof.org</uri>
       <updated>2015-04-23</updated>
     </person>
+    <person id="BSE">
+      <name>Beirut Stock Exchange</name>
+      <uri>mailto:itd&amp;bse.com.lb</uri>
+      <updated>2019-01-17</updated>
+    </person>
     <person id="Caleb_Bell">
       <name>Caleb Bell</name>
       <uri>mailto:cbell&amp;rxnetworks.com</uri>
@@ -3028,6 +3150,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <name>Carl Malamud</name>
       <uri>mailto:carl&amp;media.org</uri>
       <updated>2014-01-03</updated>
+    </person>
+    <person id="CBOE_Europe">
+      <name>CBOE Europe</name>
+      <uri>mailto:noceurope&amp;cboe.com</uri>
+      <updated>2019-02-13</updated>
     </person>
     <person id="Charles_Tewiah">
       <name>Charles Tewiah</name>
@@ -3067,6 +3194,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <name>Colin Caughie</name>
       <uri>mailto:cfc&amp;indigo-avs.com</uri>
       <updated>2000-05-01</updated>
+    </person>
+    <person id="Coinbase">
+      <name>Coinbase</name>
+      <uri>mailto:markets-infra&amp;coinbase.com</uri>
+      <updated>2019-01-28</updated>
     </person>
     <person id="COMTECH_Kft.">
       <name>COMTECH Kft.</name>
@@ -3205,6 +3337,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:Erik.Guttman&amp;sun.com</uri>
       <updated>2001-12-01</updated>
     </person>
+    <person id="Ernst_EDER">
+      <name>Ernst EDER</name>
+      <uri>mailto:tech&amp;lonmark.org</uri>
+      <updated>2018-11-19</updated>
+    </person>
     <person id="Euronext_Admin">
       <name>Euronext Admin</name>
       <uri>mailto:iana-admin&amp;euronext.com</uri>
@@ -3244,6 +3381,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:gmalkin&amp;baynetworks.com</uri>
       <updated>1998-02-01</updated>
     </person>
+    <person id="Gavin_McKee">
+      <name>Gavin McKee</name>
+      <uri>mailto:gav.mckee&amp;coinbase.com</uri>
+      <updated>2019-01-25</updated>
+    </person>
     <person id="Gene_Marsh">
       <name>Gene Marsh</name>
       <uri>mailto:MarshM&amp;diebold.com</uri>
@@ -3268,6 +3410,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <name>Gerald Hanweck</name>
       <uri>mailto:jhanweck&amp;hanweckassoc.com</uri>
       <updated>2014-09-05</updated>
+    </person>
+    <person id="Giovanni_Marzot">
+      <name>Giovanni Marzot</name>
+      <uri>mailto:gmarzot&amp;ramp.com</uri>
+      <updated>2019-03-13</updated>
     </person>
     <person id="Grant_Taylor">
       <name>Grant Taylor</name>
@@ -3294,10 +3441,15 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:gwhitehouse&amp;londonstockexchange.com</uri>
       <updated>2006-03-31</updated>
     </person>
+    <person id="Hanweck_Associates">
+      <name>Hanweck Associates</name>
+      <uri>mailto:iana-change-controller&amp;hanweckassoc.com</uri>
+      <updated>2019-10-01</updated>
+    </person>
     <person id="Hatice_Unal">
       <name>Hatice Unal</name>
-      <uri>mailto:Can-NetworkEngineering&amp;itg.com</uri>
-      <updated>2017-01-23</updated>
+      <uri>mailto:CAN-Tech-Network&amp;itg.com</uri>
+      <updated>2019-01-25</updated>
     </person>
     <person id="Heiko_Rupp">
       <name>Heiko Rupp</name>
@@ -3308,6 +3460,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <name>Henri Moelard</name>
       <uri>mailto:HMOELARD&amp;wcnd.nl.lucent.com</uri>
       <updated>1998-03</updated>
+    </person>
+    <person id="Henrik_Lans">
+      <name>Henrik Lans</name>
+      <uri>mailto:henrik.lans&amp;telia.no</uri>
+      <updated>2019-09-27</updated>
     </person>
     <person id="Hiroshi_Okubo">
       <name>Hiroshi Okubo</name>
@@ -3341,6 +3498,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <name>Ian Wilson</name>
       <uri>mailto:iwilson&amp;cisco.com</uri>
       <updated>2001-12-01</updated>
+    </person>
+    <person id="Instinet">
+      <name>Instinet</name>
+      <uri>mailto:uk.networks&amp;instinet.co.uk</uri>
+      <updated>2019-08-29</updated>
     </person>
     <person id="Intercontinental_Exchange_Inc.">
       <name>Intercontinental Exchange, Inc.</name>
@@ -3396,6 +3558,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <name>Jasmine Strong</name>
       <uri>mailto:jasmine&amp;heroicrobotics.com</uri>
       <updated>2014-06-04</updated>
+    </person>
+    <person id="Jason_Ives">
+      <name>Jason Ives</name>
+      <uri>mailto:noceurope&amp;cboe.com</uri>
+      <updated>2019-02-13</updated>
     </person>
     <person id="Javier_Landin">
       <name>Javier Landin</name>
@@ -3491,6 +3658,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:73374.313&amp;compuserve.com</uri>
       <updated>1996-07-01</updated>
     </person>
+    <person id="Juan_Ayas">
+      <name>Juan Ayas</name>
+      <uri>mailto:jayas&amp;lda-audiotech.com</uri>
+      <updated>2018-10-17</updated>
+    </person>
     <person id="Julian_Nevell">
       <name>Julian Nevell</name>
       <uri>mailto:JNEVELL&amp;vbs.bt.co.uk</uri>
@@ -3499,7 +3671,7 @@ low-order bits of the IP Multicast address are placed in the low-order
     <person id="Justin_Beaman">
       <name>Justin Beaman</name>
       <uri>mailto:justin.beaman&amp;midwestvideosolutions.com</uri>
-      <updated>2018-06-07</updated>
+      <updated>2019-11-13</updated>
     </person>
     <person id="Kang_Lee">
       <name>Kang Lee</name>
@@ -3540,6 +3712,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:kristian.bognaes&amp;norman.com</uri>
       <updated>2014-01-08</updated>
     </person>
+    <person id="LDA_Audio_Tech">
+      <name>LDA Audio Tech</name>
+      <uri>mailto:info&amp;lda-audiotech.com</uri>
+      <updated>2018-10-19</updated>
+    </person>
     <person id="Lev_V._Cherednikov">
       <name>Lev V. Cherednikov</name>
       <uri>mailto:lev.cherednikov&amp;nbn-holding.ru</uri>
@@ -3559,6 +3736,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <name>Lloyd Wood</name>
       <uri>mailto:L.Wood&amp;surrey.ac.uk</uri>
       <updated>2011-03-17</updated>
+    </person>
+    <person id="LonMark_International">
+      <name>LonMark International</name>
+      <uri>mailto:tech&amp;lonmark.org</uri>
+      <updated>2018-11-19</updated>
     </person>
     <person id="Louis_Mamakos">
       <name>Louis Mamakos</name>
@@ -3589,11 +3771,6 @@ low-order bits of the IP Multicast address are placed in the low-order
       <name>Mark Bakke</name>
       <uri>mailto:mbakke&amp;cisco.com</uri>
       <updated>2001-12-01</updated>
-    </person>    
-    <person id="Mark_Chester">
-      <name>Mark Chester</name>
-      <uri>mailto:networks&amp;aquis.eu</uri>
-      <updated>2013-05-13</updated>
     </person>
     <person id="Mark_Hamilton">
       <name>Mark Hamilton</name>
@@ -3644,10 +3821,10 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:ceo&amp;mediastreamusa.com</uri>
       <updated>2006-09-15</updated>
     </person>
-    <person id="Media_Alliance_JSC">
-      <name>Media Alliance JSC</name>
-      <uri>mailto:noc&amp;medi-a.ru</uri>
-      <updated>2008-01-15</updated>
+    <person id="Mellanox">
+      <name>Mellanox Technologies, Inc.</name>
+      <uri>mailto:info&amp;mellanox.com</uri>
+      <updated>2019-07-01</updated>
     </person>
     <person id="Meridian_Labs_LTD">
       <name>Meridian Labs LTD.</name>
@@ -3699,10 +3876,20 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:Michael.Wang&amp;usa.xerox.com</uri>
       <updated>1999-03-01</updated>
     </person>
+    <person id="Midwest_Video_Solutions">
+      <name>Midwest Video Solutions</name>
+      <uri>mailto:support&amp;midwestvideosolutions.com</uri>
+      <updated>2019-11-13</updated>
+    </person>
     <person id="Mika_Uusitalo">
       <name>Mika Uusitalo</name>
       <uri>mailto:msu&amp;xingtech.com</uri>
       <updated>1997-04-01</updated>
+    </person>
+    <person id="Mike_King">
+      <name>Mike King</name>
+      <uri>mailto:mike.king&amp;philips.com</uri>
+      <updated>2019-02-07</updated>
     </person>
     <person id="Mike_Pontillo">
       <name>Mike Pontillo</name>
@@ -3774,6 +3961,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:o.lewis&amp;icerobotics.co.uk</uri>
       <updated>2006-07-11</updated>
     </person>
+    <person id="OPC_Foundation">
+      <name>OPC Foundation</name>
+      <uri>mailto:sysadmin&amp;opcfoundation.org</uri>
+      <updated>2019-08-19</updated>
+    </person>
     <person id="OSPF_WG_Chairs">
       <name>OSPF WG Chairs</name>
       <uri>mailto:ospf-chairs&amp;ietf.org</uri>
@@ -3797,6 +3989,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <name>Paul Langille</name>
       <uri>mailto:plangille&amp;dnpg.com</uri>
       <updated>2007-01-17</updated>
+    </person>
+    <person id="Paul_Roberts">
+      <name>Paul Roberts</name>
+      <uri>mailto:networks&amp;aquis.eu</uri>
+      <updated>2019-08-28</updated>
     </person>
     <person id="Paul_Suhler">
       <name>Paul Suhler</name>
@@ -3828,6 +4025,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:peter_white&amp;3com.com</uri>
       <updated>1999-04-01</updated>
     </person>
+    <person id="Philips_Healthcare">
+      <name>Philips Healthcare</name>
+      <uri>mailto:bill.holden&amp;philips.com</uri>
+      <updated>2019-02-07</updated>
+    </person>
     <person id="Pierre_Oliver">
       <name>Pierre Oliver</name>
       <uri>mailto:polivier&amp;calamp.com</uri>
@@ -3857,6 +4059,16 @@ low-order bits of the IP Multicast address are placed in the low-order
       <name>Ram Iyer</name>
       <uri>mailto:ram&amp;aaccorp.com</uri>
       <updated>1998-03-01</updated>
+    </person>
+    <person id="Rami_Chalhoub">
+      <name>Rami Chalhoub</name>
+      <uri>mailto:itd&amp;bse.com.lb</uri>
+      <updated>2019-01-17</updated>
+    </person>
+    <person id="Ramp_Holdings">
+      <name>Ramp Holdings</name>
+      <uri>mailto:ops&amp;ramp.com</uri>
+      <updated>2019-03-28</updated>
     </person>
     <person id="Raymond_Shum">
       <name>Raymond Shum</name>
@@ -3923,11 +4135,6 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:sakonk&amp;cscoms.net</uri>
       <updated>2000-05-01</updated>
     </person>
-    <person id="Sam_Birru">
-      <name>Sam Birru</name>
-      <uri>mailto:sam.birru&amp;instinet.co.uk</uri>
-      <updated>2014-09-05</updated>
-    </person>
     <person id="Sarunas_Brakauskas">
       <name>Sarunas Brakauskas</name>
       <uri>mailto:sbrakaus&amp;cme.com</uri>
@@ -3938,10 +4145,20 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:scott&amp;disney.com</uri>
       <updated>1997-08-01</updated>
     </person>
+    <person id="Semtech_Corporation">
+      <name>Semtech Corporation</name>
+      <uri>mailto:aptovision_support&amp;semtech.com</uri>
+      <updated>2019-02-22</updated>
+    </person>
     <person id="Sergey_Shulgin">
       <name>Sergey Shulgin</name>
       <uri>mailto:sshulgin&amp;pinkotc.com</uri>
       <updated>2008-08-12</updated>
+    </person>
+    <person id="Shachar_Dor">
+      <name>Shachar Dor</name>
+      <uri>mailto:shachard&amp;mellanox.com</uri>
+      <updated>2019-07-01</updated>
     </person>
     <person id="Shai_Revzen">
       <name>Shai Revzen</name>
@@ -3962,6 +4179,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <name>Simon Barber</name>
       <uri>mailto:simon.barber&amp;parc.com</uri>
       <updated>2009-09-24</updated>
+    </person>
+    <person id="SINERGIYA_Ltd.">
+      <name>SINERGIYA Ltd.</name>
+      <uri>mailto:noc&amp;snrgt.ru</uri>
+      <updated>2020-01-21</updated>
     </person>
     <person id="Soren_Martin_Sorensen">
       <name>Soren Martin Sorensen</name>
@@ -4031,6 +4253,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <uri>mailto:stuart.kerry&amp;philips.com</uri>
       <updated>2003-01-01</updated>
     </person>
+    <person id="Svetlana_Kachintseva">
+      <name>Svetlana Kachintseva</name>
+      <uri>mailto:skachintseva&amp;hanweck.com</uri>
+      <updated>2019-09-12</updated>
+    </person>
     <person id="Susie_Armstrong">
       <name>Susie Armstrong</name>
       <uri>mailto:Armstrong.wbst128&amp;xerox.com</uri>
@@ -4044,6 +4271,11 @@ low-order bits of the IP Multicast address are placed in the low-order
       <name>Technicolor NL NOC</name>
       <uri>mailto:noc&amp;technicolor.com</uri>
       <updated>2009-12-23</updated>
+    </person>
+    <person id="Telia-Norway-Get-NOC">
+      <name>Telia-Norway-Get-NOC</name>
+      <uri>mailto:noc&amp;get.no</uri>
+      <updated>2019-08-28</updated>
     </person>
     <person id="Terry_Gibson">
       <name>Terry Gibson</name>
@@ -4118,12 +4350,17 @@ low-order bits of the IP Multicast address are placed in the low-order
       <name>TV System Administrators</name>
       <org>Ålands Telekommunikation Ab</org>
       <uri>mailto:tv-noc&amp;alcom.ax</uri>
-      <updated>2018-02-20</updated>
+      <updated>2019-02-28</updated>
     </person>
     <person id="UPnP_Forum">
       <name>UPnP Forum</name>
       <uri>mailto:upnpadmin&amp;forum.upnp.org</uri>
       <updated>2006-06-27</updated>
+    </person>
+    <person id="Vanya_Levy">
+      <name>Vanya Levy</name>
+      <uri>mailto:vlevy&amp;semtech.com</uri>
+      <updated>2019-02-20</updated>
     </person>
     <person id="Victor_Volpe">
       <name>Victor Volpe</name>

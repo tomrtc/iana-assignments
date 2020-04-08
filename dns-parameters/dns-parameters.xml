@@ -3,7 +3,7 @@
 <?oxygen RNGSchema="dns-parameters.rng" type="xml"?>
 <registry xmlns="http://www.iana.org/assignments" id="dns-parameters">
   <title>Domain Name System (DNS) Parameters</title>
-  <updated>2018-01-08</updated>
+  <updated>2020-03-30</updated>
 
 
   <registry id="dns-parameters-2">
@@ -51,7 +51,7 @@ Classes in the range 32768 to 65535 are incompatible with Multicast DNS.
     <range>
       <value>65280-65534</value>
       <hex>0xFF00-0xFFFE</hex>
-      <registration_rule>Reserved for Private Use</registration_rule>
+      <registration_rule>Private Use</registration_rule>
     </range>
     <range>
       <value>65535</value>
@@ -165,7 +165,7 @@ be allocated for ordinary use.</registration_rule>
     <range>
       <value>65280-65534</value>
       <hex>0xFF00-0xFFFE</hex>
-      <registration_rule>Reserved for Private Use</registration_rule>
+      <registration_rule>Private Use</registration_rule>
     </range>
     <range>
       <value>65535</value>
@@ -582,9 +582,16 @@ be allocated for ordinary use.</registration_rule>
       <description>Child-To-Parent Synchronization</description>
       <xref type="rfc" data="rfc7477"/>
     </record>
+    <record date="2018-12-12">
+      <type>ZONEMD</type>
+      <value>63</value>
+      <description>message digest for DNS zone</description>
+      <xref type="draft" data="draft-wessels-dns-zone-digest"/>
+      <file type="template">ZONEMD/zonemd-completed-template</file>
+    </record>
     <record>
       <type>Unassigned</type>
-      <value>63-98</value>
+      <value>64-98</value>
       <description/>
     </record>
     <record>
@@ -704,9 +711,10 @@ be allocated for ordinary use.</registration_rule>
     <record>
       <type>*</type>
       <value>255</value>
-      <description>A request for all records the server/cache has available</description>
+      <description>A request for some or all records the server has available</description>
       <xref type="rfc" data="rfc1035"/>
       <xref type="rfc" data="rfc6895"/>
+      <xref type="rfc" data="rfc8482"/>
     </record>
     <record date="2011-02-22" updated="2015-03-26">
       <type>URI</type>
@@ -715,11 +723,11 @@ be allocated for ordinary use.</registration_rule>
       <xref type="rfc" data="rfc7553"/>
       <file type="template">URI/uri-completed-template</file>
     </record>
-    <record date="2011-04-07">
+    <record date="2011-04-07" updated="2019-06-14">
       <type>CAA</type>
       <value>257</value>
       <description>Certification Authority Restriction</description>
-      <xref type="rfc" data="rfc6844"/>
+      <xref type="rfc" data="rfc8659"/>
       <file type="template">CAA/caa-completed-template</file>
     </record>
     <record date="2016-02-26">
@@ -736,9 +744,16 @@ be allocated for ordinary use.</registration_rule>
       <xref type="draft" data="draft-durand-doa-over-dns"/>
       <file type="template">DOA/doa-completed-template</file>
     </record>
+    <record date="2019-02-06" updated="2019-12-23">
+      <type>AMTRELAY</type>
+      <value>260</value>
+      <description>Automatic Multicast Tunneling Relay</description>
+      <xref type="draft" data="RFC-ietf-mboned-driad-amt-discovery-13"/>
+      <file type="template">AMTRELAY/amtrelay-completed-template</file>
+    </record>
     <record>
       <type>Unassigned</type>
-      <value>260-32767</value>
+      <value>261-32767</value>
       <description/>
     </record>
     <record date="2005-12-13">
@@ -751,10 +766,11 @@ be allocated for ordinary use.</registration_rule>
         Deploying DNSSEC Without a Signed Root.  Technical Report 1999-19,
 Information Networking Institute, Carnegie Mellon University, April 2004.</xref>
     </record>
-    <record>
+    <record updated="2019-11-04">
       <type>DLV</type>
       <value>32769</value>
-      <description>DNSSEC Lookaside Validation</description>
+      <description>DNSSEC Lookaside Validation (OBSOLETE)</description>
+      <xref type="rfc" data="rfc8749"/>
       <xref type="rfc" data="rfc4431"/>
     </record>
     <record>
@@ -773,9 +789,11 @@ Information Networking Institute, Carnegie Mellon University, April 2004.</xref>
       <description/>
     </record>
     <footnote anchor="1">In <xref type="rfc" data="rfc1002"/>, two types are defined.  It is not clear that these
-are in use, though if so their assignment does conflict with those above.
-        NB      32      NetBIOS general Name Service
-        NBSTAT  33      NetBIOS NODE STATUS
+are in use, though if so their assignment does conflict with those 
+above.
+
+NB      32      NetBIOS general Name Service
+NBSTAT  33      NetBIOS NODE STATUS
     </footnote>
   </registry>
  
@@ -815,8 +833,13 @@ are in use, though if so their assignment does conflict with those above.
       <description>Update</description>
       <xref type="rfc" data="rfc2136"/>
     </record>
+    <record date="2018-12-07">
+      <value>6</value>
+      <description>DNS Stateful Operations (DSO)</description>
+      <xref type="rfc" data="rfc8490"/>
+    </record>
     <record>
-      <value>6-15</value>
+      <value>7-15</value>
       <description>Unassigned</description>
     </record>
   </registry>
@@ -827,7 +850,22 @@ are in use, though if so their assignment does conflict with those above.
     <title>DNS RCODEs</title>
     <xref type="rfc" data="rfc6895"/>
     <xref type="rfc" data="rfc1035"/>
-    <registration_rule>IETF Review</registration_rule>
+    <range>
+      <value>0-3840</value>
+      <registration_rule>IETF Review</registration_rule>
+    </range>
+    <range>
+      <value>3841-4095</value>
+      <registration_rule>Private Use</registration_rule>
+    </range>
+    <range>
+      <value>4096-65534</value>
+      <registration_rule>IETF Review</registration_rule>
+    </range>
+    <range>
+      <value>65535</value>
+      <registration_rule>Reserved (Standards Action)</registration_rule>
+    </range>   
     <record>
       <value>0</value>
       <name>NoError</name>
@@ -900,8 +938,14 @@ are in use, though if so their assignment does conflict with those above.
       <description>Name not contained in zone</description>
       <xref type="rfc" data="rfc2136"/>
     </record>
+    <record date="2018-12-07">
+      <value>11</value>
+      <name>DSOTYPENI</name>
+      <description>DSO-TYPE Not Implemented</description>
+      <xref type="rfc" data="rfc8490"/>
+    </record>
     <record>
-      <value>11-15</value>
+      <value>12-15</value>
       <name>Unassigned</name>
     </record>
     <record>
@@ -1068,7 +1112,8 @@ Client Identifier option).</description>
       <xref type="rfc" data="rfc4701"/>
     </record>
   </registry>
-  
+
+
     
   <registry id="dhcid-rr-digest-type-codes">
     <title>DHCID RR Digest Type Codes</title>
@@ -1145,7 +1190,14 @@ from next octet form a pointer to the compression target.</description>
     <title>DNS EDNS0 Option Codes (OPT)</title>
     <xref type="rfc" data="rfc6891"/>
     <xref type="rfc-errata" data="3604"/>
-    <registration_rule>Expert Review</registration_rule>
+    <range>
+      <value>1-65000</value>
+      <registration_rule>Expert Review</registration_rule>
+    </range>
+    <range>
+      <value>65001-65534</value>
+      <registration_rule>Local/Experimental Use</registration_rule>
+    </range>
     <expert>Olafur Gudmundsson</expert>
     <note>Registrations made by standards-track documents are listed as "Standard," 
 and by non-standards-track documents as "Optional." Registrations for 
@@ -1156,11 +1208,11 @@ which there are no final specifications are listed as "On-Hold."
       <description>Reserved</description>
       <xref type="rfc" data="rfc6891"/>
     </record>
-    <record>
+    <record updated="2019-08-26">
       <value>1</value>
       <description>LLQ</description>
-      <status>On-hold</status>
-      <xref type="uri" data="http://files.dns-sd.org/draft-sekar-dns-llq.txt"/>
+      <status>Optional</status>
+      <xref type="draft" data="RFC-sekar-dns-llq-06"/>
     </record>
     <record>
       <value>2</value>
@@ -1240,7 +1292,23 @@ which there are no final specifications are listed as "On-Hold."
       <xref type="rfc" data="rfc8145"/>
     </record>
     <record>
-      <value>15-26945</value>
+      <value>15</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-03-26">
+      <value>16</value>
+      <description>EDNS-Client-Tag</description>
+      <status>Optional</status>
+      <xref type="draft" data="draft-bellis-dnsop-edns-tags"/>
+    </record>
+    <record date="2019-03-26">
+      <value>17</value>
+      <description>EDNS-Server-Tag</description>
+      <status>Optional</status>
+      <xref type="draft" data="draft-bellis-dnsop-edns-tags"/>
+    </record>
+    <record>
+      <value>18-26945</value>
       <description>Unassigned</description>
     </record>
     <record date="2015-12-09">
@@ -1384,6 +1452,400 @@ query from bit 5 through bit 11 (<xref type="rfc" data="rfc1035"/> section 4.1.1
     </record>
   </registry>
 
+  
+  <registry id="underscored-globally-scoped-dns-node-names">
+    <title>Underscored and Globally Scoped DNS Node Names</title>
+    <xref type="rfc" data="rfc8552"/>
+    <registration_rule>Expert Review</registration_rule>
+    <expert>Frederico A C Neves, Paul Wouters</expert>
+    <record date="2018-11-29">
+      <value>*</value>
+      <description>_example</description>
+      <xref type="rfc" data="rfc8552">RFC8552, Section 4.1.4</xref>
+    </record>
+    <record date="2018-11-29">
+      <value>NULL</value>
+      <description>_ta-* <xref type="note" data="2"/></description>
+      <xref type="rfc" data="rfc8145"/>
+    </record>
+    <record date="2018-11-29">
+      <value>OPENPGPKEY</value>
+      <description>_openpgpkey</description>
+      <xref type="rfc" data="rfc7929"/>
+    </record>
+    <record date="2018-11-29">
+      <value>SMIMEA</value>
+      <description>_smimecert</description>
+      <xref type="rfc" data="rfc8162"/>
+    </record>
+    <record date="2018-11-29">
+      <value>SRV</value>
+      <description>_dccp</description>
+      <xref type="rfc" data="rfc2782"/>
+    </record>
+    <record date="2018-11-29">
+      <value>SRV</value>
+      <description>_http</description>
+      <xref type="rfc" data="rfc4386"/>
+    </record>
+    <record date="2018-11-29">
+      <value>SRV</value>
+      <description>_ipv6</description>
+      <xref type="rfc" data="rfc5026"/>
+    </record>
+    <record date="2018-11-29">
+      <value>SRV</value>
+      <description>_ldap</description>
+      <xref type="rfc" data="rfc4386"/>
+    </record>
+    <record date="2018-11-29">
+      <value>SRV</value>
+      <description>_ocsp</description>
+      <xref type="rfc" data="rfc4386"/>
+    </record>
+    <record date="2018-11-29">
+      <value>SRV</value>
+      <description>_sctp</description>
+      <xref type="rfc" data="rfc2782"/>
+    </record>
+    <record date="2018-11-29">
+      <value>SRV</value>
+      <description>_sip</description>
+      <xref type="rfc" data="rfc5509"/>
+    </record>
+    <record date="2018-11-29">
+      <value>SRV</value>
+      <description>_tcp</description>
+      <xref type="rfc" data="rfc2782"/>
+    </record>
+    <record date="2018-11-29">
+      <value>SRV</value>
+      <description>_udp</description>
+      <xref type="rfc" data="rfc2782"/>
+    </record>
+    <record date="2018-11-29">
+      <value>SRV</value>
+      <description>_xmpp</description>
+      <xref type="rfc" data="rfc3921"/>
+    </record>
+    <record date="2018-11-29">
+      <value>TLSA</value>
+      <description>_dane</description>
+      <xref type="rfc" data="rfc7671"/>
+    </record>
+    <record date="2018-11-29">
+      <value>TLSA</value>
+      <description>_sctp</description>
+      <xref type="rfc" data="rfc6698"/>
+    </record>
+    <record date="2018-11-29">
+      <value>TLSA</value>
+      <description>_tcp</description>
+      <xref type="rfc" data="rfc6698"/>
+    </record>
+    <record date="2018-11-29">
+      <value>TLSA</value>
+      <description>_udp</description>
+      <xref type="rfc" data="rfc6698"/>
+    </record>
+    <record date="2018-11-29">
+      <value>TXT</value>
+      <description>_acme-challenge</description>
+      <xref type="rfc" data="rfc8555"/>
+    </record>
+    <record date="2018-11-29">
+      <value>TXT</value>
+      <description>_dmarc</description>
+      <xref type="rfc" data="rfc7489"/>
+    </record>
+    <record date="2018-11-29">
+      <value>TXT</value>
+      <description>_domainkey</description>
+      <xref type="rfc" data="rfc6376"/>
+    </record>
+    <record date="2018-11-29">
+      <value>TXT</value>
+      <description>_mta-sts</description>
+      <xref type="rfc" data="rfc8461"/>
+    </record>
+    <record date="2018-11-29">
+      <value>TXT</value>
+      <description>_spf</description>
+      <xref type="rfc" data="rfc7208"/>
+    </record>
+    <record date="2019-01-28">
+      <value>TXT</value>
+      <description>_sztp</description>
+      <xref type="rfc" data="rfc8572"/>
+    </record>
+    <record date="2018-11-29">
+      <value>TXT</value>
+      <description>_tcp</description>
+      <xref type="rfc" data="rfc6763"/>
+    </record>
+    <record date="2018-11-29">
+      <value>TXT</value>
+      <description>_udp</description>
+      <xref type="rfc" data="rfc6763"/>
+    </record>
+    <record date="2018-11-29">
+      <value>TXT</value>
+      <description>_vouch</description>
+      <xref type="rfc" data="rfc5518"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_acct</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_dccp</description>
+      <xref type="rfc" data="rfc7566"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_email</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_ems</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_fax</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_ft</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_h323</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_iax</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_ical-access</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_ical-sched</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_ifax</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_im</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_mms</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_pres</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_pstn</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_sctp</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_sip</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_sms</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_tcp</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_udp</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_unifmsg</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_vcard</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_videomsg</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_voice</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_voicemsg</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_vpim</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_web</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    <record date="2018-11-29">
+      <value>URI</value>
+      <description>_xmpp</description>
+      <xref type="rfc" data="rfc6118"/>
+    </record>
+    
+    <footnote anchor="2">From <xref type="rfc" data="rfc8552">RFC8552, Section 4.1.3 _ta</xref>:
+      
+Under the NULL RR, the entry "_ta-*" denotes all node names beginning
+with the string "_ta-*". It does NOT refer to a DNS wildcard
+specification.
+    </footnote>
+    
+  </registry>
+ 
+ 
+  <registry id="dns-dso-type-codes">
+    <title>DSO Type Codes</title>
+    <xref type="rfc" data="rfc8490"/>
+    <range>
+      <value>0x0004-0x003F</value>
+      <registration_rule>Standards Action</registration_rule>
+    </range>
+    <range>
+      <value>0x0040-0xF7FF</value>
+      <registration_rule>Expert Review</registration_rule>
+    </range>
+    <range>
+      <value>0xF800-0xFBFF</value>
+      <registration_rule>Experimental/Local Use</registration_rule>
+    </range>
+    <range>
+      <value>0xFC00-0xFFFF</value>
+      <registration_rule>Standards Action</registration_rule>
+    </range>    
+    <expert>Ted Lemon, Sara Dickinson, John Dickinson</expert>
+    <record date="2018-12-07">
+      <value>0x0000</value>
+      <description>Reserved</description>
+      <early>NO</early>
+      <status>Standards Track</status>
+      <xref type="rfc" data="rfc8490"/>
+    </record>
+    <record date="2018-12-07">
+      <value>0x0001</value>
+      <description>KeepAlive</description>
+      <early>OK</early>
+      <status>Standards Track</status>
+      <xref type="rfc" data="rfc8490"/>
+    </record>
+    <record date="2018-12-07">
+      <value>0x0002</value>
+      <description>RetryDelay</description>
+      <early>NO</early>
+      <status>Standards Track</status>
+      <xref type="rfc" data="rfc8490"/>
+    </record>
+    <record date="2018-12-07">
+      <value>0x0003</value>
+      <description>EncryptionPadding</description>
+      <early>NA</early>
+      <status>Standards Track</status>
+      <xref type="rfc" data="rfc8490"/>
+    </record>
+    <record date="2018-12-07">
+      <value>0x0004-0x003F</value>
+      <description>Unassigned, reserved for DSO session-management TLVs</description>
+      <early>NO</early>
+      <status/>
+    </record>
+    <record date="2019-11-25">
+      <value>0x0040</value>
+      <description>SUBSCRIBE</description>
+      <early>OK</early>
+      <status>Standards Track</status>
+      <xref type="draft" data="RFC-ietf-dnssd-push-25">RFC-ietf-dnssd-push-25, Section 6.2</xref>
+    </record>
+    <record date="2019-11-25">
+      <value>0x0041</value>
+      <description>PUSH</description>
+      <early>NO</early>
+      <status>Standards Track</status>
+      <xref type="draft" data="RFC-ietf-dnssd-push-25">RFC-ietf-dnssd-push-25, Section 6.3</xref>
+    </record>
+    <record date="2019-11-25">
+      <value>0x0042</value>
+      <description>UNSUBSCRIBE</description>
+      <early>NO</early>
+      <status>Standards Track</status>
+      <xref type="draft" data="RFC-ietf-dnssd-push-25">RFC-ietf-dnssd-push-25, Section 6.4</xref>
+    </record>
+    <record date="2019-11-25">
+      <value>0x0043</value>
+      <description>RECONFIRM</description>
+      <early>NO</early>
+      <status>Standards Track</status>
+      <xref type="draft" data="RFC-ietf-dnssd-push-25">RFC-ietf-dnssd-push-25, Section 6.5</xref>
+    </record>
+    <record date="2018-12-07">
+      <value>0x0044-0xF7FF</value>
+      <description>Unassigned</description>
+      <early>NO</early>
+      <status/>
+    </record>
+    <record date="2018-12-07">
+      <value>0xF800-0xFBFF</value>
+      <description>Reserved for Experimental/Local Use</description>
+      <early>NO</early>
+      <status/>
+      <xref type="rfc" data="rfc8490"/>
+    </record>
+    <record date="2018-12-07">
+      <value>0xFC00-0xFFFF</value>
+      <description>Reserved for future expansion</description>
+      <early>NO</early>
+      <status/>
+    </record>
+  </registry>
   
   <people>
     <person id="Brian_Hartvigsen">

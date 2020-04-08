@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="ospfv2-parameters">
   <title>Open Shortest Path First v2 (OSPFv2) Parameters</title>
   <created>2007-04-25</created>
-  <updated>2018-06-06</updated>
+  <updated>2019-12-23</updated>
   <note>Please also see: 
     <xref type="uri" data="http://www.iana.org/assignments/ospf-authentication-codes"/>
     <xref type="uri" data="http://www.iana.org/assignments/bandwidth-constraints-model-ids"/>
@@ -270,6 +270,11 @@
       <description>Nt-bit</description>
       <xref type="rfc" data="rfc3101"/>
     </record>
+    <record date="2019-12-23">
+      <value>0x80</value>
+      <description>Host (H-bit)</description>
+      <xref type="draft" data="RFC-ietf-ospf-ospfv2-hbit-12"/>
+    </record>
   </registry>
 
   
@@ -404,21 +409,18 @@
     </record>
     <record date="2018-04-23">
       <value>13</value>
-      <description>Active Stateful PCE with P2MP 
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <description>Active Stateful PCE with P2MP</description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record date="2018-04-23">
       <value>14</value>
-      <description>Passive Stateful PCE with P2MP 
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <description>Passive Stateful PCE with P2MP</description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record date="2018-04-23">
       <value>15</value>
-      <description>Stateful PCE Initiation with P2MP 
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <description>Stateful PCE Initiation with P2MP</description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record>
       <value>16-31</value>
@@ -473,7 +475,7 @@
     <record date="2015-10-22">
       <value>2</value>
       <description>OSPF Extended Prefix Range TLV</description>
-      <xref type="draft" data="RFC-ietf-ospf-segment-routing-extensions-24"/>
+      <xref type="rfc" data="rfc8665"/>
     </record>
     <record>
       <value>3-32767</value>
@@ -503,27 +505,39 @@
     <record date="2015-10-22">
       <value>1</value>
       <description>SID/Label Sub-TLV</description>
-      <xref type="draft" data="RFC-ietf-ospf-segment-routing-extensions-24"/>
+      <xref type="rfc" data="rfc8665"/>
     </record>
     <record date="2015-10-22">
       <value>2</value>
       <description>Prefix SID Sub-TLV</description>
-      <xref type="draft" data="RFC-ietf-ospf-segment-routing-extensions-24"/>
+      <xref type="rfc" data="rfc8665"/>
+    </record>
+    <record date="2019-10-03">
+      <value>3</value>
+      <description>Flex-Algorithm Prefix Metric 
+      (TEMPORARY - registered 2019-10-03, expires 2020-10-03)</description>
+      <xref type="draft" data="draft-ietf-lsr-flex-algo"/>
+    </record>
+    <record date="2019-11-05">
+      <value>4</value>
+      <description>Prefix Source Router-ID 
+        (TEMPORARY - registered 2019-11-05, expires 2020-11-05)</description>
+      <xref type="draft" data="draft-ietf-lsr-ospf-prefix-originator"/>
     </record>
     <record>
-      <value>3-8</value>
+      <value>5-8</value>
       <description>Unassigned</description>
     </record>
     
     <record date="2017-06-29" updated="2018-06-01">
       <value>9</value>
       <description>BIER Sub-TLV</description>
-      <xref type="draft" data="RFC-ietf-bier-ospf-bier-extensions-18"/>
+      <xref type="rfc" data="rfc8444"/>
     </record>
     <record date="2017-06-29" updated="2018-06-01">
       <value>10</value>
       <description>BIER MPLS Encapsulation Sub-TLV</description>
-      <xref type="draft" data="RFC-ietf-bier-ospf-bier-extensions-18"/>
+      <xref type="rfc" data="rfc8444"/>
     </record>
     <record>
       <value>11-32767</value>
@@ -554,6 +568,12 @@
       <value>0x40</value>
       <description>N</description>
       <xref type="rfc" data="rfc7684"/>
+    </record>
+    <record date="2019-08-26">
+      <value>0x20</value>
+      <description>ELC-flag 
+        (TEMPORARY - registered 2019-08-26, expires 2020-08-26)</description>
+      <xref type="draft" data="draft-ietf-ospf-mpls-elc"/>
     </record>
     </registry>
   
@@ -599,17 +619,17 @@
     <record date="2015-10-22">
       <value>1</value>
       <description>SID/Label Sub-TLV</description>
-      <xref type="draft" data="RFC-ietf-ospf-segment-routing-extensions-24"/>
+      <xref type="rfc" data="rfc8665"/>
     </record>
     <record date="2015-10-22">
       <value>2</value>
       <description>Adj-SID Sub-TLV</description>
-      <xref type="draft" data="RFC-ietf-ospf-segment-routing-extensions-24"/>
+      <xref type="rfc" data="rfc8665"/>
     </record>
     <record date="2015-10-22">
       <value>3</value>
       <description>LAN Adj-SID/Label Sub-TLV</description>
-      <xref type="draft" data="RFC-ietf-ospf-segment-routing-extensions-24"/>
+      <xref type="rfc" data="rfc8665"/>
     </record>
     <record date="2016-11-10">
       <value>4</value>
@@ -621,10 +641,10 @@
       <description>RTM Capability</description>
       <xref type="rfc" data="rfc8169"/>
     </record>
-    <record date="2017-06-01" updated="2017-12-15">
+    <record date="2017-06-01" updated="2018-10-18">
       <value>6</value>
-      <description>Link MSD sub-TLV (TEMPORARY - registered 2017-06-01, expires 2018-06-01)</description>
-      <xref type="draft" data="draft-ietf-ospf-segment-routing-msd"/>
+      <description>OSPFv2 Link MSD</description>
+      <xref type="rfc" data="rfc8476"/>
     </record>
     <record date="2017-12-18" updated="2018-04-13">
       <value>7</value>
@@ -644,71 +664,89 @@
     <record date="2018-06-06">
       <value>10</value>
       <description>Extended Link Attribute 
-        (TEMPORARY - registered 2018-06-06, expires 2019-06-06)</description>
+        (TEMPORARY - registered 2018-06-06, extension registered 2019-06-12, expires 2020-06-06)</description>
       <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
     </record>
     <record date="2018-06-06">
       <value>11</value>
       <description>Shared Risk Link Group 
-        (TEMPORARY - registered 2018-06-06, expires 2019-06-06)</description>
+        (TEMPORARY - registered 2018-06-06, extension registered 2019-06-12, expires 2020-06-06)</description>
       <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
     </record>
     <record date="2018-06-06">
       <value>12</value>
       <description>Unidirectional Link Delay 
-        (TEMPORARY - registered 2018-06-06, expires 2019-06-06)</description>
+        (TEMPORARY - registered 2018-06-06, extension registered 2019-06-12, expires 2020-06-06)</description>
       <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
     </record>
     <record date="2018-06-06">
       <value>13</value>
       <description>Min/Max Unidirectional Link Delay 
-        (TEMPORARY - registered 2018-06-06, expires 2019-06-06)</description>
+        (TEMPORARY - registered 2018-06-06, extension registered 2019-06-12, expires 2020-06-06)</description>
       <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
     </record>
     <record date="2018-06-06">
       <value>14</value>
       <description>Unidirectional Delay Variation 
-        (TEMPORARY - registered 2018-06-06, expires 2019-06-06)</description>
+        (TEMPORARY - registered 2018-06-06, extension registered 2019-06-12, expires 2020-06-06)</description>
       <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
     </record>
     <record date="2018-06-06">
       <value>15</value>
       <description>Unidirectional Link Loss 
-        (TEMPORARY - registered 2018-06-06, expires 2019-06-06)</description>
+        (TEMPORARY - registered 2018-06-06, extension registered 2019-06-12, expires 2020-06-06)</description>
       <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
     </record>
     <record date="2018-06-06">
       <value>16</value>
       <description>Unidirectional Residual Bandwidth 
-        (TEMPORARY - registered 2018-06-06, expires 2019-06-06)</description>
+        (TEMPORARY - registered 2018-06-06, extension registered 2019-06-12, expires 2020-06-06)</description>
       <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
     </record>
     <record date="2018-06-06">
       <value>17</value>
       <description>Unidirectional Available Bandwidth 
-        (TEMPORARY - registered 2018-06-06, expires 2019-06-06)</description>
+        (TEMPORARY - registered 2018-06-06, extension registered 2019-06-12, expires 2020-06-06)</description>
       <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
     </record>
     <record date="2018-06-06">
       <value>18</value>
       <description>Unidirectional Utilized Bandwidth 
-        (TEMPORARY - registered 2018-06-06, expires 2019-06-06)</description>
+        (TEMPORARY - registered 2018-06-06, extension registered 2019-06-12, expires 2020-06-06)</description>
       <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
     </record>
     <record date="2018-06-06">
       <value>19</value>
       <description>Administrative Group 
-        (TEMPORARY - registered 2018-06-06, expires 2019-06-06)</description>
+        (TEMPORARY - registered 2018-06-06, extension registered 2019-06-12, expires 2020-06-06)</description>
       <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
     </record>
     <record date="2018-06-06">
       <value>20</value>
       <description>Extended Administrative Group 
-        (TEMPORARY - registered 2018-06-06, expires 2019-06-06)</description>
+        (TEMPORARY - registered 2018-06-06, extension registered 2019-06-12, expires 2020-06-06)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+    <record date="2019-07-31">
+      <value>21</value>
+      <description>OSPFv2 Link Attributes Bits Sub-TLV 
+        (TEMPORARY - registered 2019-07-31, expires 2020-07-31)</description>
+      <xref type="draft" data="draft-ietf-lsr-dynamic-flooding"/>
+    </record>
+    <record date="2019-09-20">
+      <value>22</value>
+      <description>Traffic Engineering Metric 
+        (TEMPORARY - registered 2019-09-20, expires 2020-09-20)</description>
+      <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
+    </record>
+	<record date="2019-09-20">
+      <value>23</value>
+      <description>Maximum Link Bandwidth 
+      (TEMPORARY - registered 2019-09-20, expires 2020-09-20)</description>
       <xref type="draft" data="draft-ietf-ospf-te-link-attr-reuse"/>
     </record>
     <record>
-      <value>21-32767</value>
+      <value>24-32767</value>
       <description>Unassigned</description>
     </record>
     <record date="2015-09-02">

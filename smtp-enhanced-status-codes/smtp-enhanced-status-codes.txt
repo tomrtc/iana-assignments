@@ -4,7 +4,7 @@
            2008-05-29
 
    Last Updated
-           2017-06-22
+           2019-11-27
 
    Available Formats
            [IMG]
@@ -14,9 +14,9 @@
 
    Registries included below
 
-     * Class Sub-Codes
-     * Subject Sub-Codes
-     * Enumerated Status Codes
+     * Class Sub-Codes
+     * Subject Sub-Codes
+     * Enumerated Status Codes
 
 Class Sub-Codes
 
@@ -595,8 +595,8 @@ Enumerated Status Codes
                                             described in Sections 8.6 and 8.7 of
                                             [RFC7208].
                                             This status code is returned when an
-   X.7.25 Reverse DNS         550           SMTP client's IP address failed a      [RFC7372] (Standards Track);   M. Kucherawy  IESG
-          validation failed                 reverse DNS validation check, contrary [RFC7601] (Standards Track)
+   X.7.25 Reverse DNS         550           SMTP client's IP address failed a      [RFC7372], Section 3.3         M. Kucherawy  IESG
+          validation failed                 reverse DNS validation check, contrary (Standards Track)
                                             to local policy requirements.
                                             This status code is returned when a
           Multiple                          message failed more than one message
@@ -610,10 +610,14 @@ Enumerated Status Codes
           null MX                           configured to reject mail from such                                   Delany
                                             sender (e.g., because it could not
                                             return a DSN).
-                              The message
-                              appears to be
-                              part of a
-   X.7.28 Mail flood detected mail flood of                                        [draft-levine-mailbomb-header] J. Levine     standards@taugh.com
-                              similar
-                              abusive
-                              message.
+                                            The message appears to be part of a
+   X.7.28 Mail flood detected .             mail flood of similar abusive          [draft-levine-mailbomb-header] J. Levine     standards@taugh.com
+                                            messages.
+   X.7.29 ARC validation      550           This status code may be returned when  [RFC8617]                      K. Andersen   IESG
+          failure                           a message fails ARC validation.
+                                            This indicates that the message was
+                                            not able to be forwarded because it
+   X.7.30 REQUIRETLS support  550           was received with a REQUIRETLS         [RFC8689]                      J. Fenton     IESG
+          required                          requirement and none of the SMTP
+                                            servers to which the message should be
+                                            forwarded provide this support.

@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="cbor-tags">
   <title>Concise Binary Object Representation (CBOR) Tags</title>
   <created>2013-09-19</created>
-  <updated>2018-05-10</updated>
+  <updated>2020-03-30</updated>
   <category>Concise Binary Object Representation (CBOR)</category>
   
   <registry id="tags">
@@ -156,10 +156,12 @@
       <xref type="uri" data="http://peteroupc.github.io/CBOR/rational.html"/>
       <xref type="person" data="Peter_Occil"/>
     </record>  
-    <record>
+    <record date="2019-11-22" updated="2019-12-18">
       <value>31</value>
-      <description>Unassigned</description>
-      <semantics/>
+      <description>Undefined (0xf7)</description>
+      <semantics>Absent value in a CBOR Array</semantics>
+      <xref type="uri" data="https://github.com/svaarala/cbor-specs/blob/master/cbor-absent-tag.rst"/>
+      <xref type="person" data="Sami_Vaarala"/>
     </record>    
     <record>
       <value>32</value>
@@ -211,9 +213,58 @@
       <semantics>Identifier</semantics>
       <xref type="uri" data="https://github.com/lucas-clemente/cbor-specs/blob/master/id.md"/>
       <xref type="person" data="Lucas_Clemente"/>
-    </record> 
+    </record>
+    <record date="2019-02-28">
+      <value>40</value>
+      <description>array of two arrays <xref type="note" data="1"/></description>
+      <semantics>Multi-dimensional Array, row-major order</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>41</value>
+      <description>array</description>
+      <semantics>Homogeneous Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-08-23">
+      <value>42</value>
+      <description>byte string</description>
+      <semantics>IPLD content identifier</semantics>
+      <xref type="uri" data="https://github.com/ipld/cid-cbor/"/>
+      <xref type="person" data="Volker_Mische"/>
+    </record>
+    <record date="2019-04-11">
+      <value>43</value>
+      <description>byte string</description>
+      <semantics>YANG bits datatype; see Section 6.7.</semantics>
+      <xref type="draft" data="draft-ietf-core-yang-cbor"/>
+    </record>
+    <record date="2019-04-11">
+      <value>44</value>
+      <description>unsigned integer</description>
+      <semantics>YANG enumeration datatype; see Section 6.6.</semantics>
+      <xref type="draft" data="draft-ietf-core-yang-cbor"/>
+    </record>
+    <record date="2019-04-11">
+      <value>45</value>
+      <description>unsigned integer or text string</description>
+      <semantics>YANG identityref datatype; see Section 6.10.</semantics>
+      <xref type="draft" data="draft-ietf-core-yang-cbor"/>
+    </record>
+    <record date="2019-04-11">
+      <value>46</value>
+      <description>unsigned integer or text string or array</description>
+      <semantics>YANG instance-identifier datatype; see Section 6.13.</semantics>
+      <xref type="draft" data="draft-ietf-core-yang-cbor"/>
+    </record>
+    <record date="2019-08-19">
+      <value>47</value>
+      <description>unsigned integer</description>
+      <semantics>YANG Schema Item iDentifier (sid); see Section 3.2.</semantics>
+      <xref type="draft" data="draft-ietf-core-yang-cbor"/>
+    </record>
     <record>
-      <value>40-60</value>
+      <value>48-60</value>
       <description>Unassigned</description>
       <semantics/>
     </record>
@@ -225,7 +276,156 @@
       <xref type="person" data="Michael_B._Jones"/>
     </record>
     <record>
-      <value>62-95</value>
+      <value>62-63</value>
+      <description>Unassigned</description>
+      <semantics/>
+    </record>
+    <record date="2019-02-28">
+      <value>64</value>
+      <description>byte string</description>
+      <semantics>uint8 Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>65</value>
+      <description>byte string</description>
+      <semantics>uint16, big endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>66</value>
+      <description>byte string</description>
+      <semantics>uint32, big endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>67</value>
+      <description>byte string</description>
+      <semantics>uint64, big endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>68</value>
+      <description>byte string</description>
+      <semantics>uint8 Typed Array, clamped arithmetic</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>69</value>
+      <description>byte string</description>
+      <semantics>uint16, little endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>70</value>
+      <description>byte string</description>
+      <semantics>uint32, little endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>71</value>
+      <description>byte string</description>
+      <semantics>uint64, little endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>72</value>
+      <description>byte string</description>
+      <semantics>sint8 Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>73</value>
+      <description>byte string</description>
+      <semantics>sint16, big endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>74</value>
+      <description>byte string</description>
+      <semantics>sint32, big endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>75</value>
+      <description>byte string</description>
+      <semantics>sint64, big endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>76</value>
+      <description>byte string</description>
+      <semantics>(reserved)</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>77</value>
+      <description>byte string</description>
+      <semantics>sint16, little endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>78</value>
+      <description>byte string</description>
+      <semantics>sint32, little endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>79</value>
+      <description>byte string</description>
+      <semantics>sint64, little endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>80</value>
+      <description>byte string</description>
+      <semantics>IEEE 754 binary16, big endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>81</value>
+      <description>byte string</description>
+      <semantics>IEEE 754 binary32, big endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>82</value>
+      <description>byte string</description>
+      <semantics>IEEE 754 binary64, big endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>83</value>
+      <description>byte string</description>
+      <semantics>IEEE 754 binary128, big endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>84</value>
+      <description>byte string</description>
+      <semantics>IEEE 754 binary16, little endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>85</value>
+      <description>byte string</description>
+      <semantics>IEEE 754 binary32, little endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>86</value>
+      <description>byte string</description>
+      <semantics>IEEE 754 binary64, little endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record date="2019-02-28">
+      <value>87</value>
+      <description>byte string</description>
+      <semantics>IEEE 754 binary128, little endian, Typed Array</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record>
+      <value>88-95</value>
       <description>Unassigned</description>
       <semantics/>
     </record>
@@ -259,8 +459,14 @@
       <xref type="uri" data="https://github.com/allthingstalk/cbor/blob/master/CBOR-Tag103-Geographic-Coordinates.md"/>
       <xref type="person" data="Danilo_Vidovic"/>
     </record>
+    <record date="2020-03-17">
+      <value>104</value>
+      <description>multiple</description>
+      <semantics>Geographic Coordinate Reference System WKT or EPSG number</semantics>
+      <xref type="draft" data="draft-clarke-cbor-crs"/>
+    </record>
     <record>
-      <value>104-119</value>
+      <value>105-119</value>
       <description>Unassigned</description>
       <semantics/>
     </record>
@@ -297,10 +503,12 @@
       <xref type="uri" data="https://github.com/input-output-hk/cbor-sets-spec/blob/master/CBOR_SETS.md"/>
       <xref type="person" data="Alfredo_Di_Napoli"/>
     </record>
-    <record>
+    <record date="2018-10-25">
       <value>259</value>
-      <description>Unassigned</description>
-      <semantics/>
+      <description>map</description>
+      <semantics>Map datatype with key-value operations (e.g. `.get()/.set()/.delete()`)</semantics>
+      <xref type="uri" data="https://github.com/shanewholloway/js-cbor-codec/blob/master/docs/CBOR-259-spec--explicit-maps.md"/>
+      <xref type="person" data="Shane_Holloway"/>
     </record>
     <record date="2018-03-06">
       <value>260</value>
@@ -344,8 +552,78 @@
       <xref type="uri" data="http://peteroupc.github.io/CBOR/bigfrac.html"/>
       <xref type="person" data="Peter_Occil"/>
     </record>
+    <record date="2018-11-06">
+      <value>266</value>
+      <description>text string</description>
+      <semantics>Internationalized resource identifier (IRI)</semantics>
+      <xref type="uri" data="https://peteroupc.github.io/CBOR/iri.html"/>
+      <xref type="person" data="Peter_Occil"/>
+    </record>
+    <record date="2018-11-09">
+      <value>267</value>
+      <description>text string</description>
+      <semantics>Internationalized resource identifier reference (IRI reference)</semantics>
+      <xref type="uri" data="https://peteroupc.github.io/CBOR/iri.html"/>
+      <xref type="person" data="Peter_Occil"/>
+    </record>
+    <record date="2019-07-18">
+      <value>268</value>
+      <description>array</description>
+      <semantics>Extended decimal fraction</semantics>
+      <xref type="uri" data="https://peteroupc.github.io/CBOR/extended.html"/>
+      <xref type="person" data="Peter_Occil"/>
+    </record>
+    <record date="2019-07-18">
+      <value>269</value>
+      <description>array</description>
+      <semantics>Extended bigfloat</semantics>
+      <xref type="uri" data="https://peteroupc.github.io/CBOR/extended.html"/>
+      <xref type="person" data="Peter_Occil"/>
+    </record>
+    <record date="2019-07-18">
+      <value>270</value>
+      <description>array</description>
+      <semantics>Extended rational number</semantics>
+      <xref type="uri" data="https://peteroupc.github.io/CBOR/extended.html"/>
+      <xref type="person" data="Peter_Occil"/>
+    </record>
+    <record date="2020-01-16">
+      <value>271</value>
+      <description>DDoS Open Threat Signaling (DOTS) signal channel object</description>
+      <semantics>DDoS Open Threat Signaling (DOTS) signal channel object, 
+        as defined in <xref type="draft" data="RFC-ietf-dots-signal-channel-41"/></semantics>
+      <xref type="draft" data="RFC-ietf-dots-signal-channel-41"/>
+    </record>
+    <record date="2020-03-18">
+      <value>272</value>
+      <description>byte string</description>
+      <semantics>Non-UTF-8 CESU-8 string</semantics>
+      <xref type="uri" data="https://github.com/svaarala/cbor-specs/blob/master/cbor-nonutf8-string-tags.rst"/>
+      <xref type="person" data="Sami_Vaarala"/>
+    </record>
+    <record date="2020-03-18">
+      <value>273</value>
+      <description>byte string</description>
+      <semantics>Non-UTF-8 WTF-8 string</semantics>
+      <xref type="uri" data="https://github.com/svaarala/cbor-specs/blob/master/cbor-nonutf8-string-tags.rst"/>
+      <xref type="person" data="Sami_Vaarala"/>
+    </record>
+    <record date="2020-03-18">
+      <value>274</value>
+      <description>byte string</description>
+      <semantics>Non-UTF-8 MUTF-8 string</semantics>
+      <xref type="uri" data="https://github.com/svaarala/cbor-specs/blob/master/cbor-nonutf8-string-tags.rst"/>
+      <xref type="person" data="Sami_Vaarala"/>
+    </record>
+    <record date="2020-03-30">
+      <value>275</value>
+      <description>map (major type 5)</description>
+      <semantics>Map contains only keys that are of type Text String (major type 3)</semantics>
+      <xref type="uri" data="https://github.com/ecorm/cbor-tag-text-key-map"/>
+      <xref type="person" data="Emile_Cormier"/>
+    </record>
     <record>
-      <value>266-1000</value>
+      <value>276-1000</value>
       <description>Unassigned</description>
       <semantics/>
     </record>
@@ -368,7 +646,18 @@
       <xref type="draft" data="draft-bormann-cbor-time-tag-01"/>
     </record>
     <record>
-      <value>1004-22097</value>
+      <value>1004-1039</value>
+      <description>Unassigned</description>
+      <semantics/>
+    </record>
+    <record date="2019-02-28">
+      <value>1040</value>
+      <description>array of two arrays <xref type="note" data="1"/></description>
+      <semantics>Multi-dimensional Array, column-major order</semantics>
+      <xref type="rfc" data="rfc8746"/>
+    </record>
+    <record>
+      <value>1041-22097</value>
       <description>Unassigned</description>
       <semantics/>
     </record>
@@ -406,7 +695,10 @@
       <value>15309737-18446744073709551615</value>
       <description>Unassigned</description>
       <semantics/>
-    </record> 
+    </record>
+    <footnote anchor="1">second element of outer array in data item is native CBOR array 
+(major type 4) or Typed Array (one of Tag 64..87)
+    </footnote>
   </registry>
   
   <people>
@@ -424,6 +716,11 @@
       <name>Danilo Vidovic</name>
       <uri>mailto:cbor&amp;allthingstalk.com</uri>
       <updated>2018-04-17</updated>
+    </person>
+    <person id="Emile_Cormier">
+      <name>Emile Cormier</name>
+      <uri>mailto:emile.cormier.jr&amp;gmail.com</uri>
+      <updated>2020-03-30</updated>
     </person>
     <person id="Lucas_Clemente">
       <name>Lucas Clemente</name>
@@ -443,12 +740,27 @@
     <person id="Peter_Occil">
       <name>Peter Occil</name>
       <uri>mailto:poccil14&amp;gmail.com</uri>
-      <updated>2014-07-01</updated>
+      <updated>2018-11-09</updated>
     </person>
     <person id="Ravi_Raju">
       <name>Ravi Raju</name>
       <uri>mailto:ravir&amp;employees.org</uri>
       <updated>2018-03-06</updated>
+    </person>
+    <person id="Sami_Vaarala">
+      <name>Sami Vaarala</name>
+      <uri>mailto:sami.vaarala&amp;iki.fi</uri>
+      <updated>2020-03-18</updated>
+    </person>
+    <person id="Shane_Holloway">
+      <name>Shane Holloway</name>
+      <uri>mailto:shane.holloway&amp;ieee.org</uri>
+      <updated>2018-10-25</updated>
+    </person>
+    <person id="Volker_Mische">
+      <name>Volker Mische</name>
+      <uri>mailto:volker&amp;protocol.ai</uri>
+      <updated>2019-08-23</updated>
     </person>
   </people>
   

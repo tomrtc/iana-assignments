@@ -4,7 +4,7 @@
            2000-11
 
    Last Updated
-           2018-07-13
+           2019-05-13
 
    Available Formats
            [IMG]
@@ -103,6 +103,9 @@ Sieve Extensions
                            in the externally stored list.
    extracttext             adds the "extracttext" action for       [RFC5703]                            [Sieve_discussion_list]
                            extracting text from a MIME body part.
+                           Adds the ":fcc" parameter to Sieve
+   fcc                     action commands that generate           [RFC8580]                            [Sieve_discussion_list]        2019-01-29
+                           additional messages.
                            adds the 'fileinto' action for          [RFC5228] (Sieve base spec),
    fileinto                delivering to a mailbox other than the  [RFC5490] (:create), [RFC3894]       [Sieve_discussion_list]
                            default                                 (:copy), [RFC5232] (:flags)
@@ -170,6 +173,12 @@ Sieve Extensions
    spamtestplus            likelihood of an email message being    [RFC5235]                            [Sieve_discussion_list]
                            spam, possibly using a percentage
                            range.
+                           adds a test for checking whether an
+                           IMAP special-use attribute is assigned
+   special-use             for a particular mailbox or any         [RFC8579]                            [Sieve_discussion_list]        2019-01-29
+                           mailbox, and it adds the ability to
+                           file messages into a mailbox identified
+                           solely by a special-use attribute.
                            adds the ':user' and ':detail' address
    subaddress              parts for use with the address and      [RFC5233]                            [Sieve_discussion_list]
                            envelope tests

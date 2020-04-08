@@ -1,7 +1,7 @@
                                                        Uniform Resource Names (URN) Namespaces
 
    Last Updated
-           2018-07-26
+           2019-02-28
 
    Note
 
@@ -38,7 +38,7 @@ Formal URN Namespaces
 
       URN Namespace        Template                                             Reference
    3gpp                                 [RFC5279]
-   3gpp2               [3gpp2-template] [RFC-atarius-dispatch-meid-urn-18]
+   3gpp2               [3gpp2-template] [RFC8464]
    adid                                 [RFC8107]
    alert                                [RFC7462]
    bbf                                  [RFC8057]
@@ -54,6 +54,7 @@ Formal URN Namespaces
    eidr                                 [RFC7972]
    epc                                  [RFC5134]
    epcglobal                            [RFC5134]
+   etsi                [etsi-template]  [RFC8515]
    eurosystem                           [RFC7207]
    example                              [RFC6963]
    fdc                                  [RFC4198]
@@ -77,7 +78,7 @@ Formal URN Namespaces
    mpeg                                 [RFC3614]
    mrn                 [mrn-template]   [International Association of Marine Aids to Navigation and Lighthouse Authorities (IALA)]
    nato                                 [RFC7467]
-   nbn                 [nbn-template]   [RFC-hakala-urn-nbn-rfc3188bis-02]
+   nbn                 [nbn-template]   [RFC8458]
    nena                                 [RFC6061]
    newsml                               [RFC3085]
    nfc                                  [RFC4729]

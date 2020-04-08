@@ -3,7 +3,7 @@
 <?oxygen RNGSchema="ieee-802-numbers.rng" type="xml"?>
 <registry xmlns="http://www.iana.org/assignments" id="ieee-802-numbers">
   <title>IEEE 802 Numbers</title>
-  <updated>2018-07-26</updated>
+  <updated>2019-12-23</updated>
   <note>This page has assignments under the control of the IEEE
 Registration Authority that are of primarily historic interest
 that and have traditionally been on the IANA web pages.
@@ -1546,7 +1546,7 @@ X3T51/80-50, Xerox Corporation, Stamford, CT., October 1980.</xref>
       <exp_decimal>-</exp_decimal>
       <exp_octal>-</exp_octal>
       <description>Multi-Topology</description>
-      <xref type="draft" data="RFC-ietf-trill-multi-topology-06"/>
+      <xref type="rfc" data="rfc8377"/>
     </record>
     <record date="2016-11-14">
       <type_decimal>41197</type_decimal>
@@ -1790,6 +1790,10 @@ Michael A. Patton and is accessible at:
     <record>
       <value>002094</value>
       <name>Cubix</name>
+    </record>
+    <record date="2019-12-23">
+      <value>00256D</value>
+      <name>Broadband Forum (BBF)</name>
     </record>
     <record>
       <value>00802B</value>
@@ -2188,9 +2192,9 @@ the Internet protocol documentation.
   
   <registry id="iana-lldp-tlv-subtypes">
     <title>IANA Link Layer Discovery Protocol (LLDP) TLV Subtypes</title>
-    <xref type="draft" data="RFC-ietf-opsawg-mud-25"/>
+    <xref type="rfc" data="rfc8520"/>
     <registration_rule>Expert Review</registration_rule>
-    <expert>Unassigned</expert>
+    <expert>Eliot Lear, Dan Romascanu</expert>
     <record>
       <value>0</value>
       <description>Unassigned</description>
@@ -2198,7 +2202,7 @@ the Internet protocol documentation.
     <record date="2018-06-27">
       <value>1</value>
       <description>the Manufacturer Usage Description (MUD) Uniform Resource Locator (URL)</description>
-      <xref type="draft" data="RFC-ietf-opsawg-mud-25"/>
+      <xref type="rfc" data="rfc8520"/>
     </record>
     <record>
       <value>2-255</value>

@@ -17,17 +17,33 @@
       <xsl:when test="@id = 'tls-extensiontype-values-3'">
         <tr>
           <th>Value</th>
-          <th>Extension Name</th>
+          <th>Name</th>
           <th>Recommended</th>
           <th>Reference</th>
           <th>Comment</th>
         </tr>
       </xsl:when>
       <xsl:when test="@id = 'certificate-status'">
-        <tr><th>Value</th><th>Description</th><th>Reference</th><th>Comment</th></tr>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Comment</th>
+        </tr>
       </xsl:when>
       <xsl:when test="@id = 'alpn-protocol-ids'">
-        <tr><th>Protocol</th><th>Identification Sequence</th><th>Reference</th></tr>
+        <tr>
+          <th>Protocol</th>
+          <th>Identification Sequence</th>
+          <th>Reference</th>
+        </tr>
+      </xsl:when>
+      <xsl:when test="@id = 'tls-certificate-compression-algorithm-ids'">
+        <tr>
+          <th>Algorithm Number</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
       </xsl:when>
       <xsl:otherwise>
         <tr><th>Value</th><th>Description</th><th>Reference</th></tr>

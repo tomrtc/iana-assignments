@@ -3,7 +3,7 @@
 <?oxygen RNGSchema="xml-registry.rng" type="xml"?>
 <registry xmlns="http://www.iana.org/assignments" id="xml-registry">
   <title>IETF XML Registry</title>
-  <updated>2018-08-10</updated>
+  <updated>2020-03-30</updated>
   <note><xref type="rfc" data="rfc3688"/> defines an IANA maintained registry of XML documents used within IETF protocols.
 These documents are divided into classes: XML Namespaces, Document Type Declarations, Schemas, and RDF Schemas.
 Individual documents are then registered within each class. The class and document names are combined to form a name
@@ -48,10 +48,16 @@ The registration template should cite the specification.
   
   
   <registry id="ns">
-    <title>ns</title>
+  <title>ns</title>
   <xref type="rfc" data="rfc3688"/>
   <registration_rule>Specification Required</registration_rule>
   <expert>Tim Bray, Martin Thomson</expert>
+    <record date="2018-10-03">
+      <value>allocationToken-1.0</value>
+      <name>urn:ietf:params:xml:ns:allocationToken-1.0</name>
+      <file type="template">ns/allocationToken-1.0.txt</file>
+      <xref type="rfc" data="rfc8495"/>
+    </record>
     <record>
       <value>areg1</value>
       <name>urn:ietf:params:xml:ns:areg1</name>
@@ -80,11 +86,23 @@ The registration template should cite the specification.
       <file type="template">ns/carddav.txt</file>
       <xref type="rfc" data="rfc6352"/>
     </record>
+    <record date="2019-02-22">
+      <value>changePoll-1.0</value>
+      <name>urn:ietf:params:xml:ns:changePoll-1.0</name>
+      <file type="template">ns/changePoll-1.0.txt</file>
+      <xref type="rfc" data="rfc8590"/>
+    </record>
     <record date="2016-09-06">
       <value>clue-info</value>
       <name>urn:ietf:params:xml:ns:clue-info</name>
       <file type="template">ns/clue-info.txt</file>
       <xref type="draft" data="RFC-ietf-clue-data-model-schema-17"/>
+    </record>
+    <record date="2019-12-19">
+      <value>clue-protocol</value>
+      <name>urn:ietf:params:xml:ns:clue-protocol</name>
+      <file type="template">ns/clue-protocol.txt</file>
+      <xref type="draft" data="RFC-ietf-clue-protocol-19"/>
     </record>
     <record>
       <value>common-policy</value>
@@ -133,6 +151,78 @@ The registration template should cite the specification.
       <name>urn:ietf:params:xml:ns:cpl</name>
       <file type="template">ns/cpl.txt</file>
       <xref type="rfc" data="rfc3880"/>
+    </record>
+    <record date="2020-03-26">
+      <value>cpxmlsec</value>
+      <name>urn:ietf:params:xml:ns:cpxmlsec</name>
+      <file type="template">ns/cpxmlsec.txt</file>
+      <xref type="draft" data="draft-smirnov-xmldsig-04"/>
+    </record>
+    <record date="2020-03-26">
+      <value>cpxmlsec:algorithms:gostr34102001-gostr3411</value>
+      <name>urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102001-gostr3411</name>
+      <file type="template">ns/cpxmlsec/algorithms/gostr34102001-gostr3411.txt</file>
+      <xref type="draft" data="draft-smirnov-xmldsig-04"/>
+    </record>
+    <record date="2020-03-26">
+      <value>cpxmlsec:algorithms:gostr34102012-gostr34112012-256</value>
+      <name>urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256</name>
+      <file type="template">ns/cpxmlsec/algorithms/gostr34102012-gostr34112012-256.txt</file>
+      <xref type="draft" data="draft-smirnov-xmldsig-04"/>
+    </record>
+    <record date="2020-03-26">
+      <value>cpxmlsec:algorithms:gostr34102012-gostr34112012-512</value>
+      <name>urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-512</name>
+      <file type="template">ns/cpxmlsec/algorithms/gostr34102012-gostr34112012-512.txt</file>
+      <xref type="draft" data="draft-smirnov-xmldsig-04"/>
+    </record>
+    <record date="2020-03-26">
+      <value>cpxmlsec:algorithms:gostr3411</value>
+      <name>urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr3411</name>
+      <file type="template">ns/cpxmlsec/algorithms/gostr3411.txt</file>
+      <xref type="draft" data="draft-smirnov-xmldsig-04"/>
+    </record>
+    <record date="2020-03-26">
+      <value>cpxmlsec:algorithms:gostr34112012-256</value>
+      <name>urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256</name>
+      <file type="template">ns/cpxmlsec/algorithms/gostr34112012-256.txt</file>
+      <xref type="draft" data="draft-smirnov-xmldsig-04"/>
+    </record>
+    <record date="2020-03-26">
+      <value>cpxmlsec:algorithms:gostr34112012-512</value>
+      <name>urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-512</name>
+      <file type="template">ns/cpxmlsec/algorithms/gostr34112012-512.txt</file>
+      <xref type="draft" data="draft-smirnov-xmldsig-04"/>
+    </record>
+    <record date="2020-03-26">
+      <value>cpxmlsec:algorithms:hmac-gostr34112012-256</value>
+      <name>urn:ietf:params:xml:ns:cpxmlsec:algorithms:hmac-gostr34112012-256</name>
+      <file type="template">ns/cpxmlsec/algorithms/hmac-gostr34112012-256.txt</file>
+      <xref type="draft" data="draft-smirnov-xmldsig-04"/>
+    </record>
+    <record date="2020-03-26">
+      <value>cpxmlsec:algorithms:hmac-gostr34112012-512</value>
+      <name>urn:ietf:params:xml:ns:cpxmlsec:algorithms:hmac-gostr34112012-512</name>
+      <file type="template">ns/cpxmlsec/algorithms/hmac-gostr34112012-512.txt</file>
+      <xref type="draft" data="draft-smirnov-xmldsig-04"/>
+    </record>
+    <record date="2020-03-26">
+      <value>cpxmlsec:types:gostr34102001-keyvalue</value>
+      <name>urn:ietf:params:xml:ns:cpxmlsec:types:gostr34102001-keyvalue</name>
+      <file type="template">ns/cpxmlsec/types/gostr34102001-keyvalue.txt</file>
+      <xref type="draft" data="draft-smirnov-xmldsig-04"/>
+    </record>
+    <record date="2020-03-26">
+      <value>cpxmlsec:types:gostr34102012-256-keyvalue</value>
+      <name>urn:ietf:params:xml:ns:cpxmlsec:types:gostr34102012-256-keyvalue</name>
+      <file type="template">ns/cpxmlsec/types/gostr34102012-256-keyvalue.txt</file>
+      <xref type="draft" data="draft-smirnov-xmldsig-04"/>
+    </record>
+    <record date="2020-03-26">
+      <value>cpxmlsec:types:gostr34102012-512-keyvalue</value>
+      <name>urn:ietf:params:xml:ns:cpxmlsec:types:gostr34102012-512-keyvalue</name>
+      <file type="template">ns/cpxmlsec/types/gostr34102012-512-keyvalue.txt</file>
+      <xref type="draft" data="draft-smirnov-xmldsig-04"/>
     </record>
     <record>
       <value>dchk1</value>
@@ -241,6 +331,30 @@ The registration template should cite the specification.
       <name>urn:ietf:params:xml:ns:epp-1.0</name>
       <file type="template">ns/epp-1.0.txt</file>
       <xref type="rfc" data="rfc5730"/>
+    </record>
+    <record date="2019-11-08">
+      <value>epp:fee-1.0</value>
+      <name>urn:ietf:params:xml:ns:epp:fee-1.0</name>
+      <file type="template">ns/epp/fee-1.0.txt</file>
+      <xref type="rfc" data="rfc8748"/>
+    </record>
+    <record date="2020-02-28">
+      <value>epp:loginSec-1.0</value>
+      <name>urn:ietf:params:xml:ns:epp:loginSec-1.0</name>
+      <file type="template">ns/epp/loginSec-1.0.txt</file>
+      <xref type="draft" data="RFC-ietf-regext-login-security-10"/>
+    </record>
+    <record date="2018-12-26">
+      <value>epp:org-1.0</value>
+      <name>urn:ietf:params:xml:ns:epp:org-1.0</name>
+      <file type="template">ns/epp/org-1.0.txt</file>
+      <xref type="rfc" data="rfc8543"/>
+    </record>
+    <record date="2018-12-26">
+      <value>epp:orgext-1.0</value>
+      <name>urn:ietf:params:xml:ns:epp:orgext-1.0</name>
+      <file type="template">ns/epp/orgext-1.0.txt</file>
+      <xref type="rfc" data="rfc8544"/>
     </record>
     <record>
       <value>eppcom-1.0</value>
@@ -942,7 +1056,7 @@ The registration template should cite the specification.
       <value>senml</value>
       <name>urn:ietf:params:xml:ns:senml</name>
       <file type="template">ns/senml.txt</file>
-      <xref type="draft" data="RFC-ietf-core-senml-16"/>
+      <xref type="rfc" data="rfc8428"/>
     </record>
     <record>
       <value>sieve</value>
@@ -1124,6 +1238,12 @@ The registration template should cite the specification.
       <file type="template">ns/yang/iana-crypt-hash.txt</file>
       <xref type="rfc" data="rfc7317"/>
     </record>
+    <record date="2020-01-16">
+      <value>yang:iana-dots-signal-channel</value>
+      <name>urn:ietf:params:xml:ns:yang:iana-dots-signal-channel</name>
+      <file type="template">ns/yang/iana-dots-signal-channel.txt</file>
+      <xref type="draft" data="RFC-ietf-dots-signal-channel-41"/>
+    </record>
     <record date="2018-02-08">
       <value>yang:iana-hardware</value>
       <name>urn:ietf:params:xml:ns:yang:iana-hardware</name>
@@ -1142,11 +1262,35 @@ The registration template should cite the specification.
       <file type="template">ns/yang/iana-routing-types.txt</file>
       <xref type="rfc" data="rfc8294"/>
     </record>
+    <record date="2019-06-25">
+      <value>yang:iana-tunnel-type</value>
+      <name>urn:ietf:params:xml:ns:yang:iana-tunnel-type</name>
+      <file type="template">ns/yang/iana-tunnel-type.txt</file>
+      <xref type="rfc" data="rfc8675"/>
+    </record>
+    <record date="2018-11-08">
+      <value>yang:ietf-access-control-list</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-access-control-list</name>
+      <file type="template">ns/yang/ietf-access-control-list.txt</file>
+      <xref type="rfc" data="rfc8519"/>
+    </record>
     <record date="2018-06-27">
       <value>yang:ietf-acldns</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-acldns</name>
       <file type="template">ns/yang/ietf-acldns.txt</file>
-      <xref type="draft" data="RFC-ietf-opsawg-mud-25"/>
+      <xref type="rfc" data="rfc8520"/>
+    </record>
+    <record date="2019-05-10">
+      <value>yang:ietf-alarms</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-alarms</name>
+      <file type="template">ns/yang/ietf-alarms.txt</file>
+      <xref type="rfc" data="rfc8632"/>
+    </record>
+    <record date="2019-05-10">
+      <value>yang:ietf-alarms-x733</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-alarms-x733</name>
+      <file type="template">ns/yang/ietf-alarms-x733.txt</file>
+      <xref type="rfc" data="rfc8632"/>
     </record>
     <record date="2018-08-09">
       <value>yang:ietf-bfd</value>
@@ -1206,19 +1350,19 @@ The registration template should cite the specification.
       <value>yang:ietf-connection-oriented-oam</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-connection-oriented-oam</name>
       <file type="template">ns/yang/ietf-connection-oriented-oam.txt</file>
-      <xref type="draft" data="RFC-ietf-lime-yang-connection-oriented-oam-model-07"/>
+      <xref type="rfc" data="rfc8531"/>
     </record>
     <record date="2017-11-22">
       <value>yang:ietf-connectionless-oam</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-connectionless-oam</name>
       <file type="template">ns/yang/ietf-connectionless-oam.txt</file>
-      <xref type="draft" data="RFC-ietf-lime-yang-connectionless-oam-18"/>
+      <xref type="rfc" data="rfc8532"/>
     </record>
     <record date="2017-11-22">
       <value>yang:ietf-connectionless-oam-methods</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-connectionless-oam-methods</name>
       <file type="template">ns/yang/ietf-connectionless-oam-methods.txt</file>
-      <xref type="draft" data="RFC-ietf-lime-yang-connectionless-oam-methods-13"/>
+      <xref type="rfc" data="rfc8533"/>
     </record>
     <record date="2018-01-18">
       <value>yang:ietf-datastores</value>
@@ -1226,11 +1370,47 @@ The registration template should cite the specification.
       <file type="template">ns/yang/ietf-datastores.txt</file>
       <xref type="rfc" data="rfc8342"/>
     </record>
+    <record date="2018-11-30">
+      <value>yang:ietf-dc-fabric-topology</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-dc-fabric-topology</name>
+      <file type="template">ns/yang/ietf-dc-fabric-topology.txt</file>
+      <xref type="rfc" data="rfc8542"/>
+    </record>
+    <record date="2018-11-30">
+      <value>yang:ietf-dc-fabric-topology-state</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-dc-fabric-topology-state</name>
+      <file type="template">ns/yang/ietf-dc-fabric-topology-state.txt</file>
+      <xref type="rfc" data="rfc8542"/>
+    </record>
+    <record date="2018-11-30">
+      <value>yang:ietf-dc-fabric-types</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-dc-fabric-types</name>
+      <file type="template">ns/yang/ietf-dc-fabric-types.txt</file>
+      <xref type="rfc" data="rfc8542"/>
+    </record>
+    <record date="2019-08-16">
+      <value>yang:ietf-dots-data-channel</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-dots-data-channel</name>
+      <file type="template">ns/yang/ietf-dots-data-channel.txt</file>
+      <xref type="draft" data="RFC-ietf-dots-data-channel-31"/>
+    </record>
+    <record date="2020-01-16">
+      <value>yang:ietf-dots-signal-channel</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-dots-signal-channel</name>
+      <file type="template">ns/yang/ietf-dots-signal-channel.txt</file>
+      <xref type="draft" data="RFC-ietf-dots-signal-channel-41"/>
+    </record>
     <record date="2018-06-05">
       <value>yang:ietf-dslite</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-dslite</name>
       <file type="template">ns/yang/ietf-dslite.txt</file>
-      <xref type="draft" data="RFC-ietf-softwire-dslite-yang-17"/>
+      <xref type="rfc" data="rfc8513"/>
+    </record>
+    <record date="2018-11-08">
+      <value>yang:ietf-ethertypes</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-ethertypes</name>
+      <file type="template">ns/yang/ietf-ethertypes.txt</file>
+      <xref type="rfc" data="rfc8519"/>
     </record>
     <record date="2018-02-08">
       <value>yang:ietf-hardware</value>
@@ -1244,6 +1424,12 @@ The registration template should cite the specification.
       <file type="template">ns/yang/ietf-hardware-state.txt</file>
       <xref type="rfc" data="rfc8348"/>
     </record>
+    <record date="2019-06-17">
+      <value>yang:ietf-igmp-mld</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-igmp-mld</name>
+      <file type="template">ns/yang/ietf-igmp-mld.txt</file>
+      <xref type="rfc" data="rfc8652"/>
+    </record>
     <record>
       <value>yang:ietf-inet-types</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-inet-types</name>
@@ -1254,7 +1440,13 @@ The registration template should cite the specification.
       <value>yang:ietf-i2rs-rib</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-i2rs-rib</name>
       <file type="template">ns/yang/ietf-i2rs-rib.txt</file>
-      <xref type="draft" data="RFC-ietf-i2rs-rib-data-model-15"/>
+      <xref type="rfc" data="rfc8431"/>
+    </record>
+    <record updated="2019-02-01">
+      <value>yang:ietf-interface-protection</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-interface-protection</name>
+      <file type="template">ns/yang/ietf-interface-protection.txt</file>
+      <xref type="rfc" data="rfc8561"/>
     </record>
     <record updated="2018-01-12">
       <value>yang:ietf-interfaces</value>
@@ -1286,6 +1478,12 @@ The registration template should cite the specification.
       <file type="template">ns/yang/ietf-ipv6-unicast-routing.txt</file>
       <xref type="rfc" data="rfc8349"/>
     </record>
+    <record date="2019-10-18">
+      <value>yang:ietf-isis</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-isis</name>
+      <file type="template">ns/yang/ietf-isis.txt</file>
+      <xref type="draft" data="RFC-ietf-isis-yang-isis-cfg-42"/>
+    </record>
     <record date="2017-05-03">
       <value>yang:ietf-key-chain</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-key-chain</name>
@@ -1296,7 +1494,7 @@ The registration template should cite the specification.
       <value>yang:ietf-l2vpn-svc</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-l2vpn-svc</name>
       <file type="template">ns/yang/ietf-l2vpn-svc.txt</file>
-      <xref type="draft" data="RFC-ietf-l2sm-l2vpn-service-model-10"/>
+      <xref type="rfc" data="rfc8466"/>
     </record>
     <record date="2017-12-18">
       <value>yang:ietf-l3-unicast-topology</value>
@@ -1320,7 +1518,7 @@ The registration template should cite the specification.
       <value>yang:ietf-lime-time-types</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-lime-time-types</name>
       <file type="template">ns/yang/ietf-lime-time-types.txt</file>
-      <xref type="draft" data="RFC-ietf-lime-yang-connectionless-oam-18"/>
+      <xref type="rfc" data="rfc8532"/>
     </record>
     <record date="2017-05-02">
       <value>yang:ietf-lmap-common</value>
@@ -1344,13 +1542,55 @@ The registration template should cite the specification.
       <value>yang:ietf-logical-network-element</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-logical-network-element</name>
       <file type="template">ns/yang/ietf-logical-network-element.txt</file>
-      <xref type="draft" data="RFC-ietf-rtgwg-lne-model-09"/>
+      <xref type="rfc" data="rfc8530"/>
+    </record>
+    <record updated="2019-02-01">
+      <value>yang:ietf-microwave-radio-link</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-microwave-radio-link</name>
+      <file type="template">ns/yang/ietf-microwave-radio-link.txt</file>
+      <xref type="rfc" data="rfc8561"/>
+    </record>
+    <record updated="2019-02-01">
+      <value>yang:ietf-microwave-types</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-microwave-types</name>
+      <file type="template">ns/yang/ietf-microwave-types.txt</file>
+      <xref type="rfc" data="rfc8561"/>
+    </record>
+    <record updated="2020-03-23">
+      <value>yang:ietf-module-tags</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-module-tags</name>
+      <file type="template">ns/yang/ietf-module-tags.txt</file>
+      <xref type="draft" data="RFC-ietf-netmod-module-tags-10"/>
+    </record>
+    <record updated="2020-03-23">
+      <value>yang:ietf-module-tags-state</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-module-tags-state</name>
+      <file type="template">ns/yang/ietf-module-tags-state.txt</file>
+      <xref type="draft" data="RFC-ietf-netmod-module-tags-10"/>
+    </record>
+    <record updated="2020-03-25">
+      <value>yang:ietf-mpls-ldp</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-mpls-ldp</name>
+      <file type="template">ns/yang/ietf-mpls-ldp.txt</file>
+      <xref type="draft" data="RFC-ietf-mpls-ldp-yang-09"/>
+    </record>
+    <record updated="2020-03-25">
+      <value>yang:ietf-mpls-ldp-extended</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-mpls-ldp-extended</name>
+      <file type="template">ns/yang/ietf-mpls-ldp-extended.txt</file>
+      <xref type="draft" data="RFC-ietf-mpls-ldp-yang-09"/>
     </record>
     <record date="2018-06-27">
       <value>yang:ietf-mud</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-mud</name>
       <file type="template">ns/yang/ietf-mud.txt</file>
-      <xref type="draft" data="RFC-ietf-opsawg-mud-25"/>
+      <xref type="rfc" data="rfc8520"/>
+    </record>
+    <record date="2018-10-12">
+      <value>yang:ietf-nat</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-nat</name>
+      <file type="template">ns/yang/ietf-nat.txt</file>
+      <xref type="rfc" data="rfc8512"/>
     </record>
     <record updated="2017-12-13">
       <value>yang:ietf-netconf-acm</value>
@@ -1363,6 +1603,12 @@ The registration template should cite the specification.
       <name>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring</name>
       <file type="template">ns/yang/ietf-netconf-monitoring.txt</file>
       <xref type="rfc" data="rfc6022"/>
+    </record>
+    <record date="2018-10-19">
+      <value>yang:ietf-netconf-nmda</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-netconf-nmda</name>
+      <file type="template">ns/yang/ietf-netconf-nmda.txt</file>
+      <xref type="rfc" data="rfc8526"/>
     </record>
     <record>
       <value>yang:ietf-netconf-notifications</value>
@@ -1392,7 +1638,7 @@ The registration template should cite the specification.
       <value>yang:ietf-network-instance</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-network-instance</name>
       <file type="template">ns/yang/ietf-network-instance.txt</file>
-      <xref type="draft" data="RFC-ietf-rtgwg-ni-model-10"/>
+      <xref type="rfc" data="rfc8529"/>
     </record>
     <record date="2017-12-21">
       <value>yang:ietf-network-state</value>
@@ -1417,6 +1663,18 @@ The registration template should cite the specification.
       <name>urn:ietf:params:xml:ns:yang:ietf-origin</name>
       <file type="template">ns/yang/ietf-origin.txt</file>
       <xref type="rfc" data="rfc8342"/>
+    </record>
+    <record date="2019-08-29">
+      <value>yang:ietf-ospf</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-ospf</name>
+      <file type="template">ns/yang/ietf-ospf.txt</file>
+      <xref type="draft" data="RFC-ietf-ospf-yang-28"/>
+    </record>
+    <record date="2018-11-08">
+      <value>yang:ietf-packet-fields</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-packet-fields</name>
+      <file type="template">ns/yang/ietf-packet-fields.txt</file>
+      <xref type="rfc" data="rfc8519"/>
     </record>
     <record date="2018-05-16">
       <value>yang:ietf-pim-base</value>
@@ -1448,6 +1706,12 @@ The registration template should cite the specification.
       <file type="template">ns/yang/ietf-pim-sm.txt</file>
       <xref type="draft" data="RFC-ietf-pim-yang-16"/>
     </record>
+    <record date="2019-02-07">
+      <value>yang:ietf-ptp</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-ptp</name>
+      <file type="template">ns/yang/ietf-ptp.txt</file>
+      <xref type="rfc" data="rfc8575"/>
+    </record>
     <record date="2017-01-18">
       <value>yang:ietf-restconf</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-restconf</name>
@@ -1460,11 +1724,17 @@ The registration template should cite the specification.
       <file type="template">ns/yang/ietf-restconf-monitoring.txt</file>
       <xref type="rfc" data="rfc8040"/>
     </record>
+    <record date="2019-08-12">
+      <value>yang:ietf-restconf-subscribed-notifications</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-restconf-subscribed-notifications</name>
+      <file type="template">ns/yang/ietf-restconf-subscribed-notifications.txt</file>
+      <xref type="rfc" data="rfc8650"/>
+    </record>
     <record date="2018-01-18">
       <value>yang:ietf-rip</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-rip</name>
       <file type="template">ns/yang/ietf-rip.txt</file>
-      <xref type="draft" data="RFC-ietf-rtgwg-yang-rip-08"/>
+      <xref type="rfc" data="rfc8695"/>
     </record>
     <record date="2016-11-03" updated="2018-02-02">
       <value>yang:ietf-routing</value>
@@ -1484,6 +1754,30 @@ The registration template should cite the specification.
       <file type="template">ns/yang/ietf-snmp.txt</file>
       <xref type="rfc" data="rfc7407"/>
     </record>
+    <record date="2019-02-14">
+      <value>yang:ietf-softwire-br</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-softwire-br</name>
+      <file type="template">ns/yang/ietf-softwire-br.txt</file>
+      <xref type="rfc" data="rfc8676"/>
+    </record>
+    <record date="2019-02-14">
+      <value>yang:ietf-softwire-ce</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-softwire-ce</name>
+      <file type="template">ns/yang/ietf-softwire-ce.txt</file>
+      <xref type="rfc" data="rfc8676"/>
+    </record>
+    <record date="2019-02-14">
+      <value>yang:ietf-softwire-common</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-softwire-common</name>
+      <file type="template">ns/yang/ietf-softwire-common.txt</file>
+      <xref type="rfc" data="rfc8676"/>
+    </record>
+    <record date="2019-05-30" updated="2019-09-06">
+      <value>yang:ietf-subscribed-notifications</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications</name>
+      <file type="template">ns/yang/ietf-subscribed-notifications.txt</file>
+      <xref type="rfc" data="rfc8639"/>
+    </record>
     <record date="2018-03-19">
       <value>yang:ietf-syslog</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-syslog</name>
@@ -1496,23 +1790,47 @@ The registration template should cite the specification.
       <file type="template">ns/yang/ietf-system.txt</file>
       <xref type="rfc" data="rfc7317"/>
     </record>
-    <record updated="2018-07-05">
+    <record date="2019-01-17">
+      <value>yang:ietf-sztp-bootstrap-server</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-sztp-bootstrap-server</name>
+      <file type="template">ns/yang/ietf-sztp-bootstrap-server.txt</file>
+      <xref type="rfc" data="rfc8572"/>
+    </record>
+    <record date="2019-01-17">
+      <value>yang:ietf-sztp-conveyed-info</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-sztp-conveyed-info</name>
+      <file type="template">ns/yang/ietf-sztp-conveyed-info.txt</file>
+      <xref type="rfc" data="rfc8572"/>
+    </record>
+    <record updated="2019-12-06">
+      <value>yang:ietf-te-packet-types</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-te-packet-types</name>
+      <file type="template">ns/yang/ietf-te-packet-types.txt</file>
+      <xref type="draft" data="RFC-ietf-teas-yang-te-types-13"/>
+    </record>
+    <record updated="2019-07-22">
       <value>yang:ietf-te-topology</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-te-topology</name>
       <file type="template">ns/yang/ietf-te-topology.txt</file>
-      <xref type="draft" data="RFC-ietf-teas-yang-te-topo-18"/>
+      <xref type="draft" data="RFC-ietf-teas-yang-te-topo-22"/>
     </record>
-    <record updated="2018-07-06">
+    <record updated="2019-07-22">
       <value>yang:ietf-te-topology-state</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-te-topology-state</name>
       <file type="template">ns/yang/ietf-te-topology-state.txt</file>
-      <xref type="draft" data="RFC-ietf-teas-yang-te-topo-18"/>
+      <xref type="draft" data="RFC-ietf-teas-yang-te-topo-22"/>
+    </record>
+    <record updated="2019-12-06">
+      <value>yang:ietf-te-types</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-te-types</name>
+      <file type="template">ns/yang/ietf-te-types.txt</file>
+      <xref type="draft" data="RFC-ietf-teas-yang-te-types-13"/>
     </record>
     <record updated="2018-03-14">
       <value>yang:ietf-template</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-template</name>
       <file type="template">ns/yang/ietf-template.txt</file>
-      <xref type="draft" data="RFC-ietf-netmod-rfc6087bis-20"/>
+      <xref type="rfc" data="rfc8407"/>
     </record>
     <record updated="2018-07-11">
       <value>yang:ietf-twamp</value>
@@ -1538,11 +1856,11 @@ The registration template should cite the specification.
       <file type="template">ns/yang/ietf-x509-cert-to-name.txt</file>
       <xref type="rfc" data="rfc7407"/>
     </record>
-    <record date="2016-05-13">
+    <record date="2016-05-13" updated="2018-10-23">
       <value>yang:ietf-yang-library</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-yang-library</name>
       <file type="template">ns/yang/ietf-yang-library.txt</file>
-      <xref type="rfc" data="rfc7895"/>
+      <xref type="rfc" data="rfc8525"/>
     </record>
     <record date="2016-03-30">
       <value>yang:ietf-yang-metadata</value>
@@ -1556,11 +1874,29 @@ The registration template should cite the specification.
       <file type="template">ns/yang/ietf-yang-patch.txt</file>
       <xref type="rfc" data="rfc8072"/>
     </record>
+    <record date="2019-06-04">
+      <value>yang:ietf-yang-push</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-yang-push</name>
+      <file type="template">ns/yang/ietf-yang-push.txt</file>
+      <xref type="rfc" data="rfc8641"/>
+    </record>
+    <record date="2018-11-08">
+      <value>yang:ietf-yang-schema-mount</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-yang-schema-mount</name>
+      <file type="template">ns/yang/ietf-yang-schema-mount.txt</file>
+      <xref type="rfc" data="rfc8528"/>
+    </record>
     <record>
       <value>yang:ietf-yang-smiv2</value>
       <name>urn:ietf:params:xml:ns:yang:ietf-yang-smiv2</name>
       <file type="template">ns/yang/ietf-yang-smiv2.txt</file>
       <xref type="rfc" data="rfc6643"/>
+    </record>
+    <record date="2020-01-29">
+      <value>yang:ietf-yang-structure-ext</value>
+      <name>urn:ietf:params:xml:ns:yang:ietf-yang-structure-ext</name>
+      <file type="template">ns/yang/ietf-yang-structure-ext.txt</file>
+      <xref type="draft" data="RFC-ietf-netmod-yang-data-ext-05"/>
     </record>
     <record>
       <value>yang:ietf-yang-types</value>
@@ -1602,17 +1938,35 @@ The registration template should cite the specification.
 
 Per <xref type="rfc" data="rfc6685"/>, IODEF schemas require an additional review by the IESG-designated IODEF expert.
     </note>
+    <record date="2018-10-03">
+      <value>allocationToken-1.0</value>
+      <name>urn:ietf:params:xml:schema:allocationToken-1.0</name>
+      <file type="template">schema/allocationToken-1.0.xsd</file>
+      <xref type="rfc" data="rfc8495"/>
+    </record>
     <record>
       <value>basic-location-profiles</value>
       <name>urn:ietf:params:xml:schema:basic-location-profiles</name>
       <file type="template">schema/basic-location-profiles.xsd</file>
       <xref type="rfc" data="rfc6772"/>
     </record>
+    <record date="2019-02-22">
+      <value>changePoll-1.0</value>
+      <name>urn:ietf:params:xml:schema:changePoll-1.0</name>
+      <file type="template">schema/changePoll-1.0.xsd</file>
+      <xref type="rfc" data="rfc8590"/>
+    </record>
     <record date="2016-09-06">
       <value>clue-info</value>
       <name>urn:ietf:params:xml:schema:clue-info</name>
       <file type="template">schema/clue-info.xsd</file>
       <xref type="draft" data="RFC-ietf-clue-data-model-schema-17"/>
+    </record>
+    <record date="2019-12-19">
+      <value>clue-protocol</value>
+      <name>urn:ietf:params:xml:schema:clue-protocol</name>
+      <file type="template">schema/clue-protocol.xsd</file>
+      <xref type="draft" data="RFC-ietf-clue-protocol-19"/>
     </record>
     <record>
       <value>common-policy</value>
@@ -1661,6 +2015,12 @@ Per <xref type="rfc" data="rfc6685"/>, IODEF schemas require an additional revie
       <name>urn:ietf:params:xml:schema:cpl</name>
       <file type="template">schema/cpl.xsd</file>
       <xref type="rfc" data="rfc3880"/>
+    </record>
+    <record date="2020-03-26">
+      <value>cpxmlsec</value>
+      <name>urn:ietf:params:xml:schema:cpxmlsec</name>
+      <file type="template">schema/cpxmlsec.xsd</file>
+      <xref type="draft" data="draft-smirnov-xmldsig-04"/>
     </record>
     <record>
       <value>dchk1</value>
@@ -1769,6 +2129,30 @@ Per <xref type="rfc" data="rfc6685"/>, IODEF schemas require an additional revie
       <name>urn:ietf:params:xml:schema:epp-1.0</name>
       <file type="template">schema/epp-1.0.xsd</file>
       <xref type="rfc" data="rfc5730"/>
+    </record>
+    <record date="2019-11-08">
+      <value>epp:fee-1.0</value>
+      <name>urn:ietf:params:xml:schema:epp:fee-1.0</name>
+      <file type="template">schema/epp/fee-1.0.xsd</file>
+      <xref type="rfc" data="rfc8748"/>
+    </record>
+    <record date="2020-02-28">
+      <value>epp:loginSec-1.0</value>
+      <name>urn:ietf:params:xml:schema:epp:loginSec-1.0</name>
+      <file type="template">schema/epp/loginSec-1.0.xsd</file>
+      <xref type="draft" data="RFC-ietf-regext-login-security-10"/>
+    </record>
+    <record date="2018-12-26">
+      <value>epp:org-1.0</value>
+      <name>urn:ietf:params:xml:schema:epp:org-1.0</name>
+      <file type="template">schema/epp/org-1.0.xsd</file>
+      <xref type="rfc" data="rfc8543"/>
+    </record>
+    <record date="2018-12-26">
+      <value>epp:orgext-1.0</value>
+      <name>urn:ietf:params:xml:schema:epp:orgext-1.0</name>
+      <file type="template">schema/epp/orgext-1.0.xsd</file>
+      <xref type="rfc" data="rfc8544"/>
     </record>
     <record>
       <value>eppcom-1.0</value>

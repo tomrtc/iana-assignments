@@ -1,7 +1,7 @@
                                                        Border Gateway Protocol (BGP) Parameters
 
    Last Updated
-           2018-08-13
+           2020-03-20
 
    Available Formats
            [IMG]
@@ -37,6 +37,8 @@
      * BGP Prefix-SID TLV Types
      * BGP Prefix-SID Label-Index TLV Flags
      * BGP Prefix-SID Originator SRGB TLV Flags
+     * BGP Graceful Restart Flags
+     * BGP Graceful Restart Flags for Address Family
 
 BGP Message Types
 
@@ -139,15 +141,24 @@ BGP Path Attributes
            2018-08-10,
            expires
            2019-07-28)
-           Internal Only To
-           Customer
-           (TEMPORARY -
-     35    registered        [draft-ietf-idr-bgp-open-policy]
+           Only to Customer
+           (OTC) (TEMPORARY
+           - registered
            2018-03-29,
+     35    extension         [draft-ietf-idr-bgp-open-policy]
+           registered
+           2020-03-20,
            expires
-           2019-03-29)
-    36-39  Unassigned
-     40    BGP Prefix-SID    [RFC-ietf-idr-bgp-prefix-sid-27]
+           2021-03-29)
+           BGP Domain Path
+           (D-PATH)
+           (TEMPORARY -
+     36    registered        [draft-ietf-bess-evpn-ipvpn-interworking]
+           2019-07-08,
+           expires
+           2020-07-08)
+    37-39  Unassigned
+     40    BGP Prefix-SID    [RFC8669]
    41-127  Unassigned
      128   ATTR_SET          [RFC6368]
      129   Deprecated        [RFC8093]
@@ -225,16 +236,16 @@ BGP Error Subcodes
            [IMG]
            CSV
 
-   Value                                 Name                                             Reference
-     0   Unspecific                                                            [RFC Errata 4493]
-     1   Unsupported Version Number                                            [RFC4271]
-     2   Bad Peer AS                                                           [RFC4271]
-     3   Bad BGP Identifier                                                    [RFC4271]
-     4   Unsupported Optional Parameter                                        [RFC4271]
-     5   [Deprecated]                                                          [RFC4271]
-     6   Unacceptable Hold Time                                                [RFC4271]
-     7   Unsupported Capability                                                [RFC5492]
-     8   Role Mismatch (TEMPORARY - registered 2018-03-29, expires 2019-03-29) [draft-ietf-idr-bgp-open-policy]
+   Value                                                  Name                                                             Reference
+     0   Unspecific                                                                                             [RFC Errata 4493]
+     1   Unsupported Version Number                                                                             [RFC4271]
+     2   Bad Peer AS                                                                                            [RFC4271]
+     3   Bad BGP Identifier                                                                                     [RFC4271]
+     4   Unsupported Optional Parameter                                                                         [RFC4271]
+     5   [Deprecated]                                                                                           [RFC4271]
+     6   Unacceptable Hold Time                                                                                 [RFC4271]
+     7   Unsupported Capability                                                                                 [RFC5492]
+     8   Role Mismatch (TEMPORARY - registered 2018-03-29, extension registered 2020-03-20, expires 2021-03-29) [draft-ietf-idr-bgp-open-policy]
    9-255 Unassigned
 
   UPDATE Message Error subcodes
@@ -298,17 +309,17 @@ BGP Error Subcodes
            [IMG]
            CSV
 
-   Value                                                 Name                                                              Reference
+   Value                 Name                    Reference
      0    Reserved
-     1    Maximum Number of Prefixes Reached                                                                  [RFC4486]
-     2    Administrative Shutdown                                                                             [RFC4486][RFC8203]
-     3    Peer De-configured                                                                                  [RFC4486]
-     4    Administrative Reset                                                                                [RFC4486][RFC8203]
-     5    Connection Rejected                                                                                 [RFC4486]
-     6    Other Configuration Change                                                                          [RFC4486]
-     7    Connection Collision Resolution                                                                     [RFC4486]
-     8    Out of Resources                                                                                    [RFC4486]
-     9    Hard Reset (TEMPORARY - registered 2017-04-21, extension registered 2018-04-13, expires 2019-04-21) [draft-ietf-idr-bgp-gr-notification]
+     1    Maximum Number of Prefixes Reached [RFC4486]
+     2    Administrative Shutdown            [RFC4486][RFC8203]
+     3    Peer De-configured                 [RFC4486]
+     4    Administrative Reset               [RFC4486][RFC8203]
+     5    Connection Rejected                [RFC4486]
+     6    Other Configuration Change         [RFC4486]
+     7    Connection Collision Resolution    [RFC4486]
+     8    Out of Resources                   [RFC4486]
+     9    Hard Reset                         [RFC8538]
    10-255 Unassigned
 
   BGP ROUTE-REFRESH Message Error subcodes
@@ -321,7 +332,7 @@ BGP Error Subcodes
            CSV
 
     Range  Registration Procedures
-    0-127  Standards Action
+   0-127   Standards Action
    128-255 First Come First Served
 
    Value          Name          Reference
@@ -339,7 +350,7 @@ BGP Outbound Route Filtering (ORF) Types
            CSV
 
     Range  Registration Procedures         Note
-    0-63   Standards Action
+   0-63    Standards Action
    64-127  First Come First Served
    128-255 Vendor-Specific         IANA does not assign
 
@@ -364,11 +375,12 @@ BGP OPEN Optional Parameter Types
            [IMG]
            CSV
 
-   Value            Name                 Reference
-     0   Reserved                    [RFC5492]
-     1   Authentication (deprecated) [RFC4271][RFC5492]
-     2   Capabilities                [RFC5492]
-   3-255 Unassigned
+   Value                                  Name                                             Reference
+     0   Reserved                                                                [RFC5492]
+     1   Authentication (deprecated)                                             [RFC4271][RFC5492]
+     2   Capabilities                                                            [RFC5492]
+   3-254 Unassigned
+    255  Extended Length (TEMPORARY - registered 2019-08-13, expires 2020-08-13) [draft-ietf-idr-ext-opt-param]
 
 BGP Tunnel Encapsulation Attribute Tunnel Types
 
@@ -383,7 +395,7 @@ BGP Tunnel Encapsulation Attribute Tunnel Types
            [IMG]
            CSV
 
-    Value                      Name                                       Reference
+    Value                      Name                                     Reference
       0     Reserved                                    [RFC5512]
       1     L2TPv3 over IP                              [RFC5512]
       2     GRE                                         [RFC5512]
@@ -399,9 +411,11 @@ BGP Tunnel Encapsulation Attribute Tunnel Types
       12    VXLAN GPE Encapsulation                     [RFC8365]
       13    MPLS in UDP Encapsulation                   [RFC7510][RFC Errata 4350]
       14    IPv6 Tunnel                                 [Martin_Djernaes]
-      15    SR TE Policy Type                           [draft-previdi-idr-segment-routing-te-policy]
+      15    SR TE Policy Type                           [draft-ietf-idr-segment-routing-te-policy]
       16    Bare                                        [Nischal_Sheth]
-   17-65535 Unassigned
+      17    SR Tunnel                                   [draft-ietf-bess-datacenter-gateway]
+      18    Cloud Security                              [Ramesh_Babu_Yakkala]
+   19-65535 Unassigned
 
 BGP Tunnel Encapsulation Attribute Sub-TLVs
 
@@ -423,23 +437,29 @@ BGP Tunnel Encapsulation Attribute Sub-TLVs
       3    IPsec Tunnel Authenticator                                                                    [RFC5566]
       4    Color                                                                                         [RFC5512]
       5    Load-Balancing Block                                                                          [RFC5640]
-      6    Remote Endpoint (TEMPORARY - registered 2017-07-18, extension registered 2018-06-29, expires  [draft-ietf-idr-tunnel-encaps]
-           2019-07-18)
-      7    IPv4 DS Field (TEMPORARY - registered 2017-07-18, extension registered 2018-06-29, expires    [draft-ietf-idr-tunnel-encaps]
-           2019-07-18)
-      8    UDP Destination Port (TEMPORARY - registered 2017-07-18, extension registered 2018-06-29,     [draft-ietf-idr-tunnel-encaps]
-           expires 2019-07-18)
-      9    Embedded Label Handling (TEMPORARY - registered 2017-07-18, extension registered 2018-06-29,  [draft-ietf-idr-tunnel-encaps]
-           expires 2019-07-18)
-     10    MPLS Label Stack (TEMPORARY - registered 2017-07-18, extension registered 2018-06-29, expires [draft-ietf-idr-tunnel-encaps]
-           2019-07-18)
-     11    Prefix SID (TEMPORARY - registered 2017-07-18, extension registered 2018-06-29, expires       [draft-ietf-idr-tunnel-encaps]
-           2019-07-18)
-     12    Preference sub-TLV (TEMPORARY - registered 2017-10-12, expires 2018-10-12)                    [draft-ietf-idr-segment-routing-te-policy]
-     13    Binding SID sub-TLV (TEMPORARY - registered 2017-10-12, expires 2018-10-12)                   [draft-ietf-idr-segment-routing-te-policy]
-   14-127  Unassigned
-     128   Segment List sub-TLV (TEMPORARY - registered 2017-10-12, expires 2018-10-12)                  [draft-ietf-idr-segment-routing-te-policy]
-   129-255 Unassigned
+      6    Remote Endpoint (TEMPORARY - registered 2017-07-18, extension registered 2019-07-04, expires  [draft-ietf-idr-tunnel-encaps]
+           2020-07-18)
+      7    IPv4 DS Field (TEMPORARY - registered 2017-07-18, extension registered 2019-07-04, expires    [draft-ietf-idr-tunnel-encaps]
+           2020-07-18)
+      8    UDP Destination Port (TEMPORARY - registered 2017-07-18, extension registered 2019-07-04,     [draft-ietf-idr-tunnel-encaps]
+           expires 2020-07-18)
+      9    Embedded Label Handling (TEMPORARY - registered 2017-07-18, extension registered 2019-07-04,  [draft-ietf-idr-tunnel-encaps]
+           expires 2020-07-18)
+     10    MPLS Label Stack (TEMPORARY - registered 2017-07-18, extension registered 2019-07-04, expires [draft-ietf-idr-tunnel-encaps]
+           2020-07-18)
+     11    Prefix SID (TEMPORARY - registered 2017-07-18, extension registered 2019-07-04, expires       [draft-ietf-idr-tunnel-encaps]
+           2020-07-18)
+     12    Preference sub-TLV (TEMPORARY - registered 2017-10-12, extension registered 2019-08-26,       [draft-ietf-idr-segment-routing-te-policy]
+           expires 2020-10-12)
+     13    Binding SID sub-TLV (TEMPORARY - registered 2017-10-12, extension registered 2019-08-26,      [draft-ietf-idr-segment-routing-te-policy]
+           expires 2020-10-12)
+     14    ENLP sub-TLV (TEMPORARY - registered 2019-08-29, expires 2020-08-29)                          [draft-ietf-idr-segment-routing-te-policy]
+     15    Priority sub-TLV (TEMPORARY - registered 2019-08-29, expires 2020-08-29)                      [draft-ietf-idr-segment-routing-te-policy]
+   16-127  Unassigned
+     128   Segment List sub-TLV (TEMPORARY - registered 2017-10-12, extension registered 2019-08-26,     [draft-ietf-idr-segment-routing-te-policy]
+           expires 2020-10-12)
+     129   Policy Name sub-TLV (TEMPORARY - registered 2019-08-29, expires 2020-08-29)                   [draft-ietf-idr-segment-routing-te-policy]
+   130-255 Unassigned
 
 BGP Layer 2 Encapsulation Types
 
@@ -451,7 +471,7 @@ BGP Layer 2 Encapsulation Types
            CSV
 
     Range  Registration Procedures
-    0-127  Expert Review
+   0-127   Expert Review
    128-251 First Come First Served
    252-255 Experimental Use
 
@@ -498,7 +518,7 @@ BGP Layer 2 TLV Types
            CSV
 
     Range  Registration Procedures
-    0-127  Expert Review
+   0-127   Expert Review
    128-251 First Come First Served
    252-255 Experimental Use
 
@@ -537,7 +557,7 @@ BGP Route Refresh Subcodes
            CSV
 
     Range  Registration Procedures
-    0-127  Standards Action
+   0-127   Standards Action
    128-254 First Come First Served
 
    Value     Code          Reference
@@ -548,10 +568,6 @@ BGP Route Refresh Subcodes
     255  Reserved      [RFC7313]
 
 P-Multicast Service Interface Tunnel (PMSI Tunnel) Tunnel Types
-
-   Registration Procedure(s)
-
- IETF Review
 
    Reference
            [RFC7385][RFC8317]
@@ -565,6 +581,13 @@ P-Multicast Service Interface Tunnel (PMSI Tunnel) Tunnel Types
            [IMG]
            CSV
 
+     Range   Registration Procedures
+   0x00-0x7A IETF Review
+   0x7B-0x7E Experimental Use
+   0x80-0xFA Composite Tunnel
+   0xFB-0xFE Experimental Use
+   0xFF      Standards Action
+
      Value                                                Meaning                                                            Reference
      0x00    no tunnel information present                                                                      [RFC6514]
      0x01    RSVP-TE P2MP LSP                                                                                   [RFC6514]
@@ -576,9 +599,9 @@ P-Multicast Service Interface Tunnel (PMSI Tunnel) Tunnel Types
      0x07    mLDP MP2MP LSP                                                                                     [RFC6514]
      0x08    Transport Tunnel                                                                                   [RFC7524]
      0x09    Unassigned
-     0x0A    Assisted-Replication Tunnel (TEMPORARY - registered 2016-06-30, extension registered 2018-06-13,   [draft-ietf-bess-evpn-optimized-ir]
-             expires 2019-06-30)
-     0x0B    BIER                                                                                               [RFC-ietf-bier-mvpn-11]
+     0x0A    Assisted-Replication Tunnel (TEMPORARY - registered 2016-06-30, extension registered 2019-06-14,   [draft-ietf-bess-evpn-optimized-ir]
+             expires 2020-06-30)
+     0x0B    BIER                                                                                               [RFC8556]
    0x0C-0x7A Unassigned
    0x7B-0x7E Reserved for Experimental Use                                                                      [RFC8317]
      0x7F    Reserved                                                                                           [RFC8317]
@@ -602,12 +625,12 @@ P-Multicast Service Interface (PMSI) Tunnel Attribute Flags
    Value                                                  Name                                                               Reference
      0   Unassigned
      1   Extension                                                                                              [RFC7902]
-     2   Unassigned
-    3-4  Assisted-Replication Type (T) (TEMPORARY - registered 2016-06-30, extension registered 2018-06-13,     [draft-ietf-bess-evpn-optimized-ir]
-         expires 2019-06-30)
-     5   Broadcast and Multicast (BM) (TEMPORARY - registered 2016-06-30, extension registered 2018-06-13,      [draft-ietf-bess-evpn-optimized-ir]
-         expires 2019-06-30)
-     6   Unknown (U) (TEMPORARY - registered 2016-06-30, extension registered 2018-06-13, expires 2019-06-30)   [draft-ietf-bess-evpn-optimized-ir]
+     2   Leaf Information Required per-Flow (LIR-pF)                                                            [RFC8534]
+    3-4  Assisted-Replication Type (T) (TEMPORARY - registered 2016-06-30, extension registered 2019-06-14,     [draft-ietf-bess-evpn-optimized-ir]
+         expires 2020-06-30)
+     5   Broadcast and Multicast (BM) (TEMPORARY - registered 2016-06-30, extension registered 2019-06-14,      [draft-ietf-bess-evpn-optimized-ir]
+         expires 2020-06-30)
+     6   Unknown (U) (TEMPORARY - registered 2016-06-30, extension registered 2019-06-14, expires 2020-06-30)   [draft-ietf-bess-evpn-optimized-ir]
      7   Leaf Information Required (L)                                                                          [RFC6514]
 
 BGP MCAST-VPN Route Types
@@ -674,22 +697,22 @@ BGP Prefix-SID TLV Types
 
    Expert(s)
 
- Unassigned
+ Acee Lindem, Hannes Gredler
 
    Reference
-           [RFC-ietf-idr-bgp-prefix-sid-27]
+           [RFC8669]
 
    Available Formats
            [IMG]
            CSV
 
-   Value      Type                  Reference
-     0   Reserved        [RFC-ietf-idr-bgp-prefix-sid-27]
-     1   Label-Index     [RFC-ietf-idr-bgp-prefix-sid-27]
-     2   Deprecated      [RFC-ietf-idr-bgp-prefix-sid-27]
-     3   Originator SRGB [RFC-ietf-idr-bgp-prefix-sid-27]
+   Value      Type       Reference
+     0   Reserved        [RFC8669]
+     1   Label-Index     [RFC8669]
+     2   Deprecated      [RFC8669]
+     3   Originator SRGB [RFC8669]
    4-254 Unassigned
-    255  Reserved        [RFC-ietf-idr-bgp-prefix-sid-27]
+    255  Reserved        [RFC8669]
 
 BGP Prefix-SID Label-Index TLV Flags
 
@@ -699,10 +722,10 @@ BGP Prefix-SID Label-Index TLV Flags
 
    Expert(s)
 
- Unassigned
+ Acee Lindem, Hannes Gredler
 
    Reference
-           [RFC-ietf-idr-bgp-prefix-sid-27]
+           [RFC8669]
 
    Available Formats
            [IMG]
@@ -719,10 +742,10 @@ BGP Prefix-SID Originator SRGB TLV Flags
 
    Expert(s)
 
- Unassigned
+ Acee Lindem, Hannes Gredler
 
    Reference
-           [RFC-ietf-idr-bgp-prefix-sid-27]
+           [RFC8669]
 
    Available Formats
            [IMG]
@@ -731,10 +754,46 @@ BGP Prefix-SID Originator SRGB TLV Flags
        Value        Name    Reference
    0x0001-0x8000 Unassigned
 
+BGP Graceful Restart Flags
+
+   Registration Procedure(s)
+
+ Standards Action
+
+   Reference
+           [RFC4724][RFC8538]
+
+   Available Formats
+           [IMG]
+           CSV
+
+   Bit Position     Name      Short Name Reference
+        0       Restart State R          [RFC4724]
+        1       Notification  N          [RFC8538]
+       2-3      Unassigned
+
+BGP Graceful Restart Flags for Address Family
+
+   Registration Procedure(s)
+
+ Standards Action
+
+   Reference
+           [RFC4724][RFC8538]
+
+   Available Formats
+           [IMG]
+           CSV
+
+   Bit Position       Name       Short Name Reference
+        0       Forwarding State F          [RFC4724]
+       1-7      Unassigned
+
                                                                         People
 
-          ID              Name               Contact URI          Last Updated
-   [Eric_Rosen]      Eric Rosen      mailto:erosen&cisco.com      2010-02-23
-   [Gargi_Nalawade]  Gargi Nalawade  mailto:gargi&cisco.com       2004-02
-   [Martin_Djernaes] Martin Djernaes mailto:mdjernaes&juniper.net 2016-03-30
-   [Nischal_Sheth]   Nischal Sheth   mailto:nsheth&juniper.net    2017-08-16
+            ID                  Name                 Contact URI          Last Updated
+   [Eric_Rosen]          Eric Rosen          mailto:erosen&cisco.com      2010-02-23
+   [Gargi_Nalawade]      Gargi Nalawade      mailto:gargi&cisco.com       2004-02
+   [Martin_Djernaes]     Martin Djernaes     mailto:mdjernaes&juniper.net 2016-03-30
+   [Nischal_Sheth]       Nischal Sheth       mailto:nsheth&juniper.net    2017-08-16
+   [Ramesh_Babu_Yakkala] Ramesh Babu Yakkala mailto:ryakkala&cisco.com    2020-02-18

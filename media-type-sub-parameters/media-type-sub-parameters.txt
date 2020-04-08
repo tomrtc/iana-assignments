@@ -4,7 +4,7 @@
            2003-10-31
 
    Last Updated
-           2018-08-02
+           2020-03-23
 
    Available Formats
            [IMG]
@@ -301,7 +301,7 @@ Sub-Parameter Registry for video/raw
 
    Expert(s)
 
- Unassigned
+ Roni Even, Ali Begen
 
    Reference
            [RFC4175]
@@ -334,7 +334,7 @@ Sub-Parameter Registry for video/raw
 
    Expert(s)
 
- Unassigned
+ Roni Even, Ali Begen
 
    Reference
            [RFC4175]
@@ -386,14 +386,15 @@ Parameter Values for the smime-type Parameter
            CSV
 
      smime-type Value          Reference
-   certs-only           [RFC5751, Section 3.2.2]
+   authEnveloped-data   [RFC8551, Section 3.2.2]
+   certs-only           [RFC8551, Section 3.2.2]
    CMC-Request          [RFC5273, Section 3]
    CMC-Response         [RFC5273, Section 3]
-   compressed-data      [RFC5751, Section 3.2.2]
-   enveloped-data       [RFC5751, Section 3.2.2]
+   compressed-data      [RFC8551, Section 3.2.2]
+   enveloped-data       [RFC8551, Section 3.2.2]
    enveloped-x400       [RFC3854, Section 3.3.1]
    server-generated-key [RFC7030, Section 4.4.2]
-   signed-data          [RFC5751, Section 3.2.2]
+   signed-data          [RFC8551, Section 3.2.2]
    signed-receipt       [RFC2634, Section 2.4]
    signed-x400          [RFC3854, Section 3.2.1]
 
@@ -405,7 +406,7 @@ CMS Encapsulating Content Types
 
    Expert(s)
 
- Unassigned
+ Russ Housley, Sean Turner, Jim Schaad
 
    Reference
            [RFC7193]
@@ -435,7 +436,7 @@ CMS Inner Content Types
 
    Expert(s)
 
- Unassigned
+ Russ Housley, Sean Turner, Jim Schaad
 
    Reference
            [RFC7193]
@@ -464,6 +465,8 @@ CMS Inner Content Types
    TAMP-error                  2.16.840.1.101.2.1.2.77.9  [RFC5934]
    keyPackageReceipt           2.16.840.1.101.2.1.2.78.3  [RFC7191]
    keyPackageError             2.16.840.1.101.2.1.2.78.6  [RFC7191]
+   cbor                        1.2.840.113549.1.9.16.1.44 [RFC8769]
+   cborSequence                1.2.840.113549.1.9.16.1.45 [RFC8769]
 
 Report Types
 
@@ -476,17 +479,17 @@ Report Types
  Murray Kucherawy
 
    Reference
-           [RFC-ietf-uta-smtp-tlsrpt-23]
+           [RFC8460]
 
    Available Formats
            [IMG]
            CSV
 
-         Report-Type                      Media Type                          Reference                                Comment
-                            application/tlsrpt+gzip,                                              Media types suitable for use with this
-   tlsrpt                   application/tlsrpt+json                 [RFC-ietf-uta-smtp-tlsrpt-23] report-type are defined in Sections 6.4 and 6.5
-                                                                                                  of [RFC-ietf-uta-smtp-tlsrpt-23]
-   disposition-notification message/disposition-notification        [RFC8098, Section 10]
-   disposition-notification message/global-disposition-notification [RFC6533, Section 6]
-   delivery-status          message/delivery-status                 [RFC3464, Section 2.1]
-   delivery-status          message/global-delivery-status          [RFC6533, Section 6]
+         Report-Type                           Media Type                          Reference                            Comment
+                                                                                                    Media types suitable for use with this
+   tlsrpt                   application/tlsrpt+gzip, application/tlsrpt+json [RFC8460]              report-type are defined in Sections 6.4 and 6.5
+                                                                                                    of [RFC8460]
+   disposition-notification message/disposition-notification                 [RFC8098, Section 10]
+   disposition-notification message/global-disposition-notification          [RFC6533, Section 6]
+   delivery-status          message/delivery-status                          [RFC3464, Section 2.1]
+   delivery-status          message/global-delivery-status                   [RFC6533, Section 6]

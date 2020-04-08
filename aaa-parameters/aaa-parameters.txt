@@ -4,7 +4,7 @@
            2003-04-08
 
    Last Updated
-           2018-08-15
+           2019-08-28
 
    Available Formats
            [IMG]
@@ -52,9 +52,9 @@
           * Requested-Action AVP Values (436)
           * Final-Unit-Action AVP Values (code 449)
           * Subscription-Id-Type AVP Values (code 450)
+          * Tariff-Change-Usage AVP Values (code 452)
           * CC-Unit-Type AVP Values (code 454)
           * Multiple-Services-Indicator AVP Values (code 455)
-          * Tariff-Change-Usage AVP Values (code 452)
           * User-Equipment-Info-Type AVP Values (code 459)
           * Accounting-Record-Type AVP Values (code 480)
           * Accounting-Realtime-Required AVP Values (code 483)
@@ -77,13 +77,6 @@
 
 AVP Codes
 
-   Registration Procedure(s)
-
- Expert Review with Specification. A block allocation
- (release of more than three AVPs at a time for a given purpose)
- requires IETF Review.
-
-
    Expert(s)
 
  Lionel Morand (primary) and Jouni Korhonen (secondary)
@@ -95,9 +88,9 @@ AVP Codes
            [IMG]
            CSV
 
-     Range    Registration Procedures                                       Note
-   1-16777215 IETF Review             block allocation (release of more than three AVPs at a time for a given purpose)
-   1-16777215 Expert Review           other allocation
+                                        Range                                       Registration Procedures
+   block allocation (release of more than three AVPs at a time for a given purpose) IETF Review
+   other allocation                                                                 Specification Required
 
      AVP Code             Attribute Name                              Reference
       1-255     Radius attributes                   [http://www.iana.org/assignments/radius-types]
@@ -218,57 +211,57 @@ AVP Codes
        407      QoS-Filter-Rule                     [RFC7155]
        408      Origin-AAA-Protocol                 [RFC7155]
      409-410    Unassigned
-       411      CC-Correlation-Id                   [RFC4006]
-       412      CC-Input-Octets                     [RFC4006]
-       413      CC-Money                            [RFC4006]
-       414      CC-Output-Octets                    [RFC4006]
-       415      CC-Request-Number                   [RFC4006]
-       416      CC-Request-Type                     [RFC4006]
-       417      CC-Service-Specific-Units           [RFC4006]
-       418      CC-Session-Failover                 [RFC4006]
-       419      CC-Sub-Session-Id                   [RFC4006]
-       420      CC-Time                             [RFC4006]
-       421      CC-Total-Octets                     [RFC4006]
-       422      Check-Balance-Result                [RFC4006]
-       423      Cost-Information                    [RFC4006]
-       424      Cost-Unit                           [RFC4006]
-       425      Currency-Code                       [RFC4006]
-       426      Credit-Control                      [RFC4006]
-       427      Credit-Control-Failure-Handling     [RFC4006]
-       428      Direct-Debiting-Failure-Handling    [RFC4006]
-       429      Exponent                            [RFC4006]
-       430      Final-Unit-Indication               [RFC4006]
-       431      Granted-Service-Unit                [RFC4006]
-       432      Rating-Group                        [RFC4006]
-       433      Redirect-Address-Type               [RFC4006]
-       434      Redirect-Server                     [RFC4006]
-       435      Redirect-Server-Address             [RFC4006]
-       436      Requested-Action                    [RFC4006]
-       437      Requested-Service-Unit              [RFC4006]
-       438      Restriction-Filter-Rule             [RFC4006]
-       439      Service-Identifier                  [RFC4006]
-       440      Service-Parameter-Info              [RFC4006]
-       441      Service-Parameter-Type              [RFC4006]
-       442      Service-Parameter-Value             [RFC4006]
-       443      Subscription-Id                     [RFC4006]
-       444      Subscription-Id-Data                [RFC4006]
-       445      Unit-Value                          [RFC4006]
-       446      Used-Service-Unit                   [RFC4006]
-       447      Value-Digits                        [RFC4006]
-       448      Validity-Time                       [RFC4006]
-       449      Final-Unit-Action                   [RFC4006]
-       450      Subscription-Id-Type                [RFC4006]
-       451      Tariff-Time-Change                  [RFC4006]
-       452      Tariff-Change-Usage                 [RFC4006]
-       453      G-S-U-Pool-Identifier               [RFC4006]
-       454      CC-Unit-Type                        [RFC4006]
-       455      Multiple-Services-Indicator         [RFC4006]
-       456      Multiple-Services-Credit-Control    [RFC4006]
-       457      G-S-U-Pool-Reference                [RFC4006]
-       458      User-Equipment-Info                 [RFC4006]
-       459      User-Equipment-Info-Type            [RFC4006]
-       460      User-Equipment-Info-Value           [RFC4006]
-       461      Service-Context-Id                  [RFC4006]
+       411      CC-Correlation-Id                   [RFC8506]
+       412      CC-Input-Octets                     [RFC8506]
+       413      CC-Money                            [RFC8506]
+       414      CC-Output-Octets                    [RFC8506]
+       415      CC-Request-Number                   [RFC8506]
+       416      CC-Request-Type                     [RFC8506]
+       417      CC-Service-Specific-Units           [RFC8506]
+       418      CC-Session-Failover                 [RFC8506]
+       419      CC-Sub-Session-Id                   [RFC8506]
+       420      CC-Time                             [RFC8506]
+       421      CC-Total-Octets                     [RFC8506]
+       422      Check-Balance-Result                [RFC8506]
+       423      Cost-Information                    [RFC8506]
+       424      Cost-Unit                           [RFC8506]
+       425      Currency-Code                       [RFC8506]
+       426      Credit-Control                      [RFC8506]
+       427      Credit-Control-Failure-Handling     [RFC8506]
+       428      Direct-Debiting-Failure-Handling    [RFC8506]
+       429      Exponent                            [RFC8506]
+       430      Final-Unit-Indication               [RFC8506]
+       431      Granted-Service-Unit                [RFC8506]
+       432      Rating-Group                        [RFC8506]
+       433      Redirect-Address-Type               [RFC8506]
+       434      Redirect-Server                     [RFC8506]
+       435      Redirect-Server-Address             [RFC8506]
+       436      Requested-Action                    [RFC8506]
+       437      Requested-Service-Unit              [RFC8506]
+       438      Restriction-Filter-Rule             [RFC8506]
+       439      Service-Identifier                  [RFC8506]
+       440      Service-Parameter-Info              [RFC8506]
+       441      Service-Parameter-Type              [RFC8506]
+       442      Service-Parameter-Value             [RFC8506]
+       443      Subscription-Id                     [RFC8506]
+       444      Subscription-Id-Data                [RFC8506]
+       445      Unit-Value                          [RFC8506]
+       446      Used-Service-Unit                   [RFC8506]
+       447      Value-Digits                        [RFC8506]
+       448      Validity-Time                       [RFC8506]
+       449      Final-Unit-Action                   [RFC8506]
+       450      Subscription-Id-Type                [RFC8506]
+       451      Tariff-Time-Change                  [RFC8506]
+       452      Tariff-Change-Usage                 [RFC8506]
+       453      G-S-U-Pool-Identifier               [RFC8506]
+       454      CC-Unit-Type                        [RFC8506]
+       455      Multiple-Services-Indicator         [RFC8506]
+       456      Multiple-Services-Credit-Control    [RFC8506]
+       457      G-S-U-Pool-Reference                [RFC8506]
+       458      User-Equipment-Info                 [RFC8506]
+       459      User-Equipment-Info-Type            [RFC8506]
+       460      User-Equipment-Info-Value           [RFC8506]
+       461      Service-Context-Id                  [RFC8506]
        462      EAP-Payload                         [RFC4072]
        463      EAP-Reissued-Payload                [RFC4072]
        464      EAP-Master-Session-Key              [RFC4072]
@@ -441,12 +434,30 @@ AVP Codes
        645      Rule-IPv4-Addr-Or-Prefix            [RFC7678]
        646      Rule-IPv6-Prefix                    [RFC7678]
        647      EA-Field-Length                     [RFC7678]
-       648      OC-Peer-Algo                        [RFC-ietf-dime-agent-overload-11]
-       649      SourceID                            [RFC-ietf-dime-agent-overload-11]
-       650      Load                                [RFC-ietf-dime-load-09]
-       651      Load-Type                           [RFC-ietf-dime-load-09]
-       652      Load-Value                          [RFC-ietf-dime-load-09]
-   653-16777215 Unassigned
+       648      OC-Peer-Algo                        [RFC8581]
+       649      SourceID                            [RFC8581]
+       650      Load                                [RFC8583]
+       651      Load-Type                           [RFC8583]
+       652      Load-Value                          [RFC8583]
+       653      User-Equipment-Info-Extension       [RFC8506]
+       654      User-Equipment-Info-IMEISV          [RFC8506]
+       655      User-Equipment-Info-MAC             [RFC8506]
+       656      User-Equipment-Info-EUI64           [RFC8506]
+       657      User-Equipment-Info-ModifiedEUI64   [RFC8506]
+       658      User-Equipment-Info-IMEI            [RFC8506]
+       659      Subscription-Id-Extension           [RFC8506]
+       660      Subscription-Id-E164                [RFC8506]
+       661      Subscription-Id-IMSI                [RFC8506]
+       662      Subscription-Id-SIP-URI             [RFC8506]
+       663      Subscription-Id-NAI                 [RFC8506]
+       664      Subscription-Id-Private             [RFC8506]
+       665      Redirect-Server-Extension           [RFC8506]
+       666      Redirect-Address-IPAddress          [RFC8506]
+       667      Redirect-Address-URL                [RFC8506]
+       668      Redirect-Address-SIP-URI            [RFC8506]
+       669      QoS-Final-Unit-Indication           [RFC8506]
+       670      OC-Maximum-Rate                     [RFC8582]
+   671-16777215 Unassigned
 
 AVP Specific Values
 
@@ -550,9 +561,9 @@ AVP Specific Values
      4007    DIAMETER_ERROR_BAD_KEY                  [RFC4004]
      4008    DIAMETER_ERROR_MIP_FILTER_NOT_SUPPORTED [RFC4004]
      4009    Unassigned
-     4010    DIAMETER_END_USER_SERVICE_DENIED        [RFC4006]
-     4011    DIAMETER_CREDIT_CONTROL_NOT_APPLICABLE  [RFC4006]
-     4012    DIAMETER_CREDIT_LIMIT_REACHED           [RFC4006]
+     4010    DIAMETER_END_USER_SERVICE_DENIED        [RFC8506]
+     4011    DIAMETER_CREDIT_CONTROL_NOT_APPLICABLE  [RFC8506]
+     4012    DIAMETER_CREDIT_LIMIT_REACHED           [RFC8506]
      4013    DIAMETER_USER_NAME_REQUIRED             [RFC4740]
      4014    RESOURCE_FAILURE                        [RFC6736]
    4015-4999 Unassigned
@@ -587,8 +598,8 @@ AVP Specific Values
         5024       DIAMETER_ERROR_NO_FOREIGN_HA_SERVICE         [RFC4004]
         5025       DIAMETER_ERROR_END_TO_END_MIP_KEY_ENCRYPTION [RFC4004]
       5026-5029    Unassigned
-        5030       DIAMETER_USER_UNKNOWN                        [RFC4006]
-        5031       DIAMETER_RATING_FAILED                       [RFC4006]
+        5030       DIAMETER_USER_UNKNOWN                        [RFC8506]
+        5031       DIAMETER_RATING_FAILED                       [RFC8506]
         5032       DIAMETER_ERROR_USER_UNKNOWN                  [RFC4740]
         5033       DIAMETER_ERROR_IDENTITIES_DONT_MATCH         [RFC4740]
         5034       DIAMETER_ERROR_IDENTITY_NOT_REGISTERED       [RFC4740]
@@ -868,161 +879,330 @@ AVP Specific Values
 
   CC-Request-Type AVP Values (code 416)
 
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
+
    Available Formats
            [IMG]
            CSV
 
-   AVP Value   Attribute Name    Reference
-       1     INITIAL_REQUEST     [RFC4006]
-       2     UPDATE_REQUEST      [RFC4006]
-       3     TERMINATION_REQUEST [RFC4006]
-       4     EVENT_REQUEST       [RFC4006]
+    AVP Value     Attribute Name    Reference
+        0       Reserved            [RFC8506]
+        1       INITIAL_REQUEST     [RFC8506]
+        2       UPDATE_REQUEST      [RFC8506]
+        3       TERMINATION_REQUEST [RFC8506]
+        4       EVENT_REQUEST       [RFC8506]
+   5-2147483647 Unassigned
 
   CC-Session-Failover AVP Values (code 418)
 
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
+
    Available Formats
            [IMG]
            CSV
 
-   AVP Value     Attribute Name     Reference
-       0     FAILOVER_NOT_SUPPORTED [RFC4006]
-       1     FAILOVER_SUPPORTED     [RFC4006]
+    AVP Value       Attribute Name     Reference
+        0       FAILOVER_NOT_SUPPORTED [RFC8506]
+        1       FAILOVER_SUPPORTED     [RFC8506]
+   2-2147483647 Unassigned
 
   Check-Balance-Result AVP Values (code 422)
 
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
+
    Available Formats
            [IMG]
            CSV
 
-   AVP Value Attribute Name Reference
-       0     ENOUGH_CREDIT  [RFC4006]
-       1     NO_CREDIT      [RFC4006]
+    AVP Value   Attribute Name Reference
+        0       ENOUGH_CREDIT  [RFC8506]
+        1       NO_CREDIT      [RFC8506]
+   2-2147483647 Unassigned
 
   Credit-Control AVP Values (code 426)
 
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
+
    Available Formats
            [IMG]
            CSV
 
-   AVP Value    Attribute Name    Reference
-       0     CREDIT_AUTHORIZATION [RFC4006]
-       1     RE_AUTHORIZATION     [RFC4006]
+    AVP Value      Attribute Name    Reference
+        0       CREDIT_AUTHORIZATION [RFC8506]
+        1       RE_AUTHORIZATION     [RFC8506]
+   2-2147483647 Unassigned
 
   Credit-Control-Failure-Handling AVP Values (code 427)
 
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
+
    Available Formats
            [IMG]
            CSV
 
-   AVP Value   Attribute Name    Reference
-       0     TERMINATE           [RFC4006]
-       1     CONTINUE            [RFC4006]
-       2     RETRY_AND_TERMINATE [RFC4006]
+    AVP Value     Attribute Name    Reference
+        0       TERMINATE           [RFC8506]
+        1       CONTINUE            [RFC8506]
+        2       RETRY_AND_TERMINATE [RFC8506]
+   3-2147483647 Unassigned
 
   Direct-Debiting-Failure-Handling AVP Values (code 428)
 
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
+
    Available Formats
            [IMG]
            CSV
 
-   AVP Value   Attribute Name    Reference
-       0     TERMINATE_OR_BUFFER [RFC4006]
-       1     CONTINUE            [RFC4006]
+    AVP Value     Attribute Name    Reference
+        0       TERMINATE_OR_BUFFER [RFC8506]
+        1       CONTINUE            [RFC8506]
+   2-2147483647 Unassigned
 
   Redirect-Address-Type AVP Values (code 433)
 
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
+
    Available Formats
            [IMG]
            CSV
 
-   AVP Value Attribute Name Reference
-       0     IPv4 Address   [RFC4006]
-       1     IPv6 Address   [RFC4006]
-       2     URL            [RFC4006]
-       3     SIP URI        [RFC4006]
+    AVP Value   Attribute Name Reference
+        0       IPv4 Address   [RFC8506]
+        1       IPv6 Address   [RFC8506]
+        2       URL            [RFC8506]
+        3       SIP URI        [RFC8506]
+   4-2147483647 Unassigned
 
   Requested-Action AVP Values (436)
 
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
+
    Available Formats
            [IMG]
            CSV
 
-   AVP Value Attribute Name  Reference
-       0     DIRECT_DEBITING [RFC4006]
-       1     REFUND_ACCOUNT  [RFC4006]
-       2     CHECK_BALANCE   [RFC4006]
-       3     PRICE_ENQUIRY   [RFC4006]
+    AVP Value   Attribute Name  Reference
+        0       DIRECT_DEBITING [RFC8506]
+        1       REFUND_ACCOUNT  [RFC8506]
+        2       CHECK_BALANCE   [RFC8506]
+        3       PRICE_ENQUIRY   [RFC8506]
+   4-2147483647 Unassigned
 
   Final-Unit-Action AVP Values (code 449)
 
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
+
    Available Formats
            [IMG]
            CSV
 
-   AVP Value Attribute Name  Reference
-       0     TERMINATE       [RFC4006]
-       1     REDIRECT        [RFC4006]
-       2     RESTRICT_ACCESS [RFC4006]
+    AVP Value   Attribute Name  Reference
+        0       TERMINATE       [RFC8506]
+        1       REDIRECT        [RFC8506]
+        2       RESTRICT_ACCESS [RFC8506]
+   3-2147483647 Unassigned
 
   Subscription-Id-Type AVP Values (code 450)
 
-   Available Formats
-           [IMG]
-           CSV
+   Registration Procedure(s)
 
-   AVP Value  Attribute Name  Reference
-       0     END_USER_E164    [RFC4006]
-       1     END_USER_IMSI    [RFC4006]
-       2     END_USER_SIP_URI [RFC4006]
-       3     END_USER_NAI     [RFC4006]
-       4     END_USER_PRIVATE [RFC4006]
+ Specification Required
 
-  CC-Unit-Type AVP Values (code 454)
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
 
    Available Formats
            [IMG]
            CSV
 
-   AVP Value     Attribute Name     Reference
-       0     TIME                   [RFC4006]
-       1     MONEY                  [RFC4006]
-       2     TOTAL-OCTETS           [RFC4006]
-       3     INPUT-OCTETS           [RFC4006]
-       4     OUTPUT-OCTETS          [RFC4006]
-       5     SERVICE-SPECIFIC-UNITS [RFC4006]
-
-  Multiple-Services-Indicator AVP Values (code 455)
-
-   Available Formats
-           [IMG]
-           CSV
-
-   AVP Value         Attribute Name          Reference
-       0     MULTIPLE_SERVICES_NOT_SUPPORTED [RFC4006]
-       1     MULTIPLE_SERVICES_SUPPORTED     [RFC4006]
+    AVP Value    Attribute Name  Reference
+        0       END_USER_E164    [RFC8506]
+        1       END_USER_IMSI    [RFC8506]
+        2       END_USER_SIP_URI [RFC8506]
+        3       END_USER_NAI     [RFC8506]
+        4       END_USER_PRIVATE [RFC8506]
+   5-2147483647 Unassigned
 
   Tariff-Change-Usage AVP Values (code 452)
 
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
+
    Available Formats
            [IMG]
            CSV
 
-   AVP Value      Attribute Name       Reference
-       0     UNIT_BEFORE_TARIFF_CHANGE [RFC4006]
-       1     UNIT_AFTER_TARIFF_CHANGE  [RFC4006]
-       2     UNIT_INDETERMINATE        [RFC4006]
+    AVP Value        Attribute Name       Reference
+        0       UNIT_BEFORE_TARIFF_CHANGE [RFC8506]
+        1       UNIT_AFTER_TARIFF_CHANGE  [RFC8506]
+        2       UNIT_INDETERMINATE        [RFC8506]
+   3-2147483647 Unassigned
+
+  CC-Unit-Type AVP Values (code 454)
+
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
+
+   Available Formats
+           [IMG]
+           CSV
+
+    AVP Value       Attribute Name     Reference
+        0       TIME                   [RFC8506]
+        1       MONEY                  [RFC8506]
+        2       TOTAL-OCTETS           [RFC8506]
+        3       INPUT-OCTETS           [RFC8506]
+        4       OUTPUT-OCTETS          [RFC8506]
+        5       SERVICE-SPECIFIC-UNITS [RFC8506]
+   6-2147483647 Unassigned
+
+  Multiple-Services-Indicator AVP Values (code 455)
+
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
+
+   Available Formats
+           [IMG]
+           CSV
+
+    AVP Value           Attribute Name          Reference
+        0       MULTIPLE_SERVICES_NOT_SUPPORTED [RFC8506]
+        1       MULTIPLE_SERVICES_SUPPORTED     [RFC8506]
+   2-2147483647 Unassigned
 
   User-Equipment-Info-Type AVP Values (code 459)
 
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jouni Korhonen, Lionel Morand
+
+   Reference
+           [RFC8506]
+
    Available Formats
            [IMG]
            CSV
 
-   AVP Value Attribute Name Reference
-       0     IMEISV         [RFC4006]
-       1     MAC            [RFC4006]
-       2     EUI64          [RFC4006]
-       3     MODIFIED_EUI64 [RFC4006]
+    AVP Value   Attribute Name Reference
+        0       IMEISV         [RFC8506]
+        1       MAC            [RFC8506]
+        2       EUI64          [RFC8506]
+        3       MODIFIED_EUI64 [RFC8506]
+   4-2147483647 Unassigned
 
   Accounting-Record-Type AVP Values (code 480)
 
@@ -1185,10 +1365,14 @@ AVP Specific Values
            [IMG]
            CSV
 
-                 AVP Value                Attribute Name  Reference
-                     0                   Reserved         [RFC7683]
-            0x0000000000000001           OLR_DEFAULT_ALGO [RFC7683]
-   0x0000000000000002-0xFFFFFFFFFFFFFFFF Unassigned
+                 AVP Value                 Attribute Name   Reference
+            0x0000000000000000           Reserved           [RFC7683]
+            0x0000000000000001           OLR_DEFAULT_ALGO   [RFC7683]
+            0x0000000000000002           Unassigned
+            0x0000000000000004           OLR_RATE_ALGORITHM [RFC8582]
+            0x0000000000000008           Unassigned
+            0x0000000000000010           OC_PEER_REPORT     [RFC8581]
+   0x0000000000000020-0xFFFFFFFFFFFFFFFF Unassigned
 
   OC-Report-Type AVP Values (code 626)
 
@@ -1210,7 +1394,8 @@ AVP Specific Values
     AVP Value   Attribute Name Reference
         0       HOST_REPORT    [RFC7683]
         1       REALM_REPORT   [RFC7683]
-   2-4294967295 Unassigned
+        2       PEER_REPORT    [RFC8581]
+   3-4294967295 Unassigned
 
 AVP Flags Value
 
@@ -1245,7 +1430,7 @@ Application IDs
            CSV
 
           Range        Registration Procedures      Note
-       0-16777215      Specification Required
+   0-16777215          Specification Required
    16777216-4294967294 First Come First Served Vendor-Specific
 
         ID Value                                        Name                                                        Reference
@@ -1253,7 +1438,7 @@ Application IDs
             1          NASREQ                                                                  [RFC7155]
             2          Mobile IPv4                                                             [RFC4004]
             3          Diameter base accounting                                                [RFC6733]
-            4          Diameter Credit Control                                                 [RFC4006]
+            4          Diameter Credit Control                                                 [RFC8506]
             5          Diameter EAP                                                            [RFC4072]
             6          Diameter Session Initiation Protocol (SIP) Application                  [RFC4740]
             7          Diameter Mobile IPv6 IKE (MIP6I)                                        [RFC5778]
@@ -1413,7 +1598,9 @@ Application IDs
         16777356       3GPP V6                                                                 [3GPP TS 29.389][Kimmo_Kymalainen]
         16777357       OMN Adapt Application                                                   [Jarda_Nedved]
         16777358       3GPP Nta                                                                [3GPP TS 29.154][Kimmo_Kymalainen]
-   16777359-4294967294 Unassigned
+        16777359       Ericsson Charging - SBI Policy                                          [S.Dhanalakshmi]
+        16777360       GSMA-DESS                                                               [GSMA PRD FS.19][Wayne_Cutler]
+   16777361-4294967294 Unassigned
        4294967295      Relay                                                                   [RFC6733]
 
 Command Codes
@@ -1426,8 +1613,8 @@ Command Codes
            CSV
 
         Range                Registration Procedures                       Note
-        0-255       Reserved for RADIUS backward compatibility See RADIUS Packet Type Codes
-     256-8388607    IETF Review
+   0-255            Reserved for RADIUS backward compatibility See RADIUS Packet Type Codes
+   256-8388607      IETF Review
    8388608-16777213 First Come First Served with specification Vendor-Specific
 
       Code Value                                      Name                                                         Reference
@@ -1445,7 +1632,7 @@ Command Codes
          268        DER / DEA                                                                [RFC4072]
        269-270      Unassigned
          271        ACR / ACA                                                                [RFC6733]
-         272        CCR / CCA                                                                [RFC4006]
+         272        CCR / CCA                                                                [RFC8506]
          273        Unassigned
          274        ASR / ASA                                                                [RFC6733]
          275        STR / STA                                                                [RFC6733]
@@ -1608,7 +1795,9 @@ Command Codes
        8388734      MT-Data-Request/Answer (TDR/TDA)                                         [3GPP TS 29.128][Kimmo_Kymalainen]
        8388735      Event-Configuration-Request/Answer (ECR/ECA)                             [3GPP TS 29.154][Kimmo_Kymalainen]
        8388736      Event-Reporting-Request/Answer (ERR/ERA)                                 [3GPP TS 29.154][Kimmo_Kymalainen]
-   8388737-16777213 Unassigned
+       8388737      DESS-DTLS-Handshake-Client-Request/Response                              [GSMA PRD FS.19][Wayne_Cutler]
+       8388738      DESS-DTLS-Handshake-Server-Request/Response                              [GSMA PRD FS.19][Wayne_Cutler]
+   8388739-16777213 Unassigned
        16777214     Experimental code                                                        [RFC6733]
        16777215     Experimental code                                                        [RFC6733]
 
@@ -1648,6 +1837,7 @@ Mobility Capability Registry
    Note
 
  Only numeric values that are 2^x (power of two, where x >= 2) may be registered.
+
 
    Available Formats
            [IMG]
@@ -1702,9 +1892,10 @@ QoS Profiles
            [IMG]
            CSV
 
-     Range   Registration Procedures
-     0-511   Standards Action
-   512-32767 Specification Required
+        Range      Registration Procedures
+   0-511           Standards Action
+   512-32767       Specification Required
+   32768-429496729 Reserved
 
         Value                   Name             Reference
           0         Diameter                     [RFC5624]
@@ -1750,6 +1941,7 @@ QoS Profiles
    [Miguel_Angel_Reina_Ortega] Miguel Angel Reina Ortega mailto:MiguelAngel.ReinaOrtega&etsi.org     2010-01-08
    [Niranjan_Avula]            Niranjan Avula            mailto:niranjan.avula&verizonwireless.com   2016-07-11
    [Paul_Prisaznuk]            Paul Prisaznuk            mailto:pprisaznuk&gmail.com                 2014-04-09
+   [S.Dhanalakshmi]            S. Dhanalakshmi           mailto:s.dhanalakshmi&ericsson.com          2018-12-14
    [Sachin_Rathee]             Sachin Rathee             mailto:sachin.rathee&convergys.com          2008-12-10
    [Sanjiv_Parikh]             Sanjiv Parikh             mailto:sparikh&cloudmark.com                2010-04-28
    [Scott_Luallin]             Scott Luallin             mailto:Scott.Luallin&intrado.com            2013-04-22
@@ -1763,4 +1955,5 @@ QoS Profiles
    [Torsten_Oertel]            Torsten Oertel            mailto:torsten.oertel&vodafone.com          2006-09-20
    [Vincent_D_Onofrio]         Vincent D’Onofrio         mailto:registration&rivada.com              2014-12-29
    [Vitaly_Dzhitenov]          Vitaly Dzhitenov          mailto:vitaly&juniper.net                   2014-10-29
+   [Wayne_Cutler]              Wayne Cutler              mailto:wcutler&gsma.com                     2019-08-28
    [Yoni_Eitan]                Yoni Eitan                mailto:yeitan&sandvine.com                  2011-04-29

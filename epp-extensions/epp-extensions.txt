@@ -4,7 +4,7 @@
            2015-01-05
 
    Last Updated
-           2018-03-07
+           2020-03-16
 
    Available Formats
            [IMG]
@@ -190,9 +190,8 @@ Extensible
 Provisioning
 Protocol
 (EPP)
-.SE                                                                                                                                                        .se                                                   [Manual for
-extension    Informational [https://www.iis.se/docs/iis-1.2.txt]                                                      [Internet_Infrastructure_Foundation] .nu   None                                     Active the
-                                                                                                                                                                                                                 extension]
+.SE          Informational [https://registrar.iis.se/96]                                                              [Internet_Infrastructure_Foundation] .se   None                                     Active None
+extension                                                                                                                                                  .nu
                                                                                                                                                                                                                  This
                                                                                                                                                                                                                  extension
                                                                                                                                                                                                                  includes a
@@ -227,6 +226,49 @@ Launch Phase
 Mapping for
 the          Standards
 Extensible   Track         [RFC8334]                                                                                  [IESG]                               Any   None                                     Active None
+Provisioning
+Protocol
+(EPP)
+Allocation
+Token
+Extension
+for the      Standards     [RFC8495]                                                                                  [IESG]                               Any   None                                     Active None
+Extensible   Track
+Provisioning
+Protocol
+(EPP)
+Extensible
+Provisioning
+Protocol     Standards     [RFC8543]                                                                                  [IESG]                               Any   None                                     Active None
+(EPP)        Track
+Organization
+Mapping
+Organization
+Extension
+for the      Standards
+Extensible   Track         [RFC8544]                                                                                  [IESG]                               Any   None                                     Active None
+Provisioning
+Protocol
+(EPP)
+Change Poll
+Extension
+for the      Standards
+Extensible   Track         [RFC8590]                                                                                  [IESG]                               Any   None                                     Active None
+Provisioning
+Protocol
+(EPP)
+Registry Fee
+Extension
+for the      Standards
+Extensible   Track         [RFC8748]                                                                                  [IESG]                               Any   None                                     Active None
+Provisioning
+Protocol
+(EPP)
+Login
+Security
+Extension
+for the      Standards     [RFC-ietf-regext-login-security-10]                                                        [IESG]                               Any   None                                     Active None
+Extensible   Track
 Provisioning
 Protocol
 (EPP)

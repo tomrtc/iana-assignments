@@ -3,7 +3,7 @@
 <?oxygen RNGSchema="message-headers.rng" type="xml"?>
 <registry xmlns="http://www.iana.org/assignments" id="message-headers">
   <title>Message Headers</title>
-  <updated>2018-07-13</updated>
+  <updated>2020-03-13</updated>
   
   
   
@@ -143,6 +143,24 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <status>standard</status>
       <xref type="rfc" data="rfc5536"/>
     </record>
+    <record date="2018-12-21">
+      <value>ARC-Authentication-Results</value>
+      <protocol>mail</protocol>
+      <status>experimental</status>
+      <xref type="rfc" data="rfc8617"/>
+    </record>
+    <record date="2018-12-21">
+      <value>ARC-Message-Signature</value>
+      <protocol>mail</protocol>
+      <status>experimental</status>
+      <xref type="rfc" data="rfc8617"/>
+    </record>
+    <record date="2018-12-21">
+      <value>ARC-Seal</value>
+      <protocol>mail</protocol>
+      <status>experimental</status>
+      <xref type="rfc" data="rfc8617"/>
+    </record>
     <record>
       <value>Archive</value>
       <protocol>netnews</protocol>
@@ -187,11 +205,11 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <status>standard</status>
       <xref type="rfc" data="rfc7615">RFC7615, Section 3</xref>
     </record>
-    <record updated="2015-05-30">
+    <record updated="2019-02-07">
       <value>Authentication-Results</value>
       <protocol>mail</protocol>
       <status>standard</status>
-      <xref type="rfc" data="rfc7601"/>
+      <xref type="rfc" data="rfc8601"/>
     </record>
     <record>
       <value>Authorization</value>
@@ -265,6 +283,12 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <status>standard</status>
       <xref type="rfc" data="rfc7234">RFC7234, Section 5.2</xref>
     </record>
+    <record date="2019-03-28">
+      <value>Cal-Managed-ID</value>
+      <protocol>http</protocol>
+      <status>standard</status>
+      <xref type="rfc" data="rfc8607">RFC8607, Section 5.1</xref>
+    </record>
     <record date="2015-10-15">
       <value>CalDAV-Timezones</value>
       <protocol>http</protocol>
@@ -288,6 +312,24 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <protocol>mail</protocol>
       <status>standard</status>
       <xref type="rfc" data="rfc5322"/>
+    </record>
+    <record date="2019-02-08">
+      <value>CDN-Loop</value>
+      <protocol>http</protocol>
+      <status>standard</status>
+      <xref type="rfc" data="rfc8586"/>
+    </record>
+    <record date="2019-10-25">
+      <value>Cert-Not-After</value>
+      <protocol>http</protocol>
+      <status>standard</status>
+      <xref type="rfc" data="rfc8739">RFC8739, Section 3.3</xref>
+    </record>
+    <record date="2019-10-25">
+      <value>Cert-Not-Before</value>
+      <protocol>http</protocol>
+      <status>standard</status>
+      <xref type="rfc" data="rfc8739">RFC8739, Section 3.3</xref>
     </record>
     <record>
       <value>Close</value>
@@ -768,7 +810,7 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <value>Early-Data</value>
       <protocol>http</protocol>
       <status>standard</status>
-      <xref type="draft" data="RFC-ietf-httpbis-replay-04"/>
+      <xref type="rfc" data="rfc8470"/>
     </record>
     <record>
       <value>Encoding</value>
@@ -791,6 +833,12 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <protocol>http</protocol>
       <status>standard</status>
       <xref type="rfc" data="rfc7231">RFC7231, Section 5.1.1</xref>
+    </record>
+    <record date="2018-12-21">
+      <value>Expect-CT</value>
+      <protocol>http</protocol>
+      <status>experimental</status>
+      <xref type="draft" data="RFC-ietf-httpbis-expect-ct-08"/>
     </record>
     <record>
       <value>Expires</value>
@@ -941,7 +989,7 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <value>Include-Referred-Token-Binding-ID</value>
       <protocol>http</protocol>
       <status>standard</status>
-      <xref type="draft" data="RFC-ietf-tokbind-https-18"/>
+      <xref type="rfc" data="rfc8473"/>
     </record>
     <record>
       <value>Incomplete-Copy</value>
@@ -1241,6 +1289,42 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <protocol>mail</protocol>
       <xref type="rfc" data="rfc4021"/>
     </record>
+    <record date="2020-01-14">
+      <file type="template">perm/odata-entityid</file>
+      <value>OData-EntityId</value>
+      <protocol>http</protocol>
+      <status>standard</status>
+      <xref type="uri" data="http://docs.oasis-open.org/odata/odata/v4.01/csprd05/part1-protocol/odata-v4.01-csprd05-part1-protocol.html#_Toc14172735">OData Version 4.01 Part 1: Protocol</xref>
+      <xref type="person" data="OASIS_Open"/>
+      <xref type="person" data="Chet_Ensign"/>
+    </record>
+    <record date="2020-01-14">
+      <file type="template">perm/odata-isolation</file>
+      <value>OData-Isolation</value>
+      <protocol>http</protocol>
+      <status>standard</status>
+      <xref type="uri" data="http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_HeaderIsolationODataIsolation">OData Version 4.01 Part 1: Protocol</xref>
+      <xref type="person" data="OASIS_Open"/>
+      <xref type="person" data="Chet_Ensign"/>
+    </record>
+    <record date="2020-01-14">
+      <file type="template">perm/odata-maxversion</file>
+      <value>OData-MaxVersion</value>
+      <protocol>http</protocol>
+      <status>standard</status>
+      <xref type="uri" data="http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_HeaderODataMaxVersion">OData Version 4.01 Part 1: Protocol</xref>
+      <xref type="person" data="OASIS_Open"/>
+      <xref type="person" data="Chet_Ensign"/>
+    </record>
+    <record date="2020-01-14">
+      <file type="template">perm/odata-version</file>
+      <value>OData-Version</value>
+      <protocol>http</protocol>
+      <status>standard</status>
+      <xref type="uri" data="http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_HeaderODataVersion">OData Version 4.01 Part 1: Protocol</xref>
+      <xref type="person" data="OASIS_Open"/>
+      <xref type="person" data="Chet_Ensign"/>
+    </record>
     <record>
       <value>Opt</value>
       <protocol>http</protocol>
@@ -1316,6 +1400,12 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <protocol>mail</protocol>
       <status>standard</status>
       <xref type="rfc" data="rfc5703"/>
+    </record>
+    <record date="2019-03-26">
+      <value>OSCORE</value>
+      <protocol>http</protocol>
+      <status>standard</status>
+      <xref type="rfc" data="rfc8613">RFC8613, Section 11.1</xref>
     </record>
     <record>
       <value>Overwrite</value>
@@ -1515,6 +1605,12 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <xref type="rfc" data="rfc0850"/>
       <xref type="rfc" data="rfc5536"/>
     </record>
+    <record updated="2019-01-02">
+      <value>Replay-Nonce</value>
+      <protocol>http</protocol>
+      <status>standard</status>
+      <xref type="rfc" data="rfc8555">RFC8555, Section 6.5.1</xref>
+    </record>
     <record>
       <value>Reply-By</value>
       <protocol>mail</protocol>
@@ -1622,7 +1718,7 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <value>Sec-Token-Binding</value>
       <protocol>http</protocol>
       <status>standard</status>
-      <xref type="draft" data="RFC-ietf-tokbind-https-18"/>
+      <xref type="rfc" data="rfc8473"/>
     </record>
     <record>
       <value>Sec-WebSocket-Accept</value>
@@ -1755,6 +1851,12 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <status>standard</status>
       <xref type="rfc" data="rfc5536"/>
     </record>
+    <record date="2019-04-01">
+      <value>Sunset</value>
+      <protocol>http</protocol>
+      <status>informational</status>
+      <xref type="rfc" data="rfc8594"/>
+    </record>
     <record>
       <value>Supersedes</value>
       <protocol>mail</protocol>
@@ -1798,13 +1900,19 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <value>TLS-Report-Domain</value>
       <protocol>mail</protocol>
       <status>standard</status>
-      <xref type="draft" data="RFC-ietf-uta-smtp-tlsrpt-23"/>
+      <xref type="rfc" data="rfc8460"/>
     </record>
     <record date="2018-06-14">
       <value>TLS-Report-Submitter</value>
       <protocol>mail</protocol>
       <status>standard</status>
-      <xref type="draft" data="RFC-ietf-uta-smtp-tlsrpt-23"/>
+      <xref type="rfc" data="rfc8460"/>
+    </record>
+    <record date="2019-08-05">
+      <value>TLS-Required</value>
+      <protocol>mail</protocol>
+      <status>standard</status>
+      <xref type="rfc" data="rfc8689"/>
     </record>
     <record>
       <value>To</value>
@@ -2021,29 +2129,16 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <protocol>http</protocol>
       <xref type="uri" data="http://www.w3.org/2006/appformats/">W3C Web Application Formats Working Group</xref>
     </record>
+    <record date="2018-09-24">
+      <value>AMP-Cache-Transform</value>
+      <protocol>http</protocol>
+      <xref type="uri" data="https://github.com/ampproject/amphtml/blob/master/spec/amp-cache-transform.md"/>
+    </record>
     <record>
       <file type="template">prov/apparently-to</file>
       <value>Apparently-To</value>
       <protocol>mail</protocol>
       <xref type="rfc" data="rfc2076"/>
-    </record>
-    <record date="2017-06-28">
-      <file type="template">prov/arc-authentication-results</file>
-      <value>ARC-Authentication-Results</value>
-      <protocol>mail</protocol>
-      <xref type="draft" data="draft-ietf-dmarc-arc-protocol"/>
-    </record>
-    <record date="2017-06-28">
-      <file type="template">prov/arc-message-signature</file>
-      <value>ARC-Message-Signature</value>
-      <protocol>mail</protocol>
-      <xref type="draft" data="draft-ietf-dmarc-arc-protocol"/>
-    </record>
-    <record date="2017-06-28">
-      <file type="template">prov/arc-seal</file>
-      <value>ARC-Seal</value>
-      <protocol>mail</protocol>
-      <xref type="draft" data="draft-ietf-dmarc-arc-protocol"/>
     </record>
     <record>
       <value>Compliance</value>
@@ -2085,6 +2180,14 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <value>Form-Sub</value>
       <protocol>mail</protocol>
       <xref type="draft" data="draft-levine-mailbomb-header"/>
+    </record>
+    <record date="2020-01-14">
+      <file type="template">prov/isolation</file>
+      <value>Isolation</value>
+      <protocol>http</protocol>
+      <xref type="uri" data="http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_HeaderIsolationODataIsolation">OData Version 4.01 Part 1: Protocol</xref>
+      <xref type="person" data="OASIS_Open"/>
+      <xref type="person" data="Chet_Ensign"/>
     </record>
     <record>
       <file type="template">prov/jabber-id</file>
@@ -2174,10 +2277,28 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
       <protocol>http</protocol>
       <xref type="rfc" data="rfc4229"/>
     </record>
+    <record date="2018-12-27">
+      <file type="template">prov/timing-allow-origin</file>
+      <value>Timing-Allow-Origin</value>
+      <protocol>http</protocol>
+      <xref type="uri" data="https://www.w3.org/TR/resource-timing-1/#timing-allow-origin"/>
+    </record>
     <record>
       <value>Title</value>
       <protocol>http</protocol>
       <xref type="rfc" data="rfc4229"/>
+    </record>
+    <record date="2018-12-20">
+      <file type="template">prov/traceparent</file>
+      <value>Traceparent</value>
+      <protocol>http</protocol>
+      <xref type="uri" data="https://www.w3.org/TR/trace-context/#traceparent-field"/>
+    </record>
+    <record date="2018-12-20">
+      <file type="template">prov/tracestate</file>
+      <value>Tracestate</value>
+      <protocol>http</protocol>
+      <xref type="uri" data="https://www.w3.org/TR/trace-context/#tracestate-field"/>
     </record>
     <record>
       <value>UA-Color</value>
@@ -2316,5 +2437,15 @@ That restriction is now lifted, per <xref type="rfc" data="rfc6857"/>.</note>
     </record>
   </registry>
 
-  <people/>
+  <people>
+    <person id="Chet_Ensign">
+      <name>Chet Ensign</name>
+      <uri>mailto:chet.ensign&amp;oasis-open.org</uri>
+      <updated>2020-01-14</updated>
+    </person>
+    <person id="OASIS_Open">
+      <name>OASIS Open</name>
+      <uri>https://www.oasis-open.org</uri>
+    </person>
+  </people>
 </registry>

@@ -3,7 +3,7 @@
 <?oxygen RNGSchema="bgp-parameters.rng" type="xml"?>
 <registry xmlns="http://www.iana.org/assignments" id="bgp-parameters">
   <title>Border Gateway Protocol (BGP) Parameters</title>
-  <updated>2018-08-13</updated>
+  <updated>2020-03-20</updated>
 
 
   <registry id="bgp-parameters-1">
@@ -237,19 +237,24 @@ Work in progress, March 1996.</xref>
         (TEMPORARY - registered 2017-07-28, extension registered 2018-08-10, expires 2019-07-28)</code>
       <xref type="draft" data="draft-ietf-idr-wide-bgp-communities"/>
     </record>
-    <record date="2018-03-29">
+    <record date="2018-03-29" updated="2020-03-20">
       <value>35</value>
-      <code>Internal Only To Customer (TEMPORARY - registered 2018-03-29, expires 2019-03-29)</code>
+      <code>Only to Customer (OTC) (TEMPORARY - registered 2018-03-29, extension registered 2020-03-20, expires 2021-03-29)</code>
       <xref type="draft" data="draft-ietf-idr-bgp-open-policy"/>
     </record>
+    <record date="2019-07-08">
+      <value>36</value>
+      <code>BGP Domain Path (D-PATH) (TEMPORARY - registered 2019-07-08, expires 2020-07-08)</code>
+      <xref type="draft" data="draft-ietf-bess-evpn-ipvpn-interworking"/>
+    </record>
     <record>
-      <value>36-39</value>
+      <value>37-39</value>
       <code>Unassigned</code>
     </record>
     <record date="2015-09-30" updated="2018-08-13">
       <value>40</value>
       <code>BGP Prefix-SID</code>
-      <xref type="draft" data="RFC-ietf-idr-bgp-prefix-sid-27"/>
+      <xref type="rfc" data="rfc8669"/>
     </record>
     <record>
       <value>41-127</value>
@@ -427,7 +432,7 @@ Work in progress, March 1996.</xref>
       </record>
       <record date="2018-03-29">
         <value>8</value>
-        <name>Role Mismatch (TEMPORARY - registered 2018-03-29, expires 2019-03-29)</name>
+        <name>Role Mismatch (TEMPORARY - registered 2018-03-29, extension registered 2020-03-20, expires 2021-03-29)</name>
         <xref type="draft" data="draft-ietf-idr-bgp-open-policy"/>
       </record>
       <record>
@@ -586,10 +591,10 @@ Work in progress, March 1996.</xref>
       <name>Out of Resources</name>
       <xref type="rfc" data="rfc4486"/>
     </record>
-    <record date="2017-04-21" updated="2018-04-13">
+    <record date="2017-04-21" updated="2018-12-13">
       <value>9</value>
-      <name>Hard Reset (TEMPORARY - registered 2017-04-21, extension registered 2018-04-13, expires 2019-04-21)</name>
-      <xref type="draft" data="draft-ietf-idr-bgp-gr-notification"/>
+      <name>Hard Reset</name>
+      <xref type="rfc" data="rfc8538"/>
     </record>
     <record>
       <value>10-255</value>
@@ -695,8 +700,13 @@ Work in progress, March 1996.</xref>
       <xref type="rfc" data="rfc5492"/>
     </record>
     <record>
-      <value>3-255</value>
+      <value>3-254</value>
       <name>Unassigned</name>
+    </record>
+    <record date="2019-08-13">
+      <value>255</value>
+      <name>Extended Length (TEMPORARY - registered 2019-08-13, expires 2020-08-13)</name>
+      <xref type="draft" data="draft-ietf-idr-ext-opt-param"/>
     </record>
   </registry>
   
@@ -784,15 +794,25 @@ Work in progress, March 1996.</xref>
     <record date="2016-12-20">
       <value>15</value>
       <name>SR TE Policy Type</name>
-      <xref type="draft" data="draft-previdi-idr-segment-routing-te-policy"/>
+      <xref type="draft" data="draft-ietf-idr-segment-routing-te-policy"/>
     </record>
     <record date="2017-08-16">
       <value>16</value>
       <name>Bare</name>
       <xref type="person" data="Nischal_Sheth"/>
     </record>
+    <record date="2019-08-21">
+      <value>17</value>
+      <name>SR Tunnel</name>
+      <xref type="draft" data="draft-ietf-bess-datacenter-gateway"/>
+    </record>
+    <record date="2020-02-18">
+      <value>18</value>
+      <name>Cloud Security</name>
+      <xref type="person" data="Ramesh_Babu_Yakkala"/>
+    </record>
     <record>
-      <value>17-65535</value>
+      <value>19-65535</value>
       <name>Unassigned</name>
     </record>
   </registry>  
@@ -832,57 +852,75 @@ Work in progress, March 1996.</xref>
       <name>Load-Balancing Block</name>
       <xref type="rfc" data="rfc5640"/>
     </record>
-    <record date="2017-07-18" updated="2018-06-29">
+    <record date="2017-07-18" updated="2019-07-04">
       <value>6</value>
-      <name>Remote Endpoint (TEMPORARY - registered 2017-07-18, extension registered 2018-06-29, expires 2019-07-18)</name>
+      <name>Remote Endpoint (TEMPORARY - registered 2017-07-18, extension registered 2019-07-04, expires 2020-07-18)</name>
       <xref type="draft" data="draft-ietf-idr-tunnel-encaps"/>
     </record>
-    <record date="2017-07-18">
+    <record date="2017-07-18" updated="2019-07-04">
       <value>7</value>
-      <name>IPv4 DS Field (TEMPORARY - registered 2017-07-18, extension registered 2018-06-29, expires 2019-07-18)</name>
+      <name>IPv4 DS Field (TEMPORARY - registered 2017-07-18, extension registered 2019-07-04, expires 2020-07-18)</name>
       <xref type="draft" data="draft-ietf-idr-tunnel-encaps"/>
     </record>
-    <record date="2017-07-18">
+    <record date="2017-07-18" updated="2019-07-04">
       <value>8</value>
-      <name>UDP Destination Port (TEMPORARY - registered 2017-07-18, extension registered 2018-06-29, expires 2019-07-18)</name>
+      <name>UDP Destination Port (TEMPORARY - registered 2017-07-18, extension registered 2019-07-04, expires 2020-07-18)</name>
       <xref type="draft" data="draft-ietf-idr-tunnel-encaps"/>
     </record>
-    <record date="2017-07-18">
+    <record date="2017-07-18" updated="2019-07-04">
       <value>9</value>
-      <name>Embedded Label Handling (TEMPORARY - registered 2017-07-18, extension registered 2018-06-29, expires 2019-07-18)</name>
+      <name>Embedded Label Handling (TEMPORARY - registered 2017-07-18, extension registered 2019-07-04, expires 2020-07-18)</name>
       <xref type="draft" data="draft-ietf-idr-tunnel-encaps"/>
     </record>
-    <record date="2017-07-18">
+    <record date="2017-07-18" updated="2019-07-04">
       <value>10</value>
-      <name>MPLS Label Stack (TEMPORARY - registered 2017-07-18, extension registered 2018-06-29, expires 2019-07-18)</name>
+      <name>MPLS Label Stack (TEMPORARY - registered 2017-07-18, extension registered 2019-07-04, expires 2020-07-18)</name>
       <xref type="draft" data="draft-ietf-idr-tunnel-encaps"/>
     </record>
-    <record date="2017-07-18">
+    <record date="2017-07-18" updated="2019-07-04">
       <value>11</value>
-      <name>Prefix SID (TEMPORARY - registered 2017-07-18, extension registered 2018-06-29, expires 2019-07-18)</name>
+      <name>Prefix SID (TEMPORARY - registered 2017-07-18, extension registered 2019-07-04, expires 2020-07-18)</name>
       <xref type="draft" data="draft-ietf-idr-tunnel-encaps"/>
     </record>
     <record date="2017-10-12">
       <value>12</value>
-      <name>Preference sub-TLV (TEMPORARY - registered 2017-10-12, expires 2018-10-12)</name>
+      <name>Preference sub-TLV 
+        (TEMPORARY - registered 2017-10-12, extension registered 2019-08-26, expires 2020-10-12)</name>
       <xref type="draft" data="draft-ietf-idr-segment-routing-te-policy"/>
     </record>
     <record date="2017-10-12">
       <value>13</value>
-      <name>Binding SID sub-TLV (TEMPORARY - registered 2017-10-12, expires 2018-10-12)</name>
+      <name>Binding SID sub-TLV 
+        (TEMPORARY - registered 2017-10-12, extension registered 2019-08-26, expires 2020-10-12)</name>
+      <xref type="draft" data="draft-ietf-idr-segment-routing-te-policy"/>
+    </record>
+    <record date="2019-08-29">
+      <value>14</value>
+      <name>ENLP sub-TLV (TEMPORARY - registered 2019-08-29, expires 2020-08-29)</name>
+      <xref type="draft" data="draft-ietf-idr-segment-routing-te-policy"/>
+    </record>
+    <record date="2019-08-29">
+      <value>15</value>
+      <name>Priority sub-TLV (TEMPORARY - registered 2019-08-29, expires 2020-08-29)</name>
       <xref type="draft" data="draft-ietf-idr-segment-routing-te-policy"/>
     </record>
     <record>
-      <value>14-127</value>
+      <value>16-127</value>
       <name>Unassigned</name>
     </record>
     <record date="2017-10-12">
       <value>128</value>
-      <name>Segment List sub-TLV (TEMPORARY - registered 2017-10-12, expires 2018-10-12)</name>
+      <name>Segment List sub-TLV 
+        (TEMPORARY - registered 2017-10-12, extension registered 2019-08-26, expires 2020-10-12)</name>
+      <xref type="draft" data="draft-ietf-idr-segment-routing-te-policy"/>
+    </record>
+    <record date="2019-08-29">
+      <value>129</value>
+      <name>Policy Name sub-TLV (TEMPORARY - registered 2019-08-29, expires 2020-08-29)</name>
       <xref type="draft" data="draft-ietf-idr-segment-routing-te-policy"/>
     </record>
     <record>
-      <value>129-255</value>
+      <value>130-255</value>
       <name>Unassigned</name>
     </record>
   </registry>
@@ -1155,9 +1193,28 @@ Work in progress, March 1996.</xref>
 
   <registry id="pmsi-tunnel-types">
     <title>P-Multicast Service Interface Tunnel (PMSI Tunnel) Tunnel Types</title>
-    <registration_rule>IETF Review</registration_rule>
     <xref type="rfc" data="rfc7385"/>
     <xref type="rfc" data="rfc8317"/>
+    <range>
+      <value>0x00-0x7A</value>
+      <registration_rule>IETF Review</registration_rule>
+    </range>
+    <range>
+      <value>0x7B-0x7E</value>
+      <registration_rule>Experimental Use</registration_rule>
+    </range>
+    <range>
+      <value>0x80-0xFA</value>
+      <registration_rule>Composite Tunnel</registration_rule>
+    </range>
+    <range>
+      <value>0xFB-0xFE</value>
+      <registration_rule>Experimental Use</registration_rule>
+    </range>
+    <range>
+      <value>0xFF</value>
+      <registration_rule>Standards Action</registration_rule>
+    </range>
    <note>The status of value 0xFF may only be changed through Standards Action <xref type="rfc" data="rfc8126"/>.
    </note>
     <record>
@@ -1211,13 +1268,13 @@ Work in progress, March 1996.</xref>
    </record>
    <record date="2016-06-30">
      <value>0x0A</value>
-     <name>Assisted-Replication Tunnel (TEMPORARY - registered 2016-06-30, extension registered 2018-06-13, expires 2019-06-30)</name>
+     <name>Assisted-Replication Tunnel (TEMPORARY - registered 2016-06-30, extension registered 2019-06-14, expires 2020-06-30)</name>
      <xref type="draft" data="draft-ietf-bess-evpn-optimized-ir"/>
    </record>
     <record date="2017-06-29">
       <value>0x0B</value>
       <name>BIER</name>
-      <xref type="draft" data="RFC-ietf-bier-mvpn-11"/>
+      <xref type="rfc" data="rfc8556"/>
     </record>
     <record>
      <value>0x0C-0x7A</value>
@@ -1263,23 +1320,27 @@ Work in progress, March 1996.</xref>
       <name>Extension</name>
       <xref type="rfc" data="rfc7902"/>
     </record>
-    <record>
+    <record date="2018-12-06">
       <value>2</value>
-      <name>Unassigned</name>
+      <name>Leaf Information Required per-Flow (LIR-pF)</name>
+      <xref type="rfc" data="rfc8534"/>
     </record>
     <record date="2016-06-30">
       <value>3-4</value>
-      <name>Assisted-Replication Type (T) (TEMPORARY - registered 2016-06-30, extension registered 2018-06-13, expires 2019-06-30)</name>
+      <name>Assisted-Replication Type (T) 
+        (TEMPORARY - registered 2016-06-30, extension registered 2019-06-14, expires 2020-06-30)</name>
       <xref type="draft" data="draft-ietf-bess-evpn-optimized-ir"/>
     </record>
     <record date="2016-06-30">
       <value>5</value>
-      <name>Broadcast and Multicast (BM) (TEMPORARY - registered 2016-06-30, extension registered 2018-06-13, expires 2019-06-30)</name>
+      <name>Broadcast and Multicast (BM) 
+        (TEMPORARY - registered 2016-06-30, extension registered 2019-06-14, expires 2020-06-30)</name>
       <xref type="draft" data="draft-ietf-bess-evpn-optimized-ir"/>
     </record>
     <record date="2016-06-30">
       <value>6</value>
-      <name>Unknown (U) (TEMPORARY - registered 2016-06-30, extension registered 2018-06-13, expires 2019-06-30)</name>
+      <name>Unknown (U) 
+        (TEMPORARY - registered 2016-06-30, extension registered 2019-06-14, expires 2020-06-30)</name>
       <xref type="draft" data="draft-ietf-bess-evpn-optimized-ir"/>
     </record>
     <record date="2016-05-12">
@@ -1407,27 +1468,27 @@ anyway, and marked as "Reserved."
   <registry id="bgp-prefix-sid-tlv-types">
     <title>BGP Prefix-SID TLV Types</title>
     <registration_rule>Expert Review</registration_rule>
-    <expert>Unassigned</expert>
-    <xref type="draft" data="RFC-ietf-idr-bgp-prefix-sid-27"/>
+    <expert>Acee Lindem, Hannes Gredler</expert>
+    <xref type="rfc" data="rfc8669"/>
     <record date="2018-08-13">
       <value>0</value>
       <name>Reserved</name>
-      <xref type="draft" data="RFC-ietf-idr-bgp-prefix-sid-27"/>
+      <xref type="rfc" data="rfc8669"/>
     </record>
     <record date="2018-08-13">
       <value>1</value>
       <name>Label-Index</name>
-      <xref type="draft" data="RFC-ietf-idr-bgp-prefix-sid-27"/>
+      <xref type="rfc" data="rfc8669"/>
     </record>
     <record date="2018-08-13">
       <value>2</value>
       <name>Deprecated</name>
-      <xref type="draft" data="RFC-ietf-idr-bgp-prefix-sid-27"/>
+      <xref type="rfc" data="rfc8669"/>
     </record>
     <record date="2018-08-13">
       <value>3</value>
       <name>Originator SRGB</name>
-      <xref type="draft" data="RFC-ietf-idr-bgp-prefix-sid-27"/>
+      <xref type="rfc" data="rfc8669"/>
     </record>
     <record>
       <value>4-254</value>
@@ -1436,15 +1497,15 @@ anyway, and marked as "Reserved."
     <record date="2018-08-13">
       <value>255</value>
       <name>Reserved</name>
-      <xref type="draft" data="RFC-ietf-idr-bgp-prefix-sid-27"/>
+      <xref type="rfc" data="rfc8669"/>
     </record>
   </registry>
 
   <registry id="bgp-prefix-sid-label-index-tlv-flags">
     <title>BGP Prefix-SID Label-Index TLV Flags</title>
     <registration_rule>Expert Review</registration_rule>
-    <expert>Unassigned</expert>
-    <xref type="draft" data="RFC-ietf-idr-bgp-prefix-sid-27"/>
+    <expert>Acee Lindem, Hannes Gredler</expert>
+    <xref type="rfc" data="rfc8669"/>
     <record>
       <value>0x0001-0x8000</value>
       <name>Unassigned</name>
@@ -1455,13 +1516,55 @@ anyway, and marked as "Reserved."
   <registry id="bgp-prefix-sid-originator-srgb-tlv-flags">
     <title>BGP Prefix-SID Originator SRGB TLV Flags</title>
     <registration_rule>Expert Review</registration_rule>
-    <expert>Unassigned</expert>
-    <xref type="draft" data="RFC-ietf-idr-bgp-prefix-sid-27"/>
+    <expert>Acee Lindem, Hannes Gredler</expert>
+    <xref type="rfc" data="rfc8669"/>
     <record>
       <value>0x0001-0x8000</value>
       <name>Unassigned</name>
     </record>
     
+  </registry>
+
+  <registry id="bgp-graceful-restart-flags">
+    <title>BGP Graceful Restart Flags</title>
+    <registration_rule>Standards Action</registration_rule>
+    <xref type="rfc" data="rfc4724"/>
+    <xref type="rfc" data="rfc8538"/>
+    <record date="2018-12-13">
+      <value>0</value>
+      <name>Restart State</name>
+      <shortname>R</shortname>
+      <xref type="rfc" data="rfc4724"/>
+    </record>
+    <record date="2018-12-13">
+      <value>1</value>
+      <name>Notification</name>
+      <shortname>N</shortname>
+      <xref type="rfc" data="rfc8538"/>
+    </record>
+    <record>
+      <value>2-3</value>
+      <name>Unassigned</name>
+      <shortname/>
+    </record>
+  </registry>
+  
+  <registry id="bgp-graceful-restart-flags-for-address-family">
+    <title>BGP Graceful Restart Flags for Address Family</title>
+    <registration_rule>Standards Action</registration_rule>
+    <xref type="rfc" data="rfc4724"/>
+    <xref type="rfc" data="rfc8538"/>
+    <record date="2018-12-13">
+      <value>0</value>
+      <name>Forwarding State</name>
+      <shortname>F</shortname>
+      <xref type="rfc" data="rfc4724"/>
+    </record>
+    <record>
+      <value>1-7</value>
+      <name>Unassigned</name>
+      <shortname/>
+    </record>
   </registry>
 
   <people>
@@ -1484,6 +1587,11 @@ anyway, and marked as "Reserved."
       <name>Nischal Sheth</name>
       <uri>mailto:nsheth&amp;juniper.net</uri>
       <updated>2017-08-16</updated>
+    </person>
+    <person id="Ramesh_Babu_Yakkala">
+      <name>Ramesh Babu Yakkala</name>
+      <uri>mailto:ryakkala&amp;cisco.com</uri>
+      <updated>2020-02-18</updated>
     </person>
   </people>
 </registry>

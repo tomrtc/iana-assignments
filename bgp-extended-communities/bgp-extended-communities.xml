@@ -5,7 +5,7 @@
   <title>Border Gateway Protocol (BGP) Extended Communities</title>
   <category>Border Gateway Protocol (BGP) Parameters</category>
   <created>2005-08-15</created>
-  <updated>2018-06-28</updated>
+  <updated>2019-09-03</updated>
   
   
   
@@ -253,7 +253,7 @@ octet (the "Type" field) is 0x06.
     <record date="2016-05-11">
       <value>0x06</value>
       <name>DF Election Extended Community</name>
-      <xref type="draft" data="draft-ietf-bess-evpn-df-election"/>
+      <xref type="rfc" data="rfc8584"/>
     </record>
     <record date="2016-05-11">
       <value>0x07</value>
@@ -290,8 +290,13 @@ octet (the "Type" field) is 0x06.
       <name>EVI-RT Type 3 Extended Community</name>
       <xref type="draft" data="draft-ietf-bess-evpn-igmp-mld-proxy"/>
     </record>
+    <record date="2019-01-23">
+      <value>0x0E</value>
+      <name>EVPN Attachment Circuit Extended Community</name>
+      <xref type="draft" data="draft-sajassi-bess-evpn-ac-aware-bundling"/>
+    </record>
     <record>
-      <value>0x0E-0xff</value>
+      <value>0x0F-0xff</value>
       <name>Unassigned</name>
     </record>
   </registry>
@@ -375,7 +380,16 @@ octet (the "Type" field) is 0x00.
       <xref type="draft" data="draft-ietf-bess-service-chaining"/>
     </record>
     <record>
-      <value>0x14-0xff</value>
+      <value>0x14-0x7f</value>
+      <name>Unassigned</name>
+    </record>
+    <record date="2019-06-19">
+      <value>0x80</value>
+      <name>Virtual-Network Identifier Extended Community</name>
+      <xref type="person" data="Manju_Ramesh"/>
+    </record>
+    <record>
+      <value>0x81-0xff</value>
       <name>Unassigned</name>
     </record>
   </registry>
@@ -726,8 +740,13 @@ octet (the "Type" field) is 0x03.
       <name>Additional PMSI Tunnel Attribute Flags</name>
       <xref type="rfc" data="rfc7902"/>
     </record>
+    <record date="2019-01-23">
+      <value>0x08</value>
+      <name>Context Label Space ID Extended Community</name>
+      <xref type="draft" data="draft-ietf-bess-mvpn-evpn-aggregation-label"/>
+    </record>
     <record>
-      <value>0x08-0x0a</value>
+      <value>0x09-0x0a</value>
       <name>Unassigned</name>
     </record>
     <record>
@@ -763,11 +782,10 @@ octet (the "Type" field) is 0x03.
       <value>0x15-0xa9</value>
       <name>Unassigned</name>
     </record>
-    <record date="2017-11-01">
+    <record date="2017-11-01" updated="2018-09-11">
       <value>0xaa</value>
       <name>LoadBalance</name>
-      <xref type="person" data="Anantharamu_Suryanarayana"/>
-      <xref type="uri" data="https://github.com/Juniper/contrail-controller/wiki/BGP-Extended-Communities#load-balance"/>
+      <xref type="draft" data="draft-ietf-bess-service-chaining"/>
     </record>
     <record>
       <value>0xab-0xff</value>
@@ -803,8 +821,13 @@ octet (the "Type" field) is 0x43.
       <name>Cost Community</name>
       <xref type="draft" data="draft-ietf-idr-custom-decision"/>
     </record>
+    <record date="2019-05-17">
+      <value>0x02</value>
+      <name>Route Target</name>
+      <xref type="person" data="Nischal_Sheth"/>
+    </record>
     <record>
-      <value>0x02-0xff</value>
+      <value>0x03-0xff</value>
       <name>Unassigned</name>
     </record>
   </registry>
@@ -838,8 +861,14 @@ octet (the "Type" field) is 0x80.
       <xref type="rfc" data="rfc4577"/>
     </record>
     <record>
-      <value>0x02-0x04</value>
+      <value>0x02-0x03</value>
       <name>Unassigned</name>
+    </record>
+    <record date="2018-10-01">
+      <value>0x04</value>
+      <name>SecurityGroup</name>
+      <xref type="person" data="Anantharamu_Suryanarayana"/>
+      <xref type="uri" data="https://github.com/Juniper/contrail-controller/wiki/BGP-Extended-Communities#security-group"/>
     </record>
     <record date="2014-08-01">
       <value>0x05</value>
@@ -886,8 +915,14 @@ octet (the "Type" field) is 0x80.
       <xref type="person" data="Anantharamu_Suryanarayana"/>
       <xref type="uri" data="https://github.com/Juniper/contrail-controller/wiki/BGP-Extended-Communities#tag"/>
     </record>
+    <record date="2019-09-03">
+      <value>0x85</value>
+      <name>Origin Sub-Cluster</name>
+      <xref type="person" data="Richard_Roberts"/>
+      <xref type="uri" data="https://github.com/robric/wiki-contrail-controller/blob/master/BGP-Extended-Communities.md"/>
+    </record>
     <record>
-      <value>0x85-0xff</value>
+      <value>0x86-0xff</value>
       <name>Unassigned</name>
     </record>
   </registry>
@@ -942,7 +977,17 @@ field) of an extended community when the value of the first
 octet (the "Type" field) is 0x82.
     </note>    
     <record>
-      <value>0x00-0x07</value>
+      <value>0x00-0x03</value>
+      <name>Unassigned</name>
+    </record>
+    <record date="2018-10-01">
+      <value>0x04</value>
+      <name>SecurityGroupAS4</name>
+      <xref type="person" data="Anantharamu_Suryanarayana"/>
+      <xref type="uri" data="https://github.com/Juniper/contrail-controller/wiki/BGP-Extended-Communities#security-group"/>
+    </record>
+    <record>
+      <value>0x05-0x07</value>
       <name>Unassigned</name>
     </record>
     <record date="2015-08-28">
@@ -951,7 +996,23 @@ octet (the "Type" field) is 0x82.
       <xref type="rfc" data="rfc7674"/>
     </record>
     <record>
-      <value>0x09-0xff</value>
+      <value>0x09-0x83</value>
+      <name>Unassigned</name>
+    </record>
+    <record date="2018-10-01">
+      <value>0x84</value>
+      <name>Tag4</name>
+      <xref type="person" data="Anantharamu_Suryanarayana"/>
+      <xref type="uri" data="https://github.com/Juniper/contrail-controller/wiki/BGP-Extended-Communities#tag"/>
+    </record>
+    <record date="2019-09-03">
+      <value>0x85</value>
+      <name>Origin Sub-Cluster4</name>
+      <xref type="person" data="Richard_Roberts"/>
+      <xref type="uri" data="https://github.com/robric/wiki-contrail-controller/blob/master/BGP-Extended-Communities.md"/>
+    </record>
+    <record>
+      <value>0x86-0xff</value>
       <name>Unassigned</name>
     </record>
   </registry>
@@ -1071,8 +1132,13 @@ IPv6-Address-Specific Extended Community.
     <xref type="rfc" data="rfc7902"/>
     <registration_rule>Standards Action</registration_rule>
     <record>
-      <value>0-47</value>
+      <value>0-46</value>
       <name>Unassigned</name>
+    </record>
+    <record date="2019-01-23">
+      <value>47</value>
+      <name>DCB (TEMPORARY - registered 2019-01-23, expires 2020-01-23.)</name>
+      <xref type="draft" data="draft-ietf-bess-mvpn-evpn-aggregation-label"/>
     </record>
   </registry>
   
@@ -1137,13 +1203,57 @@ IPv6-Address-Specific Extended Community.
       <xref type="rfc" data="rfc4761"/>
     </record>
   </registry>
+  
+  <registry id="df-alg">
+    <title>DF Alg</title>
+    <xref type="rfc" data="rfc8584"/>
+    <registration_rule>RFC Required</registration_rule>
+    <record date="2019-02-01">
+      <value>0</value>
+      <name>Default DF Election</name>
+      <xref type="rfc" data="rfc8584"/>
+    </record>
+    <record date="2019-02-01">
+      <value>1</value>
+      <name>HRW Algorithm</name>
+      <xref type="rfc" data="rfc8584"/>
+    </record>
+    <record>
+      <value>2-30</value>
+      <name>Unassigned</name>
+    </record>
+    <record date="2019-02-01">
+      <value>31</value>
+      <name>Reserved for Experimental Use</name>
+      <xref type="rfc" data="rfc8584"/>
+    </record>
+  </registry>
+  
+  <registry id="df-election-capabilities">
+    <title>DF Election Capabilities</title>
+    <xref type="rfc" data="rfc8584"/>
+    <registration_rule>RFC Required</registration_rule>
+    <record>
+      <value>0</value>
+      <name>Unassigned</name>
+    </record>
+    <record date="2019-02-01">
+      <value>1</value>
+      <name>AC-DF Capability</name>
+      <xref type="rfc" data="rfc8584"/>
+    </record>
+    <record>
+      <value>2-15</value>
+      <name>Unassigned</name>
+    </record>
+  </registry>
 
 
   <people>
     <person id="Anantharamu_Suryanarayana">
       <name>Anantharamu Suryanarayana</name>
-      <uri>mailto:anantha&amp;juniper.net</uri>
-      <updated>2017-11-01</updated>
+      <uri>mailto:anantharamu&amp;gmail.com</uri>
+      <updated>2018-10-01</updated>
     </person>
      <person id="Dhananjaya_Rao">
       <name>Dhananjaya Rao</name>
@@ -1154,6 +1264,21 @@ IPv6-Address-Specific Extended Community.
       <name>Eric Rosen</name>
       <uri>mailto:erosen&amp;cisco.com</uri>
       <updated>2012-04-10</updated>
+    </person>
+    <person id="Nischal_Sheth">
+      <name>Nischal Sheth</name>
+      <uri>mailto:nischal.sheth&amp;gmail.com</uri>
+      <updated>2019-05-17</updated>
+    </person>
+    <person id="Manju_Ramesh">
+      <name>Manju Ramesh</name>
+      <uri>mailto:manjrame&amp;cisco.com</uri>
+      <updated>2019-06-19</updated>
+    </person>
+    <person id="Richard_Roberts">
+      <name>Richard Roberts</name>
+      <uri>mailto:rroberts&amp;juniper.net</uri>
+      <updated>2019-09-03</updated>
     </person>
     <person id="Rishabh_Parekh">
       <name>Rishabh Parekh</name>

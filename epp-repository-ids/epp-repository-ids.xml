@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="epp-repository-ids">
   <title>Extensible Provisioning Protocol (EPP) Repository Identifiers</title>
   <created>2004-10-26</created>
-  <updated>2018-07-20</updated>
+  <updated>2020-03-30</updated>
   <registry id="epp-repository-ids-1">
     <title>EPP Repository Identifiers</title>
     <xref type="rfc" data="rfc5730"/>
@@ -2464,6 +2464,51 @@ No review beyond IANA review is required.
       <change><xref type="person" data="Afilias_TLD_Tech"/></change>
       <xref type="person" data="Afilias_TLD_Tech"/>
     </record>
+    <record date="2018-11-14">
+      <id>MLS, #x004D #x004C #x0053</id>
+      <change><xref type="person" data="Canadian_Internet_Re"/></change>
+      <xref type="person" data="Canadian_Internet_Re"/>
+    </record>
+    <record date="2019-01-09">
+      <id>BUY, #x0042 #x0055 #x0059</id>
+      <change><xref type="person" data="NEUSTAR"/></change>
+      <xref type="person" data="NEUSTAR"/>
+    </record>
+    <record date="2019-03-29">
+      <id>NATURA, #x004E #x0041 #x0054 #x0055 #x0052 #x0041</id>
+      <change><xref type="person" data="NIC_BR"/></change>
+      <xref type="person" data="Frederico_A_C_Neves"/>
+    </record>
+    <record date="2019-09-16">
+      <id>REGI, #x0052 #x0045 #x0047 #x0049</id>
+      <change><xref type="person" data="REGISTRIO"/></change>
+      <xref type="person" data="REGISTRIO"/>
+    </record>
+    <record date="2020-02-19">
+      <id>LEMRA, #x004C #x0045 #x004D #x0052 #x0041</id>
+      <change><xref type="person" data="LEMARIT_GmbH"/></change>
+      <xref type="person" data="LEMARIT_GmbH"/>
+    </record>
+    <record date="2020-03-04">
+      <id>VIRGIN, #x0056 #x0049 #x0052 #x0047 #x0049 #x004E</id>
+      <change><xref type="person" data="NIC_VIRGIN"/></change>
+      <xref type="person" data="NIC_VIRGIN"/>
+    </record>
+    <record date="2020-03-30">
+      <id>AMAZON, #x0041 #x004D #x0041 #x005A #x004F #x004E</id>
+      <change><xref type="person" data="NIC_AMAZON"/></change>
+      <xref type="person" data="NIC_AMAZON"/>
+    </record>
+    <record date="2020-03-30">
+      <id>AMAZONJP, #x0041 #x004D #x0041 #x005A #x004F #x004E #x004A #x0050</id>
+      <change><xref type="person" data="NIC_AMAZONJP"/></change>
+      <xref type="person" data="NIC_AMAZONJP"/>
+    </record>
+    <record date="2020-03-30">
+      <id>AMAZONCN, #x0041 #x004D #x0041 #x005A #x004F #x004E #x0043 #x004E</id>
+      <change><xref type="person" data="NIC_AMAZONCN"/></change>
+      <xref type="person" data="NIC_AMAZONCN"/>
+    </record>
     
   </registry>
   
@@ -2598,6 +2643,11 @@ No review beyond IANA review is required.
       <uri>mailto:lee&amp;nic.gdn</uri>
       <updated>2016-10-21</updated>
     </person>
+    <person id="LEMARIT_GmbH">
+      <name>LEMARIT GmbH</name>
+      <uri>mailto:lrs&amp;lemarit.com</uri>
+      <updated>2020-02-19</updated>
+    </person>
     <person id="NCC_Group">
       <name>NCC Group Domain Services</name>
       <uri>mailto:registry&amp;openregistry.com</uri>
@@ -2615,6 +2665,21 @@ No review beyond IANA review is required.
       <name>Neustar, Inc.</name>
       <uri>mailto:registrytechnical1&amp;neustar.biz</uri>
       <updated>2018-01-25</updated>
+    </person>
+    <person id="NIC_AMAZON">
+      <name>Nominet UK</name>
+      <uri>mailto:icann-tech-response&amp;nominet.org.uk</uri>
+      <updated>2020-03-30</updated>
+    </person>
+    <person id="NIC_AMAZONCN">
+      <name>Nominet UK</name>
+      <uri>mailto:icann-tech-response&amp;nominet.org.uk</uri>
+      <updated>2020-03-30</updated>
+    </person>
+    <person id="NIC_AMAZONJP">
+      <name>Nominet UK</name>
+      <uri>mailto:icann-tech-response&amp;nominet.org.uk</uri>
+      <updated>2020-03-30</updated>
     </person>
     <person id="NIC_BENTLEY">
       <name>Nominet UK</name>
@@ -2655,10 +2720,20 @@ No review beyond IANA review is required.
       <uri>mailto:icann-tech-response&amp;nominet.org.uk</uri>
       <updated>2015-10-09</updated>
     </person>
+    <person id="NIC_VIRGIN">
+      <name>Nominet UK</name>
+      <uri>mailto:icann-tech-response&amp;nominet.org.uk</uri>
+      <updated>2020-03-04</updated>
+    </person>
     <person id="NIC_WALES">
       <name>Nominet UK</name>
       <uri>mailto:icann-tech-response&amp;nominet.org.uk</uri>
       <updated>2015-09-30</updated>
+    </person>
+    <person id="REGISTRIO">
+      <name>REGISTRIO</name>
+      <uri>mailto:hello&amp;registr.io</uri>
+      <updated>2019-09-16</updated>
     </person>    
     <person id="RIGHTSIDE">
       <name>Rightside Registry</name>

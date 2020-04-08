@@ -3,15 +3,16 @@
 <?oxygen RNGSchema="rtp-parameters.rng" type="xml"?>
 <registry xmlns="http://www.iana.org/assignments" id="rtp-parameters">
   <title>Real-Time Transport Protocol (RTP) Parameters</title>
-  <updated>2018-06-18</updated>
+  <updated>2019-11-06</updated>
   
   <registry id="rtp-parameters-1">
-    <title>RTP Payload types (PT) for standard audio and video encodings - Closed</title>
+    <title>RTP Payload Types (PT) for standard audio and video encodings - Closed</title>
     <xref type="rfc" data="rfc3551"/>
     <registration_rule>Registry closed; see <xref type="rfc" data="rfc3551"/>, Section 3</registration_rule>
     <note>The RFC "RTP Profile for Audio and Video Conferences with Minimal
 Control" <xref type="rfc" data="rfc3551"/> specifies an initial set "payload types".  This
-list maintains and extends that list.</note>
+list maintains and extends that list.
+    </note>
     <record>
       <value>0</value>
       <name>PCMU</name>
@@ -276,7 +277,7 @@ list maintains and extends that list.</note>
   
   
   <registry id="rtp-parameters-2">
-    <title>RTP Payload Format media types</title>
+    <title>RTP Payload Format Media Types</title>
     <xref type="rfc" data="rfc4855"/>
     <registration_rule>Standards Action or Expert Review</registration_rule>
     <expert>Steve Casner</expert>
@@ -294,7 +295,8 @@ formats that have a normal value.  Both type and subtype names are
 case-insensitive as defined in RFC4288.
 
 Registration procedures and a registration template can be found in
-<xref type="rfc" data="rfc4855"/></note>
+<xref type="rfc" data="rfc4855"/>.
+    </note>
     <record>
       <type>application</type>
       <subtype>1d-interleaved-parityfec</subtype>
@@ -1044,16 +1046,23 @@ Registration procedures and a registration template can be found in
       <clock_rate>90000</clock_rate>
       <xref type="rfc" data="rfc4425"/>
     </record>
+    <record date="2018-08-29">
+      <type>video</type>
+      <subtype>vc2</subtype>
+      <clock_rate>90000</clock_rate>
+      <xref type="rfc" data="rfc8450"/>
+    </record>
   </registry>
   
   
   <registry id="rtp-parameters-4">
-    <title>RTCP Control Packet types (PT)</title>
+    <title>RTCP Control Packet Types (PT)</title>
     <xref type="rfc" data="rfc5761"/><xref type="rfc" data="rfc3550"/>
     <expert>Steve Casner, Magnus Westerlund</expert>
     <note>The RFC "RTP: A Transport Protocol for Real-Time Applications"
 <xref type="rfc" data="rfc3550"/> specifies an initial set of "control packet types" for
-RTCP.  This list maintains and extends that list.</note>
+RTCP.  This list maintains and extends that list.
+    </note>
     <range>
       <value>1-191</value>
       <registration_rule>Specification required or expert review</registration_rule>
@@ -1203,13 +1212,14 @@ Applications in Local Area Networks." Work in progress.</xref>
   
   
   <registry id="rtp-parameters-5">
-    <title>RTP SDES item types</title>
+    <title>RTP SDES Item Types</title>
     <xref type="rfc" data="rfc3550"/>
     <registration_rule>Specification Required or Expert Review</registration_rule>
     <expert>Rachel Huang, Magnus Westerlund</expert>
     <note>The RFC "RTP: A Transport Protocol for Real-Time Applications"
 <xref type="rfc" data="rfc3550"/> specifies an initial set of "item types" for the RTCP
-SDES control packet.  This list maintains and extends that list.</note>
+SDES control packet.  This list maintains and extends that list.
+    </note>
     <record>
       <value>0</value>
       <abbrev>END</abbrev>
@@ -1436,8 +1446,15 @@ SDES control packet.  This list maintains and extends that list.</note>
       <long_name>Media Pause/Resume</long_name>
       <xref type="rfc" data="rfc7728"/>
     </record>
+    <record date="2018-10-29">
+      <value>10</value>
+      <name>DBI</name>
+      <long_name>Delay Budget Information (DBI)</long_name>
+      <xref type="uri" data="https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1404">3GPP TS 26.114 v16.3.0</xref>
+      <xref type="person" data="Ozgur_Oyman"/>
+    </record>
     <record>
-      <value>10-30</value>
+      <value>11-30</value>
       <long_name>Unassigned</long_name>
     </record>
     <record>
@@ -1506,7 +1523,7 @@ SDES control packet.  This list maintains and extends that list.</note>
       <value>9</value>
       <name>ROI</name>
       <long_name>Video region-of-interest (ROI)</long_name>
-      <xref type="uri" data="http://www.3gpp.org/DynaReport/26114.htm">3GPP TS 26.114 v13.1.0</xref>
+      <xref type="uri" data="https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1404">3GPP TS 26.114 v16.3.0</xref>
       <xref type="person" data="Ozgur_Oyman"/>
     </record>
     <record date="2017-07-10">
@@ -1898,7 +1915,8 @@ for the sent video, see clause 6.2.3.4</description>
     <xref type="rfc" data="rfc6285"/>
     <registration_rule>Specification Required</registration_rule>
     <expert>Unassigned</expert>
-    <note>New response codes should be classified following the guidelines below:</note>
+    <note>New response codes should be classified following the guidelines below:
+    </note>
     <range>
       <value>1xx</value>
       <registration_rule>Informational</registration_rule>
@@ -2082,7 +2100,7 @@ has been denied</description>
     <person id="Ozgur_Oyman">
       <name>Ozgur Oyman</name>
       <uri>mailto:ozgur.oyman&amp;intel.com</uri>
-      <updated>2015-10-19</updated>
+      <updated>2019-11-06</updated>
     </person>
     <person id="Roni_Even">
       <name>Roni Even</name>

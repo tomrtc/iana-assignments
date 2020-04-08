@@ -1,7 +1,7 @@
                                                                    Message Headers
 
    Last Updated
-           2018-07-13
+           2020-03-13
 
    Available Formats
            [IMG]
@@ -42,7 +42,7 @@ Permanent Message Header Field Names
            [IMG]
            CSV
 
-  Header Field Name                      Template                Protocol Status        Reference
+            Header Field Name                   Template         Protocol    Status                               Reference
   A-IM                                                           http                   [RFC4229]
   Accept                                                         http     standard      [RFC7231, Section 5.3.2]
   Accept-Additions                                               http                   [RFC4229]
@@ -65,6 +65,9 @@ Permanent Message Header Field Names
   Alternates                                                     http                   [RFC4229]
   Apply-To-Redirect-Ref                                          http                   [RFC4437]
   Approved                                                       netnews  standard      [RFC5536]
+  ARC-Authentication-Results                                     mail     experimental  [RFC8617]
+  ARC-Message-Signature                                          mail     experimental  [RFC8617]
+  ARC-Seal                                                       mail     experimental  [RFC8617]
   Archive                                                        netnews  standard      [RFC5536]
   Archived-At                                                    mail     standard      [RFC5064]
   Archived-At                                                    netnews  standard      [RFC5064]
@@ -72,7 +75,7 @@ Permanent Message Header Field Names
   Article-Updates                                                netnews  obsoleted     [RFC1849][RFC5536]
   Authentication-Control                                         http     experimental  [RFC8053, Section 4]
   Authentication-Info                                            http     standard      [RFC7615, Section 3]
-  Authentication-Results                                         mail     standard      [RFC7601]
+  Authentication-Results                                         mail     standard      [RFC8601]
   Authorization                                                  http     standard      [RFC7235, Section 4.2]
   Auto-Submitted                                                 mail     standard      [RFC3834 section 5]
   Autoforwarded                                                  mail                   [RFC4021]
@@ -86,10 +89,14 @@ Permanent Message Header Field Names
   C-PEP                                                          http                   [RFC4229]
   C-PEP-Info                                                     http                   [RFC4229]
   Cache-Control                                                  http     standard      [RFC7234, Section 5.2]
+  Cal-Managed-ID                                                 http     standard      [RFC8607, Section 5.1]
   CalDAV-Timezones                                               http     standard      [RFC7809, Section 7.1]
   Cancel-Key                                                     netnews  standard      [RFC8315]
   Cancel-Lock                                                    netnews  standard      [RFC8315]
   Cc                                                             mail     standard      [RFC5322]
+  CDN-Loop                                                       http     standard      [RFC8586]
+  Cert-Not-After                                                 http     standard      [RFC8739, Section 3.3]
+  Cert-Not-Before                                                http     standard      [RFC8739, Section 3.3]
   Close                                                          http     reserved      [RFC7230, Section 8.1]
   Comments                                                       mail     standard      [RFC5322]
   Comments                                                       netnews  standard      [RFC5536][RFC5322]
@@ -171,11 +178,12 @@ Permanent Message Header Field Names
   Downgraded-Return-Path                                         mail     obsoleted     [RFC5504][RFC6857]
   Downgraded-Sender                                              mail     obsoleted     [RFC5504][RFC6857]
   Downgraded-To                                                  mail     obsoleted     [RFC5504][RFC6857]
-  Early-Data                                                     http     standard      [RFC-ietf-httpbis-replay-04]
+  Early-Data                                                     http     standard      [RFC8470]
   Encoding                                                       mail                   [RFC4021]
   Encrypted                                                      mail                   [RFC4021]
   ETag                                                           http     standard      [RFC7232, Section 2.3]
   Expect                                                         http     standard      [RFC7231, Section 5.1.1]
+  Expect-CT                                                      http     experimental  [RFC-ietf-httpbis-expect-ct-08]
   Expires                                                        http     standard      [RFC7234, Section 5.3]
   Expires                                                        mail                   [RFC4021]
   Expires                                                        netnews  standard      [RFC5536]
@@ -201,7 +209,7 @@ Permanent Message Header Field Names
   If-Unmodified-Since                                            http     standard      [RFC7232, Section 3.4]
   Importance                                                     mail                   [RFC4021]
   In-Reply-To                                                    mail     standard      [RFC5322]
-  Include-Referred-Token-Binding-ID                              http     standard      [RFC-ietf-tokbind-https-18]
+  Include-Referred-Token-Binding-ID                              http     standard      [RFC8473]
   Incomplete-Copy                                                mail                   [RFC4021]
   Injection-Date                                                 netnews  standard      [RFC5536]
   Injection-Info                                                 netnews  standard      [RFC5536]
@@ -254,6 +262,10 @@ Permanent Message Header Field Names
   NNTP-Posting-Date                                              netnews  obsoleted     [RFC5536]
   NNTP-Posting-Host                                              netnews  obsoleted     [RFC2980][RFC5536]
   Obsoletes                                                      mail                   [RFC4021]
+  OData-EntityId                         perm/odata-entityid     http     standard      [OData Version 4.01 Part 1: Protocol][OASIS_Open][Chet_Ensign]
+  OData-Isolation                        perm/odata-isolation    http     standard      [OData Version 4.01 Part 1: Protocol][OASIS_Open][Chet_Ensign]
+  OData-MaxVersion                       perm/odata-maxversion   http     standard      [OData Version 4.01 Part 1: Protocol][OASIS_Open][Chet_Ensign]
+  OData-Version                          perm/odata-version      http     standard      [OData Version 4.01 Part 1: Protocol][OASIS_Open][Chet_Ensign]
   Opt                                                            http                   [RFC4229]
   Optional-WWW-Authenticate                                      http     experimental  [RFC8053, Section 3]
   Ordering-Type                                                  http     standard      [RFC4229]
@@ -267,6 +279,7 @@ Permanent Message Header Field Names
   Original-Sender                                                netnews  standard      [RFC5537]
   Originator-Return-Address                                      mail                   [RFC4021]
   Original-Subject                                               mail     standard      [RFC5703]
+  OSCORE                                                         http     standard      [RFC8613, Section 11.1]
   Overwrite                                                      http     standard      [RFC4918]
   P3P                                                            http                   [RFC4229]
   Path                                                           netnews  standard      [RFC5536]
@@ -302,6 +315,7 @@ Permanent Message Header Field Names
   References                                                     netnews  standard      [RFC5536][RFC5322]
   Referer                                                        http     standard      [RFC7231, Section 5.5.2]
   Relay-Version                                                  netnews  obsoleted     [RFC0850][RFC5536]
+  Replay-Nonce                                                   http     standard      [RFC8555, Section 6.5.1]
   Reply-By                                                       mail                   [RFC4021]
   Reply-To                                                       mail     standard      [RFC5322]
   Reply-To                                                       netnews  standard      [RFC5536][RFC5322]
@@ -319,7 +333,7 @@ Permanent Message Header Field Names
   Safe                                                           http                   [RFC4229]
   Schedule-Reply                                                 http     standard      [RFC6638]
   Schedule-Tag                                                   http     standard      [RFC6638]
-  Sec-Token-Binding                                              http     standard      [RFC-ietf-tokbind-https-18]
+  Sec-Token-Binding                                              http     standard      [RFC8473]
   Sec-WebSocket-Accept                                           http     standard      [RFC6455]
   Sec-WebSocket-Extensions                                       http     standard      [RFC6455]
   Sec-WebSocket-Key                                              http     standard      [RFC6455]
@@ -342,6 +356,7 @@ Permanent Message Header Field Names
   Subject                                                        mail     standard      [RFC5322]
   Subject                                                        netnews  standard      [RFC5536][RFC5322]
   Summary                                                        netnews  standard      [RFC5536]
+  Sunset                                                         http     informational [RFC8594]
   Supersedes                                                     mail                   [RFC4021]
   Supersedes                                                     netnews  standard      [RFC5536][RFC2156]
   Surrogate-Capability                                           http                   [RFC4229]
@@ -349,8 +364,9 @@ Permanent Message Header Field Names
   TCN                                                            http                   [RFC4229]
   TE                                                             http     standard      [RFC7230, Section 4.3]
   Timeout                                                        http     standard      [RFC4918]
-  TLS-Report-Domain                                              mail     standard      [RFC-ietf-uta-smtp-tlsrpt-23]
-  TLS-Report-Submitter                                           mail     standard      [RFC-ietf-uta-smtp-tlsrpt-23]
+  TLS-Report-Domain                                              mail     standard      [RFC8460]
+  TLS-Report-Submitter                                           mail     standard      [RFC8460]
+  TLS-Required                                                   mail     standard      [RFC8689]
   To                                                             mail     standard      [RFC5322]
   Topic                                                          http     standard      [RFC8030, Section 5.4]
   Trailer                                                        http     standard      [RFC7230, Section 4.4]
@@ -401,7 +417,7 @@ Provisional Message Header Field Names
            [IMG]
            CSV
 
-Header Field Name                Template                              Protocol Status     Reference
+       Header Field Name                       Template                Protocol   Status                                        Reference
 Access-Control                   prov/access-control                   http     deprecated [W3C Web Application Formats Working Group]
 Access-Control-Allow-Credentials prov/access-control-allow-credentials http                [W3C Web Application Formats Working Group]
 Access-Control-Allow-Headers     prov/access-control-allow-headers     http                [W3C Web Application Formats Working Group]
@@ -410,10 +426,8 @@ Access-Control-Allow-Origin      prov/access-control-allow-origin      http     
 Access-Control-Max-Age           prov/access-control-max-age           http                [W3C Web Application Formats Working Group]
 Access-Control-Request-Method    prov/access-control-request-method    http                [W3C Web Application Formats Working Group]
 Access-Control-Request-Headers   prov/access-control-request-headers   http                [W3C Web Application Formats Working Group]
+AMP-Cache-Transform                                                    http                [https://github.com/ampproject/amphtml/blob/master/spec/amp-cache-transform.md]
 Apparently-To                    prov/apparently-to                    mail                [RFC2076]
-ARC-Authentication-Results       prov/arc-authentication-results       mail                [draft-ietf-dmarc-arc-protocol]
-ARC-Message-Signature            prov/arc-message-signature            mail                [draft-ietf-dmarc-arc-protocol]
-ARC-Seal                         prov/arc-seal                         mail                [draft-ietf-dmarc-arc-protocol]
 Compliance                                                             http                [RFC4229]
 Content-Transfer-Encoding                                              http                [RFC4229]
 Cost                                                                   http                [RFC4229]
@@ -422,6 +436,7 @@ EDIINT-Features                                                        mail     
 Eesst-Version                                                          mail                [RFC7681]
 Errors-To                        prov/errors-to                        mail                [RFC2076]
 Form-Sub                                                               mail                [draft-levine-mailbomb-header]
+Isolation                        prov/isolation                        http                [OData Version 4.01 Part 1: Protocol][OASIS_Open][Chet_Ensign]
 Jabber-ID                        prov/jabber-id                        mail                [RFC7259]
 Jabber-ID                        prov/jabber-id                        netnews             [RFC7259]
 Message-ID                                                             http                [RFC4229]
@@ -438,7 +453,10 @@ SIO-Label                                                              mail     
 SIO-Label-History                                                      mail                [RFC7444]
 SubOK                                                                  http                [RFC4229]
 Subst                                                                  http                [RFC4229]
+Timing-Allow-Origin              prov/timing-allow-origin              http                [https://www.w3.org/TR/resource-timing-1/#timing-allow-origin]
 Title                                                                  http                [RFC4229]
+Traceparent                      prov/traceparent                      http                [https://www.w3.org/TR/trace-context/#traceparent-field]
+Tracestate                       prov/tracestate                       http                [https://www.w3.org/TR/trace-context/#tracestate-field]
 UA-Color                                                               http                [RFC4229]
 UA-Media                                                               http                [RFC4229]
 UA-Pixels                                                              http                [RFC4229]
@@ -477,7 +495,13 @@ Content-Translation-Type Header Field Values
            [IMG]
            CSV
 
-   Value     Description                                                                                                          Reference
+     Value                                                       Description                                                      Reference
    original  Content in the original language                                                                                     [RFC8255]
    human     Content that has been translated by a human translator or a human has checked and corrected an automated translation [RFC8255]
    automated Content that has been translated by an electronic agent without proofreading or subsequent correction                [RFC8255]
+
+                                                                        People
+
+        ID          Name                Contact URI            Last Updated
+   [Chet_Ensign] Chet Ensign mailto:chet.ensign&oasis-open.org 2020-01-14
+   [OASIS_Open]  OASIS Open  https://www.oasis-open.org

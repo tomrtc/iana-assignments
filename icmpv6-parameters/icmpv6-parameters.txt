@@ -1,7 +1,7 @@
                                            Internet Control Message Protocol version 6 (ICMPv6) Parameters
 
    Last Updated
-           2018-08-20
+           2020-03-25
 
    Available Formats
            [IMG]
@@ -56,6 +56,7 @@
      * IPv6 Neighbor Discovery Prefix Information Option Flags
      * Address Registration Option Flags
      * Address Registration Option I-Field
+     * PvD Option Flags
 
 ICMPv6 "type" Numbers
 
@@ -67,7 +68,7 @@ ICMPv6 "type" Numbers
            CSV
 
                 Range                                      Registration Procedures
-        0-127 (Error messages)      IETF RFC Publication (Standards track, informational or experimental)
+   0-127 (Error messages)           IETF RFC Publication (Standards track, informational or experimental)
    128-255 (Informational messages) IETF RFC Publication (Standards track, informational or experimental)
 
     Type                                     Name                                    Reference
@@ -143,7 +144,7 @@ ICMPv6 "Code" Fields
            [IMG]
            CSV
 
-   Code                            Name                                Reference
+   Code                            Name                                      Reference
     0   no route to destination
     1   communication with destination administratively prohibited
     2   beyond scope of source address                             [RFC4443]
@@ -152,6 +153,7 @@ ICMPv6 "Code" Fields
     5   source address failed ingress/egress policy                [RFC4443]
     6   reject route to destination                                [RFC4443]
     7   Error in Source Routing Header                             [RFC6550][RFC6554]
+    8   Headers too long                                           [RFC-ietf-6man-icmp-limits-08]
 
   Type 2 - Packet Too Big
 
@@ -199,11 +201,18 @@ ICMPv6 "Code" Fields
            [IMG]
            CSV
 
-   Code                         Name                         Reference
+   Code                              Name                                              Reference
     0   erroneous header field encountered
     1   unrecognized Next Header type encountered
     2   unrecognized IPv6 option encountered
-    3   IPv6 First Fragment has incomplete IPv6 Header Chain [RFC7112]
+    3   IPv6 First Fragment has incomplete IPv6 Header Chain           [RFC7112]
+    4   SR Upper-layer Header Error                                    [RFC-ietf-6man-segment-routing-header-26]
+    5   Unrecognized Next Header type encountered by intermediate node [RFC-ietf-6man-icmp-limits-08]
+    6   Extension header too big                                       [RFC-ietf-6man-icmp-limits-08]
+    7   Extension header chain too long                                [RFC-ietf-6man-icmp-limits-08]
+    8   Too many extension headers                                     [RFC-ietf-6man-icmp-limits-08]
+    9   Too many options in extension header                           [RFC-ietf-6man-icmp-limits-08]
+    10  Option too big                                                 [RFC-ietf-6man-icmp-limits-08]
 
   Type 128 - Echo Request
 
@@ -463,7 +472,7 @@ ICMPv6 "Code" Fields
 
    Registration Procedure(s)
 
- Not Defined
+ IESG Approval
 
    Reference
            [RFC3775]
@@ -479,7 +488,7 @@ ICMPv6 "Code" Fields
 
    Registration Procedure(s)
 
- Not Defined
+ IESG Approval
 
    Reference
            [RFC3775]
@@ -495,7 +504,7 @@ ICMPv6 "Code" Fields
 
    Registration Procedure(s)
 
- Not Defined
+ IESG Approval
 
    Reference
            [RFC3775]
@@ -511,13 +520,17 @@ ICMPv6 "Code" Fields
 
    Registration Procedure(s)
 
- Not Defined
+ IESG Approval
 
    Reference
            [RFC3775]
 
-                Code
-   No registrations at this time.
+   Available Formats
+           [IMG]
+           CSV
+
+   Code
+    0
 
   Type 157 - Duplicate Address Request Code Suffix
 
@@ -526,18 +539,18 @@ ICMPv6 "Code" Fields
  IETF Review or IESG Approval
 
    Reference
-           [RFC-ietf-6lo-rfc6775-update-21]
+           [RFC8505]
 
    Available Formats
            [IMG]
            CSV
 
-   Code Suffix               Meaning                           Reference
-        0      [RFC6775] DAR message                [RFC6775]
-        1      EDAR message with 64-bit ROVR field  [RFC-ietf-6lo-rfc6775-update-21]
-        2      EDAR message with 128-bit ROVR field [RFC-ietf-6lo-rfc6775-update-21]
-        3      EDAR message with 192-bit ROVR field [RFC-ietf-6lo-rfc6775-update-21]
-        4      EDAR message with 256-bit ROVR field [RFC-ietf-6lo-rfc6775-update-21]
+   Code Suffix               Meaning                Reference
+        0      DAR message                          [RFC6775]
+        1      EDAR message with 64-bit ROVR field  [RFC8505]
+        2      EDAR message with 128-bit ROVR field [RFC8505]
+        3      EDAR message with 192-bit ROVR field [RFC8505]
+        4      EDAR message with 256-bit ROVR field [RFC8505]
       5-15     Unassigned
 
   Type 158 - Duplicate Address Confirmation Code Suffix
@@ -547,18 +560,18 @@ ICMPv6 "Code" Fields
  IETF Review or IESG Approval
 
    Reference
-           [RFC-ietf-6lo-rfc6775-update-21]
+           [RFC8505]
 
    Available Formats
            [IMG]
            CSV
 
-   Code Suffix               Meaning                           Reference
-        0      [RFC6775] DAC message                [RFC6775]
-        1      EDAC message with 64-bit ROVR field  [RFC-ietf-6lo-rfc6775-update-21]
-        2      EDAC message with 128-bit ROVR field [RFC-ietf-6lo-rfc6775-update-21]
-        3      EDAC message with 192-bit ROVR field [RFC-ietf-6lo-rfc6775-update-21]
-        4      EDAC message with 256-bit ROVR field [RFC-ietf-6lo-rfc6775-update-21]
+   Code Suffix               Meaning                Reference
+        0      DAC message                          [RFC6775]
+        1      EDAC message with 64-bit ROVR field  [RFC8505]
+        2      EDAC message with 128-bit ROVR field [RFC8505]
+        3      EDAC message with 192-bit ROVR field [RFC8505]
+        4      EDAC message with 256-bit ROVR field [RFC8505]
       5-15     Unassigned
 
   Type 160 - Extended Echo Request
@@ -641,50 +654,51 @@ IPv6 Neighbor Discovery Option Formats
            [IMG]
            CSV
 
-    Type                          Description                                         Reference
-      1    Source Link-layer Address                                  [RFC4861]
-      2    Target Link-layer Address                                  [RFC4861]
-      3    Prefix Information                                         [RFC4861]
-      4    Redirected Header                                          [RFC4861]
-      5    MTU                                                        [RFC4861]
-      6    NBMA Shortcut Limit Option                                 [RFC2491]
-      7    Advertisement Interval Option                              [RFC6275]
-      8    Home Agent Information Option                              [RFC6275]
-      9    Source Address List                                        [RFC3122]
-     10    Target Address List                                        [RFC3122]
-     11    CGA option                                                 [RFC3971]
-     12    RSA Signature option                                       [RFC3971]
-     13    Timestamp option                                           [RFC3971]
-     14    Nonce option                                               [RFC3971]
-     15    Trust Anchor option                                        [RFC3971]
-     16    Certificate option                                         [RFC3971]
-     17    IP Address/Prefix Option                                   [RFC5568]
-     18    New Router Prefix Information Option                       [RFC4068]
-     19    Link-layer Address Option                                  [RFC5568]
-     20    Neighbor Advertisement Acknowledgment Option               [RFC5568]
-     21    PvD ID Router Advertisement Option (reclaimable in future) [draft-ietf-intarea-provisioning-domains]
+    Type                   Description                                  Reference
+      1    Source Link-layer Address                    [RFC4861]
+      2    Target Link-layer Address                    [RFC4861]
+      3    Prefix Information                           [RFC4861]
+      4    Redirected Header                            [RFC4861]
+      5    MTU                                          [RFC4861]
+      6    NBMA Shortcut Limit Option                   [RFC2491]
+      7    Advertisement Interval Option                [RFC6275]
+      8    Home Agent Information Option                [RFC6275]
+      9    Source Address List                          [RFC3122]
+     10    Target Address List                          [RFC3122]
+     11    CGA option                                   [RFC3971]
+     12    RSA Signature option                         [RFC3971]
+     13    Timestamp option                             [RFC3971]
+     14    Nonce option                                 [RFC3971]
+     15    Trust Anchor option                          [RFC3971]
+     16    Certificate option                           [RFC3971]
+     17    IP Address/Prefix Option                     [RFC5568]
+     18    New Router Prefix Information Option         [RFC4068]
+     19    Link-layer Address Option                    [RFC5568]
+     20    Neighbor Advertisement Acknowledgment Option [RFC5568]
+     21    PvD ID Router Advertisement Option           [RFC-ietf-intarea-provisioning-domains-11]
      22    Unassigned
-     23    MAP Option                                                 [RFC4140]
-     24    Route Information Option                                   [RFC4191]
-     25    Recursive DNS Server Option                                [RFC5006][RFC8106]
-     26    RA Flags Extension Option                                  [RFC5175]
-     27    Handover Key Request Option                                [RFC5269]
-     28    Handover Key Reply Option                                  [RFC5269]
-     29    Handover Assist Information Option                         [RFC5271]
-     30    Mobile Node Identifier Option                              [RFC5271]
-     31    DNS Search List Option                                     [RFC8106]
-     32    Proxy Signature (PS)                                       [RFC6496]
-     33    Address Registration Option                                [RFC6775]
-     34    6LoWPAN Context Option                                     [RFC6775]
-     35    Authoritative Border Router Option                         [RFC6775]
-     36    6LoWPAN Capability Indication Option (6CIO)                [RFC7400]
-     37    DHCP Captive-Portal                                        [RFC7710]
-   38-137  Unassigned
-     138   CARD Request option                                        [RFC4065]
-     139   CARD Reply option                                          [RFC4065]
+     23    MAP Option                                   [RFC4140]
+     24    Route Information Option                     [RFC4191]
+     25    Recursive DNS Server Option                  [RFC5006][RFC8106]
+     26    RA Flags Extension Option                    [RFC5175]
+     27    Handover Key Request Option                  [RFC5269]
+     28    Handover Key Reply Option                    [RFC5269]
+     29    Handover Assist Information Option           [RFC5271]
+     30    Mobile Node Identifier Option                [RFC5271]
+     31    DNS Search List Option                       [RFC8106]
+     32    Proxy Signature (PS)                         [RFC6496]
+     33    Address Registration Option                  [RFC6775]
+     34    6LoWPAN Context Option                       [RFC6775]
+     35    Authoritative Border Router Option           [RFC6775]
+     36    6LoWPAN Capability Indication Option (6CIO)  [RFC7400]
+     37    DHCP Captive-Portal                          [RFC7710]
+     38    PREF64 option                                [RFC-ietf-6man-ra-pref64-09]
+   39-137  Unassigned
+     138   CARD Request option                          [RFC4065]
+     139   CARD Reply option                            [RFC4065]
    140-252 Unassigned
-     253   RFC3692-style Experiment 1 [1]                             [RFC4727]
-     254   RFC3692-style Experiment 2 [1]                             [RFC4727]
+     253   RFC3692-style Experiment 1 [1]               [RFC4727]
+     254   RFC3692-style Experiment 2 [1]               [RFC4727]
 
 Trust Anchor option (Type 15) Name Type field
 
@@ -825,18 +839,18 @@ Address Registration Option Status Values
            [IMG]
            CSV
 
-   Value                 Description                            Reference
+   Value                 Description                 Reference
      0    Success                                    [RFC6775]
      1    Duplicate Address                          [RFC6775]
      2    Neighbor Cache Full                        [RFC6775]
-     3    Moved                                      [RFC-ietf-6lo-rfc6775-update-21]
-     4    Removed                                    [RFC-ietf-6lo-rfc6775-update-21]
-     5    Validation Requested                       [RFC-ietf-6lo-rfc6775-update-21]
-     6    Duplicate Source Address                   [RFC-ietf-6lo-rfc6775-update-21]
-     7    Invalid Source Address                     [RFC-ietf-6lo-rfc6775-update-21]
-     8    Registered Address topologically incorrect [RFC-ietf-6lo-rfc6775-update-21]
-     9    6LBR Registry saturated                    [RFC-ietf-6lo-rfc6775-update-21]
-     10   Validation Failed                          [RFC-ietf-6lo-rfc6775-update-21]
+     3    Moved                                      [RFC8505]
+     4    Removed                                    [RFC8505]
+     5    Validation Requested                       [RFC8505]
+     6    Duplicate Source Address                   [RFC8505]
+     7    Invalid Source Address                     [RFC8505]
+     8    Registered Address Topologically Incorrect [RFC8505]
+     9    6LBR Registry Saturated                    [RFC8505]
+     10   Validation Failed                          [RFC8505]
    11-255 Unassigned
 
 6LoWPAN Capability Bits
@@ -852,14 +866,14 @@ Address Registration Option Status Values
            [IMG]
            CSV
 
-    Bit           Description                     Reference
+    Bit           Description          Reference
     0-7  Reserved for Experimental Use [RFC7400]
     8-9  Unassigned
-    10   EDA Support (D bit)           [RFC-ietf-6lo-rfc6775-update-21]
-    11   6LR capable (L bit)           [RFC-ietf-6lo-rfc6775-update-21]
-    12   6LBR capable (B bit)          [RFC-ietf-6lo-rfc6775-update-21]
-    13   Routing Registrar (P bit)     [RFC-ietf-6lo-rfc6775-update-21]
-    14   EARO support (E bit)          [RFC-ietf-6lo-rfc6775-update-21]
+    10   EDA Support (D bit)           [RFC8505]
+    11   6LR capable (L bit)           [RFC8505]
+    12   6LBR capable (B bit)          [RFC8505]
+    13   Routing Registrar (P bit)     [RFC8505]
+    14   EARO support (E bit)          [RFC8505]
     15   GHC capable bit (G bit)       [RFC7400]
    16-47 Unassigned
 
@@ -889,16 +903,16 @@ Address Registration Option Flags
  IETF Review or IESG Approval
 
    Reference
-           [RFC-ietf-6lo-rfc6775-update-21]
+           [RFC8505]
 
    Available Formats
            [IMG]
            CSV
 
-   ARO Status Description            Reference
+   ARO Status Description Reference
       0-5     Unassigned
-       6      'R' Flag    [RFC-ietf-6lo-rfc6775-update-21]
-       7      'T' Flag    [RFC-ietf-6lo-rfc6775-update-21]
+       6      R Flag      [RFC8505]
+       7      T Flag      [RFC8505]
 
 Address Registration Option I-Field
 
@@ -907,15 +921,34 @@ Address Registration Option I-Field
  IETF Review or IESG Approval
 
    Reference
-           [RFC-ietf-6lo-rfc6775-update-21]
+           [RFC8505]
 
    Available Formats
            [IMG]
            CSV
 
-   Value                Meaning                           Reference
-     0   Abstract Index for Topology Selection [RFC-ietf-6lo-rfc6775-update-21]
+   Value                Meaning                Reference
+     0   Abstract Index for Topology Selection [RFC8505]
     1-3  Unassigned
+
+PvD Option Flags
+
+   Registration Procedure(s)
+
+ Standards Action
+
+   Reference
+           [RFC-ietf-intarea-provisioning-domains-11]
+
+   Available Formats
+           [IMG]
+           CSV
+
+   Bit     Name                    Reference
+    0   H-flag     [RFC-ietf-intarea-provisioning-domains-11]
+    1   L-flag     [RFC-ietf-intarea-provisioning-domains-11]
+    2   R-flag     [RFC-ietf-intarea-provisioning-domains-11]
+   3-15 Unassigned
 
                                                                        Footnote
 

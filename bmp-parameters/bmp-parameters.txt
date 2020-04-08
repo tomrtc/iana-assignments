@@ -4,7 +4,7 @@
            2016-04-14
 
    Last Updated
-           2017-04-20
+           2019-11-07
 
    Available Formats
            [IMG]
@@ -14,16 +14,16 @@
 
    Registries included below
 
-     * BMP Message Types
-     * BMP Peer Types
-     * BMP Peer Flags
-     * BMP Statistics Types
-     * BMP Initiation Message TLVs
-     * BMP Termination Message TLVs
-     * BMP Termination Message Reason Codes
-     * BMP Peer Down Reason Codes
-     * BMP Route Mirroring TLVs
-     * BMP Route Mirroring Information Codes
+     * BMP Message Types
+     * BMP Peer Types
+     * BMP Peer Flags
+     * BMP Statistics Types
+     * BMP Initiation Message TLVs
+     * BMP Termination Message TLVs
+     * BMP Termination Message Reason Codes
+     * BMP Peer Down Reason Codes
+     * BMP Route Mirroring TLVs
+     * BMP Route Mirroring Information Codes
 
 BMP Message Types
 
@@ -39,7 +39,7 @@ BMP Message Types
            CSV
 
     Range  Registration Procedures
-    0-127  Standards Action
+   0-127   Standards Action
    128-250 Specification Required
 
     Type        Description       Reference
@@ -68,16 +68,18 @@ BMP Peer Types
            CSV
 
     Range  Registration Procedures
-    0-127  Standards Action
+   0-127   Standards Action
    128-250 Specification Required
 
-   Peer Type     Description      Reference
-   0         Global Instance Peer [RFC7854]
-   1         RD Instance Peer     [RFC7854]
-   2         Local Instance Peer  [RFC7854]
-   3-250     Unassigned
-   251-254   Experimental         [RFC7854]
-   255       Reserved             [RFC7854]
+   Peer Type                                              Description                                                          Reference
+   0         Global Instance Peer                                                                                   [RFC7854]
+   1         RD Instance Peer                                                                                       [RFC7854]
+   2         Local Instance Peer                                                                                    [RFC7854]
+   3         Loc-RIB Instance Peer (TEMPORARY - registered 2018-12-13, extension registered 2019-10-23, expires     [draft-ietf-grow-bmp-local-rib]
+             2020-12-13)
+   4-250     Unassigned
+   251-254   Experimental                                                                                           [RFC7854]
+   255       Reserved                                                                                               [RFC7854]
 
 BMP Peer Flags
 
@@ -92,11 +94,13 @@ BMP Peer Flags
            [IMG]
            CSV
 
-   Flag Description Reference
-   0    V flag      [RFC7854]
-   1    L flag      [RFC7854]
-   2    A flag      [RFC7854]
-   3-7  Unassigned
+   Flag                                           Description                                                      Reference
+   0    V flag                                                                                          [RFC7854]
+   1    L flag                                                                                          [RFC7854]
+   2    A flag                                                                                          [RFC7854]
+   3    O flag                                                                                          [RFC8671]
+   4    F flag (TEMPORARY - registered 2018-12-13, extension registered 2019-10-23, expires 2020-12-13) [draft-ietf-grow-bmp-local-rib]
+   5-7  Unassigned
 
 BMP Statistics Types
 
@@ -112,7 +116,7 @@ BMP Statistics Types
            CSV
 
       Range    Registration Procedures
-     0-32767   Standards Action
+   0-32767     Standards Action
    32768-65530 Specification Required
 
     Stat Type                                        Description                                        Reference
@@ -130,7 +134,11 @@ BMP Statistics Types
    11          Number of updates subjected to treat-as-withdraw                                         [RFC7854]
    12          Number of prefixes subjected to treat-as-withdraw                                        [RFC7854]
    13          Number of duplicate update messages received                                             [RFC7854]
-   14-65530    Unassigned
+   14          Number of routes in pre-policy Adj-RIB-Out                                               [RFC8671]
+   15          Number of routes in post-policy Adj-RIB-Outy                                             [RFC8671]
+   16          Number of routes in per-AFI/SAFI pre-policy Adj-RIB-Out                                  [RFC8671]
+   17          Number of routes in per-AFI/SAFI post-policy Adj-RIB-Out                                 [RFC8671]
+   18-65530    Unassigned
    65531-65534 Experimental                                                                             [RFC7854]
    65535       Reserved                                                                                 [RFC7854]
 
@@ -148,16 +156,19 @@ BMP Initiation Message TLVs
            CSV
 
       Range    Registration Procedures
-     0-32767   Standards Action
+   0-32767     Standards Action
    32768-65530 Specification Required
 
-      Type     Description  Reference
-   0           String       [RFC7854]
-   1           sysDescr     [RFC7854]
-   2           sysName      [RFC7854]
-   3-65530     Unassigned
-   65531-65534 Experimental [RFC7854]
-   65535       Reserved     [RFC7854]
+      Type                                                 Description                                                         Reference
+   0           String                                                                                               [RFC7854]
+   1           sysDescr                                                                                             [RFC7854]
+   2           sysName                                                                                              [RFC7854]
+   3           VRF/Table Name (TEMPORARY - registered 2018-12-13, extension registered 2019-10-23, expires          [draft-ietf-grow-bmp-local-rib]
+               2020-12-13)
+   4           Admin Label                                                                                          [RFC8671]
+   5-65530     Unassigned
+   65531-65534 Experimental                                                                                         [RFC7854]
+   65535       Reserved                                                                                             [RFC7854]
 
 BMP Termination Message TLVs
 
@@ -173,7 +184,7 @@ BMP Termination Message TLVs
            CSV
 
       Range    Registration Procedures
-     0-32767   Standards Action
+   0-32767     Standards Action
    32768-65530 Specification Required
 
       Type     Description  Reference
@@ -197,7 +208,7 @@ BMP Termination Message Reason Codes
            CSV
 
       Range    Registration Procedures
-     0-32767   Standards Action
+   0-32767     Standards Action
    32768-65530 Specification Required
 
       Type                 Description             Reference
@@ -224,7 +235,7 @@ BMP Peer Down Reason Codes
            CSV
 
       Range    Registration Procedures
-     0-32767   Standards Action
+   0-32767     Standards Action
    32768-65530 Specification Required
 
       Type                      Description                   Reference
@@ -252,7 +263,7 @@ BMP Route Mirroring TLVs
            CSV
 
       Range    Registration Procedures
-     0-32767   Standards Action
+   0-32767     Standards Action
    32768-65530 Specification Required
 
       Type     Description  Reference
@@ -276,7 +287,7 @@ BMP Route Mirroring Information Codes
            CSV
 
       Range    Registration Procedures
-     0-32767   Standards Action
+   0-32767     Standards Action
    32768-65530 Specification Required
 
       Type      Description  Reference

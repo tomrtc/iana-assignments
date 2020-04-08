@@ -115,8 +115,6 @@
         <ref name="value_name_description_xref"/>
         <!-- SMI Network Management MGMT Codes Internet-standard MIB -->
         <ref name="reg_value_name_description_xref"/>
-        <!-- Prefix: iso.org.dod.internet.mgmt.mib-2.interface.ifTable.ifEntry.ifType -->
-        <ref name="reg_empty"/>
         <ref name="footnotes"/>
       </element>
 
@@ -240,6 +238,8 @@
         <ref name="reg_value_description_xref"/>
         <!--SMI Security for S/MIME 1.2.840.113549.1.9.16.12-->
         <ref name="reg_value_description_xref"/>
+        <!--SMI Security for S/MIME 1.2.840.113549.1.9.16.13-->
+        <ref name="reg_value_description_xref"/>
         <!-- SMI Security for Mechanism SPKM Codes -->
         <ref name="reg_value_name_description_xref"/>
         <!-- SMI Security for Mechanism MSP-Based IDUP (MIM) Codes -->
@@ -305,6 +305,8 @@
         <!-- SMI Security for PKIX Proxy Matching Rules (1.3.6.1.5.5.7.22) -->
         <ref name="reg_value_description_xref"/>
         <!-- SMI Security for PKIX Subject Key Identifier Semantics (1.3.6.1.5.5.7.23) -->
+        <ref name="reg_value_description_xref"/>
+        <!-- SMI Security for SCEP Attribute Identifiers (1.3.6.1.5.5.7.24) -->
         <ref name="reg_value_description_xref"/>
         <!-- SMI Security for PKIX Access Descriptor (1.3.6.1.5.5.7.48) -->
         <ref name="reg_value_description_xref"/>

@@ -4,7 +4,7 @@
            2011-09-08
 
    Last Updated
-           2017-09-29
+           2019-06-20
 
    Available Formats
            [IMG]
@@ -20,7 +20,7 @@
      * rpki-rtr-error
      * BGPsec Capability
      * BGPsec_Path Flags
-     * BGPsec Algorithm Suite Registry
+     * BGPsec Algorithm Suites
 
 RPKI Signed Objects
 
@@ -160,25 +160,27 @@ BGPsec_Path Flags
    1-7  Unassigned                                              [RFC8205]
         Value: All 7 bits set to zero
 
-BGPsec Algorithm Suite Registry
+BGPsec Algorithm Suites
 
    Registration Procedure(s)
 
  Standards Action
 
    Reference
-           [RFC8208]
+           [RFC8608]
 
    Available Formats
            [IMG]
            CSV
 
    Algorithm Suite Identifier Digest Algorithm Signature Algorithm                                    Reference
-   0x0                        Reserved         Reserved            [RFC8208]
+   0x00                       Reserved         Reserved            [RFC8608]
                                                                    [National Institute of Standards and Technology (NIST), U.S. Department of
                                                                    Commerce, "Digital Signature Standard", FIPS Publication 186-4, July
-   0x1                        SHA-256          ECDSA P-256         2013.][National Institute of Standards and Technology (NIST), U.S. Department of
+   0x01                       SHA-256          ECDSA P-256         2013.][National Institute of Standards and Technology (NIST), U.S. Department of
                                                                    Commerce, "Secure Hash Standard", FIPS Publication 180-4, August
-                                                                   2015.][RFC6090][RFC8208]
-   0x2-0xEF                   Unassigned       Unassigned
-   0xFF                       Reserved         Reserved            [RFC8208]
+                                                                   2015.][RFC6090][RFC8608]
+   0x02-0xF6                  Unassigned       Unassigned
+   0xF7-0xFA                  Experimentation  Experimentation     [RFC8608]
+   0xFB-0xFE                  Documentation    Documentation       [RFC8608]
+   0xFF                       Reserved         Reserved            [RFC8608]

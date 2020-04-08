@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="sip-parameters">
   <title>Session Initiation Protocol (SIP) Parameters</title>
   <created>2002-01</created>
-  <updated>2018-08-03</updated>
+  <updated>2020-03-10</updated>
   
   
   <registry id="sip-parameters-2">
@@ -61,6 +61,10 @@ Action.
     <record>
       <value>Alert-Info</value>
       <spec><xref type="rfc" data="rfc3261"/></spec>
+    </record>
+    <record date="2020-03-10">
+      <value>AlertMsg-Error</value>
+      <spec><xref type="draft" data="RFC-ietf-ecrit-data-only-ea-22"/></spec>
     </record>
     <record>
       <value>Allow</value>
@@ -260,6 +264,10 @@ Action.
       <value>P-Called-Party-ID</value>
       <spec><xref type="rfc" data="rfc7315"/></spec>
     </record>
+    <record date="2018-09-17">
+      <value>P-Charge-Info</value>
+      <spec> <xref type="rfc" data="rfc8496"/></spec>
+    </record>
     <record>
       <value>P-Charging-Function-Addresses</value>
      <spec> <xref type="rfc" data="rfc7315"/></spec>
@@ -316,9 +324,10 @@ Action.
       <value>P-Refused-URI-List</value>
       <spec><xref type="rfc" data="rfc5318"/></spec>
     </record>
-    <record>
+    <record updated="2018-12-14">
       <value>P-Served-User</value>
-      <spec><xref type="rfc" data="rfc5502"/></spec>
+      <spec><xref type="rfc" data="rfc5502"/>
+        <xref type="rfc" data="rfc8498"/></spec>
     </record>
     <record>
       <value>P-User-Database</value>
@@ -347,6 +356,11 @@ Action.
     <record>
       <value>Priority</value>
       <spec><xref type="rfc" data="rfc3261"/></spec>
+    </record>
+    <record date="2019-05-09">
+      <value>Priority-Share</value>
+      <spec><xref type="uri" data="https://www.3gpp.org/ftp/Specs/2019-03/Rel-13/24_series/24229-dg0.zip">3GPP TS 24.229 v13.16.0</xref>
+      <xref type="person" data="Frederic_Firmin"/></spec>
     </record>
     <record>
       <value>Priv-Answer-Mode</value>
@@ -688,11 +702,11 @@ registry.</footnote>
     <xref type="rfc" data="rfc5727"/>
     <registration_rule>Standards Action</registration_rule>
     <note>Option tags are used in header fields such as Require,
-  Supported, Proxy-Require, and Unsupported in support of
-  SIP compatibility mechanisms for extensions. The option
-  tag itself is a string that is associated with a particular
-  SIP option (that is, an extension).
-  It identifies the option to SIP endpoints.
+Supported, Proxy-Require, and Unsupported in support of SIP 
+compatibility mechanisms for extensions. The option tag 
+itself is a string that is associated with a particular SIP 
+option (that is, an extension). It identifies the option to 
+SIP endpoints.
     </note>
     <record>
       <value>100rel</value>
@@ -1385,6 +1399,11 @@ otherwise noted.
       <description>Bad Location Information</description>
       <xref type="rfc" data="rfc6442"/>
     </record>
+    <record date="2020-03-10">
+      <value>425</value>
+      <description>Bad Alert Message</description>
+      <xref type="draft" data="RFC-ietf-ecrit-data-only-ea-22"/>
+    </record>
     <record>
       <value>428</value>
       <description>Use Identity Header</description>
@@ -1522,6 +1541,11 @@ otherwise noted.
       <value>513</value>
       <description>Message Too Large</description>
     </record>
+    <record date="2019-03-28">
+      <value>555</value>
+      <description>Push Notification Service Not Supported</description>
+      <xref type="rfc" data="rfc8599"/>
+    </record>
     <record>
       <value>580</value>
       <description>Precondition Failure</description>
@@ -1547,6 +1571,11 @@ otherwise noted.
       <value>607</value>
       <description>Unwanted</description>
       <xref type="rfc" data="rfc8197"/>
+    </record>
+    <record date="2019-07-18">
+      <value>608</value>
+      <description>Rejected</description>
+      <xref type="rfc" data="rfc8688"/>
     </record>
   </registry>
   
@@ -1610,7 +1639,8 @@ History-Info header field(s)</description>
    
   <registry id="sip-parameters-9">
     <title>Security Mechanism Names</title>
-    <xref type="rfc" data="rfc3329">RFC3329 Section 6</xref>
+    <registration_rule>IETF Review</registration_rule>
+    <xref type="rfc" data="rfc3329"/>
     <record>
       <value>digest</value>
       <xref type="rfc" data="rfc3329"/>
@@ -1636,7 +1666,8 @@ History-Info header field(s)</description>
   
   <registry id="sip-parameters-10">
     <title>Compression Schemes</title>
-    <xref type="rfc" data="rfc3486">RFC3486 Section 11</xref>
+    <xref type="rfc" data="rfc3486"/>
+    <registration_rule>Standards Action</registration_rule>
     <record>
       <description>Signaling Compression</description>
       <value>sigcomp</value>
@@ -1761,6 +1792,26 @@ History-Info header field(s)</description>
       <predefined>No</predefined>
       <xref type="rfc" data="rfc4240"/>
     </record>
+    <record date="2019-03-28">
+      <value>pn-param</value>
+      <predefined>No</predefined>
+      <xref type="rfc" data="rfc8599"/>
+    </record>
+    <record date="2019-03-28">
+      <value>pn-prid</value>
+      <predefined>No</predefined>
+      <xref type="rfc" data="rfc8599"/>
+    </record>
+    <record date="2019-03-28">
+      <value>pn-provider</value>
+      <predefined>No</predefined>
+      <xref type="rfc" data="rfc8599"/>
+    </record>
+    <record date="2019-03-28">
+      <value>pn-purr</value>
+      <predefined>No</predefined>
+      <xref type="rfc" data="rfc8599"/>
+    </record>
     <record>
       <value>postbody</value>
       <predefined>No</predefined>
@@ -1813,7 +1864,7 @@ History-Info header field(s)</description>
   <registry id="sip-parameters-12">
     <title>Header Field Parameters and Parameter Values</title>
     <xref type="rfc" data="rfc3968"/>
-    <registration_rule>RFC Required</registration_rule>
+    <registration_rule>IETF Review</registration_rule>
     <record>
       <header_field>Accept</header_field>
       <value>q</value>
@@ -1837,6 +1888,12 @@ History-Info header field(s)</description>
       <value>appearance</value>
       <predefined>No</predefined>
       <xref type="rfc" data="rfc7463"/>
+    </record>
+    <record date="2020-03-10">
+      <header_field>AlertMsg-Error</header_field>
+      <value>code</value>
+      <predefined>no</predefined>
+      <xref type="draft" data="RFC-ietf-ecrit-data-only-ea-22"/>
     </record>
     <record>
       <header_field>Answer-Mode</header_field>
@@ -1947,7 +2004,7 @@ History-Info header field(s)</description>
       <predefined>Yes</predefined>
       <xref type="rfc" data="rfc6910"/>
     </record>
-    <record updated="2015-12-10">
+    <record updated="2019-07-18">
       <header_field>Call-Info</header_field>
       <value>purpose</value>
       <predefined>Yes</predefined>
@@ -1957,6 +2014,7 @@ History-Info header field(s)</description>
       <xref type="rfc" data="rfc6993"/>
       <xref type="rfc" data="rfc7082"/>
       <xref type="rfc" data="rfc7852"/>
+	  <xref type="rfc" data="rfc8688"/>
     </record>
     <record>
       <header_field>Contact</header_field>
@@ -2122,6 +2180,12 @@ History-Info header field(s)</description>
       <value>tag</value>
       <predefined>No</predefined>
       <xref type="rfc" data="rfc3261"/>
+    </record>
+    <record date="2020-02-18">
+      <header_field>Geolocation</header_field>
+      <value>loc-src</value>
+      <predefined>No</predefined>
+      <xref type="draft" data="RFC-ietf-sipcore-locparam-06"/>
     </record>
     <record>
       <header_field>Geolocation-Error</header_field>
@@ -2382,6 +2446,24 @@ History-Info header field(s)</description>
       <predefined>No</predefined>
       <xref type="rfc" data="rfc5318"/>
     </record>
+    <record date="2018-12-14">
+      <header_field>P-Served-User</header_field>
+      <value>sescase</value>
+      <predefined>Yes</predefined>
+      <xref type="rfc" data="rfc5502"/>
+    </record>
+    <record date="2018-12-14">
+      <header_field>P-Served-User</header_field>
+      <value>regstate</value>
+      <predefined>Yes</predefined>
+      <xref type="rfc" data="rfc5502"/>
+    </record>
+    <record date="2018-12-14">
+      <header_field>P-Served-User</header_field>
+      <value>orig-cdiv</value>
+      <predefined>No</predefined>
+      <xref type="rfc" data="rfc8498"/>
+    </record>
     <record>
       <header_field>Policy-Contact</header_field>
       <value>non-cacheable</value>
@@ -2509,6 +2591,12 @@ History-Info header field(s)</description>
       <value>cause</value>
       <predefined>Yes</predefined>
       <xref type="rfc" data="rfc3326"/>
+    </record>
+    <record date="2019-03-27">
+      <header_field>Reason</header_field>
+      <value>location</value>
+      <predefined>Yes</predefined>
+      <xref type="rfc" data="rfc8606"/>
     </record>
     <record>
       <header_field>Reason</header_field>
@@ -2719,6 +2807,12 @@ History-Info header field(s)</description>
       <value>spi</value>
       <predefined>No</predefined>
       <xref type="rfc" data="rfc3329"/>
+    </record>
+    <record date="2018-10-02">
+      <header_field>Session-ID</header_field>
+      <value>logme</value>
+      <predefined>No (no values are allowed)</predefined>
+      <xref type="rfc" data="rfc8497"/>
     </record>
     <record date="2016-08-19">
       <header_field>Session-ID</header_field>
@@ -5726,7 +5820,7 @@ requires subsequent labels to define the service.</description>
   <registry id="sip-parameters-69">
     <title>Reason Codes</title>
     <xref type="rfc" data="rfc6665"/>
-    <registration_rule>RFC Required</registration_rule>
+    <registration_rule>Standards Action</registration_rule>
     <record>
       <value>deactivated</value>
       <xref type="rfc" data="rfc6665"/>
@@ -6023,6 +6117,31 @@ do support the PS to CS SRVCC for originating calls in pre-alerting phase.</desc
       <xref type="uri" data="http://www.3gpp.org/ftp/Specs/archive/24_series/24.379/">3GPP TS 24.379 v14.5.0</xref>
       <xref type="person" data="Frederic_Firmin"/>
     </record>
+    <record date="2018-10-22">
+      <value>g.3gpp.dynamic-e-stn-drvcc</value>
+      <description>This feature-capability indicator, when included in a Feature-Caps header field as specified in IETF
+        <xref type="rfc" data="rfc6809"/> in a SIP response to a SIP INVITE request, indicates support to transfer the 
+        session to the circuit switched (CS) domain using the Emergency Session Transfer Number for DRVCC digit string.</description>
+      <xref type="uri" data="http://www.3gpp.org/ftp/Specs/archive/24_series/24.237/">3GPP TS 24.237</xref>
+      <xref type="person" data="Frederic_Firmin"/>
+    </record>
+    <record date="2018-10-22">
+      <value>g.3gpp.ps2cs-srvcc-term-pre-alerting</value>
+      <description>This feature-capability indicator when used in a Feature-Caps header field of a SIP request or a SIP 
+        response indicates that: 1. the functional entity including the feature-capability indicator in the SIP message 
+        supports the PS to CS SRVCC for terminating calls in pre-alerting phase; and 2. all entities of which the functional 
+        entity including the feature-capability indicator in the SIP message is aware of being requested to support the feature 
+        do support the PS to CS SRVCC for terminating calls in pre-alerting phase. </description>
+      <xref type="uri" data="http://www.3gpp.org/ftp/Specs/archive/24_series/24.237/">3GPP TS 24.237</xref>
+      <xref type="person" data="Frederic_Firmin"/>
+    </record>
+    <record date="2019-05-28">
+      <value>g.3gpp.priority-share</value>
+      <description>When included in a Feature-Caps header field in SIP requests or SIP 
+        responses, the sender indicates that priority sharing is supported.</description>
+      <xref type="uri" data="https://www.3gpp.org/DynaReport/24229.htm">3GPP TS 24.229 13.16.0</xref>
+      <xref type="person" data="Frederic_Firmin"/>
+    </record>
   </registry>
   
    
@@ -6037,6 +6156,64 @@ do support the PS to CS SRVCC for originating calls in pre-alerting phase.</desc
         the server supports, and will process, the 607 (Unwanted) response
         code.</description>
       <xref type="rfc" data="rfc8197"/>
+    </record>
+    
+    <record date="2019-03-28">
+      <value>sip.pns</value>
+      <description>This feature-capability indicator, when inserted in a
+        Feature-Caps header field of a SIP REGISTER request or a SIP 2xx
+        response to a REGISTER request, denotes that the entity
+        associated with the indicator supports the SIP push mechanism
+        and the type of push notification service conveyed by the
+        indicator value.</description>
+      <xref type="rfc" data="rfc8599"/>
+    </record>
+    <record date="2019-03-28">
+      <value>sip.vapid</value>
+      <description>This feature-capability indicator, when inserted in a
+        SIP 2xx response to a SIP REGISTER request, denotes that the
+        entity associated with the indicator supports the Voluntary
+        Application Server Identification (VAPID) mechanism when the
+        entity requests that a push notification be sent to a SIP UA.
+        The indicator value is a public key identifying the entity,
+        which can be used by a SIP UA to restrict subscriptions to that
+        entity.</description>
+      <xref type="rfc" data="rfc8599"/>
+    </record>
+    <record date="2019-03-28">
+      <value>sip.pnsreg</value>
+      <description>This feature-capability indicator, when inserted in a
+        SIP 2xx response to a SIP REGISTER request, denotes that the
+        entity associated with the indicator expects to receive
+        binding-refresh REGISTER requests for the binding from the SIP
+        UA associated with the binding before the binding expires, even
+        if the entity does not request that a push notification be sent
+        to the SIP UA in order to trigger the binding-refresh REGISTER
+        requests. The indicator value conveys the minimum time
+        (given in seconds) prior to the binding expiration when the UA
+        MUST send the REGISTER request.</description>
+      <xref type="rfc" data="rfc8599"/>
+    </record>
+    <record date="2019-03-28">
+      <value>sip.pnspurr</value>
+      <description>This feature-capability indicator, when inserted in a
+        SIP 2xx response to a SIP REGISTER request, conveys that
+        the entity associated with the indicator will store information
+        that can be used to associate a mid-dialog SIP request with the
+        binding information in the REGISTER request. The indicator
+        value is an identifier that can be used as a key to retrieve the
+        binding information.</description>
+      <xref type="rfc" data="rfc8599"/>
+    </record>
+    <record date="2019-07-18">
+      <value>sip.608</value>
+      <description>This feature-capability indicator, when included in a
+		Feature-Caps header field of an INVITE request, indicates that the
+		entity associated with the indicator will be responsible for
+		indicating to the caller any information contained in the 608 SIP
+		response code, specifically, the value referenced by the Call-Info
+		header.</description>
+      <xref type="rfc" data="rfc8688"/>
     </record>
   </registry>
   
@@ -6148,6 +6325,55 @@ a User-to-User header field <xref type="rfc" data="rfc7433"/>.
       <xref type="rfc" data="rfc7433"/>
     </record>
   </registry>
+  
+  <registry id="sip-pns">
+    <title>Push Notification Service (PNS)</title>
+    <xref type="rfc" data="rfc8599"/>
+    <registration_rule>Specification Required</registration_rule>
+    <expert>Christer Holmberg</expert>
+    <record date="2019-03-29">
+      <value>apns</value>
+      <description>Apple Push Notification service</description>
+      <xref type="rfc" data="rfc8599"/>
+    </record>
+    <record date="2019-03-29">
+      <value>fcm</value>
+      <description>Firebase Cloud Messaging</description>
+      <xref type="rfc" data="rfc8599"/>
+    </record>
+    <record date="2019-03-29">
+      <value>webpush</value>
+      <description>Generic Event Delivery Using HTTP Push</description>
+      <xref type="rfc" data="rfc8599"/>
+    </record>
+  </registry>
+  
+  <registry id="sip-alertmsg-error-codes">
+    <title>SIP AlertMsg-Error Codes</title>
+    <xref type="draft" data="RFC-ietf-ecrit-data-only-ea-22"/>
+    <registration_rule>Specification Required</registration_rule>
+    <expert>Unassigned</expert>
+    <record date="2020-03-10">
+      <value>100</value>
+      <description>"Cannot Process the Alert Payload"</description>
+      <xref type="draft" data="RFC-ietf-ecrit-data-only-ea-22"/>
+    </record>
+    <record date="2020-03-10">
+      <value>101</value>
+      <description>"Alert Payload was not present or could not be found"</description>
+      <xref type="draft" data="RFC-ietf-ecrit-data-only-ea-22"/>
+    </record>
+    <record date="2020-03-10">
+      <value>102</value>
+      <description>"Not enough information to determine the purpose of the alert"</description>
+      <xref type="draft" data="RFC-ietf-ecrit-data-only-ea-22"/>
+    </record>
+    <record date="2020-03-10">
+      <value>103</value>
+      <description>"Alert Payload was corrupted"</description>
+      <xref type="draft" data="RFC-ietf-ecrit-data-only-ea-22"/>
+    </record>
+  </registry>
 
   <people>
     <person id="_3GPP">
@@ -6167,7 +6393,7 @@ a User-to-User header field <xref type="rfc" data="rfc7433"/>.
     <person id="Frederic_Firmin">
       <name>Frederic Firmin</name>
       <uri>mailto:frederic.firmin&amp;etsi.org</uri>
-      <updated>2018-03-02</updated>
+      <updated>2019-05-28</updated>
     </person>
     <person id="Jon_Peterson">
       <name>Jon Peterson</name>

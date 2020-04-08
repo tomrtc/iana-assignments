@@ -3,12 +3,9 @@
    Created
            2014-01-27
 
-   Last Updated
-           2018-07-03
-
    Registration Procedure(s)
 
- See ifType definitions registry.
+ This is one of the available formats of the ifType registry.
 
    Description
 
@@ -16,11 +13,11 @@
  module. They must instead be added to the "ifType definitions" registry
  at [IANA registry smi-numbers].
 
- Module: [iana-if-type@2018-07-03.yang]
+   Module: [iana-if-type@2020-01-10.yang]
 
 
    Reference
-           [RFC1213][RFC2863][RFC7224]
+           [RFC1213][RFC2863][RFC7224][RFC-thaler-iftype-reg-07]
 
    Available Formats
            [IMG]

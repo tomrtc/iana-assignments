@@ -4,7 +4,7 @@
            2017-04-03
 
    Last Updated
-           2017-09-28
+           2020-03-30
 
    Available Formats
            [IMG]
@@ -26,16 +26,14 @@
      * IPv6 Address Flags
      * IPv4 Attached Subnet Flags
      * IPv6 Attached Subnet Flags
+     * Hop Control Actions Values
+     * Queue Parameter Sub-Data Item Type Values
 
 Signal Type Values
 
-   Registration Procedure(s)
-
- Specification Required
-
    Expert(s)
 
- Stan Ratliff, Rick Taylor
+ Rick Taylor
 
    Reference
            [RFC8175]
@@ -43,6 +41,10 @@ Signal Type Values
    Available Formats
            [IMG]
            CSV
+
+      Range    Registration Procedures
+   3-65519     Specification Required
+   65520-65534 Private Use
 
     Type Code        Description        Reference
    0           Reserved                 [RFC8175]
@@ -54,13 +56,9 @@ Signal Type Values
 
 Message Type Values
 
-   Registration Procedure(s)
-
- Specification Required
-
    Expert(s)
 
- Stan Ratliff, Rick Taylor
+ Rick Taylor
 
    Reference
            [RFC8175]
@@ -68,6 +66,10 @@ Message Type Values
    Available Formats
            [IMG]
            CSV
+
+      Range    Registration Procedures
+   17-65519    Specification Required
+   65520-65534 Private Use
 
     Type Code                Description               Reference
    0           Reserved                                [RFC8175]
@@ -93,13 +95,9 @@ Message Type Values
 
 Data Item Type Values
 
-   Registration Procedure(s)
-
- Specification Required
-
    Expert(s)
 
- Stan Ratliff, Rick Taylor
+ Rick Taylor
 
    Reference
            [RFC8175]
@@ -107,6 +105,10 @@ Data Item Type Values
    Available Formats
            [IMG]
            CSV
+
+      Range    Registration Procedures
+   26-65407    Specification Required
+   65408-65534 Private Use
 
     Type Code                Description               Reference
    0           Reserved                                [RFC8175]
@@ -130,19 +132,23 @@ Data Item Type Values
    18          Relative Link Quality (Receive) (RLQR)  [RFC8175]
    19          Relative Link Quality (Transmit) (RLQT) [RFC8175]
    20          Maximum Transmission Unit (MTU)         [RFC8175]
-   21-65407    Unassigned
+   21          Hop Count                               [RFC8629]
+   22          Hop Control                             [RFC8629]
+   23          Queue Parameters                        [RFC8651]
+   24          Pause                                   [RFC8651]
+   25          Restart                                 [RFC8651]
+   26          Link Identifier Length                  [RFC8703]
+   27          Link Identifier                         [RFC8703]
+   28          Latency Range                           [RFC8757]
+   29-65407    Unassigned
    65408-65534 Reserved for Private Use                [RFC8175]
    65535       Reserved                                [RFC8175]
 
 Status Code Values
 
-   Registration Procedure(s)
-
- Specification Required
-
    Expert(s)
 
- Stan Ratliff, Rick Taylor
+ Rick Taylor
 
    Reference
            [RFC8175]
@@ -150,6 +156,12 @@ Status Code Values
    Available Formats
            [IMG]
            CSV
+
+    Range  Registration Procedures
+   4-111   Specification Required
+   112-127 Private Use
+   133-239 Specification Required
+   240-254 Private Use
 
    Status Code Failure Mode       Description        Reference
    0           Continue     Success                  [RFC8175]
@@ -169,13 +181,9 @@ Status Code Values
 
 Extension Type Values
 
-   Registration Procedure(s)
-
- Specification Required
-
    Expert(s)
 
- Stan Ratliff, Rick Taylor
+ Rick Taylor
 
    Reference
            [RFC8175]
@@ -184,11 +192,19 @@ Extension Type Values
            [IMG]
            CSV
 
-      Code           Description        Reference
-   0           Reserved                 [RFC8175]
-   1-65519     Unassigned
-   65520-65534 Reserved for Private Use [RFC8175]
-   65535       Reserved                 [RFC8175]
+      Range    Registration Procedures
+   2-65519     Specification Required
+   65520-65534 Private Use
+
+      Code            Description        Reference
+   0           Reserved                  [RFC8175]
+   1           Multi-Hop Forwarding      [RFC8629]
+   2           Control-Plane-Based Pause [RFC8651]
+   3           Link Identifiers          [RFC8703]
+   4           Latency Range             [RFC8757]
+   5-65519     Unassigned
+   65520-65534 Reserved for Private Use  [RFC8175]
+   65535       Reserved                  [RFC8175]
 
 IPv4 Connection Point Flags
 
@@ -198,7 +214,7 @@ IPv4 Connection Point Flags
 
    Expert(s)
 
- Stan Ratliff, Rick Taylor
+ Rick Taylor
 
    Reference
            [RFC8175]
@@ -219,7 +235,7 @@ IPv6 Connection Point Flags
 
    Expert(s)
 
- Stan Ratliff, Rick Taylor
+ Rick Taylor
 
    Reference
            [RFC8175]
@@ -240,7 +256,7 @@ Peer Type Flags
 
    Expert(s)
 
- Stan Ratliff, Rick Taylor
+ Rick Taylor
 
    Reference
            [RFC8175]
@@ -261,7 +277,7 @@ IPv4 Address Flags
 
    Expert(s)
 
- Stan Ratliff, Rick Taylor
+ Rick Taylor
 
    Reference
            [RFC8175]
@@ -282,7 +298,7 @@ IPv6 Address Flags
 
    Expert(s)
 
- Stan Ratliff, Rick Taylor
+ Rick Taylor
 
    Reference
            [RFC8175]
@@ -303,7 +319,7 @@ IPv4 Attached Subnet Flags
 
    Expert(s)
 
- Stan Ratliff, Rick Taylor
+ Rick Taylor
 
    Reference
            [RFC8175]
@@ -324,7 +340,7 @@ IPv6 Attached Subnet Flags
 
    Expert(s)
 
- Stan Ratliff, Rick Taylor
+ Rick Taylor
 
    Reference
            [RFC8175]
@@ -336,3 +352,53 @@ IPv6 Attached Subnet Flags
    Bit    Description     Reference
    0-6 Unassigned
    7   Add/Drop indicator [RFC8175]
+
+Hop Control Actions Values
+
+   Expert(s)
+
+ Rick Taylor
+
+   Reference
+           [RFC8629]
+
+   Available Formats
+           [IMG]
+           CSV
+
+      Range    Registration Procedures
+   4-65519     Specification Required
+   65520-65534 Private Use
+
+      Value             Action          Reference
+   0           Reset                    [RFC8629]
+   1           Terminate                [RFC8629]
+   2           Direct Connection        [RFC8629]
+   3           Suppress Forwarding      [RFC8629]
+   4-65519     Unassigned
+   65520-65534 Reserved for Private Use [RFC8629]
+   65535       Reserved                 [RFC8629]
+
+Queue Parameter Sub-Data Item Type Values
+
+   Expert(s)
+
+ Unassigned
+
+   Reference
+           [RFC8651]
+
+   Available Formats
+           [IMG]
+           CSV
+
+      Range    Registration Procedures
+   2-65407     Specification Required
+   65408-65534 Private Use
+
+    Type Code     Description/Policy    Reference
+   0           Reserved                 [RFC8651]
+   1           Queue Parameter          [RFC8651]
+   2-65407     Unassigned
+   65408-65534 Reserved for Private Use [RFC8651]
+   65535       Reserved                 [RFC8651]

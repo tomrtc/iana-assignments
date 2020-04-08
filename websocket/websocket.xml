@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="websocket">
   <title>WebSocket Protocol Registries</title>
   <created>2011-10-21</created>
-  <updated>2018-08-02</updated>
+  <updated>2020-03-19</updated>
 
   <registry id="extension-name">
     <title>WebSocket Extension Name Registry</title>
@@ -17,6 +17,14 @@
       <incompatible>None</incompatible>
       <xref type="rfc" data="rfc7692"/>
     </record>
+    <record date="2019-05-21" updated="2019-12-13">
+      <id>bbf-usp-protocol</id>
+      <common>BBF USP Protocol</common>
+      <definition><xref type="uri" data="https://usp.technology"/></definition>
+      <incompatible>None</incompatible>
+      <xref type="person" data="Broadband_Forum"/>
+      <controller/>
+    </record>
   </registry>
   
   <registry id="subprotocol-name">
@@ -24,9 +32,13 @@
     <registration_rule>First Come First Served</registration_rule>
     <xref type="rfc" data="rfc6455"/>
     <xref type="rfc" data="rfc7936"/>
+    <xref type="draft" data="RFC-ietf-mmusic-data-channel-sdpneg-28"/>
     <note>Please see Section 2 of <xref type="rfc" data="rfc7936"/>, which 
 clarifies that registrations which differ from existing registrations only 
 by case will be refused.
+    </note>
+    <note>This table also includes subprotocol identifiers specified for usage
+within a WebRTC data channel.
     </note>
     <record>
       <id>MBWS.huawei.com</id>
@@ -74,26 +86,32 @@ by case will be refused.
       <id>ocpp1.2</id>
       <common>OCPP 1.2</common>
       <definition><xref type="uri" data="http://www.gir.fr/ocppjs/ocpp_srpc_spec.shtml"/></definition>
-      <xref type="person" data="Patrick_Rademakers"/>
+      <xref type="person" data="Open_Charge_Alliance"/>
     </record>    
     <record date="2013-05-17">
       <id>ocpp1.5</id>
       <common>OCPP 1.5</common>
-      <definition><xref type="uri" data="http://www.gir.fr/ocppjs/ocpp_srpc_spec.shtml"/></definition>
-      <xref type="person" data="Patrick_Rademakers"/>
+      <definition><xref type="uri" data="https://www.openchargealliance.org/downloads/"/></definition>
+      <xref type="person" data="Open_Charge_Alliance"/>
     </record>
     <record date="2015-01-20">
       <id>ocpp1.6</id>
       <common>OCPP 1.6</common>
-      <definition><xref type="uri" data="http://www.gir.fr/ocppjs/ocpp_srpc_spec.shtml"/></definition>
-      <xref type="person" data="Patrick_Rademakers"/>
+      <definition><xref type="uri" data="https://www.openchargealliance.org/downloads/"/></definition>
+      <xref type="person" data="Open_Charge_Alliance"/>
     </record>  
     <record date="2013-05-17">
       <id>ocpp2.0</id>
       <common>OCPP 2.0</common>
-      <definition><xref type="uri" data="http://www.gir.fr/ocppjs/ocpp_srpc_spec.shtml"/></definition>
-      <xref type="person" data="Patrick_Rademakers"/>
-    </record>    
+      <definition><xref type="uri" data="https://www.openchargealliance.org/downloads/"/></definition>
+      <xref type="person" data="Open_Charge_Alliance"/>
+    </record>
+    <record date="2019-01-23">
+      <id>ocpp2.0.1</id>
+      <common>OCPP 2.0.1</common>
+      <definition><xref type="uri" data="https://www.openchargealliance.org/downloads/"/></definition>
+      <xref type="person" data="Open_Charge_Alliance"/>
+    </record>     
     <record date="2013-07-29">
       <id>rfb</id>
       <common>RFB</common>
@@ -124,11 +142,11 @@ by case will be refused.
       <definition><xref type="uri" data="http://docs.oasis-open.org/amqp-bindmap/amqp-wsb/v1.0/csprd02/amqp-wsb-v1.0-csprd02.pdf"/></definition>
       <xref type="person" data="Robin_Cover"/>
     </record>
-    <record date="2014-05-09">
+    <record date="2014-05-09" updated="2019-03-26">
       <id>mqtt</id>
       <common>mqtt</common>
-      <definition><xref type="uri" data="http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/csprd02/mqtt-v3.1.1-csprd02.html">MQTT Version 3.1.1</xref></definition>
-      <xref type="person" data="Robin_Cover"/>
+      <definition><xref type="uri" data="http://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html">MQTT Version 5.0</xref></definition>
+      <xref type="person" data="Chet_Ensign"/>
     </record>
     <record date="2014-09-30">
       <id>jsflow</id>
@@ -222,11 +240,11 @@ by case will be refused.
       <definition><xref type="uri" data="https://swindon-rs.github.io/swindon/swindon-lattice/"/></definition>
       <xref type="person" data="Paul_Colomiets"/>
     </record>
-    <record date="2017-09-28">
+    <record date="2017-09-28" updated="2019-12-13">
       <id>v1.usp</id>
       <common>USP (Broadband Forum User Services Platform)</common>
-      <definition><xref type="uri" data="https://github.com/BroadbandForum/usp"/></definition>
-      <xref type="person" data="Barbara_Stark"/>
+      <definition><xref type="uri" data="https://usp.technology/specification/mtp/websocket"/></definition>
+      <xref type="person" data="Broadband_Forum"/>
     </record>
     <record date="2017-11-02">
       <id>mles-websocket</id>
@@ -254,6 +272,88 @@ by case will be refused.
         of websocket is primarly geared towards cloud deployments. sqlnet 
         supports bi-directional data transfer and is full duplex in nature.</definition>
       <xref type="person" data="Feroz_Alam_Khan"/>
+    </record>
+    <record date="2018-09-20">
+      <id>oneM2M.R2.0.json</id>
+      <common>oneM2M R2.0 JSON</common>
+      <definition><xref type="uri" data="http://ftp.onem2m.org/Work%20Programme/WI-0040/TS-0020-WebSocket_Protocol_Binding-V2_2_0.ZIP"/></definition>
+      <xref type="person" data="Miguel_Angel_Reina_Ortega"/>
+    </record>
+    <record date="2018-09-20">
+      <id>oneM2M.R2.0.xml</id>
+      <common>oneM2M R2.0 XML</common>
+      <definition><xref type="uri" data="http://ftp.onem2m.org/Work%20Programme/WI-0040/TS-0020-WebSocket_Protocol_Binding-V2_2_0.ZIP"/></definition>
+      <xref type="person" data="Miguel_Angel_Reina_Ortega"/>
+    </record>
+    <record date="2018-09-20">
+      <id>oneM2M.R2.0.cbor</id>
+      <common>oneM2M R2.0 CBOR</common>
+      <definition><xref type="uri" data="http://ftp.onem2m.org/Work%20Programme/WI-0040/TS-0020-WebSocket_Protocol_Binding-V2_2_0.ZIP"/></definition>
+      <xref type="person" data="Miguel_Angel_Reina_Ortega"/>
+    </record>
+    <record date="2018-11-29">
+      <id>transit</id>
+      <common>Transit</common>
+      <definition><xref type="uri" data="https://github.com/Randy-Buchholz/Transit"/></definition>
+      <xref type="person" data="Randy_Buchholz"/>
+    </record>
+    <record date="2019-04-10">
+      <id>2016.serverpush.dash.mpeg.org</id>
+      <common>MPEG-DASH-ServerPush-23009-6-2017</common>
+      <definition><xref type="uri" data="https://www.iso.org/standard/71072.html"/></definition>
+      <xref type="person" data="Imed_Bouazizi"/>
+    </record>
+    <record date="2019-04-10">
+      <id>2018.mmt.mpeg.org</id>
+      <common>MPEG-MMT-23008-1-2018</common>
+      <definition><xref type="uri" data="https://www.iso.org/standard/76386.html"/></definition>
+      <xref type="person" data="Imed_Bouazizi"/>
+    </record>
+    <record date="2019-04-23">
+      <id>CLUE</id>
+      <common>CLUE</common>
+      <definition><xref type="draft" data="RFC-ietf-clue-datachannel-18"/></definition>
+      <xref type="draft" data="RFC-ietf-clue-datachannel-18"/>
+    </record>
+    <record date="2019-05-09" updated="2019-05-13">
+      <id>webrtc.softvelum.com</id>
+      <common>Softvelum WebSocket signaling protocol</common>
+      <definition>WebRTC live streaming requires WebSocket-based signaling protocol for 
+        every specific implementation. Softvelum products will use this subprotocol for 
+        signaling.</definition>
+      <xref type="person" data="Yury_Udovichenko"/>
+    </record>
+    <record date="2019-11-13">
+      <id>cobra.v2.json</id>
+      <common>Cobra Real Time Messaging Protocol</common>
+      <definition><xref type="uri" data="https://machinezone.github.io/cobra/api/"/></definition>
+      <xref type="person" data="Benjamin_Sergeant"/>
+    </record>
+    <record date="2019-12-03">
+      <id>drp</id>
+      <common>Declarative Resource Protocol</common>
+      <definition><xref type="uri" data="https://github.com/adhdtech/DRP"/></definition>
+      <xref type="person" data="Pete_Brown"/>
+    </record>
+    <record date="2019-12-19">
+      <id>hub.bsc.bacnet.org</id>
+      <common>BACnet Secure Connect Hub Connection</common>
+      <definition><xref type="uri" data="https://www.ashrae.org/File%20Library/Technical%20Resources/Standards%20and%20Guidelines/Standards%20Addenda/135_2016_bj_20191118.pdf">Addendum BJ to ANSI/ASHRAE Standard 135-2016</xref></definition>
+      <xref type="person" data="Bernhard_Isler"/>
+      <controller><xref type="person" data="ASHRAE"/></controller>
+    </record>
+    <record date="2019-12-19">
+      <id>dc.bsc.bacnet.org</id>
+      <common>BACnet Secure Connect Direct Connection</common>
+      <definition><xref type="uri" data="https://www.ashrae.org/File%20Library/Technical%20Resources/Standards%20and%20Guidelines/Standards%20Addenda/135_2016_bj_20191118.pdf">Addendum BJ to ANSI/ASHRAE Standard 135-2016</xref></definition>
+      <xref type="person" data="Bernhard_Isler"/>
+      <controller><xref type="person" data="ASHRAE"/></controller>
+    </record>
+    <record date="2020-03-19">
+      <id>jmap</id>
+      <common>WebSocket Transport for JMAP (JSON Meta Application Protocol)</common>
+      <definition><xref type="draft" data="RFC-ietf-jmap-websocket-07"/></definition>
+      <xref type="draft" data="RFC-ietf-jmap-websocket-07"/>
     </record>
   </registry>
 
@@ -539,10 +639,30 @@ by case will be refused.
       <uri>mailto:westermann&amp;eebus.org</uri>
       <updated>2014-11-06</updated>
     </person>
-    <person id="Barbara_Stark">
-      <name>Barbara Stark</name>
-      <uri>mailto:bs7652&amp;att.com</uri>
-      <updated>2017-09-28</updated>
+    <person id="ASHRAE">
+      <name>ASHRAE Inc.</name>
+      <uri>mailto:standards.section&amp;ashrae.org</uri>
+      <updated>2019-12-20</updated>
+    </person>
+    <person id="Benjamin_Sergeant">
+      <name>Benjamin Sergeant</name>
+      <uri>mailto:bsergean&amp;gmail.com</uri>
+      <updated>2019-11-13</updated>
+    </person>
+    <person id="Bernhard_Isler">
+      <name>Bernhard Isler</name>
+      <uri>mailto:bernhard.isler&amp;siemens.com</uri>
+      <updated>2019-12-19</updated>
+    </person>
+    <person id="Broadband_Forum">
+      <name>Broadband Forum</name>
+      <uri>mailto:help&amp;broadband-forum.org</uri>
+      <updated>2019-12-13</updated>
+    </person>
+    <person id="Chet_Ensign">
+      <name>Chet Ensign</name>
+      <uri>mailto:chet.ensign&amp;oasis-open.org</uri>
+      <updated>2019-03-26</updated>
     </person>
     <person id="Dario_Crivelli">
       <name>Dario Crivelli</name>
@@ -558,6 +678,11 @@ by case will be refused.
       <name>IESG HYBI WG</name>
       <uri>mailto:hybi&amp;ietf.org</uri>
       <updated>2011-12</updated>
+    </person>
+    <person id="Imed_Bouazizi">
+      <name>Imed_Bouazizi</name>
+      <uri>mailto:i.bouazizi&amp;samsung.com</uri>
+      <updated>2019-04-10</updated>
     </person>
     <person id="Jeff_Mesnil">
       <name>Jeff Mesnil</name>
@@ -589,6 +714,11 @@ by case will be refused.
       <uri>mailto:masoud.aghadavoodi.jolfaei&amp;sap.com</uri>
       <updated>2015-07-30</updated>
     </person>
+    <person id="Miguel_Angel_Reina_Ortega">
+      <name>Miguel Angel Reina Ortega</name>
+      <uri>mailto:miguelangel.reinaortega&amp;etsi.org</uri>
+      <updated>2018-09-20</updated>
+    </person>
     <person id="Nils_Langhammer">
       <name>Nils Langhammer</name>
       <uri>mailto:nils.langhammer&amp;miele.de</uri>
@@ -604,15 +734,15 @@ by case will be refused.
       <uri>mailto:tcb&amp;opcfoundation.org</uri>
       <updated>2017-05-19</updated>
     </person>
+    <person id="Open_Charge_Alliance">
+      <name>Open Charge Alliance</name>
+      <uri>mailto:info&amp;openchargealliance.org</uri>
+      <updated>2019-01-23</updated>
+    </person>
     <person id="Patrick_Gansterer">
       <name>Patrick Gansterer</name>
       <uri>mailto:paroga&amp;paroga.com</uri>
       <updated>2014-10-16</updated>
-    </person>
-    <person id="Patrick_Rademakers">
-      <name>Patrick Rademakers</name>
-      <uri>mailto:Patrick.Rademakers&amp;ihomer.nl</uri>
-      <updated>2015-01-20</updated>
     </person>
     <person id="Paul_Batum">
       <name>Paul Batum</name>
@@ -623,6 +753,16 @@ by case will be refused.
       <name>Paul Colomiets</name>
       <uri>mailto:paul&amp;colomiets.name</uri>
       <updated>2017-07-05</updated>
+    </person>
+    <person id="Pete_Brown">
+      <name>Pete Brown</name>
+      <uri>mailto:jpbrown&amp;adhdtech.com</uri>
+      <updated>2019-12-03</updated>
+    </person>
+    <person id="Randy_Buchholz">
+      <name>Randy Buchholz</name>
+      <uri>mailto:me&amp;randybuchholz.com</uri>
+      <updated>2018-11-29</updated>
     </person>
     <person id="Robin_Cover">
       <name>Robin Cover</name>
@@ -647,7 +787,8 @@ by case will be refused.
     <person id="Yury_Udovichenko">
       <name>Yuri Udovichenko</name>
       <uri>mailto:connect&amp;softvelum.com</uri>
-      <updated>2017-04-17</updated>
+      <updated>2019-05-09</updated>
     </person>
   </people>
+
 </registry>

@@ -1,7 +1,7 @@
                                                                    Capability Codes
 
    Last Updated
-           2018-08-21
+           2020-03-20
 
    Available Formats
            [IMG]
@@ -23,7 +23,7 @@ Capability Codes
            CSV
 
     Range  Registration Procedures          Note
-    1-63   IETF Review
+   1-63    IETF Review
    64-127  First Come First Served
    128-255 Reserved for Private Use IANA does not assign
 
@@ -34,11 +34,10 @@ Capability Codes
       3    Outbound Route Filtering Capability                                                               [RFC5291]
       4    Multiple routes to a destination capability (deprecated)                                          [RFC8277]
       5    Extended Next Hop Encoding                                                                        [RFC5549]
-      6    BGP-Extended Message (TEMPORARY - registered 2015-09-30, extension registered 2018-08-21, expires [draft-ietf-idr-bgp-extended-messages]
-           2019-09-30)
+      6    BGP Extended Message                                                                              [RFC8654]
       7    BGPsec Capability                                                                                 [RFC8205]
       8    Multiple Labels Capability                                                                        [RFC8277]
-      9    BGP Role (TEMPORARY - registered 2018-03-29, expires 2019-03-29)                                  [draft-ietf-idr-bgp-open-policy]
+      9    BGP Role (TEMPORARY - registered 2018-03-29, extension registered 2020-03-20, expires 2021-03-29) [draft-ietf-idr-bgp-open-policy]
     10-63  Unassigned
      64    Graceful Restart Capability                                                                       [RFC4724]
      65    Support for 4-octet AS number capability                                                          [RFC6793]

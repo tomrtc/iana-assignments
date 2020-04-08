@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="pcep">
   <title>Path Computation Element Protocol (PCEP) Numbers</title>
   <created>2008-12-19</created>
-  <updated>2018-08-02</updated>
+  <updated>2020-04-01</updated>
   
   <registry id="pcep-messages">
     <title>PCEP Messages</title>
@@ -217,10 +217,17 @@
       <type-description>IPv6</type-description>
       <xref type="rfc" data="rfc8306"/>
     </record>
+    <record updated="2019-12-17">
+      <class-value>4</class-value>
+      <class-description>END-POINTS</class-description>
+      <type-value>5</type-value>
+      <type-description>Generalized Endpoint</type-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16">RFC-ietf-pce-gmpls-pcep-extensions-16, Section 2.5</xref>
+    </record>
     <record>
       <class-value>4</class-value>
       <class-description>END-POINTS</class-description>
-      <type-value>5-15</type-value>
+      <type-value>6-15</type-value>
       <type-description>Unassigned</type-description>
     </record>
     <record>
@@ -245,10 +252,25 @@
       <type-description>Bandwidth of an existing TE LSP for which a reoptimization is requested</type-description>
       <xref type="rfc" data="rfc5440"/>
     </record>
+    <record date="2019-12-17">
+      <class-value>5</class-value>
+      <class-description>BANDWIDTH</class-description>
+      <type-value>3</type-value>
+      <type-description>Generalized bandwidth</type-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16">RFC-ietf-pce-gmpls-pcep-extensions-16, Section 2.3</xref>
+    </record>
+    <record date="2019-12-17">
+      <class-value>5</class-value>
+      <class-description>BANDWIDTH</class-description>
+      <type-value>4</type-value>
+      <type-description>Generalized bandwidth of an existing TE-LSP for
+        which a reoptimization is requested</type-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16">RFC-ietf-pce-gmpls-pcep-extensions-16, Section 2.3</xref>
+    </record>
     <record>
       <class-value>5</class-value>
       <class-description>BANDWIDTH</class-description>
-      <type-value>3-15</type-value>
+      <type-value>5-15</type-value>
       <type-description>Unassigned</type-description>
     </record>
     <record>
@@ -434,10 +456,17 @@
       <type-description>Load Balancing</type-description>
       <xref type="rfc" data="rfc5440"/>
     </record>
+    <record date="2019-12-17">
+      <class-value>14</class-value>
+      <class-description>LOAD-BALANCING</class-description>
+      <type-value>2</type-value>
+      <type-description>Generalized Load Balancing</type-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16">RFC-ietf-pce-gmpls-pcep-extensions-16, Section 2.4</xref>
+    </record>
     <record>
       <class-value>14</class-value>
       <class-description>LOAD-BALANCING</class-description>
-      <type-value>2-15</type-value>
+      <type-value>3-15</type-value>
       <type-description>Unassigned</type-description>
     </record>
     <record>
@@ -970,26 +999,26 @@
       <type-value>2-15</type-value>
       <type-description>Unassigned</type-description>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2019-08-02">
       <class-value>40</class-value>
-      <class-description>ASSOCIATION (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</class-description>
+      <class-description>ASSOCIATION</class-description>
       <type-value>0</type-value>
-      <type-description>Reserved (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</type-description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <type-description>Reserved</type-description>
+      <xref type="rfc" data="rfc8697"/>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2019-08-02">
       <class-value>40</class-value>
-      <class-description>ASSOCIATION (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</class-description>
+      <class-description>ASSOCIATION</class-description>
       <type-value>1</type-value>
-      <type-description>IPv4 (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</type-description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <type-description>IPv4</type-description>
+      <xref type="rfc" data="rfc8697"/>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2019-08-02">
       <class-value>40</class-value>
-      <class-description>ASSOCIATION (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</class-description>
+      <class-description>ASSOCIATION</class-description>
       <type-value>2</type-value>
-      <type-description>IPv6 (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</type-description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <type-description>IPv6</type-description>
+      <xref type="rfc" data="rfc8697"/>
     </record>
     <record>
       <class-value>40</class-value>
@@ -999,21 +1028,17 @@
     </record>
     <record date="2018-04-23">
       <class-value>41</class-value>
-      <class-description>S2LS 
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</class-description>
+      <class-description>S2LS</class-description>
       <type-value>0</type-value>
-      <type-description>Reserved 
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</type-description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <type-description>Reserved</type-description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record date="2018-04-23">
       <class-value>41</class-value>
-      <class-description>S2LS 
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</class-description>
+      <class-description>S2LS</class-description>
       <type-value>1</type-value>
-      <type-description>S2LS 
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</type-description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <type-description>S2LS</type-description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record>
       <class-value>41</class-value>
@@ -1021,15 +1046,35 @@
       <type-value>2-15</type-value>
       <type-description>Unassigned</type-description>
     </record>
+    <record date="2019-03-25">
+      <class-value>42</class-value>
+      <class-description>WA</class-description>
+      <type-value>0</type-value>
+      <type-description>Reserved</type-description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-03-25">
+      <class-value>42</class-value>
+      <class-description>WA</class-description>
+      <type-value>1</type-value>
+      <type-description>Wavelength Assignment</type-description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
     <record>
-      <class-value>42-247</class-value>
+      <class-value>42</class-value>
+      <class-description>WA</class-description>
+      <type-value>2-15</type-value>
+      <type-description>Unassigned</type-description>
+    </record>
+    <record>
+      <class-value>43-247</class-value>
       <class-description>Unassigned</class-description>
       <type-value>0</type-value>
       <type-description>Reserved</type-description>
       <xref type="rfc-errata" data="4956"/>
     </record>
     <record>
-      <class-value>41-247</class-value>
+      <class-value>43-247</class-value>
       <class-description>Unassigned</class-description>
       <type-value>1-15</type-value>
       <type-description>Unassigned</type-description>
@@ -1071,8 +1116,13 @@
     <registration_rule>IETF Review</registration_rule>
     <note>Bits are numbered from bit 0 as the most significant bit.</note>
     <record>
-      <value>0-16</value>
+      <value>0-14</value>
       <description>Unassigned</description>
+    </record>
+    <record date="2014-06-23">
+      <value>15-16</value>
+      <description>routing granularity (RG)</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16">RFC-ietf-pce-gmpls-pcep-extensions-16, Section 2.2</xref>
     </record>
     <record date="2014-06-23">
       <value>17</value>
@@ -1236,10 +1286,10 @@
       <description>P2MP hop count metric</description>
       <xref type="rfc" data="rfc8306"/>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2019-03-15">
       <value>11</value>
-      <description>Segment-ID (SID) Depth. (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</description>
-      <xref type="draft" data="draft-ietf-pce-segment-routing"/>
+      <description>Segment-ID (SID) Depth.</description>
+      <xref type="rfc" data="rfc8664"/>
     </record>
     <record date="2016-09-28">
       <value>12</value>
@@ -1281,8 +1331,18 @@
       <description>Number of layers on a path</description>
       <xref type="rfc" data="rfc8282"/>
     </record>
+    <record date="2019-06-13">
+      <value>20</value>
+      <description>Domain Count metric</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <value>21</value>
+      <description>Border Node Count metric</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
     <record>
-      <value>20-255</value>
+      <value>22-255</value>
       <description>Unassigned</description>
     </record>
   </registry>
@@ -1365,8 +1425,23 @@
       <xref type="rfc" data="rfc7897"/>
       <xref type="rfc" data="rfc7898"/>
     </record>
+    <record date="2019-03-26">
+      <value>8</value>
+      <description>Optical Interface Class List</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-03-26">
+      <value>9</value>
+      <description>Client Signal Information</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-12-17">
+      <value>10</value>
+      <description>Label subobject</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
     <record>
-      <value>8-31</value>
+      <value>11-31</value>
       <description>Unassigned</description>
     </record>
     <record>
@@ -1391,8 +1466,13 @@
     <registration_rule>IETF Review</registration_rule>
     <note>Bits are numbered from bit 0 as the most significant bit.</note>
     <record>
-      <value>0-18</value>
+      <value>0-17</value>
       <description>Unassigned</description>
+    </record>
+    <record date="2019-06-13">
+      <value>18</value>
+      <description>Domain Diverse O-bit</description>
+      <xref type="rfc" data="rfc8685"/>
     </record>
     <record updated="2017-10-16">
       <value>19</value>
@@ -1505,7 +1585,33 @@
       <value-description>Unassigned</value-description>
     </record>
     <record>
-      <type-value>5-255</type-value>
+      <type-value>5</type-value>
+      <type-description>Auto-Bandwidth Overwhelm State</type-description>
+      <value-value>0</value-value>
+      <value-description>Unassigned</value-description>
+    </record>
+    <record date="2019-10-08">
+      <type-value>5</type-value>
+      <type-description>Auto-Bandwidth Overwhelm State</type-description>
+      <value-value>1</value-value>
+      <value-description>Entering Auto-Bandwidth Overwhelm State</value-description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <type-value>5</type-value>
+      <type-description>Auto-Bandwidth Overwhelm State</type-description>
+      <value-value>2</value-value>
+      <value-description>Clearing Auto-Bandwidth Overwhelm State</value-description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record>
+      <type-value>5</type-value>
+      <type-description>Auto-Bandwidth Overwhelm State</type-description>
+      <value-value>3-255</value-value>
+      <value-description>Unassigned</value-description>
+    </record>
+    <record>
+      <type-value>6-255</type-value>
       <type-description>Unassigned</type-description>
       <value-value>1-255</value-value>
       <value-description>Unassigned</value-description>
@@ -1679,10 +1785,38 @@
       <value-description>Unsupported network performance constraint</value-description>
       <xref type="rfc" data="rfc8233"/>
     </record>
+    <record date="2019-12-17">
+      <type-value>4</type-value>
+      <type-description>Not supported object</type-description>
+      <value-value>6</value-value>
+      <value-description>Bandwidth Object type 3 or 4 not supported</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>4</type-value>
+      <type-description>Not supported object</type-description>
+      <value-value>7</value-value>
+      <value-description>Unsupported endpoint type in END-POINTS Generalized Endpoint object type</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>4</type-value>
+      <type-description>Not supported object</type-description>
+      <value-value>8</value-value>
+      <value-description>Unsupported TLV present in END-POINTS Generalized Endpoint object type</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>4</type-value>
+      <type-description>Not supported object</type-description>
+      <value-value>9</value-value>
+      <value-description>Unsupported granularity in the RP object flags</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
     <record>
       <type-value>4</type-value>
       <type-description>Not supported object</type-description>
-      <value-value>6-255</value-value>
+      <value-value>10-255</value-value>
       <value-description>Unassigned</value-description>
     </record>
     <record>
@@ -1834,22 +1968,27 @@
       <type-value>6</type-value>
       <type-description>Mandatory Object missing</type-description>
       <value-value>13</value-value>
-      <value-description>S2LS object missing
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <value-description>S2LS object missing</value-description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record date="2018-04-23">
       <type-value>6</type-value>
       <type-description>Mandatory Object missing</type-description>
       <value-value>14</value-value>
-      <value-description>P2MP-LSP-IDENTIFIER TLV missing
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <value-description>P2MP-LSP-IDENTIFIERS TLV missing</value-description>
+      <xref type="rfc" data="rfc8623"/>
+    </record>
+    <record date="2020-02-11">
+      <type-value>6</type-value>
+      <type-description>Mandatory Object missing</type-description>
+      <value-value>15</value-value>
+      <value-description>DISJOINTNESS-CONFIGURATION TLV missing</value-description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
     </record>
     <record>
       <type-value>6</type-value>
       <type-description>Mandatory Object missing</type-description>
-      <value-value>15-255</value-value>
+      <value-value>16-255</value-value>
       <value-description>Unassigned</value-description>
     </record>
     <record>
@@ -1887,47 +2026,47 @@
       <value-description>reception of an object with P flag not set although the P-flag must be set according to this specification.</value-description>
       <xref type="rfc" data="rfc5440"/>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2019-03-15">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>2</value-value>
-      <value-description>Bad label value (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
-      <xref type="draft" data="draft-ietf-pce-segment-routing"/>
+      <value-description>Bad label value</value-description>
+      <xref type="rfc" data="rfc8664"/>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2019-03-15">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>3</value-value>
-      <value-description>Unsupported number of Segment ERO subobjects (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
-      <xref type="draft" data="draft-ietf-pce-segment-routing"/>
+      <value-description>Unsupported number of SR-ERO subobjects</value-description>
+      <xref type="rfc" data="rfc8664"/>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2019-03-15">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>4</value-value>
-      <value-description>Bad label format (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
-      <xref type="draft" data="draft-ietf-pce-segment-routing"/>
+      <value-description>Bad label format</value-description>
+      <xref type="rfc" data="rfc8664"/>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2019-03-15">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>5</value-value>
-      <value-description>Non-identical ERO subobjects (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
-      <xref type="draft" data="draft-ietf-pce-segment-routing"/>
+      <value-description>ERO mixes SR-ERO subobjects with other subobject types</value-description>
+      <xref type="rfc" data="rfc8664"/>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2019-03-15">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>6</value-value>
-      <value-description>Both SID and NAI are absent in ERO subobject (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
-      <xref type="draft" data="draft-ietf-pce-segment-routing"/>
+      <value-description>Both SID and NAI are absent in the SR-ERO subobject</value-description>
+      <xref type="rfc" data="rfc8664"/>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2019-03-15">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>7</value-value>
-      <value-description>Both SID and NAI are absent in RRO subobject (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
-      <xref type="draft" data="draft-ietf-pce-segment-routing"/>
+      <value-description>Both SID and NAI are absent in the SR-RRO subobject</value-description>
+      <xref type="rfc" data="rfc8664"/>
     </record>
     <record date="2016-07-27" updated="2017-10-18">
       <type-value>10</type-value>
@@ -1936,19 +2075,21 @@
       <value-description>SYMBOLIC-PATH-NAME TLV missing</value-description>
       <xref type="rfc" data="rfc8281"/>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2019-03-15">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>9</value-value>
-      <value-description>Default MSD is specified for the PCEP session (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
-      <xref type="draft" data="draft-ietf-pce-segment-routing"/>
+      <value-description>MSD exceeds the
+        default for the PCEP session</value-description>
+      <xref type="rfc" data="rfc8664"/>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2019-03-15">
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
       <value-value>10</value-value>
-      <value-description>Non-identical RRO subjects (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</value-description>
-      <xref type="draft" data="draft-ietf-pce-segment-routing"/>
+      <value-description>RRO mixes SR-RRO
+        subobjects with other subobject types</value-description>
+      <xref type="rfc" data="rfc8664"/>
     </record>
     <record date="2015-08-14" updated="2018-05-11">
       <type-value>10</type-value>
@@ -1957,10 +2098,161 @@
       <value-description>Malformed object</value-description>
       <xref type="rfc" data="rfc8408"/>
     </record>
+    <record date="2019-03-15">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>12</value-value>
+      <value-description>Missing PCE-SR-CAPABILITY sub-TLV</value-description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>13</value-value>
+      <value-description>Unsupported NAI Type in the SR-ERO/SR-RRO subobject</value-description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid objectD</type-description>
+      <value-value>14</value-value>
+      <value-description>Unknown SID</value-description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>15</value-value>
+      <value-description>NAI cannot be resolved to a SID</value-description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>16</value-value>
+      <value-description>Could not find SRGB</value-description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <type-value>10</type-value>
+      <type-description>UReception of an invalid object</type-description>
+      <value-value>17</value-value>
+      <value-description>SID index exceeds SRGB size</value-description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>18</value-value>
+      <value-description>Could not find SRLB</value-description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>19</value-value>
+      <value-description>SID index exceeds SRLB size</value-description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>20</value-value>
+      <value-description>Inconsistent SIDs in SR-ERO / SR-RRO subobjects</value-description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>21</value-value>
+      <value-description>MSD must be nonzero</value-description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-05-10">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>22</value-value>
+      <value-description>Mismatch of O field in S2LS and LSP object</value-description>
+      <xref type="rfc" data="rfc8623"/>
+    </record>
+    <record date="2019-06-13">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>23</value-value>
+      <value-description>Incompatible OF codes in H-PCE</value-description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>24</value-value>
+      <value-description>Bad Bandwidth Object type 3 (Generalized bandwidth) or 
+        4 (Generalized bandwidth of existing
+        TE-LSP for which a reoptimization is
+        requested)</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>25</value-value>
+      <value-description>Unsupported LSP Protection Flags in 
+        PROTECTION-ATTRIBUTE TLV</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>26</value-value>
+      <value-description>Unsupported Secondary LSP Protection Flags in PROTECTION-ATTRIBUTE TLV</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>27</value-value>
+      <value-description>Unsupported Link Protection Type in PROTECTION-ATTRIBUTE TLV</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>28</value-value>
+      <value-description>LABEL-SET TLV present with 0 bit set but without R bit set in RP</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>29</value-value>
+      <value-description>Wrong LABEL-SET TLV present with 0 and L bit set</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>30</value-value>
+      <value-description>Wrong LABEL-SET with O bit set and wrong format</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>31</value-value>
+      <value-description>Missing GMPLS-CAPABILITY TLV</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2020-02-11">
+      <type-value>10</type-value>
+      <type-description>Reception of an invalid object</type-description>
+      <value-value>32</value-value>
+      <value-description>Incompatible OF code</value-description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
     <record>
       <type-value>10</type-value>
       <type-description>Reception of an invalid object</type-description>
-      <value-value>12-255</value-value>
+      <value-value>33-255</value-value>
       <value-description>Unassigned</value-description>
     </record>
     <record>
@@ -2144,25 +2436,22 @@
       <type-value>18</type-value>
       <type-description>P2MP Fragmentation Error</type-description>
       <value-value>2</value-value>
-      <value-description>Fragmented Report failure
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <value-description>Fragmented Report failure</value-description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record updated="2018-04-23">
       <type-value>18</type-value>
       <type-description>P2MP Fragmentation Error</type-description>
       <value-value>3</value-value>
-      <value-description>Fragmented Update failure
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <value-description>Fragmented Update failure</value-description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record updated="2018-04-23">
       <type-value>18</type-value>
       <type-description>P2MP Fragmentation Error</type-description>
       <value-value>4</value-value>
-      <value-description>Fragmented Instantiation failure
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <value-description>Fragmented Instantiation failure</value-description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record>
       <type-value>18</type-value>
@@ -2255,18 +2544,16 @@
       <type-description>Invalid Operation</type-description>
       <value-value>11</value-value>
       <value-description>Attempted LSP State Report
-        for P2MP if stateful PCE capability for P2MP was not advertised
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+        for P2MP if stateful PCE capability for P2MP was not advertised</value-description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record date="2018-04-23">
       <type-value>19</type-value>
       <type-description>Invalid Operation</type-description>
       <value-value>12</value-value>
       <value-description>Attempted LSP Update Request
-        for P2MP if active stateful PCE capability for P2MP was not advertised
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+        for P2MP if active stateful PCE capability for P2MP was not advertised</value-description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record date="2018-04-23">
       <type-value>19</type-value>
@@ -2274,14 +2561,20 @@
       <value-value>13</value-value>
       <value-description>Attempted LSP Instantiation
         Request for P2MP if stateful PCE
-        instantiation capability for P2MP was not advertised
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</value-description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+        instantiation capability for P2MP was not advertised</value-description>
+      <xref type="rfc" data="rfc8623"/>
+    </record>
+    <record date="2019-10-08">
+      <type-value>19</type-value>
+      <type-description>Invalid Operation</type-description>
+      <value-value>14</value-value>
+      <value-description>Auto-Bandwidth capability was not advertised</value-description>
+      <xref type="rfc" data="rfc8733"/>
     </record>
     <record date="2016-07-27" updated="2017-06-26">
       <type-value>19</type-value>
       <type-description>Invalid Operation</type-description>
-      <value-value>14-255</value-value>
+      <value-value>15-255</value-value>
       <value-description>Unassigned</value-description>
     </record>
     <record date="2016-07-27">
@@ -2494,71 +2787,200 @@
       <value-value>6-255</value-value>
       <value-description>Unassigned</value-description>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2019-08-02">
       <type-value>26</type-value>
-      <type-description>Association Error (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</type-description>
+      <type-description>Association Error</type-description>
       <value-value>0</value-value>
       <value-description>Unassigned</value-description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <xref type="rfc" data="rfc8697"/>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2020-01-23">
       <type-value>26</type-value>
-      <type-description>Association Error (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</type-description>
+      <type-description>Association Error</type-description>
       <value-value>1</value-value>
-      <value-description>Association-type is not supported (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</value-description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <value-description>Association Type is not supported</value-description>
+      <xref type="rfc" data="rfc8697"/>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2019-08-02">
       <type-value>26</type-value>
-      <type-description>Association Error (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</type-description>
+      <type-description>Association Error</type-description>
       <value-value>2</value-value>
-      <value-description>Too many LSPs in the association group (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</value-description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <value-description>Too many LSPs in the association group</value-description>
+      <xref type="rfc" data="rfc8697"/>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2019-08-02">
       <type-value>26</type-value>
-      <type-description>Association Error (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</type-description>
+      <type-description>Association Error</type-description>
       <value-value>3</value-value>
-      <value-description>Too many association groups (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</value-description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <value-description>Too many association groups</value-description>
+      <xref type="rfc" data="rfc8697"/>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2019-08-02">
       <type-value>26</type-value>
-      <type-description>Association Error (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</type-description>
+      <type-description>Association Error</type-description>
       <value-value>4</value-value>
-      <value-description>Association unknown (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</value-description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <value-description>Association unknown</value-description>
+      <xref type="rfc" data="rfc8697"/>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2019-08-02">
       <type-value>26</type-value>
-      <type-description>Association Error (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</type-description>
+      <type-description>Association Error</type-description>
       <value-value>5</value-value>
-      <value-description>Operator-configured association information mismatch (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</value-description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <value-description>Operator-configured association information mismatch</value-description>
+      <xref type="rfc" data="rfc8697"/>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2019-08-02">
       <type-value>26</type-value>
-      <type-description>Association Error (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</type-description>
+      <type-description>Association Error</type-description>
       <value-value>6</value-value>
-      <value-description>Association information mismatch (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</value-description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <value-description>Association information mismatch</value-description>
+      <xref type="rfc" data="rfc8697"/>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2019-08-02">
       <type-value>26</type-value>
-      <type-description>Association Error (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</type-description>
+      <type-description>Association Error</type-description>
       <value-value>7</value-value>
-      <value-description>Cannot join the association group (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</value-description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <value-description>Cannot join the association group</value-description>
+      <xref type="rfc" data="rfc8697"/>
     </record>
-    <record date="2017-10-17">
+    <record date="2019-08-02" updated="2020-01-23">
       <type-value>26</type-value>
-      <type-description>Association Error (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</type-description>
-      <value-value>8-255</value-value>
-      <value-description>Unassigned</value-description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <type-description>Association Error</type-description>
+      <value-value>8</value-value>
+      <value-description>Association ID not in range</value-description>
+      <xref type="rfc" data="rfc8697"/>
+    </record>
+    <record date="2019-10-23">
+      <type-value>26</type-value>
+      <type-description>Association Error</type-description>
+      <value-value>9</value-value>
+      <value-description>Tunnel ID or End points mismatch for
+        Path Protection Association</value-description>
+      <xref type="rfc" data="rfc8745"/>
+    </record>
+    <record date="2019-10-23">
+      <type-value>26</type-value>
+      <type-description>Association Error</type-description>
+      <value-value>10</value-value>
+      <value-description>Attempt to add another working/protection LSP 
+        for Path Protection Association</value-description>
+      <xref type="rfc" data="rfc8745"/>
+    </record>
+    <record date="2019-10-23">
+      <type-value>26</type-value>
+      <type-description>Association Error</type-description>
+      <value-value>11</value-value>
+      <value-description>Protection type is not supported</value-description>
+      <xref type="rfc" data="rfc8745"/>
     </record>
     <record>
-      <type-value>27-255</type-value>
+      <type-value>26</type-value>
+      <type-description>Association Error</type-description>
+      <value-value>12-255</value-value>
+      <value-description>Unassigned</value-description>
+    </record>
+    <record date="2019-03-25">
+      <type-value>27</type-value>
+      <type-description>WSON RWA Error</type-description>
+      <value-value>0</value-value>
+      <value-description>Unassigned</value-description>
+    </record>
+    <record date="2019-03-25">
+      <type-value>27</type-value>
+      <type-description>WSON RWA Error</type-description>
+      <value-value>1</value-value>
+      <value-description>Insufficient Memory</value-description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-03-25">
+      <type-value>27</type-value>
+      <type-description>WSON RWA Error</type-description>
+      <value-value>2</value-value>
+      <value-description>RWA computation Not supported</value-description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-03-25">
+      <type-value>27</type-value>
+      <type-description>WSON RWA Error</type-description>
+      <value-value>3</value-value>
+      <value-description>Syntactical Encoding error</value-description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-03-25">
+      <type-value>27</type-value>
+      <type-description>WSON RWA Error</type-description>
+      <value-value>4-255</value-value>
+      <value-description>Unassigned</value-description>
+    </record>
+    <record date="2019-06-13">
+      <type-value>28</type-value>
+      <type-description>H-PCE Error</type-description>
+      <value-value>0</value-value>
+      <value-description>Unassigned</value-description>
+    </record>
+    <record date="2019-06-13">
+      <type-value>28</type-value>
+      <type-description>H-PCE Error</type-description>
+      <value-value>1</value-value>
+      <value-description>H-PCE Capability not advertised</value-description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <type-value>28</type-value>
+      <type-description>H-PCE Error</type-description>
+      <value-value>2</value-value>
+      <value-description>Parent PCE Capability cannot be provided</value-description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record>
+      <type-value>28</type-value>
+      <type-description>H-PCE Error</type-description>
+      <value-value>3-255</value-value>
+      <value-description>Unassigned</value-description>
+    </record>
+    <record date="2019-12-17">
+      <type-value>29</type-value>
+      <type-description>Path computation failure</type-description>
+      <value-value>0</value-value>
+      <value-description>Unassigned</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>29</type-value>
+      <type-description>Path computation failure</type-description>
+      <value-value>1</value-value>
+      <value-description>Unacceptable request message</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>29</type-value>
+      <type-description>Path computation failure</type-description>
+      <value-value>2</value-value>
+      <value-description>Generalized bandwidth value not supported</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>29</type-value>
+      <type-description>Path computation failure</type-description>
+      <value-value>3</value-value>
+      <value-description>Label Set constraint could not be met</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>29</type-value>
+      <type-description>Path computation failure</type-description>
+      <value-value>4</value-value>
+      <value-description>Label constraint could not be met</value-description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <type-value>29</type-value>
+      <type-description>Path computation failure</type-description>
+      <value-value>5-255</value-value>
+      <value-description>Unassigned</value-description>
+    </record>
+    <record>
+      <type-value>30-255</type-value>
       <type-description>Unassigned</type-description>
       <value-value>0-255</value-value>
       <value-description>Unassigned</value-description>
@@ -2703,8 +3125,23 @@
       <xref type="rfc" data="rfc7897"/>
       <xref type="rfc" data="rfc7898"/>
     </record>
+    <record date="2019-03-26">
+      <value>8</value>
+      <description>Optical Interface Class List</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-03-26">
+      <value>9</value>
+      <description>Client Signal Information</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-12-17">
+      <value>10</value>
+      <description>Label subobject</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
     <record>
-      <value>8-31</value>
+      <value>11-31</value>
       <description>Unassigned</description>
     </record>
     <record>
@@ -2832,8 +3269,38 @@
       <description>Maximum Reserved Under-Utilized Path (MRUP)</description>
       <xref type="rfc" data="rfc8233"/>
     </record>
+    <record date="2019-06-13">
+      <value>12</value>
+      <description>Minimize the number of Transit Domains (MTD)</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <value>13</value>
+      <description>Minimize the number of Border Nodes (MBN)</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <value>14</value>
+      <description>Minimize the number of Common Transit Domains (MCTD)</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2020-02-11">
+      <value>15</value>
+      <description>Minimize the number of shared Links (MSL)</description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
+    <record date="2020-02-11">
+      <value>16</value>
+      <description>Minimize the number of shared SRLGs (MSS)</description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
+    <record date="2020-02-11">
+      <value>17</value>
+      <description>Minimize the number of shared Nodes (MSN)</description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
     <record>
-      <value>12-32767</value>
+      <value>18-32767</value>
       <description>Unassigned</description>
     </record>
     <record>
@@ -2894,9 +3361,45 @@
       <description>VENDOR-INFORMATION-TLV</description>
       <xref type="rfc" data="rfc7470"/>
     </record>
-    <record>
-      <value>8-15</value>
-      <description>Unassigned</description>
+    <record date="2019-03-25">
+      <value>8</value>
+      <description>Wavelength Selection</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-03-25">
+      <value>9</value>
+      <description>Wavelength Restriction</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-03-25">
+      <value>10</value>
+      <description>Wavelength Allocation</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-03-25">
+      <value>11</value>
+      <description>Optical Interface Class List</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-03-25">
+      <value>12</value>
+      <description>Client Signal Information</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-06-13">
+      <value>13</value>
+      <description>H-PCE-CAPABILITY</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <value>14</value>
+      <description>Domain-ID</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <value>15</value>
+      <description>H-PCE-FLAG</description>
+      <xref type="rfc" data="rfc8685"/>
     </record>
     <record date="2016-07-27" updated="2017-06-26">
       <value>16</value>
@@ -2946,10 +3449,10 @@
       <value>25</value>
       <description>Unassigned</description>
     </record>
-    <record date="2015-08-14">
+    <record date="2015-08-14" updated="2019-03-15">
       <value>26</value>
-      <description>SR-PCE-CAPABILITY (TEMPORARY - registered 2015-08-14, extension registered 2018-08-02, expires 2019-08-14)</description>
-      <xref type="draft" data="draft-ietf-pce-segment-routing"/>
+      <description>SR-PCE-CAPABILITY (deprecated)</description>
+      <xref type="rfc" data="rfc8664"/>
     </record>
     <record>
       <value>27</value>
@@ -2960,40 +3463,103 @@
       <description>PATH-SETUP-TYPE</description>
       <xref type="rfc" data="rfc8408"/>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2019-08-02">
       <value>29</value>
-      <description>Operator-configured Association Range (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <description>Operator-configured Association Range</description>
+      <xref type="rfc" data="rfc8697"/>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2019-08-02">
       <value>30</value>
-      <description>Global Association Source (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <description>Global Association Source</description>
+      <xref type="rfc" data="rfc8697"/>
     </record>
-    <record date="2017-10-17">
+    <record date="2017-10-17" updated="2019-08-02">
       <value>31</value>
-      <description>Extended Association Id (TEMPORARY - registered 2017-10-17, expires 2018-10-17)</description>
-      <xref type="draft" data="draft-ietf-pce-association-group"/>
+      <description>Extended Association ID</description>
+      <xref type="rfc" data="rfc8697"/>
     </record>
     <record date="2018-04-23">
       <value>32</value>
-      <description>P2MP-IPV4-LSP-IDENTIFIERS
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <description>P2MP-IPV4-LSP-IDENTIFIERS</description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record date="2018-04-23">
       <value>33</value>
-      <description>P2MP-IPV6-LSP-IDENTIFIERS
-        (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <description>P2MP-IPV6-LSP-IDENTIFIERS</description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record date="2018-05-11">
       <value>34</value>
       <description>PATH-SETUP-TYPE-CAPABILITY</description>
       <xref type="rfc" data="rfc8408"/>
     </record>
+    <record date="2019-08-02">
+      <value>35</value>
+      <description>ASSOC-Type-List</description>
+      <xref type="rfc" data="rfc8697"/>
+    </record>
+    <record date="2019-10-08">
+      <value>36</value>
+      <description>AUTO-BANDWIDTH-CAPABILITY</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>37</value>
+      <description>AUTO-BANDWIDTH-ATTRIBUTES</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-23">
+      <value>38</value>
+      <description>Path Protection Association Group TLV</description>
+      <xref type="rfc" data="rfc8745"/>
+    </record>
+    <record date="2019-12-17">
+      <value>39</value>
+      <description>IPV4-ADDRESS</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16">RFC-ietf-pce-gmpls-pcep-extensions-16, Section 2.5.2.1</xref>
+    </record>
+    <record date="2019-12-17">
+      <value>40</value>
+      <description>IPV6-ADDRESS</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16">RFC-ietf-pce-gmpls-pcep-extensions-16, Section 2.5.2.2</xref>
+    </record>
+    <record date="2019-12-17">
+      <value>41</value>
+      <description>UNNUMBERED-ENDPOINT</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16">RFC-ietf-pce-gmpls-pcep-extensions-16, Section 2.5.2.3</xref>
+    </record>
+    <record date="2019-12-17">
+      <value>42</value>
+      <description>LABEL-REQUEST</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16">RFC-ietf-pce-gmpls-pcep-extensions-16, Section 2.5.2.4</xref>
+    </record>
+    <record date="2019-12-17">
+      <value>43</value>
+      <description>LABEL-SET</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16">RFC-ietf-pce-gmpls-pcep-extensions-16, Section 2.5.2.5</xref>
+    </record>
+    <record date="2019-12-17">
+      <value>44</value>
+      <description>PROTECTION-ATTRIBUTE</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16">RFC-ietf-pce-gmpls-pcep-extensions-16, Section 2.8</xref>
+    </record>
+    <record date="2019-12-17">
+      <value>45</value>
+      <description>GMPLS-CAPABILITY</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16">RFC-ietf-pce-gmpls-pcep-extensions-16, Section 2.1.2</xref>
+    </record>
+    <record date="2020-02-11">
+      <value>46</value>
+      <description>Disjointness Configuration</description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
+    <record date="2020-02-11">
+      <value>47</value>
+      <description>Disjointness Status</description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
     <record>
-      <value>35-65503</value>
+      <value>48-65503</value>
       <description>Unassigned</description>
     </record>
     <record>
@@ -3009,8 +3575,79 @@
     <registration_rule>IETF Review</registration_rule>
     <note>Bits are numbered from bit 0 as the most significant bit.</note>
     <record>
-      <value>0-23</value>
+      <value>0-9</value>
       <description>Unassigned</description>
+    </record>
+    <record date="2020-02-11">
+      <value>10</value>
+      <description>Requested disjoint computation not supported</description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
+    <record date="2020-02-11">
+      <value>11</value>
+      <description>Disjoint path not found</description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
+    <record date="2019-12-17">
+      <value>12</value>
+      <description>LOAD-BALANCING could not be performed with the
+        bandwidth constraints</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <value>13</value>
+      <description>No label resource in range</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <value>14</value>
+      <description>No endpoint label resource in range</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <value>15</value>
+      <description>No endpoint label resource</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <value>16</value>
+      <description>Granularity not supported</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <value>17</value>
+      <description>No Resource</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <value>18</value>
+      <description>Protection Mismatch</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-06-13">
+      <value>19</value>
+      <description>Destination is not found in the indicated domain</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <value>20</value>
+      <description>No available resource in one or more domains</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <value>21</value>
+      <description>Unresponsive child PCE(s)</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <value>22</value>
+      <description>Destination domain unknown</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record updated="2019-03-25">
+      <value>23</value>
+      <description>No RWA constraints met</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
     </record>
     <record updated="2017-10-16">
       <value>24</value>
@@ -3177,18 +3814,23 @@
     <registration_rule>Standards Action</registration_rule>
     <note>Bits are numbered from bit 0 as the most significant bit.</note>
     <record date="2017-06-26" updated="2017-10-18">
-      <value>0-1</value>
+      <value>0</value>
       <description>Unassigned</description>
+    </record>
+    <record date="2019-05-10">
+      <value>1</value>
+      <description>ERO-compression</description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record date="2018-04-23">
       <value>2</value>
-      <description>Fragmentation (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <description>Fragmentation</description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record date="2018-04-23">
       <value>3</value>
-      <description>P2MP (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
-      <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+      <description>P2MP</description>
+      <xref type="rfc" data="rfc8623"/>
     </record>
     <record date="2017-10-18">
       <value>4</value>
@@ -3222,7 +3864,7 @@
     </record>
   </registry>
     
-    <registry id="stateful-pce-capability-tlv-flag-field">
+  <registry id="stateful-pce-capability-tlv-flag-field">
       <title>STATEFUL-PCE-CAPABILITY TLV Flag Field</title>
       <xref type="rfc" data="rfc8231"/>
       <registration_rule>Standards Action</registration_rule>
@@ -3233,21 +3875,18 @@
       </record>
       <record date="2018-04-23">
         <value>23</value>
-        <description>P2MP-LSP-INSTANTIATION-CAPABILITY
-          (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
-        <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+        <description>P2MP-LSP-INSTANTIATION-CAPABILITY</description>
+        <xref type="rfc" data="rfc8623"/>
       </record>
       <record date="2018-04-23">
         <value>24</value>
-        <description>P2MP-LSP-UPDATE-CAPABILITY
-          (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
-        <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+        <description>P2MP-LSP-UPDATE-CAPABILITY</description>
+        <xref type="rfc" data="rfc8623"/>
       </record>
       <record date="2018-04-23">
         <value>25</value>
-        <description>P2MP-CAPABILITY
-          (TEMPORARY - registered 2018-04-23, expires 2019-04-23)</description>
-        <xref type="draft" data="draft-ietf-pce-stateful-pce-p2mp"/>
+        <description>P2MP-CAPABILITY</description>
+        <xref type="rfc" data="rfc8623"/>
       </record>
       <record date="2017-06-29">
         <value>26</value>
@@ -3285,7 +3924,6 @@
     <title>LSP-ERROR-CODE TLV Error Code Field</title>
     <xref type="rfc" data="rfc8231"/>
     <registration_rule>Standards Action</registration_rule>
-    <note/>
     <record date="2017-06-26">
       <value>0</value>
       <description>Reserved</description>
@@ -3340,13 +3978,17 @@
   <registry id="srp-object-flag-field">
     <title>SRP Object Flag Field</title>
     <xref type="rfc" data="rfc8281"/>
+	<xref type="draft" data="RFC-ietf-pce-stateful-flags-01"/>
     <registration_rule>Standards Action</registration_rule>
-    <note/>
     <record date="2017-10-18">
-      <value>0-30</value>
+      <value>0-29</value>
       <description>Unassigned</description>
-      <xref type="rfc" data="rfc8281"/>
     </record> 
+    <record date="2019-10-28" updated="2020-03-06">
+      <value>30</value>
+      <description>LSP Control Request</description>
+      <xref type="rfc" data="rfc8741"/>
+    </record>
     <record date="2017-10-18">
       <value>31</value>
       <description>LSP-Remove</description>
@@ -3358,14 +4000,541 @@
     <title>PCEP Path Setup Types</title>
     <xref type="rfc" data="rfc8408"/>
     <registration_rule>IETF Review</registration_rule>
-    <note/>
     <record date="2018-05-11">
       <value>0</value>
       <description>Path is set up using the RSVP-TE signaling protocol</description>
       <xref type="rfc" data="rfc8408"/>
-    </record> 
+    </record>
+    <record date="2019-03-15">
+      <value>1</value>
+      <description>Traffic-engineering path is set up using Segment Routing.</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
     <record>
-      <value>1-255</value>
+      <value>2-255</value>
+      <description>Unassigned</description>
+    </record>
+  </registry>
+  
+  <registry id="pcep-sr-ero-nai-types">
+    <title>PCEP SR-ERO NAI Types</title>
+    <xref type="rfc" data="rfc8664"/>
+    <registration_rule>IETF Review</registration_rule>
+    <record date="2019-03-15">
+      <value>0</value>
+      <description>NAI is absent.</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <value>1</value>
+      <description>NAI is an IPv4 node ID.</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <value>2</value>
+      <description>NAI is an IPv6 node ID.</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <value>3</value>
+      <description>NAI is an IPv4 adjacency.</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <value>4</value>
+      <description>NAI is an IPv6 adjacency with global IPv6 addresses.</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <value>5</value>
+      <description>NAI is an unnumbered adjacency with IPv4 node IDs.</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <value>6</value>
+      <description>NAI is an IPv6 adjacency with link-local IPv6 addresses.</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record>
+      <value>7-15</value>
+      <description>Unassigned</description>
+    </record>
+  </registry>
+  
+  <registry id="sr-ero-flag-field">
+    <title>SR-ERO Flag Field</title>
+    <xref type="rfc" data="rfc8664"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record>
+      <value>0-7</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-03-15">
+      <value>8</value>
+      <description>NAI is absent (F)</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <value>9</value>
+      <description>SID is absent (S)</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <value>10</value>
+      <description>SID specifies TC, S, and TTL in addition to an MPLS label (C)</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <value>11</value>
+      <description>SID specifies an MPLS label (M)</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+  </registry>
+  
+  <registry id="path-setup-type-capability-sub-tlv-type-indicators">
+    <title>PATH-SETUP-TYPE-CAPABILITY Sub-TLV Type Indicators</title>
+    <xref type="rfc" data="rfc8664"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record date="2019-03-15">
+      <value>0</value>
+      <description>Reserved</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record>
+      <value>1-25</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-03-15">
+      <value>26</value>
+      <description>SR-PCE-CAPABILITY</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record>
+      <value>27-65535</value>
+      <description>Unassigned</description>
+    </record>
+  </registry>
+  
+  <registry id="sr-capability-flag-field">
+    <title>SR Capability Flag Field</title>
+    <xref type="rfc" data="rfc8664"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record>
+      <value>0-5</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-03-15">
+      <value>6</value>
+      <description>Node or Adjacency Identifier (NAI) is
+        supported (N)</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+    <record date="2019-03-15">
+      <value>7</value>
+      <description>Unlimited Maximum SID Depth (X)</description>
+      <xref type="rfc" data="rfc8664"/>
+    </record>
+  </registry>
+  
+  <registry id="wa-object-flag-field">
+    <title>WA Object Flag Field</title>
+    <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record>
+      <value>0-14</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-03-25">
+      <value>15</value>
+      <description>Explicit Label Control</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+  </registry>
+  
+  <registry id="wavelength-restriction-constraint-tlv-action-values">
+    <title>Wavelength Restriction Constraint TLV Action Values</title>
+    <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record date="2019-03-25">
+      <value>0</value>
+      <description>Inclusive List</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record date="2019-03-25">
+      <value>1</value>
+      <description>Inclusive Range</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+    <record>
+      <value>2-255</value>
+      <description>Unassigned</description>
+    </record>
+  </registry>
+  
+  <registry id="wavelength-allocation-tlv-flag-field">
+    <title>Wavelength Allocation TLV Flag Field</title>
+    <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record>
+      <value>0-14</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-03-25">
+      <value>15</value>
+      <description>Wavelength Allocation Mode</description>
+      <xref type="draft" data="RFC-ietf-pce-wson-rwa-ext-17"/>
+    </record>
+  </registry>
+  
+  <registry id="s2ls-object-flag-field">
+    <title>S2LS Object Flag Field</title>
+    <xref type="rfc" data="rfc8623"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record>
+      <value>0-28</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-05-10">
+      <value>29-31</value>
+      <description>Operational (3 bits)</description>
+      <xref type="rfc" data="rfc8623"/>
+    </record>
+  </registry>
+  
+  <registry id="h-pce-capability-tlv-flag-field">
+    <title>H-PCE-CAPABILITY TLV Flag Field</title>
+    <xref type="rfc" data="rfc8685"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record>
+      <value>0-30</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-06-13">
+      <value>31</value>
+      <description>P (Parent PCE Request bit)</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+  </registry>
+  
+  <registry id="domain-id-tlv-domain-type">
+    <title>Domain-ID TLV Domain Type</title>
+    <xref type="rfc" data="rfc8685"/>
+    <registration_rule>IETF Review</registration_rule>
+    <record date="2019-06-13">
+      <value>0</value>
+      <description>Reserved</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <value>1</value>
+      <description>2-byte AS number</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <value>2</value>
+      <description>4-byte AS number</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <value>3</value>
+      <description>4-byte OSPF area ID</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <value>4</value>
+      <description>Variable-length IS-IS area ID</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record>
+      <value>5-255</value>
+      <description>Unassigned</description>
+    </record>
+  </registry>
+  
+  <registry id="h-pce-flag-tlv-flag-field">
+    <title>H-PCE-FLAG TLV Flag Field</title>
+    <xref type="rfc" data="rfc8685"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record>
+      <value>0-29</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-06-13">
+      <value>30</value>
+      <description>D (Disallow Domain Re-entry bit)</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+    <record date="2019-06-13">
+      <value>31</value>
+      <description>S (Domain Sequence bit)</description>
+      <xref type="rfc" data="rfc8685"/>
+    </record>
+  </registry>
+  
+  <registry id="association-flag-field">
+    <title>ASSOCIATION Flag Field</title>
+    <xref type="rfc" data="rfc8697"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record>
+      <value>0-14</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-08-02">
+      <value>15</value>
+      <description>R (Removal)</description>
+      <xref type="rfc" data="rfc8697"/>
+    </record>
+  </registry>
+  
+  <registry id="association-type-field">
+    <title>ASSOCIATION Type Field</title>
+    <xref type="rfc" data="rfc8697"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record date="2019-10-23">
+      <value>0</value>
+      <description>Reserved</description>
+      <xref type="rfc" data="rfc8697"/>
+    </record>
+    <record date="2019-10-23">
+      <value>1</value>
+      <description>Path Protection Association</description>
+      <xref type="rfc" data="rfc8745"/>
+    </record>
+    <record date="2020-02-11">
+      <value>2</value>
+      <description>Disjointness Association</description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
+    <record>
+      <value>3-65535</value>
+      <description>Unassigned</description>
+    </record>
+  </registry>
+  
+  <registry id="auto-bandwidth-capability-tlv-flag-field">
+    <title>AUTO-BANDWIDTH-CAPABILITY TLV Flag Field</title>
+    <xref type="rfc" data="rfc8733"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record>
+      <value>0-31</value>
+      <description>Unassigned</description>
+    </record>
+  </registry>
+  
+  <registry id="auto-bandwidth-attributes-sub-tlv">
+    <title>AUTO-BANDWIDTH-ATTRIBUTES Sub-TLV Types</title>
+    <xref type="rfc" data="rfc8733"/>
+    <range>
+      <value>0-65503</value>
+      <registration_rule>IETF Review</registration_rule>
+    </range>
+    <range>
+      <value>65504-65535</value>
+      <registration_rule>Experimental Use</registration_rule>
+    </range>
+    <record date="2019-10-08">
+      <value>0</value>
+      <description>Reserved</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>1</value>
+      <description>Sample-Interval</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>2</value>
+      <description>Adjustment-Interval</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>3</value>
+      <description>Down-Adjustment-Interval</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>4</value>
+      <description>Adjustment-Threshold</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>5</value>
+      <description>Adjustment-Threshold-Percentage</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>6</value>
+      <description>Down-Adjustment-Threshold</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>7</value>
+      <description>Down-Adjustment-Threshold-Percentage</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>8</value>
+      <description>Minimum-Bandwidth</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>9</value>
+      <description>Maximum-Bandwidth</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>10</value>
+      <description>Overflow-Threshold</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>11</value>
+      <description>Overflow-Threshold-Percentage</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>12</value>
+      <description>Underflow-Threshold</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record date="2019-10-08">
+      <value>13</value>
+      <description>Underflow-Threshold-Percentage</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+    <record>
+      <value>14-65503</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-10-08">
+      <value>65504-65535</value>
+      <description>Experimental Use</description>
+      <xref type="rfc" data="rfc8733"/>
+    </record>
+  </registry>
+
+  <registry id="path-protection-association-group-tlv-flag-field">
+    <title>Path Protection Association Group TLV Flag Field</title>
+    <xref type="rfc" data="rfc8745"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record date="2019-10-23">
+      <value>31</value>
+      <description>P - PROTECTION-LSP</description>
+      <xref type="rfc" data="rfc8745"/>
+    </record>
+    <record date="2019-10-23">
+      <value>30</value>
+      <description>S - SECONDARY-LSP</description>
+      <xref type="rfc" data="rfc8745"/>
+    </record>
+    <record>
+      <value>6-29</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-10-23">
+      <value>0-5</value>
+      <description>Protection Type Flags</description>
+      <xref type="rfc" data="rfc8745"/>
+    </record>
+  </registry>
+  
+  <registry id="generalized-endpoint-type">
+    <title>Generalized Endpoint Type</title>
+    <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    <range>
+      <value>0-244</value>
+      <registration_rule>Standards Action</registration_rule>
+    </range>
+    <range>
+      <value>245-255</value>
+      <registration_rule>Experimental Use</registration_rule>
+    </range>
+    <record date="2019-12-17">
+      <value>0</value>
+      <type>Point-to-Point</type>
+      <description/>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <value>1</value>
+      <type>Point-to-Multipoint</type>
+      <description>New leaves to add</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <value>2</value>
+      <type/>
+      <description>Old leaves to remove</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <value>3</value>
+      <type/>
+      <description>Old leaves whose path can be
+        modified/reoptimized</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record date="2019-12-17">
+      <value>4</value>
+      <type/>
+      <description>Old leaves whose path has to be
+        left unchanged</description>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+    <record>
+      <value>5-244</value>
+      <type>Unassigned</type>
+      <description/>
+    </record>
+    <record date="2019-12-17">
+      <value>245-255</value>
+      <type>Experimental Use</type>
+      <description/>
+      <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    </record>
+  </registry>
+
+  <registry id="gmpls-capability-tlv-flag-field">
+    <title>GMPLS-CAPABILITY TLV Flag Field</title>
+    <xref type="draft" data="RFC-ietf-pce-gmpls-pcep-extensions-16"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record>
+      <value>0-31</value>
+      <description>Unassigned</description>
+    </record>
+  </registry>
+  
+  <registry id="disjointness-configuration-tlv-flag-field">
+    <title>Disjointness Configuration TLV Flag Field</title>
+    <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    <registration_rule>Standards Action</registration_rule>
+    <record date="2020-02-11">
+      <value>31</value>
+      <description>L - Link Diverse</description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
+    <record date="2020-02-11">
+      <value>30</value>
+      <description>N - Node Diverse</description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
+    <record date="2020-02-11">
+      <value>29</value>
+      <description>S - SRLG Diverse</description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
+    <record date="2020-02-11">
+      <value>28</value>
+      <description>P - Shortest Path</description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
+    <record date="2020-02-11">
+      <value>27</value>
+      <description>T - Strict Disjointness</description>
+      <xref type="draft" data="RFC-ietf-pce-association-diversity-14"/>
+    </record>
+    <record>
+      <value>0-26</value>
       <description>Unassigned</description>
     </record>
   </registry>

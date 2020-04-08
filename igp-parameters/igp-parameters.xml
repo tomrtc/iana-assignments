@@ -4,11 +4,11 @@
 <registry xmlns="http://www.iana.org/assignments" id="igp-parameters">
   <title>Interior Gateway Protocol (IGP) Parameters</title>
   <created>2017-12-18</created>
-  <updated>2018-06-06</updated>
+  <updated>2019-12-11</updated>
 
   <registry id="igp-algorithm-types">
     <title>IGP Algorithm Types</title>
-    <xref type="draft" data="RFC-ietf-ospf-segment-routing-extensions-24"/>
+    <xref type="rfc" data="rfc8665"/>
     <registration_rule>Standards Action</registration_rule>
     <record date="2017-12-18">
       <value>0</value>
@@ -18,7 +18,7 @@
         protocols, Algorithm 0 permits any node to overwrite the SPF path
         with a different path based on its local policy.
       </description>
-      <xref type="draft" data="RFC-ietf-ospf-segment-routing-extensions-24"/>
+      <xref type="rfc" data="rfc8665"/>
     </record>
     <record date="2017-12-18">
       <value>1</value>
@@ -28,7 +28,7 @@
         decision.  Local policy at the node claiming support for Algorithm
         1 MUST NOT alter the SPF paths computed by Algorithm 1.
       </description>
-      <xref type="draft" data="RFC-ietf-ospf-segment-routing-extensions-24"/>
+      <xref type="rfc" data="rfc8665"/>
     </record>
     <record>
       <value>2-127</value>
@@ -36,8 +36,46 @@
     </record>
     <record date="2018-06-06">
       <value>128-255</value>
-      <description>Flexible Algorithms (TEMPORARY - registered 2018-06-06, expires 2019-06-06)</description>
+      <description>Flexible Algorithms 
+        (TEMPORARY - registered 2018-06-06, extension registered 2019-06-06, expires 2020-06-06)</description>
       <xref type="draft" data="draft-ietf-lsr-flex-algo"/>
+    </record>
+  </registry>
+  
+  <registry id="igp-msd-types">
+    <title>IGP MSD-Types</title>
+    <xref type="rfc" data="rfc8491"/>
+    <registration_rule>Expert Review</registration_rule>
+    <expert>Uma Chunduri, Jeff Tantsura</expert>
+    <record date="2018-10-17">
+      <value>0</value>
+      <description>Reserved</description>
+      <xref type="rfc" data="rfc8491"/>
+    </record>
+    <record date="2018-10-17">
+      <value>1</value>
+      <description>Base MPLS Imposition MSD</description>
+      <xref type="rfc" data="rfc8491"/>
+    </record>
+    <record date="2019-08-29">
+      <value>2</value>
+      <description>Entropy Label Readable Depth (ERLD) 
+        (TEMPORARY - registered 2019-08-29, expires 2020-08-29)</description>
+      <xref type="draft" data="draft-ietf-isis-mpls-elc"/>
+    </record>
+    <record>
+      <value>3-250</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2018-10-17">
+      <value>251-254</value>
+      <description>Experimental Use</description>
+      <xref type="rfc" data="rfc8491"/>
+    </record>
+    <record date="2018-10-17">
+      <value>255</value>
+      <description>Reserved</description>
+      <xref type="rfc" data="rfc8491"/>
     </record>
   </registry>
   

@@ -4,7 +4,7 @@
            2007-05-02
 
    Last Updated
-           2017-04-13
+           2020-03-26
 
    Available Formats
            [IMG]
@@ -14,12 +14,12 @@
 
    Registries included below
 
-     * Dispatch Type Field
-     * Short Address Fields
-     * LOWPAN_NHC Header Type
-     * ESC Extension Types
-     * Critical 6LoWPAN Routing Header Type
-     * Elective 6LoWPAN Routing Header Type
+     * Dispatch Type Field
+     * Short Address Fields
+     * LOWPAN_NHC Header Type
+     * ESC Extension Types
+     * Critical 6LoWPAN Routing Header Type
+     * Elective 6LoWPAN Routing Header Type
 
 Dispatch Type Field
 
@@ -38,7 +38,7 @@ Dispatch Type Field
            [IMG]
            CSV
 
-           Bit Pattern         Page                Header Type                     Reference
+           Bit Pattern         Page                Header Type                              Reference
    00 xxxxxx                   0    NALP                                       [RFC4944][RFC8025]
    00 xxxxxx                   1-14 Unassigned
    00 xxxxxx                   15   Reserved for Experimental Use              [RFC8025]
@@ -77,8 +77,14 @@ Dispatch Type Field
    11 100xxx                   0    FRAGN -- Fragmentation Header (subsequent) [RFC4944][RFC8025]
    11 100xxx                   1-14 Unassigned
    11 100xxx                   15   Reserved for Experimental Use              [RFC8025]
-   11 101000 through 11 101111 0-14 Unassigned
-   11 101000 through 11 101111 15   Reserved for Experimental Use              [RFC8025]
+   11 10100x                   0    RFRAG - Recoverable Fragment               [RFC-ietf-6lo-fragment-recovery-21]
+   11 10100x                   1-14 Unassigned
+   11 10100x                   15   Reserved for Experimental Use              [RFC8025]
+   11 10101x                   0    RFRAG-ACK - RFRAG Acknowledgment           [RFC-ietf-6lo-fragment-recovery-21]
+   11 10101x                   1-14 Unassigned
+   11 10101x                   15   Reserved for Experimental Use              [RFC8025]
+   11 101100 through 11 101111 0-14 Unassigned
+   11 101100 through 11 101111 15   Reserved for Experimental Use              [RFC8025]
    11 11xxxx                   0-15 Page switch                                [RFC8025]
 
 Short Address Fields
@@ -193,7 +199,8 @@ Elective 6LoWPAN Routing Header Type
            [IMG]
            CSV
 
-   Value  Description   Reference
+   Value   Description              Reference
    0-5   Unassigned
-   6     IP-in-IP-6LoRH [RFC8138]
-   7-255 Unassigned
+   6     IP-in-IP-6LoRH  [RFC8138]
+   7     Deadline-6LoRHE [RFC-ietf-6lo-deadline-time-05]
+   8-255 Unassigned

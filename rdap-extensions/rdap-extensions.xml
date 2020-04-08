@@ -5,18 +5,26 @@
   <title>RDAP Extensions</title>
   <category>Registration Data Access Protocol (RDAP)</category>
   <created>2015-01-12</created>
-  <updated>2018-07-31</updated>
+  <updated>2019-06-21</updated>
   
   <registry id="rdap-extensions-1">
     <title>RDAP Extensions</title>
     <xref type="rfc" data="rfc7480"/>
     <registration_rule>Specification Required</registration_rule>
     <expert>Andy Newton, Scott Hollenbeck</expert>
+    
     <record date="2018-07-31">
       <value>arin_originas0</value>
       <operator><xref type="person" data="ARIN"/></operator>
       <xref type="uri" data="https://bitbucket.org/arin-specs/arin-rdap-originas/src/master/arin-rdap-originas.txt"/>
       <contact><xref type="person" data="Andrew_Newton"/></contact>
+      <usage>COMMON</usage>
+    </record>
+    <record date="2019-03-15">
+      <value>artRecord</value>
+      <operator>.ART</operator>
+      <xref type="uri" data="https://gitlab.centralnic.com/centralnic/centralnic-rdap-extensions/blob/master/art-records.md"/>
+      <contact><xref type="person" data="Gavin_Brown"/></contact>
       <usage>COMMON</usage>
     </record>
     <record date="2018-07-31">
@@ -35,6 +43,43 @@
         server. This RDAP server provides some extended features defined in 
         specification.</usage>
     </record>
+    <record date="2019-06-21">
+      <value>icann_rdap_response_profile_0</value>
+      <operator>ICANN</operator>
+      <xref type="uri" data="https://www.icann.org/gtld-rdap-profile"/>
+      <contact><xref type="person" data="ICANN"/></contact>
+      <usage>COMMON</usage>
+    </record>
+    <record date="2019-06-21">
+      <value>icann_rdap_technical_implementation_guide_0</value>
+      <operator>ICANN</operator>
+      <xref type="uri" data="https://www.icann.org/gtld-rdap-profile"/>
+      <contact><xref type="person" data="ICANN"/></contact>
+      <usage>COMMON</usage>
+    </record>
+    <record date="2019-03-15">
+      <value>platformNS</value>
+      <operator>Any</operator>
+      <xref type="uri" data="https://gitlab.centralnic.com/centralnic/centralnic-rdap-extensions/blob/master/platformNS.md"/>
+      <contact><xref type="person" data="Gavin_Brown"/></contact>
+      <usage>COMMON</usage>
+    </record>
+    <record date="2018-08-27">
+      <value>rdap_objectTag</value>
+      <operator>Any</operator>
+      <xref type="rfc" data="rfc8521"/>
+      <contact><xref type="person" data="IESG"/></contact>
+      <usage>This extension describes a best practice for
+        structuring entity identifiers to enable query bootstrapping.</usage>
+    </record>
+    <record date="2019-03-15">
+      <value>regType</value>
+      <operator>Any</operator>
+      <xref type="uri" data="https://gitlab.centralnic.com/centralnic/centralnic-rdap-extensions/blob/master/regtype.md"/>
+      <contact><xref type="person" data="Gavin_Brown"/></contact>
+      <usage>COMMON</usage>
+    </record>
+    
   </registry>
     
   <people>
@@ -51,6 +96,19 @@
       <name>CZ.NIC, z. s. p. o.</name>
       <uri>mailto:tech&amp;nic.cz</uri>
       <updated>2016-03-30</updated>
+    </person>
+    <person id="Gavin_Brown">
+      <name>Gavin Brown</name>
+      <uri>mailto:rdap&amp;centralnic.com</uri>
+      <updated>2019-03-15</updated>
+    </person>
+    <person id="ICANN">
+      <name>ICANN</name>
+      <uri>mailto:globalsupport&amp;icann.org</uri>
+    </person>
+    <person id="IESG">
+      <name>IESG</name>
+      <uri>mailto:iesg&amp;ietf.org</uri>
     </person>
     <person id="Jaromir_Talir">
       <name>Jaromir Talir</name>

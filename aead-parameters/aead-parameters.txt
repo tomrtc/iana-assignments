@@ -4,7 +4,7 @@
            2007-11-14
 
    Last Updated
-           2018-06-19
+           2019-04-18
 
    Available Formats
            [IMG]
@@ -20,7 +20,7 @@ AEAD Algorithms
 
    Expert(s)
 
- David McGrew
+ David McGrew, Bjoern Tackmann, Stanislav Smyshlyaev
 
    Reference
            [RFC5116]
@@ -30,8 +30,8 @@ AEAD Algorithms
            CSV
 
       Range    Registration Procedures
-     1-32767   Specification Required
-   32768-65535 IANA does not assign
+   1-32767     Specification Required
+   32768-65535 Private Use
 
    Numeric ID             Name                  Reference
         1      AEAD_AES_128_GCM           [RFC5116]
@@ -63,5 +63,7 @@ AEAD Algorithms
        27      AEAD_AES_256_OCB_TAGLEN96  [RFC7253, Section 3.1]
        28      AEAD_AES_256_OCB_TAGLEN64  [RFC7253, Section 3.1]
        29      AEAD_CHACHA20_POLY1305     [RFC8439]
-    30-32767   Unassigned
+       30      AEAD_AES_128_GCM_SIV       [RFC8452]
+       31      AEAD_AES_256_GCM_SIV       [RFC8452]
+    32-32767   Unassigned
    32768-65535 Reserved for Private Use   [RFC5116]

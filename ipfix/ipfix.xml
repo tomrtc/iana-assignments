@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="ipfix">
 <title>IP Flow Information Export (IPFIX) Entities</title>
 <created>2007-05-10</created>
-<updated>2018-07-10</updated>
+<updated>2019-07-25</updated>
 
 <note><xref type="rfc" data="rfc7012"/> has obsoleted <xref type="rfc" data="rfc5102"/>. However, references to <xref type="rfc" data="rfc5102"/>
 remain as part of the historical record.</note>
@@ -168,7 +168,7 @@ set to 1.  The bit is cleared to 0 otherwise.
 </paragraph>
 <paragraph>
 The values of each bit are shown below, per the definition of the
-bits in the TCP header <xref type="rfc" data="rfc793"/><xref type="rfc" data="rfc3168"/><xref type="rfc" data="rfc3540"/>:
+bits in the TCP header <xref type="rfc" data="rfc793"/><xref type="rfc" data="rfc3168"/>:
 </paragraph>
 <artwork>
  MSb                                                         LSb
@@ -239,7 +239,7 @@ given exporter.
 </description>
 <references>
 <paragraph>
-<xref type="rfc" data="rfc793"/><xref type="rfc" data="rfc3168"/><xref type="rfc" data="rfc3540"/>
+<xref type="rfc" data="rfc793"/><xref type="rfc" data="rfc3168"/>
 </paragraph>
 </references>
 <xref type="rfc" data="rfc7125"/>
@@ -1198,7 +1198,7 @@ IPv4 source address prefix.
 This field identifies the control protocol that allocated the
 top-of-stack label.  Values for this field are listed in the 
 MPLS label type registry. See 
-<xref type="uri" data="http://www.iana.org/assignments/ipfix/ipfix.xml#ipfix-mpls-label-type"/>
+<xref type="uri" data="http://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type"/>
 </paragraph>
 </description>
 <references>
@@ -2513,7 +2513,7 @@ application assignments.
 <paragraph>
 Values for this field are listed in the Classification
 Engine IDs registry. See 
-<xref type="uri" data="http://www.iana.org/assignments/ipfix/ipfix.xml#classification-engine-ids"/>
+<xref type="uri" data="http://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids"/>
 </paragraph>
 </description>
 <xref type="rfc" data="rfc6759"/>
@@ -5360,7 +5360,7 @@ the type of a NAT event. Examples of NAT events include, but are not
 limited to, NAT translation create, NAT translation delete, Threshold 
 Reached, or Threshold Exceeded, etc. Values for this Information 
 Element are listed in the "NAT Event Type" registry, see 
-<xref type="uri" data="http://www.iana.org/assignments/ipfix/ipfix.xml#ipfix-nat-event-type"/>. 
+<xref type="uri" data="http://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type"/>. 
 New assignments of values will be administered by IANA and are 
 subject to Expert Review <xref type="rfc" data="rfc8126"/>. Experts 
 need to check definitions of new values for completeness, accuracy, 
@@ -9433,7 +9433,7 @@ Information Elements for completeness, accuracy, and redundancy.
 Those experts will initially be drawn from the Working Group
 Chairs and document editors of the IPFIX and PSAMP Working Groups.
 The Intermediate Flow Selection Process Techniques
-identifiers are defined at <xref type="uri" data="http://www.iana.org/assignments/ipfix/ipfix.xml#ipfix-flowselectoralgorithm"/>.
+identifiers are defined at <xref type="uri" data="http://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flowselectoralgorithm"/>.
 </paragraph>
 </description>
 <xref type="rfc" data="rfc7014"/>
@@ -11639,30 +11639,237 @@ of this field is limited to 10 characters, UTF-8 encoded.
 </record>
   
 <record date="2018-07-10">
-  <name>vpnIdentifier</name>
-  <dataType>octetArray</dataType>
-  <dataTypeSemantics>default</dataTypeSemantics>
-  <elementId>482</elementId>
-  <status>current</status>
-  <description>
-    <paragraph>
-      VPN ID in the format specified by <xref type="rfc" data="rfc2685"/>.
-      The size of this Information Element is 7 octets.
-    </paragraph>
-  </description>
-  <references>
-    <paragraph>
-      <xref type="rfc" data="rfc2685"/>   
-    </paragraph>
-  </references>
-  <xref type="person" data="ipfix-iana_at_cisco.com"/>
-  <revision>0</revision>
-  <date>2018-07-10</date>
+<name>vpnIdentifier</name>
+<dataType>octetArray</dataType>
+<dataTypeSemantics>default</dataTypeSemantics>
+<elementId>482</elementId>
+<status>current</status>
+<description>
+  <paragraph>
+   VPN ID in the format specified by <xref type="rfc" data="rfc2685"/>.
+   The size of this Information Element is 7 octets.
+  </paragraph>
+</description>
+<references>
+  <paragraph>
+  <xref type="rfc" data="rfc2685"/>   
+  </paragraph>
+</references>
+<xref type="person" data="ipfix-iana_at_cisco.com"/>
+<revision>0</revision>
+<date>2018-07-10</date>
 </record>
 
+<record date="2019-01-18">
+<name>bgpCommunity</name>
+<dataType>unsigned32</dataType>
+<dataTypeSemantics>identifier</dataTypeSemantics>
+<elementId>483</elementId>
+<status>current</status>
+<description>
+  <paragraph>
+    BGP community as defined in <xref type="rfc" data="rfc1997"/>
+  </paragraph>
+</description>
+<references>
+  <paragraph>
+    <xref type="rfc" data="rfc1997"/> 
+  </paragraph>
+</references>
+<xref type="rfc" data="rfc8549"/>
+<revision>0</revision>
+<date>2019-01-18</date>
+</record>
+  
+<record date="2019-01-18">
+<name>bgpSourceCommunityList</name>
+<dataType>basicList</dataType>
+<dataTypeSemantics>list</dataTypeSemantics>
+<elementId>484</elementId>
+<status>current</status>
+<description>
+  <paragraph>
+    basicList of zero or more bgpCommunity IEs, containing the BGP 
+    communities corresponding with source IP address of a specific flow
+  </paragraph>
+</description>
+<references>
+  <paragraph>
+    <xref type="rfc" data="rfc6313"/>
+    <xref type="rfc" data="rfc1997"/> 
+  </paragraph>
+</references>
+<xref type="rfc" data="rfc8549"/>
+<revision>0</revision>
+<date>2019-01-18</date>
+</record>
+
+<record date="2019-01-18">
+<name>bgpDestinationCommunityList</name>
+<dataType>basicList</dataType>
+<dataTypeSemantics>list</dataTypeSemantics>
+<elementId>485</elementId>
+<status>current</status>
+<description>
+  <paragraph>
+    basicList of zero or more bgpCommunity IEs, containing the BGP 
+    communities corresponding with destination IP address of a specific flow
+  </paragraph>
+</description>
+<references>
+  <paragraph>
+    <xref type="rfc" data="rfc6313"/>
+    <xref type="rfc" data="rfc1997"/> 
+  </paragraph>
+</references>
+<xref type="rfc" data="rfc8549"/>
+<revision>0</revision>
+<date>2019-01-18</date>
+</record>
+
+<record date="2019-01-18">
+<name>bgpExtendedCommunity</name>
+<dataType>octetArray</dataType>
+<dataTypeSemantics>default</dataTypeSemantics>
+<elementId>486</elementId>
+<status>current</status>
+<description>
+  <paragraph>
+    BGP Extended Community as defined in <xref type="rfc" data="rfc4360"/>;
+    the size of this IE MUST be 8 octets
+  </paragraph>
+</description>
+<references>
+  <paragraph>
+    <xref type="rfc" data="rfc4360"/>
+  </paragraph>
+</references>
+<xref type="rfc" data="rfc8549"/>
+<revision>0</revision>
+<date>2019-01-18</date>
+</record>
+  
+<record date="2019-01-18">
+<name>bgpSourceExtendedCommunityList</name>
+<dataType>basicList</dataType>
+<dataTypeSemantics>list</dataTypeSemantics>
+<elementId>487</elementId>
+<status>current</status>
+<description>
+  <paragraph>
+    basicList of zero or more bgpExtendedCommunity IEs, 
+    containing the BGP Extended Communities corresponding with source 
+    IP address of a specific flow
+  </paragraph>
+</description>
+<references>
+  <paragraph>
+    <xref type="rfc" data="rfc6313"/>
+    <xref type="rfc" data="rfc4360"/> 
+  </paragraph>
+</references>
+<xref type="rfc" data="rfc8549"/>
+<revision>0</revision>
+<date>2019-01-18</date>
+</record>
+  
+<record date="2019-01-18">
+<name>bgpDestinationExtendedCommunityList</name>
+<dataType>basicList</dataType>
+<dataTypeSemantics>list</dataTypeSemantics>
+<elementId>488</elementId>
+<status>current</status>
+<description>
+  <paragraph>
+    basicList of zero or more bgpExtendedCommunity IEs, 
+    containing the BGP Extended Communities corresponding 
+    with destination IP address of a specific flow
+  </paragraph>
+</description>
+<references>
+  <paragraph>
+    <xref type="rfc" data="rfc6313"/>
+    <xref type="rfc" data="rfc4360"/> 
+  </paragraph>
+</references>
+<xref type="rfc" data="rfc8549"/>
+<revision>0</revision>
+<date>2019-01-18</date>
+</record>
+  
+<record date="2019-01-18">
+<name>bgpLargeCommunity</name>
+<dataType>octetArray</dataType>
+<dataTypeSemantics>default</dataTypeSemantics>
+<elementId>489</elementId>
+<status>current</status>
+<description>
+  <paragraph>
+    BGP Large Community as defined in <xref type="rfc" data="rfc8092"/>;
+    the size of this IE MUST be 12 octets.
+  </paragraph>
+</description>
+<references>
+  <paragraph>
+    <xref type="rfc" data="rfc8092"/>
+   </paragraph>
+</references>
+<xref type="rfc" data="rfc8549"/>
+<revision>0</revision>
+<date>2019-01-18</date>
+</record>
+
+<record date="2019-01-18">
+<name>bgpSourceLargeCommunityList</name>
+<dataType>basicList</dataType>
+<dataTypeSemantics>list</dataTypeSemantics>
+<elementId>490</elementId>
+<status>current</status>
+<description>
+  <paragraph>
+    basicList of zero or more bgpLargeCommunity IEs, 
+    containing the BGP Large Communities corresponding 
+    with source IP address of a specific flow 
+  </paragraph>
+</description>
+<references>
+<paragraph>
+  <xref type="rfc" data="rfc6313"/>
+  <xref type="rfc" data="rfc8092"/> 
+</paragraph>
+</references>
+<xref type="rfc" data="rfc8549"/>
+<revision>0</revision>
+<date>2019-01-18</date>
+</record>
+  
+<record date="2019-01-18">
+<name>bgpDestinationLargeCommunityList</name>
+<dataType>basicList</dataType>
+<dataTypeSemantics>list</dataTypeSemantics>
+<elementId>491</elementId>
+<status>current</status>
+<description>
+  <paragraph>
+    basicList of zero or more bgpLargeCommunity IEs, 
+    containing the BGP Large Communities corresponding 
+    with destination IP address of a specific flow
+  </paragraph>
+</description>
+<references>
+  <paragraph>
+    <xref type="rfc" data="rfc6313"/>
+    <xref type="rfc" data="rfc8092"/> 
+  </paragraph>
+</references>
+<xref type="rfc" data="rfc8549"/>
+<revision>0</revision>
+<date>2019-01-18</date>
+</record>
+  
 <record>
 <name>Unassigned</name>
-<elementId>483-32767</elementId>
+<elementId>492-32767</elementId>
 </record>
 
 
@@ -12196,6 +12403,14 @@ enterprise.
 <xref type="person" data="Qosmos"/>
 </record>
 
+<record date="2019-06-18">
+<value>22</value>
+<description>The Selector ID contains a protocol from the ntop nDPI engine.</description>
+<length>2</length>
+<xref type="person" data="Paul_Aitken"/>
+<xref type="uri" data="https://www.ntop.org/products/deep-packet-inspection/ndpi"/>
+</record>
+
 </registry>
 
 
@@ -12582,8 +12797,6 @@ hashSelectedRangeMax, hashOutputRangeMin, hashOutputRangeMax</parameters>
 <xref type="rfc" data="rfc5610"/>
 <registration_rule>Standards Action</registration_rule>
 
-
-
 <record>
 <value>0</value>
 <description>octetArray</description>
@@ -12750,6 +12963,8 @@ hashSelectedRangeMax, hashOutputRangeMin, hashOutputRangeMax</parameters>
 <description>Unassigned</description>
 </record>
 
+
+
 </registry>
 
 
@@ -12758,8 +12973,6 @@ hashSelectedRangeMax, hashOutputRangeMin, hashOutputRangeMax</parameters>
 <title>IPFIX Information Element Semantics</title>
 <xref type="rfc" data="rfc5610"/>
 <registration_rule>Standards Action</registration_rule>
-
-
 
 <record>
 <value>0</value>
@@ -12820,6 +13033,8 @@ hashSelectedRangeMax, hashOutputRangeMin, hashOutputRangeMax</parameters>
 <description>Unassigned</description>
 <xref type="rfc" data="rfc5610"/>
 </record>
+
+
 
 </registry>
 

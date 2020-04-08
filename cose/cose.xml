@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="cose">
   <title>CBOR Object Signing and Encryption (COSE)</title>
   <created>2017-01-11</created>
-  <updated>2018-04-19</updated>
+  <updated>2020-03-16</updated>
   
   
   <registry id="header-parameters">
@@ -133,6 +133,53 @@
       <reg/>
       <description>Counter signature with implied signer and headers</description>
       <xref type="rfc" data="rfc8152"/>
+    </record>
+    <record date="2019-03-26">
+      <name>kid context</name>
+      <label>10</label>
+      <value>bstr</value>
+      <reg/>
+      <description>Identifies the context for the key identifier</description>
+      <xref type="rfc" data="rfc8613">RFC8613, Section 5.1</xref>
+    </record>
+    <record>
+      <name>Unassigned</name>
+      <label>11-31</label>
+      <value/>
+      <reg/>
+      <description/>
+    </record>
+    <record date="2019-08-20">
+      <name>x5bag (TEMPORARY - registered 2019-08-20, expires 2020-08-20)</name>
+      <label>32</label>
+      <value>COSE_X509</value>
+      <reg/>
+      <description>An unordered bag of X.509 certificates</description>
+      <xref type="draft" data="draft-ietf-cose-x509"/>
+    </record>
+    <record date="2019-08-20">
+      <name>x5chain (TEMPORARY - registered 2019-08-20, expires 2020-08-20)</name>
+      <label>33</label>
+      <value>COSE_X509</value>
+      <reg/>
+      <description>An ordered chain of X.509 certificates</description>
+      <xref type="draft" data="draft-ietf-cose-x509"/>
+    </record>
+    <record date="2019-08-20">
+      <name>x5t (TEMPORARY - registered 2019-08-20, expires 2020-08-20)</name>
+      <label>34</label>
+      <value>COSE_CertHash</value>
+      <reg/>
+      <description>Hash of an X.509 certificate</description>
+      <xref type="draft" data="draft-ietf-cose-x509"/>
+    </record>
+    <record date="2019-08-20">
+      <name>x5u (TEMPORARY - registered 2019-08-20, expires 2020-08-20)</name>
+      <label>35</label>
+      <value>uri</value>
+      <reg/>
+      <description>URI pointing to an X.509 certificate</description>
+      <xref type="draft" data="draft-ietf-cose-x509"/>
     </record>
   </registry>
   
@@ -307,11 +354,11 @@
       <description/>
       <recommended/>
     </record>
-    <record date="2018-04-19">
-      <name>RS1 (TEMPORARY - registered 2018-04-19, expires 2019-04-19)</name>
+    <record date="2018-04-19" updated="2020-03-13">
+      <name>RS1 (TEMPORARY - registered 2018-04-19, extension registered 2020-03-13, expires 2021-04-19)</name>
       <value>-65535</value>
       <description>RSASSA-PKCS1-v1_5 w/ SHA-1</description>
-      <xref type="draft" data="draft-jones-webauthn-cose-algorithms"/>
+      <xref type="draft" data="draft-ietf-cose-webauthn-algorithms-05"/>
       <recommended>Deprecated</recommended>
     </record>
     <record>
@@ -320,32 +367,60 @@
       <description/>
       <recommended/>
     </record>  
-    <record date="2018-04-19">
-      <name>RS512 (TEMPORARY - registered 2018-04-19, expires 2019-04-19)</name>
+    <record date="2018-04-19" updated="2020-03-13">
+      <name>RS512 (TEMPORARY - registered 2018-04-19, extension registered 2020-03-13, expires 2021-04-19)</name>
       <value>-259</value>
       <description>RSASSA-PKCS1-v1_5 w/ SHA-512</description>
-      <xref type="draft" data="draft-jones-webauthn-cose-algorithms"/>
+      <xref type="draft" data="draft-ietf-cose-webauthn-algorithms-05"/>
       <recommended>No</recommended>
     </record>
-    <record date="2018-04-19">
-      <name>RS384 (TEMPORARY - registered 2018-04-19, expires 2019-04-19)</name>
+    <record date="2018-04-19" updated="2020-03-13">
+      <name>RS384 (TEMPORARY - registered 2018-04-19, extension registered 2020-03-13, expires 2021-04-19)</name>
       <value>-258</value>
       <description>RSASSA-PKCS1-v1_5 w/ SHA-384</description>
-      <xref type="draft" data="draft-jones-webauthn-cose-algorithms"/>
+      <xref type="draft" data="draft-ietf-cose-webauthn-algorithms-05"/>
       <recommended>No</recommended>
     </record>
-    <record date="2018-04-19">
-      <name>RS256 (TEMPORARY - registered 2018-04-19, expires 2019-04-19)</name>
+    <record date="2018-04-19" updated="2020-03-13">
+      <name>RS256 (TEMPORARY - registered 2018-04-19, extension registered 2020-03-13, expires 2021-04-19)</name>
       <value>-257</value>
       <description>RSASSA-PKCS1-v1_5 w/ SHA-256</description>
-      <xref type="draft" data="draft-jones-webauthn-cose-algorithms"/>
-      <recommended>No</recommended>
+      <xref type="draft" data="draft-ietf-cose-webauthn-algorithms-05"/>
+      <recommended>Deprecated</recommended>
     </record>
     <record>
       <name>Unassigned</name>
-      <value>-256 to -43</value>
+      <value>-256 to -47</value>
       <description/>
       <recommended/>
+    </record>
+    <record date="2020-01-02">
+      <name>HSS-LMS</name>
+      <value>-46</value>
+      <description>HSS/LMS hash-based digital signature</description>
+      <xref type="draft" data="RFC-ietf-cose-hash-sig-09"/>
+      <recommended>Yes</recommended>
+    </record>
+    <record date="2019-08-13">
+      <name>SHAKE256 (TEMPORARY - registered 2019-08-13, expires 2020-08-13)</name>
+      <value>-45</value>
+      <description>256-bit SHAKE</description>
+      <xref type="draft" data="draft-ietf-cose-hash-algs"/>
+      <recommended>Yes</recommended>
+    </record>
+    <record date="2019-08-13">
+      <name>SHA-512 (TEMPORARY - registered 2019-08-13, expires 2020-08-13)</name>
+      <value>-44</value>
+      <description>SHA-2 512-bit Hash</description>
+      <xref type="draft" data="draft-ietf-cose-hash-algs"/>
+      <recommended>Yes</recommended>
+    </record>
+    <record date="2019-08-13">
+      <name>SHA-384 (TEMPORARY - registered 2019-08-13, expires 2020-08-13)</name>
+      <value>-43</value>
+      <description>SHA-2 384-bit Hash</description>
+      <xref type="draft" data="draft-ietf-cose-hash-algs"/>
+      <recommended>Yes</recommended>
     </record>
     <record date="2017-07-17">
       <name>RSAES-OAEP w/ SHA-512</name>
@@ -475,9 +550,44 @@
     </record>
     <record>
       <name>Unassigned</name>
-      <value>-24 to -14</value>
+      <value>-24 to -19</value>
       <description/>
       <recommended/>
+    </record>
+    <record date="2019-08-13">
+      <name>SHAKE128 (TEMPORARY - registered 2019-08-13, expires 2020-08-13)</name>
+      <value>-18</value>
+      <description>128-bit SHAKE</description>
+      <xref type="draft" data="draft-ietf-cose-hash-algs"/>
+      <recommended>Yes</recommended>
+    </record>
+    <record date="2019-08-13">
+      <name>SHA-512/256 (TEMPORARY - registered 2019-08-13, expires 2020-08-13)</name>
+      <value>-17</value>
+      <description>SHA-2 512-bit Hash truncated to 256-bits</description>
+      <xref type="draft" data="draft-ietf-cose-hash-algs"/>
+      <recommended>Yes</recommended>
+    </record>
+    <record date="2019-08-13">
+      <name>SHA-256 (TEMPORARY - registered 2019-08-13, expires 2020-08-13)</name>
+      <value>-16</value>
+      <description>SHA-2 256-bit Hash</description>
+      <xref type="draft" data="draft-ietf-cose-hash-algs"/>
+      <recommended>Yes</recommended>
+    </record>
+    <record date="2019-08-13">
+      <name>SHA-256/64 (TEMPORARY - registered 2019-08-13, expires 2020-08-13)</name>
+      <value>-15</value>
+      <description>SHA-2 256-bit Hash truncated to 64-bits</description>
+      <xref type="draft" data="draft-ietf-cose-hash-algs"/>
+      <recommended>Filter Only</recommended>
+    </record>
+    <record date="2019-08-13">
+      <name>SHA-1 (TEMPORARY - registered 2019-08-13, expires 2020-08-13)</name>
+      <value>-14</value>
+      <description>SHA-1 Hash</description>
+      <xref type="draft" data="draft-ietf-cose-hash-algs"/>
+      <recommended>Filter Only</recommended>
     </record>
     <record date="2017-01-11">
       <name>direct+HKDF-AES-256</name>
@@ -790,9 +900,9 @@ delegated to the COSE Key Type Parameters registry</registration_rule>
       <name>kty</name>
       <label>1</label>
       <cbor-type>tstr / int</cbor-type>
-      <reg>COSE Key Common Parameters</reg>
+      <reg>COSE Key Types</reg>
       <description>Identification of the key type</description>
-      <xref type="rfc" data="rfc8152"/>
+      <xref type="rfc" data="rfc8152"/><xref type="rfc-errata" data="5545"/>
     </record>
     <record date="2017-01-11">
       <name>kid</name>
@@ -841,13 +951,14 @@ delegated to the COSE Key Type Parameters registry</registration_rule>
       <description>EC identifier - Taken from the "COSE Elliptic Curves" registry</description>
       <xref type="rfc" data="rfc8152"/>
     </record>   
-    <record date="2017-01-11">
+    <record date="2017-01-11" updated="2019-03-14">
       <keytype>2</keytype>
       <name>crv</name>
       <label>-1</label>
       <cbor-type>int / tstr</cbor-type>
-      <description>EC identifier - Taken from the "COSE Key Common Parameters" registry</description>
+      <description>EC identifier - Taken from the "COSE Elliptic Curves" registry</description>
       <xref type="rfc" data="rfc8152"/>
+      <xref type="rfc-errata" data="5650"/>
     </record>
     <record date="2017-01-11">
       <keytype>4</keytype>
@@ -994,6 +1105,14 @@ delegated to the COSE Key Type Parameters registry</registration_rule>
         r_(i-1))^(-1) mod r_i</description>
       <xref type="rfc" data="rfc8230"/>
     </record>
+    <record date="2020-01-02">
+      <keytype>5</keytype>
+      <name>pub</name>
+      <label>-1</label>
+      <cbor-type>bstr</cbor-type>
+      <description>Public key for HSS/LMS hash-based digital signature</description>
+      <xref type="draft" data="RFC-ietf-cose-hash-sig-09"/>
+    </record>
   </registry>
 
   <registry id="key-type">
@@ -1030,6 +1149,12 @@ delegated to the COSE Key Type Parameters registry</registration_rule>
       <value>4</value>
       <description>Symmetric Keys</description>
       <xref type="rfc" data="rfc8152"/>
+    </record>
+    <record date="2020-01-02">
+      <name>HSS-LMS</name>
+      <value>5</value>
+      <description>Public key for HSS/LMS hash-based digital signature</description>
+      <xref type="draft" data="RFC-ietf-cose-hash-sig-09"/>
     </record>
   </registry>
 

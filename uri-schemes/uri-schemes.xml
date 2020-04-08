@@ -3,7 +3,7 @@
 <?oxygen RNGSchema="uri-schemes.rng" type="xml"?>
 <registry xmlns="http://www.iana.org/assignments" id="uri-schemes">
   <title>Uniform Resource Identifier (URI) Schemes</title>
-  <updated>2018-08-13</updated>
+  <updated>2020-04-07</updated>
   
   <registry id="uri-schemes-1">
     <title>Uniform Resource Identifier (URI) Schemes</title>
@@ -12,6 +12,7 @@ First Come First Served for Provisional registrations</registration_rule>
     <expert>Graham Klyne</expert>
     <xref type="rfc" data="rfc7595"/>
     <xref type="rfc-errata" data="4420"/>
+    <xref type="rfc" data="rfc8615"/>
     <note>Requests for permanent registration must be preceded by mailing list review, 
 per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
     </note>
@@ -19,6 +20,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>aaa</value>
       <description>Diameter Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6733"/>
       <notes/>
     </record>
@@ -26,6 +28,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>aaas</value>
       <description>Diameter Protocol with Secure Transport</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6733"/>
       <notes/>
     </record>
@@ -33,6 +36,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>about</value>
       <description>about</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6694"/>
       <notes/>
     </record>
@@ -40,6 +44,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>acap</value>
       <description>application configuration access protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2244"/>
       <notes/>
     </record>    
@@ -47,7 +52,17 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>acct</value>
       <description>acct</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc7565"/>
+      <notes/>
+    </record>
+    <record date="2019-04-12">
+      <file type="template">prov/acd</file>
+      <value>acd</value>
+      <description>acd</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="Michael_Hedenus"/>
       <notes/>
     </record>
     <record date="2014-12-19" updated="2015-03-05">
@@ -55,6 +70,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>acr</value>
       <description>acr</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="OMA-OMNA"/>
       <notes/>
     </record>
@@ -63,7 +79,17 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>adiumxtra</value>
       <description>adiumxtra</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
+      <notes/>
+    </record>
+    <record date="2019-07-04">
+      <file type="template">prov/adt</file>
+      <value>adt</value>
+      <description>adt</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="SAP_SE"/>
       <notes/>
     </record>
     <record>
@@ -71,6 +97,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>afp</value>
       <description>afp</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -78,6 +105,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>afs</value>
       <description>Andrew File System global file names</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc1738"/>
       <notes/>
     </record>
@@ -86,7 +114,27 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>aim</value>
       <description>aim</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
+      <notes/>
+    </record>
+    <record date="2019-03-18">
+      <file type="template">prov/amss</file>
+      <value>amss</value>
+      <description>amss</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="RadioDNS_Project"/>
+      <notes/>
+    </record>
+    <record date="2019-03-29">
+      <file type="template">prov/android</file>
+      <value>android</value>
+      <description>android</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="Adam_Barth"/>
+      <xref type="uri" data="https://developer.android.com/guide/topics/manifest/manifest-intro"/>
       <notes/>
     </record>
     <record date="2015-09-29">
@@ -94,6 +142,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>appdata</value>
       <description>appdata</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -102,7 +151,18 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>apt</value>
       <description>apt</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
+      <notes/>
+    </record>
+    <record updated="2019-08-22">
+      <file type="template">prov/ark</file>
+      <value>ark</value>
+      <description>ark</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="ARK_agency"/>
+	  <xref type="uri" data="https://n2t.net/ark:/21206/10015"/>
       <notes/>
     </record>
     <record>
@@ -110,6 +170,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>attachment</value>
       <description>attachment</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -118,6 +179,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>aw</value>
       <description>aw</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -126,6 +188,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>barion</value>
       <description>barion</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Bíró_Tamás"/>
       <notes/>
     </record>
@@ -134,6 +197,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>beshare</value>
       <description>beshare</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -142,6 +206,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>bitcoin</value>
       <description>bitcoin</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -150,6 +215,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>bitcoincash</value>
       <description>bitcoincash</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Corentin_Mercier"/>
       <notes/>
     </record>
@@ -158,6 +224,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>blob</value>
       <description>blob</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="W3C_WebApps_Working_Group"/>
       <xref type="person" data="Chris_Rebert"/>
       <notes/>
@@ -167,6 +234,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>bolo</value>
       <description>bolo</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -175,7 +243,17 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>browserext</value>
       <description>browserext</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Mike_Pietraszak"/>
+      <notes/>
+    </record>
+    <record date="2018-11-14">
+      <file type="template">prov/calculator</file>
+      <value>calculator</value>
+      <description>calculator</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
     <record>
@@ -183,6 +261,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>callto</value>
       <description>callto</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Alexey_Melnikov"/>
       <notes/>
     </record>
@@ -190,7 +269,28 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>cap</value>
       <description>Calendar Access Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4324"/>
+      <notes/>
+    </record>
+    <record date="2019-03-29">
+      <file type="template">prov/cast</file>
+      <value>cast</value>
+      <description>cast</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="Adam_Barth"/>
+      <xref type="uri" data="https://developers.google.com/cast/docs/registration"/>
+      <notes/>
+    </record>
+    <record date="2019-03-29">
+      <file type="template">prov/casts</file>
+      <value>casts</value>
+      <description>casts</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="Adam_Barth"/>
+      <xref type="uri" data="https://developers.google.com/cast/docs/registration"/>
       <notes/>
     </record>
     <record>
@@ -198,6 +298,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>chrome</value>
       <description>chrome</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -206,6 +307,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>chrome-extension</value>
       <description>chrome-extension</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -213,6 +315,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>cid</value>
       <description>content identifier</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2392"/>
       <notes/>
     </record>    
@@ -220,6 +323,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>coap</value>
       <description>coap</description>
       <status>Permanent</status>
+      <well-known><xref type="rfc" data="rfc7252"/></well-known>
       <xref type="rfc" data="rfc7252"/>
       <notes/>
     </record>
@@ -227,6 +331,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>coap+tcp</value>
       <description>coap+tcp <xref type="note" data="1"/></description>
       <status>Permanent</status>
+      <well-known><xref type="rfc" data="rfc8323"/></well-known>
       <xref type="rfc" data="rfc8323"/>
       <notes/>
     </record>
@@ -234,6 +339,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>coap+ws</value>
       <description>coap+ws <xref type="note" data="1"/></description>
       <status>Permanent</status>
+      <well-known><xref type="rfc" data="rfc8323"/></well-known>
       <xref type="rfc" data="rfc8323"/>
       <notes/>
     </record>
@@ -241,6 +347,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>coaps</value>
       <description>coaps</description>
       <status>Permanent</status>
+      <well-known><xref type="rfc" data="rfc7252"/></well-known>
       <xref type="rfc" data="rfc7252"/>
       <notes/>
     </record>
@@ -248,6 +355,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>coaps+tcp</value>
       <description>coaps+tcp <xref type="note" data="1"/></description>
       <status>Permanent</status>
+      <well-known><xref type="rfc" data="rfc8323"/></well-known>
       <xref type="rfc" data="rfc8323"/>
       <notes/>
     </record>
@@ -255,6 +363,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>coaps+ws</value>
       <description>coaps+ws <xref type="note" data="1"/></description>
       <status>Permanent</status>
+      <well-known><xref type="rfc" data="rfc8323"/></well-known>
       <xref type="rfc" data="rfc8323"/>
       <notes/>
     </record>
@@ -263,6 +372,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>com-eventbrite-attendee</value>
       <description>com-eventbrite-attendee</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Bob_Van_Zant"/>
       <notes/>
     </record>
@@ -271,6 +381,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>content</value>
       <description>content</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -279,6 +390,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>conti</value>
       <description>conti</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Michael_Hedenus"/>
       <notes/>
     </record>
@@ -286,6 +398,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>crid</value>
       <description>TV-Anytime Content Reference Identifier</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4078"/>
       <notes/>
     </record>
@@ -294,13 +407,24 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>cvs</value>
       <description>cvs</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
+      <notes/>
+    </record>
+    <record date="2019-03-18">
+      <file type="template">prov/dab</file>
+      <value>dab</value>
+      <description>dab</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="RadioDNS_Project"/>
       <notes/>
     </record>
     <record>
       <value>data</value>
       <description>data</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2397"/>
       <notes/>
     </record>
@@ -308,6 +432,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>dav</value>
       <description>dav</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4918"/>
       <notes/>
     </record>
@@ -316,6 +441,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>diaspora</value>
       <description>diaspora</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dennis_Schubert"/>
       <notes/>
     </record>
@@ -323,16 +449,19 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>dict</value>
       <description>dictionary service protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2229"/>
       <notes/>
     </record>
-    <record date="2018-05-14">
+    <record date="2018-05-14" updated="2020-02-14">
       <file type="template">prov/did</file>
       <value>did</value>
       <description>did</description>
       <status>Provisional</status>
-      <xref type="person" data="W3C_Credentials_Community_Group"/>
+      <well-known>-</well-known>
+      <xref type="person" data="W3C_Decentralized_Identifier_Working_Group "/>
       <xref type="person" data="Manu_Sporny"/>
+      <xref type="person" data="Ivan_Herman"/>
       <notes/>
     </record>
     <record date="2015-12-08">
@@ -340,6 +469,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>dis</value>
       <description>dis</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Christophe_Meessen"/>
       <notes/>
     </record>
@@ -348,6 +478,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>dlna-playcontainer</value>
       <description>dlna-playcontainer</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="DLNA"/>
       <notes/>
     </record>
@@ -356,6 +487,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>dlna-playsingle</value>
       <description>dlna-playsingle</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="DLNA"/>
       <notes/>
     </record>
@@ -363,6 +495,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>dns</value>
       <description>Domain Name System</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4501"/>
       <notes/>
     </record>
@@ -371,13 +504,52 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>dntp</value>
       <description>dntp</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Hans-Dieter_A._Hiep"/>
       <notes/>
-    </record>   
+    </record>
+    <record date="2019-01-23">
+      <file type="template">prov/dpp</file>
+      <value>dpp</value>
+      <description>dpp</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="Gaurav_Jain"/>
+      <xref type="person" data="Wi-Fi_Alliance"/>
+      <notes/>
+    </record>
+    <record date="2019-03-18">
+      <file type="template">prov/drm</file>
+      <value>drm</value>
+      <description>drm</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="RadioDNS_Project"/>
+      <notes/>
+    </record>
+    <record date="2019-03-21" updated="2020-04-07">
+      <file type="template">prov/drop</file>
+      <value>drop</value>
+      <description>drop</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="Tim_McSweeney"/>
+      <notes/>
+    </record>
+    <record date="2020-03-02">
+      <file type="template">prov/dtmi</file>
+      <value>dtmi</value>
+      <description>dtmi</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
     <record>
       <value>dtn</value>
       <description>DTNRG research and development</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc5050"/>
       <notes/>
     </record>
@@ -385,6 +557,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>dvb</value>
       <description>dvb</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="draft" data="draft-mcroberts-uri-dvb"/>
       <notes/>
     </record>
@@ -393,6 +566,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ed2k</value>
       <description>ed2k</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -401,6 +575,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>elsi</value>
       <description>elsi</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Kimmo_Lindholm"/>
       <notes/>
     </record>
@@ -408,6 +583,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>example</value>
       <description>example</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc7595"/>
       <notes/>
     </record>
@@ -416,6 +592,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>facetime</value>
       <description>facetime</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -423,6 +600,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>fax</value>
       <description>fax</description>
       <status>Historical</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2806"/>
       <xref type="rfc" data="rfc3966"/>
       <notes/>
@@ -432,6 +610,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>feed</value>
       <description>feed</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -440,6 +619,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>feedready</value>
       <description>feedready</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Mirko_Nosenzo"/>
       <notes/>
     </record>
@@ -447,6 +627,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>file</value>
       <description>Host-specific file names</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc8089"/>
       <notes/>
     </record>
@@ -455,6 +636,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>filesystem</value>
       <description>filesystem</description>
       <status>Historical</status>
+      <well-known>-</well-known>
       <xref type="person" data="W3C_WebApps_Working_Group"/>
       <xref type="person" data="Chris_Rebert"/>
       <notes/>
@@ -464,7 +646,17 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>finger</value>
       <description>finger</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
+      <notes/>
+    </record>
+    <record date="2019-04-09">
+      <file type="template">prov/first-run-pen-experience</file>
+      <value>first-run-pen-experience</value>
+      <description>first-run-pen-experience</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
     <record>
@@ -472,20 +664,42 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>fish</value>
       <description>fish</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
+      <notes/>
+    </record>
+    <record date="2019-03-18">
+      <file type="template">prov/fm</file>
+      <value>fm</value>
+      <description>fm</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="RadioDNS_Project"/>
       <notes/>
     </record>
     <record>
       <value>ftp</value>
       <description>File Transfer Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc1738"/>
+      <notes/>
+    </record>
+    <record date="2019-03-29">
+      <file type="template">prov/fuchsia-pkg</file>
+      <value>fuchsia-pkg</value>
+      <description>fuchsia-pkg</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="Adam_Barth"/>
+      <xref type="uri" data="https://fuchsia.googlesource.com/fuchsia/"/>
       <notes/>
     </record>
     <record>
       <value>geo</value>
       <description>Geographic Locations</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc5870"/>
       <notes/>
     </record>
@@ -494,6 +708,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>gg</value>
       <description>gg</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -502,6 +717,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>git</value>
       <description>git</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -510,6 +726,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>gizmoproject</value>
       <description>gizmoproject</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -517,6 +734,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>go</value>
       <description>go</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3368"/>
       <notes/>
     </record>
@@ -524,6 +742,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>gopher</value>
       <description>The Gopher Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4266"/>
       <notes/>
     </record>  
@@ -532,6 +751,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>graph</value>
       <description>graph</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Alastair_Green"/>
       <notes/>
     </record>
@@ -540,6 +760,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>gtalk</value>
       <description>gtalk</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -547,6 +768,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>h323</value>
       <description>H.323</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3508"/>
       <notes/>
     </record>
@@ -554,6 +776,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ham</value>
       <description>ham</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc7046"/>
       <notes/>
     </record>
@@ -562,6 +785,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>hcap</value>
       <description>hcap</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -570,6 +794,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>hcp</value>
       <description>hcp</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Alexey_Melnikov"/>
       <notes/>
     </record>
@@ -577,14 +802,16 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>http</value>
       <description>Hypertext Transfer Protocol</description>
       <status>Permanent</status>
-      <xref type="rfc" data="rfc7230">RFC7230, Section 2.7.1</xref>
+      <well-known><xref type="rfc" data="rfc8615"/></well-known>
+      <xref type="rfc" data="rfc8615"/>
       <notes/>
     </record>
     <record>
       <value>https</value>
       <description>Hypertext Transfer Protocol Secure</description>
       <status>Permanent</status>
-      <xref type="rfc" data="rfc7230">RFC7230, Section 2.7.2</xref>
+      <well-known><xref type="rfc" data="rfc8615"/></well-known>
+      <xref type="rfc" data="rfc8615"/>
       <notes/>
     </record>
     <record date="2017-05-09">
@@ -592,6 +819,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>hxxp</value>
       <description>hxxp</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="draft" data="draft-salgado-hxxp"/>
       <notes/>
     </record>
@@ -600,6 +828,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>hxxps</value>
       <description>hxxps</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="draft" data="draft-salgado-hxxp"/>
       <notes/>
     </record>
@@ -607,6 +836,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>hydrazone</value>
       <description>hydrazone</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Matthias_Merkel"/>
       <xref type="uri" data="https://tech.hydrazone.pro/uri/specification/hydrazone.txt"/>
       <notes/>
@@ -615,6 +845,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>iax</value>
       <description>Inter-Asterisk eXchange Version 2</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc5456"/>
       <notes/>
     </record>
@@ -622,6 +853,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>icap</value>
       <description>Internet Content Adaptation Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3507"/>
       <notes/>
     </record>
@@ -629,6 +861,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>icon</value>
       <description>icon</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="draft" data="draft-lafayette-icon-uri-scheme"/>
       <notes/>
     </record>
@@ -636,6 +869,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>im</value>
       <description>Instant Messaging</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3860"/>
       <notes/>
     </record>
@@ -643,6 +877,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>imap</value>
       <description>internet message access protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc5092"/>
       <notes/>
     </record>
@@ -653,6 +888,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
         of public namespaces, which is maintained by NISO and can be accessed 
         from <xref type="uri" data="http://info-uri.info/"/>.</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4452"/>
       <notes/>
     </record>
@@ -661,6 +897,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>iotdisco</value>
       <description>iotdisco</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Peter_Waher"/>
       <xref type="uri" data="http://www.iana.org/assignments/uri-schemes/prov/iotdisco.pdf"/>
       <notes/>
@@ -669,6 +906,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ipn</value>
       <description>ipn</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6260"/>
       <notes/>
     </record>
@@ -676,6 +914,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ipp</value>
       <description>Internet Printing Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3510"/>
       <notes/>
     </record>
@@ -683,6 +922,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ipps</value>
       <description>Internet Printing Protocol over HTTPS</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc7472"/>
       <notes/>
     </record>
@@ -691,6 +931,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>irc</value>
       <description>irc</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -699,6 +940,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>irc6</value>
       <description>irc6</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -707,6 +949,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ircs</value>
       <description>ircs</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -714,6 +957,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>iris</value>
       <description>Internet Registry Information Service</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3981"/>
       <notes/>
     </record>
@@ -721,6 +965,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>iris.beep</value>
       <description>iris.beep</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3983"/>
       <notes/>
     </record>
@@ -728,6 +973,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>iris.lwz</value>
       <description>iris.lwz</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4993"/>
       <notes/>
     </record>
@@ -735,6 +981,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>iris.xpc</value>
       <description>iris.xpc</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4992"/>
       <notes/>
     </record>
@@ -742,6 +989,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>iris.xpcs</value>
       <description>iris.xpcs</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4992"/>
       <notes/>
     </record>
@@ -750,6 +998,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>isostore</value>
       <description>isostore</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>   
@@ -758,6 +1007,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>itms</value>
       <description>itms</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -766,6 +1016,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>jabber</value>
       <description>jabber</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="person" data="Peter_Saint-Andre"/>
       <notes/>
     </record>    
@@ -774,6 +1025,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>jar</value>
       <description>jar</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -781,6 +1033,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>jms</value>
       <description>Java Message Service</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6167"/>
       <notes/>
     </record>
@@ -789,6 +1042,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>keyparc</value>
       <description>keyparc</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -797,6 +1051,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>lastfm</value>
       <description>lastfm</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -804,6 +1059,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ldap</value>
       <description>Lightweight Directory Access Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4516"/>
       <notes/>
     </record>
@@ -812,7 +1068,26 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ldaps</value>
       <description>ldaps</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
+      <notes/>
+    </record>
+    <record date="2019-01-28" updated="2019-02-25">
+      <file type="template"/>
+      <value>leaptofrogans</value>
+      <description>leaptofrogans</description>
+      <status>Permanent</status>
+      <well-known>-</well-known>
+      <xref type="rfc" data="rfc8589"/>
+      <notes/>
+    </record>
+    <record>
+      <file type="template">prov/lorawan</file>
+      <value>lorawan</value>
+      <description>lorawan</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="OMA-DMSE"/>
       <notes/>
     </record>
     <record date="2016-06-13">
@@ -820,6 +1095,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>lvlt</value>
       <description>lvlt</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Alexander_Shishenko"/>
       <notes/>
     </record>
@@ -828,6 +1104,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>magnet</value>
       <description>magnet</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -835,6 +1112,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>mailserver</value>
       <description>Access to data available from mail servers</description>
       <status>Historical</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6196"/>
       <notes/>
     </record>
@@ -842,6 +1120,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>mailto</value>
       <description>Electronic mail address</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6068"/>
       <notes/>
     </record>
@@ -850,6 +1129,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>maps</value>
       <description>maps</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -858,6 +1138,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>market</value>
       <description>market</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -866,6 +1147,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>message</value>
       <description>message</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -874,6 +1156,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>microsoft.windows.camera</value>
       <description>microsoft.windows.camera</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -882,6 +1165,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>microsoft.windows.camera.multipicker</value>
       <description>microsoft.windows.camera.multipicker</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -890,6 +1174,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>microsoft.windows.camera.picker</value>
       <description>microsoft.windows.camera.picker</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -897,6 +1182,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>mid</value>
       <description>message identifier</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2392"/>
       <notes/>
     </record>
@@ -905,6 +1191,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>mms</value>
       <description>mms</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Alexey_Melnikov"/>
       <notes/>
     </record>
@@ -912,6 +1199,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>modem</value>
       <description>modem</description>
       <status>Historical</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2806"/>
       <xref type="rfc" data="rfc3966"/>
       <notes/>
@@ -921,6 +1209,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>mongodb</value>
       <description>mongodb</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Ignacio_Losiggio"/>
       <xref type="person" data="Mongo_DB_Inc"/>
       <notes/>
@@ -930,6 +1219,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>moz</value>
       <description>moz</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Joe_Hildebrand"/>
       <notes/>
     </record>
@@ -938,6 +1228,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-access</value>
       <description>ms-access</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -946,6 +1237,16 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-browser-extension</value>
       <description>ms-browser-extension</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
+    <record date="2018-11-14">
+      <file type="template">prov/ms-calculator</file>
+      <value>ms-calculator</value>
+      <description>ms-calculator</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -954,6 +1255,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-drive-to</value>
       <description>ms-drive-to</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -962,6 +1264,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-enrollment</value>
       <description>ms-enrollment</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -970,6 +1273,16 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-excel</value>
       <description>ms-excel</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
+    <record date="2018-11-01">
+      <file type="template">prov/ms-eyecontrolspeech</file>
+      <value>ms-eyecontrolspeech</value>
+      <description>ms-eyecontrolspeech</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -978,6 +1291,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-gamebarservices</value>
       <description>ms-gamebarservices</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -986,6 +1300,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-gamingoverlay</value>
       <description>ms-gamingoverlay</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -994,6 +1309,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-getoffice</value>
       <description>ms-getoffice</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1002,6 +1318,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-help</value>
       <description>ms-help</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Alexey_Melnikov"/>
       <notes/>
     </record>
@@ -1010,6 +1327,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-infopath</value>
       <description>ms-infopath</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1018,6 +1336,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-inputapp</value>
       <description>ms-inputapp</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1026,6 +1345,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-lockscreencomponent-config</value>
       <description>ms-lockscreencomponent-config</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1034,6 +1354,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-media-stream-id</value>
       <description>ms-media-stream-id</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1042,6 +1363,16 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-mixedrealitycapture</value>
       <description>ms-mixedrealitycapture</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
+    <record date="2019-02-12">
+      <file type="template">prov/ms-mobileplans</file>
+      <value>ms-mobileplans</value>
+      <description>ms-mobileplans</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1050,6 +1381,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-officeapp</value>
       <description>ms-officeapp</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1058,6 +1390,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-people</value>
       <description>ms-people</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1066,6 +1399,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-project</value>
       <description>ms-project</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1074,6 +1408,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-powerpoint</value>
       <description>ms-powerpoint</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1082,6 +1417,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-publisher</value>
       <description>ms-publisher</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1090,6 +1426,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-restoretabcompanion</value>
       <description>ms-restoretabcompanion</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1098,6 +1435,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-screenclip</value>
       <description>ms-screenclip</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1106,6 +1444,16 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-screensketch</value>
       <description>ms-screensketch</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="urischemeowners_at_microsoft.com"/>
+      <notes/>
+    </record>
+    <record date="2018-10-10">
+      <file type="template">prov/ms-search</file>
+      <value>ms-search</value>
+      <description>ms-search</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1114,6 +1462,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-search-repair</value>
       <description>ms-search-repair</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1122,6 +1471,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-secondary-screen-controller</value>
       <description>ms-secondary-screen-controller</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1130,6 +1480,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-secondary-screen-setup</value>
       <description>ms-secondary-screen-setup</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1138,6 +1489,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings</value>
       <description>ms-settings</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1146,6 +1498,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-airplanemode</value>
       <description>ms-settings-airplanemode</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1154,6 +1507,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-bluetooth</value>
       <description>ms-settings-bluetooth</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1162,6 +1516,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-camera</value>
       <description>ms-settings-camera</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1170,6 +1525,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-cellular</value>
       <description>ms-settings-cellular</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1178,6 +1534,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-cloudstorage</value>
       <description>ms-settings-cloudstorage</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1186,6 +1543,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-connectabledevices</value>
       <description>ms-settings-connectabledevices</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1194,6 +1552,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-displays-topology</value>
       <description>ms-settings-displays-topology</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1202,6 +1561,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-emailandaccounts</value>
       <description>ms-settings-emailandaccounts</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1210,6 +1570,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-language</value>
       <description>ms-settings-language</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1218,6 +1579,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-location</value>
       <description>ms-settings-location</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1226,6 +1588,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-lock</value>
       <description>ms-settings-lock</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1234,6 +1597,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-nfctransactions</value>
       <description>ms-settings-nfctransactions</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1242,6 +1606,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-notifications</value>
       <description>ms-settings-notifications</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1250,6 +1615,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-power</value>
       <description>ms-settings-power</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1258,6 +1624,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-privacy</value>
       <description>ms-settings-privacy</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1266,6 +1633,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-proximity</value>
       <description>ms-settings-proximity</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1274,6 +1642,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-screenrotation</value>
       <description>ms-settings-screenrotation</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1282,6 +1651,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-wifi</value>
       <description>ms-settings-wifi</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1290,6 +1660,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-settings-workplace</value>
       <description>ms-settings-workplace</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1298,6 +1669,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-spd</value>
       <description>ms-spd</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1306,6 +1678,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-sttoverlay</value>
       <description>ms-sttoverlay</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1314,6 +1687,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-transit-to</value>
       <description>ms-transit-to</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1322,6 +1696,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-useractivityset</value>
       <description>ms-useractivityset</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1330,6 +1705,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-virtualtouchpad</value>
       <description>ms-virtualtouchpad</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1338,6 +1714,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-visio</value>
       <description>ms-visio</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1346,6 +1723,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-walk-to</value>
       <description>ms-walk-to</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1354,6 +1732,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-whiteboard</value>
       <description>ms-whiteboard</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1362,6 +1741,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-whiteboard-cmd</value>
       <description>ms-whiteboard-cmd</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1370,6 +1750,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ms-word</value>
       <description>ms-word</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>   
@@ -1378,6 +1759,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>msnim</value>
       <description>msnim</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Alexey_Melnikov"/>
       <notes/>
     </record>
@@ -1385,6 +1767,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>msrp</value>
       <description>Message Session Relay Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4975"/>
       <notes/>
     </record>
@@ -1392,13 +1775,24 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>msrps</value>
       <description>Message Session Relay Protocol Secure</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4975"/>
+      <notes/>
+    </record>
+    <record date="2019-02-12">
+      <file type="template">prov/mss</file>
+      <value>mss</value>
+      <description>mss</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="Jarmo_Miettinen"/>
       <notes/>
     </record>
     <record>
       <value>mtqp</value>
       <description>Message Tracking Query Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3887"/>
       <notes/>
     </record>
@@ -1407,6 +1801,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>mumble</value>
       <description>mumble</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1414,6 +1809,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>mupdate</value>
       <description>Mailbox Update (MUPDATE) Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3656"/>
       <notes/>
     </record>
@@ -1422,6 +1818,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>mvn</value>
       <description>mvn</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1429,6 +1826,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>news</value>
       <description>USENET news</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc5538"/>
       <notes/>
     </record>
@@ -1436,6 +1834,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>nfs</value>
       <description>network file system protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2224"/>
       <notes/>
     </record>
@@ -1443,6 +1842,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ni</value>
       <description>ni</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6920"/>
       <notes/>
     </record>
@@ -1450,6 +1850,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>nih</value>
       <description>nih</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6920"/>
       <notes/>
     </record>
@@ -1457,6 +1858,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>nntp</value>
       <description>USENET news using NNTP access</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc5538"/>
       <notes/>
     </record>
@@ -1465,6 +1867,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>notes</value>
       <description>notes</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1473,6 +1876,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ocf</value>
       <description>ocf</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1481,6 +1885,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>oid</value>
       <description>oid</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="draft" data="draft-larmouth-oid-iri"/>
       <notes/>
     </record>
@@ -1489,6 +1894,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>onenote</value>
       <description>onenote</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1497,6 +1903,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>onenote-cmd</value>
       <description>onenote-cmd</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="urischemeowners_at_microsoft.com"/>
       <notes/>
     </record>
@@ -1504,6 +1911,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>opaquelocktoken</value>
       <description>opaquelocktokent</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4918"/>
       <notes/>
     </record>
@@ -1512,6 +1920,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>openpgp4fpr</value>
       <description>openpgp4fpr</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Wiktor_Kwapisiewicz"/>
       <notes/>
     </record>
@@ -1520,6 +1929,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>pack</value>
       <description>pack</description>
       <status>Historical</status>
+      <well-known>-</well-known>
       <xref type="draft" data="draft-shur-pack-uri-scheme"/>
       <notes/>
     </record>
@@ -1528,6 +1938,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>palm</value>
       <description>palm</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1536,13 +1947,34 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>paparazzi</value>
       <description>paparazzi</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
+      <notes/>
+    </record>
+    <record date="2020-01-08">
+      <file type="template">prov/payment</file>
+      <value>payment</value>
+      <description>payment</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="Arild_Hegvik"/>
+      <xref type="uri" data="https://bitcoincheque.org"/>
+      <notes/>
+    </record>
+    <record date="2019-01-28">
+      <file type="template">prov/payto</file>
+      <value>payto</value>
+      <description>payto</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="draft" data="draft-dold-payto"/>
       <notes/>
     </record>
     <record updated="2015-02-17">
       <value>pkcs11</value>
       <description>PKCS#11</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc7512"/>
       <notes/>
     </record>
@@ -1551,6 +1983,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>platform</value>
       <description>platform</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1558,6 +1991,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>pop</value>
       <description>Post Office Protocol v3</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2384"/>
       <notes/>
     </record>
@@ -1565,6 +1999,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>pres</value>
       <description>Presence</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3859"/>
       <notes/>
     </record>
@@ -1572,6 +2007,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>prospero</value>
       <description>Prospero Directory Service</description>
       <status>Historical</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4157"/>
       <notes/>
     </record>
@@ -1580,6 +2016,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>proxy</value>
       <description>proxy</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1588,6 +2025,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>pwid</value>
       <description>pwid</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Eld_Zierau"/>
       <notes/>
     </record>
@@ -1596,7 +2034,20 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>psyc</value>
       <description>psyc</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
+      <notes/>
+    </record>
+    <record date="2019-06-24">
+      <file type="template">prov/pttp</file>
+      <value>pttp</value>
+      <description>pttp</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="person" data="Tony_Deng"/>
+      <xref type="person" data="Tuan_Hoang"/>
+      <xref type="person" data="Bob_Hinkle"/>
+      <xref type="person" data="Mark_Chen"/>
       <notes/>
     </record>
     <record date="2016-09-20">
@@ -1604,6 +2055,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>qb</value>
       <description>qb</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Jan_Pokorny"/>
       <notes/>
     </record>
@@ -1612,7 +2064,17 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>query</value>
       <description>query</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
+      <notes/>
+    </record>
+    <record date="2019-11-05">
+      <file type="template">prov/quic-transport</file>
+      <value>quic-transport</value>
+      <description>quic-transport</description>
+      <status>Provisional</status>
+      <well-known>-</well-known>
+      <xref type="draft" data="draft-vvv-webtransport-quic"/>
       <notes/>
     </record>
     <record date="2015-07-20">
@@ -1620,6 +2082,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>redis</value>
       <description>redis</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Chris_Rebert"/>
       <notes/>
     </record>
@@ -1628,6 +2091,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>rediss</value>
       <description>rediss</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Chris_Rebert"/>
       <notes/>
     </record>
@@ -1635,6 +2099,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>reload</value>
       <description>reload</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6940"/>
       <notes/>
     </record>
@@ -1643,6 +2108,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>res</value>
       <description>res</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Alexey_Melnikov"/>
       <notes/>
     </record>
@@ -1651,6 +2117,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>resource</value>
       <description>resource</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1659,6 +2126,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>rmi</value>
       <description>rmi</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1666,6 +2134,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>rsync</value>
       <description>rsync</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc5781"/>
       <notes/>
     </record>
@@ -1675,6 +2144,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>rtmfp</value>
       <description>rtmfp</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc7425"/>
       <notes/>
     </record>
@@ -1683,6 +2153,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>rtmp</value>
       <description>rtmp</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1690,6 +2161,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>rtsp</value>
       <description>Real-Time Streaming Protocol (RTSP)</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2326"/><xref type="rfc" data="rfc7826"/>
       <notes/>
     </record>
@@ -1697,6 +2169,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>rtsps</value>
       <description>Real-Time Streaming Protocol (RTSP) over TLS</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2326"/><xref type="rfc" data="rfc7826"/>
       <notes/>
     </record>
@@ -1704,6 +2177,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>rtspu</value>
       <description>Real-Time Streaming Protocol (RTSP) over unreliable datagram transport</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2326"/>
       <notes/>
     </record>
@@ -1712,6 +2186,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>secondlife</value>
       <description>query</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1719,6 +2194,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>service</value>
       <description>service location</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2609"/>
       <notes/>
     </record>
@@ -1726,6 +2202,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>session</value>
       <description>session</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6787"/>
       <notes/>
     </record>
@@ -1734,6 +2211,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>sftp</value>
       <description>query</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1742,6 +2220,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>sgn</value>
       <description>sgn</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1749,6 +2228,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>shttp</value>
       <description>Secure Hypertext Transfer Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2660"/>
       <notes/>
     </record>
@@ -1756,6 +2236,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>sieve</value>
       <description>ManageSieve Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc5804"/>
       <notes/>
     </record>
@@ -1764,6 +2245,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>simpleledger</value>
       <description>simpleledger</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="James_Cramer"/>
       <notes/>
     </record>
@@ -1771,6 +2253,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>sip</value>
       <description>session initiation protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3261"/>
       <notes/>
     </record>
@@ -1778,6 +2261,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>sips</value>
       <description>secure session initiation protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3261"/>
       <notes/>
     </record>
@@ -1786,6 +2270,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>skype</value>
       <description>skype</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Alexey_Melnikov"/>
       <notes/>
     </record>
@@ -1794,6 +2279,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>smb</value>
       <description>smb</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1801,6 +2287,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>sms</value>
       <description>Short Message Service</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc5724"/>
       <notes/>
     </record>
@@ -1809,6 +2296,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>smtp</value>
       <description>smtp</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="draft" data="draft-melnikov-smime-msa-to-mda"/>
       <notes/>
     </record>
@@ -1816,6 +2304,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>snews</value>
       <description>NNTP over SSL/TLS</description>
       <status>Historical</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc5538"/>
       <notes/>
     </record>
@@ -1823,6 +2312,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>snmp</value>
       <description>Simple Network Management Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4088"/>
       <notes/>
     </record>
@@ -1830,6 +2320,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>soap.beep</value>
       <description>soap.beep</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4227"/>
       <notes/>
     </record>
@@ -1837,6 +2328,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>soap.beeps</value>
       <description>soap.beeps</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4227"/>
       <notes/>
     </record>
@@ -1845,6 +2337,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>soldat</value>
       <description>soldat</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1853,6 +2346,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>spiffe</value>
       <description>spiffe</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Evan_Gilman"/>
       <notes/>
     </record>
@@ -1861,6 +2355,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>spotify</value>
       <description>spotify</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1869,6 +2364,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ssh</value>
       <description>ssh</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1877,6 +2373,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>steam</value>
       <description>steam</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1884,6 +2381,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>stun</value>
       <description>stun</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc7064"/>
       <notes/>
     </record>    
@@ -1891,6 +2389,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>stuns</value>
       <description>stuns</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc7064"/>
       <notes/>
     </record>
@@ -1899,6 +2398,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>submit</value>
       <description>submit</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="draft" data="draft-melnikov-smime-msa-to-mda"/>
       <notes/>
     </record>
@@ -1907,6 +2407,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>svn</value>
       <description>svn</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1914,6 +2415,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>tag</value>
       <description>tag</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4151"/>
       <notes/>
     </record>
@@ -1922,14 +2424,17 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>teamspeak</value>
       <description>teamspeak</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
-    <record>
+    <record updated="2019-07-12">
       <value>tel</value>
       <description>telephone</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3966"/>
+	  <xref type="rfc" data="rfc5341"/>
       <notes/>
     </record>
     <record date="2014-09-12">
@@ -1937,6 +2442,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>teliaeid</value>
       <description>teliaeid</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Peter_Lewandowski"/>
       <notes/>
     </record>
@@ -1944,6 +2450,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>telnet</value>
       <description>Reference to interactive sessions</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4248"/>
       <notes/>
     </record>
@@ -1951,6 +2458,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>tftp</value>
       <description>Trivial File Transfer Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3617"/>
       <notes/>
     </record>
@@ -1959,6 +2467,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>things</value>
       <description>things</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -1967,6 +2476,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>thismessage</value>
       <description>multipart/related relative reference resolution</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2557"/>
       <notes/>
     </record>
@@ -1974,6 +2484,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>tip</value>
       <description>Transaction Internet Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2371"/>
       <notes/>
     </record>
@@ -1981,6 +2492,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>tn3270</value>
       <description>Interactive 3270 emulation sessions</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6270"/>
       <notes/>
     </record>
@@ -1989,6 +2501,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>tool</value>
       <description>tool</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Matthias_Merkel"/>
       <notes/>
     </record>      
@@ -1996,6 +2509,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>turn</value>
       <description>turn</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc7065"/>
       <notes/>
     </record>    
@@ -2003,6 +2517,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>turns</value>
       <description>turns</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc7065"/>
       <notes/>
     </record>
@@ -2010,6 +2525,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>tv</value>
       <description>TV Broadcasts</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2838"/>
       <notes/>
     </record>
@@ -2018,6 +2534,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>udp</value>
       <description>udp</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -2026,6 +2543,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>unreal</value>
       <description>unreal</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -2033,6 +2551,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>urn</value>
       <description>Uniform Resource Names</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc8141"/>
       <xref type="registry" data="urn-namespaces"/>
       <notes/>
@@ -2042,6 +2561,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ut2004</value>
       <description>ut2004</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -2050,6 +2570,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>v-event</value>
       <description>v-event</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="draft" data="draft-menderico-v-event-uri"/>
       <notes/>
     </record>
@@ -2057,6 +2578,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>vemmi</value>
       <description>versatile multimedia interface</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2122"/>
       <notes/>
     </record>
@@ -2065,6 +2587,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ventrilo</value>
       <description>ventrilo</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -2073,6 +2596,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>videotex</value>
       <description>videotex</description>
       <status>Historical</status>
+      <well-known>-</well-known>
       <xref type="draft" data="draft-mavrakis-videotex-url-spec"/>
       <xref type="rfc" data="rfc2122"/>
       <xref type="rfc" data="rfc3986"/>
@@ -2082,6 +2606,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>vnc</value>
       <description>Remote Framebuffer Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc7869"/>
       <notes/>
     </record>
@@ -2090,6 +2615,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>view-source</value>
       <description>view-source</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Mykyta_Yevstifeyev"/>
       <notes/>
     </record>
@@ -2097,6 +2623,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>wais</value>
       <description>Wide Area Information Servers</description>
       <status>Historical</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc4156"/>
       <notes/>
     </record>
@@ -2105,6 +2632,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>webcal</value>
       <description>webcal</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -2114,6 +2642,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>wpid</value>
       <description>wpid</description>
       <status>Historical</status>
+      <well-known>-</well-known>
       <xref type="person" data="Eld_Zierau"/>
       <notes/>
     </record> 
@@ -2121,6 +2650,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ws</value>
       <description>WebSocket connections</description>
       <status>Permanent</status>
+      <well-known><xref type="rfc" data="rfc8307"/></well-known>
       <xref type="rfc" data="rfc6455"/>
       <notes/>
     </record>
@@ -2128,6 +2658,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>wss</value>
       <description>Encrypted WebSocket connections</description>
       <status>Permanent</status>
+      <well-known><xref type="rfc" data="rfc8307"/></well-known>
       <xref type="rfc" data="rfc6455"/>
       <notes/>
     </record>
@@ -2136,6 +2667,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>wtai</value>
       <description>wtai</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -2144,6 +2676,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>wyciwyg</value>
       <description>wyciwyg</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -2151,6 +2684,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>xcon</value>
       <description>xcon</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6501"/>
       <notes/>
     </record>
@@ -2158,6 +2692,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>xcon-userid</value>
       <description>xcon-userid</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc6501"/>
       <notes/>
     </record>
@@ -2166,6 +2701,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>xfire</value>
       <description>xfire</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -2173,6 +2709,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>xmlrpc.beep</value>
       <description>xmlrpc.beep</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3529"/>
       <notes/>
     </record>
@@ -2180,6 +2717,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>xmlrpc.beeps</value>
       <description>xmlrpc.beeps</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc3529"/>
       <notes/>
     </record>
@@ -2187,6 +2725,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>xmpp</value>
       <description>Extensible Messaging and Presence Protocol</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc5122"/>
       <notes/>
     </record>
@@ -2195,6 +2734,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>xri</value>
       <description>xri</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -2203,6 +2743,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>ymsgr</value>
       <description>ymsgr</description>
       <status>Provisional</status>
+      <well-known>-</well-known>
       <xref type="person" data="Dave_Thaler"/>
       <notes/>
     </record>
@@ -2210,6 +2751,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>z39.50</value>
       <description>Z39.50 information access</description>
       <status>Historical</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc1738"/>
       <xref type="rfc" data="rfc2056"/>
       <notes/>
@@ -2218,6 +2760,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>z39.50r</value>
       <description>Z39.50 Retrieval</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2056"/>
       <notes/>
     </record>
@@ -2225,6 +2768,7 @@ per Section 7.2 of <xref type="rfc" data="rfc7595"/>.
       <value>z39.50s</value>
       <description>Z39.50 Session</description>
       <status>Permanent</status>
+      <well-known>-</well-known>
       <xref type="rfc" data="rfc2056"/>
       <notes/>
     </record>
@@ -2236,6 +2780,11 @@ resource should be avoided <xref type="uri" data="http://www.w3.org/TR/webarch/#
   </registry>
 
   <people>
+    <person id="Adam_Barth">
+      <name>Adam Barth</name>
+      <uri>mailto:abarth&amp;google.com</uri>
+      <updated>2019-03-29</updated>
+    </person>
     <person id="Alastair_Green">
       <name>Alastair Green</name>
       <uri>mailto:alastair.green&amp;neotechnology.com.</uri>
@@ -2251,10 +2800,25 @@ resource should be avoided <xref type="uri" data="http://www.w3.org/TR/webarch/#
       <uri>mailto:alex&amp;librevault.com</uri>
       <updated>2016-06-13</updated>
     </person>
+    <person id="Arild_Hegvik">
+      <name>Arild Hegvik</name>
+      <uri>mailto:arild&amp;bitcoincheque.org</uri>
+      <updated>2020-01-08</updated>
+    </person>
+    <person id="ARK_agency">
+      <name>ARK Maintenance Agency</name>
+      <uri>mailto:marioxcc.mt&amp;yandex.com</uri>
+      <updated>2019-08-22</updated>
+    </person>
     <person id="Bíró_Tamás">
       <name>Bíró Tamás</name>
       <uri>mailto:tamas.biro&amp;sensenet.com</uri>
       <updated>2014-05-16</updated>
+    </person>
+    <person id="Bob_Hinkle">
+      <name>Bob Hinkle</name>
+      <uri>mailto:bohinkle&amp;cisco.com</uri>
+      <updated>2019-06-24</updated>
     </person>
     <person id="Bob_Van_Zant">
       <name>Bob Van Zant</name>
@@ -2306,10 +2870,20 @@ resource should be avoided <xref type="uri" data="http://www.w3.org/TR/webarch/#
       <uri>mailto:evan&amp;scytale.io</uri>
       <updated>2018-02-23</updated>
     </person>
+    <person id="Gaurav_Jain">
+      <name>Gaurav Jain</name>
+      <uri>mailto:gjain&amp;wi-fi.org</uri>
+      <updated>2019-01-23</updated>
+    </person>
     <person id="Ignacio_Losiggio">
       <name>Ignacio Losiggio</name>
       <uri>mailto:iglosiggio&amp;gmail.com</uri>
       <updated>2017-05-09</updated>
+    </person>
+    <person id="Ivan_Herman">
+      <name>Ivan Herman</name>
+      <uri>mailto:ivan&amp;w3.org</uri>
+      <updated>2020-02-14</updated>
     </person>
     <person id="James_Cramer">
       <name>James Cramer</name>
@@ -2320,6 +2894,11 @@ resource should be avoided <xref type="uri" data="http://www.w3.org/TR/webarch/#
       <name>Jan Pokorny</name>
       <uri>mailto:jpokorny&amp;redhat.com</uri>
       <updated>2016-09-20</updated>
+    </person>
+    <person id="Jarmo_Miettinen">
+      <name>Jarmo_Miettinen</name>
+      <uri>mailto:jarmo.miettinen&amp;methics.fi</uri>
+      <updated>2019-02-12</updated>
     </person>
     <person id="Joe_Hildebrand">
       <name>Joe Hildebrand</name>
@@ -2334,7 +2913,12 @@ resource should be avoided <xref type="uri" data="http://www.w3.org/TR/webarch/#
     <person id="Manu_Sporny">
       <name>Manu Sporny</name>
       <uri>mailto:msporny&amp;digitalbazaar.com</uri>
-     <updated>2018-05-14</updated>
+     <updated>2020-02-14</updated>
+    </person>
+    <person id="Mark_Chen">
+      <name>Mark Chen</name>
+      <uri>mailto:marchen&amp;cisco.com</uri>
+      <updated>2019-06-24</updated>
     </person>
     <person id="Matthias_Merkel">
       <name>Matthias Merkel</name>
@@ -2371,6 +2955,11 @@ resource should be avoided <xref type="uri" data="http://www.w3.org/TR/webarch/#
       <uri>mailto:coretech_wg&amp;openconnectivity.org</uri>
       <updated>2017-06-07</updated>
     </person>
+    <person id="OMA-DMSE">
+      <name>OMA-DMSE – Device Management Working Group at the Open Mobile Alliance</name>
+      <uri>mailto:OMA-DM&amp;mail.openmobilealliance.org</uri>
+      <updated>2019-04-16</updated>
+    </person>
     <person id="OMA-OMNA">
       <name>OMNA – Open Mobile Naming Authority of the Open Mobile Alliance</name>
       <uri>mailto:OMA-OMNA&amp;mail.openmobilealliance.org</uri>
@@ -2391,25 +2980,55 @@ resource should be avoided <xref type="uri" data="http://www.w3.org/TR/webarch/#
       <uri>mailto:peterwaher&amp;hotmail.com</uri>
       <updated>2015-11-25</updated>
     </person>
+    <person id="RadioDNS_Project">
+      <name>RadioDNS Project</name>
+      <uri>mailto:iana&amp;radiodns.org</uri>
+      <updated>2019-03-18</updated>
+    </person>
+    <person id="SAP_SE">
+      <name>SAP SE</name>
+      <uri>mailto:ma.becker&amp;sap.com</uri>
+      <updated>2019-07-04</updated>
+    </person>
+    <person id="Tim_McSweeney">
+      <name>Tim McSweeney</name>
+      <uri>mailto:tim&amp;dropnumber.com</uri>
+      <updated>2019-04-07</updated>
+    </person>
+    <person id="Tony_Deng">
+      <name>Tony Deng</name>
+      <uri>mailto:tdeng&amp;cisco.com</uri>
+      <updated>2019-06-24</updated>
+    </person>
+    <person id="Tuan_Hoang">
+      <name>Tuan Hoang</name>
+      <uri>mailto:tuhoang&amp;cisco.com</uri>
+      <updated>2019-06-24</updated>
+    </person>
     <person id="urischemeowners_at_microsoft.com">
       <name>urischemeowners at microsoft.com</name>
       <uri>mailto:urischemeowners&amp;microsoft.com</uri>
-      <updated>2018-08-03</updated>
+      <updated>2020-03-02</updated>
     </person>
     <person id="W3C_WebApps_Working_Group">
       <name>W3C WebApps Working Group</name>
       <uri>mailto:public-webapps&amp;w3.org</uri>
       <updated>2015-07-17</updated>
     </person>
-    <person id="W3C_Credentials_Community_Group">
-      <name>W3C Credentials Community Group</name>
-      <uri>mailto:public-credentials&amp;w3.org</uri>
-      <updated>2018-05-14</updated>
+    <person id="W3C_Decentralized_Identifier_Working_Group">
+      <name>W3C Decentralized Identifier Working Group</name>
+      <uri>mailto:public-did-wg&amp;w3.org</uri>
+      <updated>2020-02-14</updated>
     </person>
     <person id="Wiktor_Kwapisiewicz">
       <name>Wiktor Kwapisiewicz</name>
       <uri>mailto:wiktor&amp;metacode.biz</uri>
       <updated>2018-05-31</updated>
+    </person>
+    <person id="Wi-Fi_Alliance">
+      <name>Wi-Fi Alliance</name>
+      <uri>mailto:gjain&amp;wi-fi.org</uri>
+      <updated>2019-01-23</updated>
     </person>
   </people>
 </registry>

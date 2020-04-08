@@ -4,7 +4,7 @@
            2010-12-08
 
    Last Updated
-           2018-06-21
+           2019-11-07
 
    Available Formats
            [IMG]
@@ -36,24 +36,30 @@ Remote Framebuffer Security Types
            [IMG]
            CSV
 
-    Value           Name                Reference
-      0    Invalid                 [RFC6143]
-      1    None                    [RFC6143]
-      2    VNC Authentication      [RFC6143]
-    3-15   RealVNC                 historic assignment
-     16    Tight                   historic assignment
-     17    Ultra                   historic assignment
-     18    TLS                     historic assignment
-     19    VeNCrypt                historic assignment
-     20    GTK-VNC SASL            historic assignment
-     21    MD5 hash authentication historic assignment
-     22    Colin Dean xvp          historic assignment
-     23    Secure Tunnel           [RFC7869]
-     24    Integrated SSH          [RFC7869]
+    Value               Name                    Reference
+      0    Invalid                         [RFC6143]
+      1    None                            [RFC6143]
+      2    VNC Authentication              [RFC6143]
+    3-15   RealVNC                         historic assignment
+     16    Tight                           historic assignment
+     17    Ultra                           historic assignment
+     18    TLS                             historic assignment
+     19    VeNCrypt                        historic assignment
+     20    GTK-VNC SASL                    historic assignment
+     21    MD5 hash authentication         historic assignment
+     22    Colin Dean xvp                  historic assignment
+     23    Secure Tunnel                   [RFC7869]
+     24    Integrated SSH                  [RFC7869]
     25-29  Unassigned
-    30-35  Apple Inc.              [Michael_Stein]
+    30-35  Apple Inc.                      [Michael_Stein]
    36-127  Unassigned
-   128-255 RealVNC                 historic assignment
+     128   RealVNC                         historic assignment
+     129   RealVNC                         historic assignment
+     129   Tight Unix Login Authentication [Samuel_Mannehed]
+   130-134 RealVNC                         historic assignment
+   135-191 Unassigned
+     192   RealVNC                         historic assignment
+   193-255 Unassigned
 
 Remote Framebuffer Client-to-Server Message Types
 
@@ -88,7 +94,8 @@ Remote Framebuffer Client-to-Server Message Types
      128   Car Connectivity                 [Jörg_Brakensiek] [Terminal Mode v1.0]
    129-149 Unassigned
      150   TightVNC EnableContinuousUpdates historic assignment
-   151-247 Unassigned
+   151-246 Unassigned
+     247   Dell-EMC                         [Rajeshkumar_Patel]
      248   ClientFence                      TigerVNC
      249   OLIVE Call Control               historic assignment
      250   Colin Dean xvp                   historic assignment
@@ -128,7 +135,8 @@ Remote Framebuffer Server-to-Client Message Types
      150   TightVNC EndOfContinuousUpdates historic assignment
    151-172 Unassigned
      173   ServerState                     historic assignment
-   174-247 Unassigned
+   174-246 Unassigned
+     247   Dell-EMC                        [Rajeshkumar_Patel]
      248   ServerFence                     TigerVNC
      249   OLIVE Call Control              historic assignment
      250   Colin Dean xvp                  historic assignment
@@ -194,6 +202,7 @@ Remote Framebuffer Encoding Types
              -312           Fence                               TigerVNC
              -313           ContinuousUpdates                   TigerVNC
              -314           CursorWithAlpha                     [Tristan_Richardson]
+             -315           ColorMap                            [Tristan_Richardson]
          -412 to -512       TurboVNC fine-grained quality level historic assignment
          -523 to -528       Car Connectivity                    [Jörg_Brakensiek] [Terminal Mode v1.0]
          -763 to -768       TurboVNC subsampling level          historic assignment
@@ -211,4 +220,6 @@ Remote Framebuffer Encoding Types
    [David_Warden]       David Warden       mailto:David_Warden&dell.com        2014-10-27
    [Jörg_Brakensiek]    Jörg Brakensiek    mailto:jorg.brakensiek&nokia.com    2011-05-11
    [Michael_Stein]      Michael Stein      mailto:mvs&apple.com                2011-11-02
+   [Rajeshkumar_Patel]  Rajeshkumar Patel  mailto:rajesh_z_patel&Dell.com      2019-04-24
+   [Samuel_Mannehed]    Samuel Mannehed    mailto:samuel&cendio.se             2019-11-07
    [Tristan_Richardson] Tristan Richardson mailto:standards&realvnc.com        2017-09-12

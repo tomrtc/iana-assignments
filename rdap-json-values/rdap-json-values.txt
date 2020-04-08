@@ -4,7 +4,7 @@
            2015-01-12
 
    Last Updated
-           2018-02-16
+           2019-08-15
 
    Available Formats
            [IMG]
@@ -233,10 +233,12 @@ RDAP JSON Values
                                                   Association of phone number represented by this ENUM domain to
    enum validation expiration   event action      registrant has expired or will expire at a pre-determined date and [CZ.NIC_z._s._p._o.]
                                                   time.
+   object redacted due to       notice and remark The object contains redacted data due to lack of authorization.    [ICANN]
+   authorization                type
 
                                                                         People
 
             ID                 Name                  Contact URI           Last Updated
    [CZ.NIC_z._s._p._o.] CZ.NIC, z. s. p. o. mailto:tech&nic.cz             2016-03-30
-   [ICANN]              ICANN               mailto:tech-services&icann.org
+   [ICANN]              ICANN               mailto:globalsupport&icann.org 2019-08-02
    [IESG]               IESG                mailto:iesg&ietf.org

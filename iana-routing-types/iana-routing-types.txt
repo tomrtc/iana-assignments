@@ -3,9 +3,6 @@
    Created
            2017-10-25
 
-   Last Updated
-           2018-06-26
-
    Registration Procedure(s)
 
  See Address Family Numbers and Subsequent Address Family
@@ -19,7 +16,7 @@
  and [Subsequent Address Family Identifiers (SAFI) Parameters]
  registries.
 
-   Module: [iana-routing-types@2017-09-19.yang]
+   Module: [iana-routing-types@2019-11-04.yang]
 
 
    Reference

@@ -5,7 +5,7 @@
   <title>Language Subtag Registry - Registration Templates</title>
   <category>Language Tags</category>
   <registration_rule>IESG-Appointed Language Subtag Reviewer</registration_rule>
-  <updated>2018-08-08</updated>
+  <updated>2020-04-01</updated>
   
   <xref type="rfc" data="rfc5646"/>
   <note><xref type="rfc" data="rfc5646"/> defines an IANA-maintained registry of language subtags, which
@@ -26,6 +26,11 @@ following is the archive of language subtag registration templates.
     <record date="2010-03-24">
       <value>abp</value>
       <file type="template">abp.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>adb</value>
+      <file type="template">adb.txt</file>
       <type>language</type>
     </record>
     <record date="2018-03-20">
@@ -63,6 +68,11 @@ following is the archive of language subtag registration templates.
       <file type="template">agv.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>ais</value>
+      <file type="template">ais.txt</file>
+      <type>language</type>
+    </record>
     <record date="2018-03-20">
       <value>aja</value>
       <file type="template">aja.txt</file>
@@ -81,6 +91,16 @@ following is the archive of language subtag registration templates.
     <record date="2012-08-27">
       <value>anl</value>
       <file type="template">anl.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>ant</value>
+      <file type="template">ant.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>aoh</value>
+      <file type="template">aoh.txt</file>
       <type>language</type>
     </record>
     <record date="2015-02-18">
@@ -128,6 +148,11 @@ following is the archive of language subtag registration templates.
       <file type="template">art.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>asd</value>
+      <file type="template">asd.txt</file>
+      <type>language</type>
+    </record>
     <record date="2018-03-20">
       <value>asf</value>
       <file type="template">asf.txt</file>
@@ -146,6 +171,11 @@ following is the archive of language subtag registration templates.
     <record date="2015-02-18">
       <value>aue</value>
       <file type="template">aue.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2018-10-31">
+      <value>aue</value>
+      <file type="template">aue-2018-10-28.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -183,6 +213,11 @@ following is the archive of language subtag registration templates.
       <file type="template">ayx.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>ayy</value>
+      <file type="template">ayy.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>azd</value>
       <file type="template">azd.txt</file>
@@ -203,9 +238,19 @@ following is the archive of language subtag registration templates.
       <file type="template">baz.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>bbz</value>
+      <file type="template">bbz.txt</file>
+      <type>language</type>
+    </record>
     <record date="2016-06-10">
       <value>bcg</value>
       <file type="template">bcg.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>bck</value>
+      <file type="template">bck.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -352,7 +397,12 @@ following is the archive of language subtag registration templates.
       <value>bpa</value>
       <file type="template">bpa.txt</file>
       <type>language</type>
-    </record>    
+    </record>   
+    <record date="2020-04-01">
+      <value>bpb</value>
+      <file type="template">bpb.txt</file>
+      <type>language</type>
+    </record> 
     <record date="2013-09-23">
       <value>bpk</value>
       <file type="template">bpk.txt</file>
@@ -366,6 +416,11 @@ following is the archive of language subtag registration templates.
     <record date="2012-08-27">
       <value>bqv</value>
       <file type="template">bqv.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>brf</value>
+      <file type="template">brf.txt</file>
       <type>language</type>
     </record>
     <record date="2010-03-24">
@@ -411,6 +466,11 @@ following is the archive of language subtag registration templates.
     <record date="2010-03-24">
       <value>byh</value>
       <file type="template">byh.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>bym</value>
+      <file type="template">bym.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -473,14 +533,29 @@ following is the archive of language subtag registration templates.
       <file type="template">cbw.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>cca</value>
+      <file type="template">cca.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>ccq</value>
       <file type="template">ccq.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>cdg</value>
+      <file type="template">cdg.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>cek</value>
       <file type="template">cek.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>cey</value>
+      <file type="template">cey.txt</file>
       <type>language</type>
     </record>    
     <record date="2013-09-23">
@@ -496,6 +571,11 @@ following is the archive of language subtag registration templates.
     <record date="2012-08-27">
       <value>cka</value>
       <file type="template">cka.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>ckm</value>
+      <file type="template">ckm.txt</file>
       <type>language</type>
     </record>    
     <record date="2013-09-23">
@@ -526,6 +606,11 @@ following is the archive of language subtag registration templates.
     <record date="2016-06-10">
       <value>cnh</value>
       <file type="template">cnh.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>cnp</value>
+      <file type="template">cnp.txt</file>
       <type>language</type>
     </record>
     <record date="2018-01-25">
@@ -576,6 +661,11 @@ following is the archive of language subtag registration templates.
     <record date="2013-09-23">
       <value>csj</value>
       <file type="template">csj.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>csp</value>
+      <file type="template">csp.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -658,9 +748,19 @@ following is the archive of language subtag registration templates.
       <file type="template">dgl.txt</file>
       <type>language</type>
     </record>    
+    <record date="2020-04-01">
+      <value>dgr</value>
+      <file type="template">dgr.txt</file>
+      <type>language</type>
+    </record>
     <record date="2013-09-23">
       <value>dgt</value>
       <file type="template">dgt-20130923.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>dgu</value>
+      <file type="template">dgu.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -698,9 +798,24 @@ following is the archive of language subtag registration templates.
       <file type="template">dhx.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>dif</value>
+      <file type="template">dif.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>dit</value>
+      <file type="template">dit.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>dja</value>
       <file type="template">dja.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>djd</value>
+      <file type="template">djd.txt</file>
       <type>language</type>
     </record>
     <record date="2010-03-24">
@@ -711,6 +826,11 @@ following is the archive of language subtag registration templates.
     <record date="2013-09-23">
       <value>djl</value>
       <file type="template">djl.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>djn</value>
+      <file type="template">djn.txt</file>
       <type>language</type>
     </record>
     <record date="2011-08-24">
@@ -738,6 +858,11 @@ following is the archive of language subtag registration templates.
       <file type="template">dmd.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>dmf</value>
+      <file type="template">dmf.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>dmo</value>
       <file type="template">dmo.txt</file>
@@ -751,6 +876,11 @@ following is the archive of language subtag registration templates.
     <record date="2013-09-23">
       <value>dnj</value>
       <file type="template">dnj.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2018-10-31">
+      <value>dno</value>
+      <file type="template">dno.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -781,6 +911,11 @@ following is the archive of language subtag registration templates.
     <record date="2012-08-27">
       <value>drl</value>
       <file type="template">drl.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>drr</value>
+      <file type="template">drr.txt</file>
       <type>language</type>
     </record>
     <record date="2010-03-24">
@@ -822,6 +957,11 @@ following is the archive of language subtag registration templates.
       <value>dty</value>
       <file type="template">dty.txt</file>
       <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>dud</value>
+      <file type="template">dud.txt</file>
+      <type>language</type>
     </record>    
     <record date="2013-09-23">
       <value>duf</value>
@@ -843,6 +983,11 @@ following is the archive of language subtag registration templates.
       <file type="template">duz.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>dwk</value>
+      <file type="template">dwk.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>dwl</value>
       <file type="template">dwl.txt</file>
@@ -856,6 +1001,21 @@ following is the archive of language subtag registration templates.
     <record date="2016-06-10">
       <value>dwy</value>
       <file type="template">dwy.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2018-10-31">
+      <value>dwz</value>
+      <file type="template">dwz.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>dyn</value>
+      <file type="template">dyn.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>dyy</value>
+      <file type="template">dyy.txt</file>
       <type>language</type>
     </record>
     <record date="2015-02-18">
@@ -873,6 +1033,11 @@ following is the archive of language subtag registration templates.
       <file type="template">eaa.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>ebc</value>
+      <file type="template">ebc.txt</file>
+      <type>language</type>
+    </record>
     <record date="2010-03-24">
       <value>ebk</value>
       <file type="template">ebk.txt</file>
@@ -886,6 +1051,11 @@ following is the archive of language subtag registration templates.
     <record date="2013-09-23">
       <value>ekc</value>
       <file type="template">ekc.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>ekc</value>
+      <file type="template">ekc-2020-04-01.txt</file>
       <type>language</type>
     </record>
     <record date="2012-09-04">
@@ -1002,12 +1172,22 @@ following is the archive of language subtag registration templates.
       <value>gbc</value>
       <file type="template">gbc.txt</file>
       <type>language</type>
-    </record>    
+    </record>   
+    <record date="2019-04-30">
+      <value>gbd</value>
+      <file type="template">gbd.txt</file>
+      <type>language</type>
+    </record>
     <record date="2013-09-23">
       <value>gbw</value>
       <file type="template">gbw.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>gdh</value>
+      <file type="template">gdh.txt</file>
+      <type>language</type>
+    </record>    
     <record date="2012-08-27">
       <value>gds</value>
       <file type="template">gds.txt</file>
@@ -1018,6 +1198,11 @@ following is the archive of language subtag registration templates.
       <file type="template">gdt.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>gef</value>
+      <file type="template">gef.txt</file>
+      <type>language</type>
+    </record>    
     <record date="2016-06-10">
       <value>gek</value>
       <file type="template">gek.txt</file>
@@ -1044,8 +1229,18 @@ following is the archive of language subtag registration templates.
       <type>language</type>
     </record>
     <record date="2015-02-18">
-      <value>gfx-2015-02-12</value>
+      <value>gfx</value>
       <file type="template">gfx-2015-02-12.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2018-10-31">
+      <value>gfx</value>
+      <file type="template">gfx-2018-10-28.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>gge</value>
+      <file type="template">gge.txt</file>
       <type>language</type>
     </record>
     <record date="2016-06-10">
@@ -1076,6 +1271,11 @@ following is the archive of language subtag registration templates.
     <record date="2012-08-27">
       <value>ght</value>
       <file type="template">ght.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>gia</value>
+      <file type="template">gia.txt</file>
       <type>language</type>
     </record>
     <record date="2017-03-03">
@@ -1123,11 +1323,21 @@ following is the archive of language subtag registration templates.
       <file type="template">gku.txt</file>
       <type>language</type>
     </record>
+    <record date="2018-10-31">
+      <value>gku</value>
+      <file type="template">gku-2018-10-28.txt</file>
+      <type>language</type>
+    </record>
     <record date="2015-02-18">
       <value>glh</value>
       <file type="template">glh.txt</file>
       <type>language</type>
-    </record>    
+    </record>
+    <record date="2020-04-01">
+      <value>gli</value>
+      <file type="template">gli.txt</file>
+      <type>language</type>
+    </record>
     <record date="2013-09-23">
       <value>gll</value>
       <file type="template">gll.txt</file>
@@ -1137,7 +1347,12 @@ following is the archive of language subtag registration templates.
       <value>gmg</value>
       <file type="template">gmg.txt</file>
       <type>language</type>
-    </record> 
+    </record>
+    <record date="2020-04-01">
+      <value>gmr</value>
+      <file type="template">gmr.txt</file>
+      <type>language</type>
+    </record>
     <record date="2013-09-23">
       <value>gmz</value>
       <file type="template">gmz.txt</file>
@@ -1151,6 +1366,11 @@ following is the archive of language subtag registration templates.
     <record date="2015-03-06">
       <value>gnk</value>
       <file type="template">gnk.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2018-10-31">
+      <value>gnk</value>
+      <file type="template">gnk-2018-10-28.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -1188,6 +1408,11 @@ following is the archive of language subtag registration templates.
       <file type="template">gtu.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>gue</value>
+      <file type="template">gue.txt</file>
+      <type>language</type>
+    </record>
     <record date="2016-06-10">
       <value>guv</value>
       <file type="template">guv.txt</file>
@@ -1198,9 +1423,19 @@ following is the archive of language subtag registration templates.
       <file type="template">gvr.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>gwc</value>
+      <file type="template">gwc.txt</file>
+      <type>language</type>
+    </record>
     <record date="2015-03-06">
       <value>gwj</value>
       <file type="template">gwj.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2018-10-31">
+      <value>gwj</value>
+      <file type="template">gwj-2018-10-28.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -1216,6 +1451,11 @@ following is the archive of language subtag registration templates.
     <record date="2015-03-06">
       <value>hgm</value>
       <file type="template">hgm.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2018-10-31">
+      <value>hgm</value>
+      <file type="template">hgm-2018-10-28.txt</file>
       <type>language</type>
     </record>
     <record date="2009-09-22">
@@ -1243,9 +1483,19 @@ following is the archive of language subtag registration templates.
       <file type="template">hmz.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>hng</value>
+      <file type="template">hng.txt</file>
+      <type>language</type>
+    </record>
     <record date="2015-03-06">
       <value>hnh</value>
       <file type="template">hnh.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2018-10-31">
+      <value>hnh</value>
+      <file type="template">hnh-2018-10-28.txt</file>
       <type>language</type>
     </record>
     <record date="2010-04-19">
@@ -1297,7 +1547,17 @@ following is the archive of language subtag registration templates.
       <value>huc</value>
       <file type="template">huc.txt</file>
       <type>language</type>
-    </record>    
+    </record>
+    <record date="2018-10-31">
+      <value>huc</value>
+      <file type="template">huc-2018-10-28.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>huc</value>
+      <file type="template">huc-2020-04-01.txt</file>
+      <type>language</type>
+    </record>
     <record date="2013-09-23">
       <value>hwc</value>
       <file type="template">hwc.txt</file>
@@ -1442,6 +1702,11 @@ following is the archive of language subtag registration templates.
       <value>jar</value>
       <file type="template">jar.txt</file>
       <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>jay</value>
+      <file type="template">jay.txt</file>
+      <type>language</type>
     </record>    
     <record date="2013-09-23">
       <value>jbi</value>
@@ -1466,6 +1731,11 @@ following is the archive of language subtag registration templates.
     <record date="2012-08-27">
       <value>jgk</value>
       <file type="template">jgk.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>jig</value>
+      <file type="template">jig.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -1516,6 +1786,11 @@ following is the archive of language subtag registration templates.
     <record date="2012-08-27">
       <value>jui</value>
       <file type="template">jui.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>kaa</value>
+      <file type="template">kaa.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -1578,14 +1853,39 @@ following is the archive of language subtag registration templates.
       <file type="template">khi.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>kjf</value>
+      <file type="template">kjf.txt</file>
+      <type>language</type>
+    </record>
     <record date="2015-02-18">
       <value>kjv</value>
       <file type="template">kjv.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>kkp</value>
+      <file type="template">kkp.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>kkq</value>
+      <file type="template">kkq.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>kky</value>
+      <file type="template">kky.txt</file>
+      <type>language</type>
+    </record>
     <record date="2010-03-24">
       <value>klg</value>
       <file type="template">klg.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>klj</value>
+      <file type="template">klj.txt</file>
       <type>language</type>
     </record>
     <record date="2010-03-24">
@@ -1648,6 +1948,11 @@ following is the archive of language subtag registration templates.
       <file type="template">krr.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>ktd</value>
+      <file type="template">ktd.txt</file>
+      <type>language</type>
+    </record>
     <record date="2016-06-10">
       <value>ktr</value>
       <file type="template">ktr.txt</file>
@@ -1663,9 +1968,19 @@ following is the archive of language subtag registration templates.
       <file type="template">ktz-2017-02-23.txt</file>
       <type>language</type>
     </record>
+    <record date="2018-10-31">
+      <value>ktz</value>
+      <file type="template">ktz-2018-10-28.txt</file>
+      <type>language</type>
+    </record>
     <record date="2015-02-18">
       <value>kue</value>
       <file type="template">kue.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>kui</value>
+      <file type="template">kui.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -1703,6 +2018,16 @@ following is the archive of language subtag registration templates.
       <file type="template">kxf.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>kxl</value>
+      <file type="template">kxl.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>kxu</value>
+      <file type="template">kxu.txt</file>
+      <type>language</type>
+    </record>
     <record date="2010-03-24">
       <value>kyn</value>
       <file type="template">kyn.txt</file>
@@ -1733,6 +2058,11 @@ following is the archive of language subtag registration templates.
       <file type="template">lay.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>lba</value>
+      <file type="template">lba.txt</file>
+      <type>language</type>
+    </record>
     <record date="2010-03-24">
       <value>lbk</value>
       <file type="template">lbk.txt</file>
@@ -1743,9 +2073,19 @@ following is the archive of language subtag registration templates.
       <file type="template">lbl.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>lbn</value>
+      <file type="template">lbn.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>lbr</value>
       <file type="template">lbr.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>lby</value>
+      <file type="template">lby.txt</file>
       <type>language</type>
     </record>
     <record date="2016-06-10">
@@ -1783,6 +2123,11 @@ following is the archive of language subtag registration templates.
       <file type="template">let.txt</file>
       <type>language</type>
     </record>
+    <record date="2018-11-30">
+      <value>lg</value>
+      <file type="template">lg.txt</file>
+      <type>language</type>
+    </record>
     <record date="2017-03-03">
       <value>lgn</value>
       <file type="template">lgn.txt</file>
@@ -1812,6 +2157,11 @@ following is the archive of language subtag registration templates.
       <value>llj</value>
       <file type="template">llj.txt</file>
       <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>llo</value>
+      <file type="template">llo.txt</file>
+      <type>language</type>
     </record>    
     <record date="2013-09-23">
       <value>lkm</value>
@@ -1826,6 +2176,11 @@ following is the archive of language subtag registration templates.
     <record date="2014-03-13">
       <value>lmm</value>
       <file type="template">lmm.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>lmz</value>
+      <file type="template">lmz.txt</file>
       <type>language</type>
     </record>
     <record date="2018-03-20">
@@ -1858,6 +2213,16 @@ following is the archive of language subtag registration templates.
       <file type="template">lsg.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>lsn</value>
+      <file type="template">lsn.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>lsv</value>
+      <file type="template">lsv.txt</file>
+      <type>language</type>
+    </record>
     <record date="2010-03-24">
       <value>lsy</value>
       <file type="template">lsy.txt</file>
@@ -1876,6 +2241,11 @@ following is the archive of language subtag registration templates.
     <record date="2010-03-24">
       <value>lv</value>
       <file type="template">lv.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>lvi</value>
+      <file type="template">lvi.txt</file>
       <type>language</type>
     </record>
     <record date="2010-03-24">
@@ -1917,10 +2287,20 @@ following is the archive of language subtag registration templates.
       <value>meb</value>
       <file type="template">meb.txt</file>
       <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>mec</value>
+      <file type="template">mec.txt</file>
+      <type>language</type>
     </record>    
     <record date="2013-09-23">
       <value>meg</value>
       <file type="template">meg.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>mep</value>
+      <file type="template">mep.txt</file>
       <type>language</type>
     </record>    
     <record date="2013-09-23">
@@ -1931,6 +2311,11 @@ following is the archive of language subtag registration templates.
     <record date="2013-09-23">
       <value>mfg</value>
       <file type="template">mfg.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>mfr</value>
+      <file type="template">mfr.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -1993,6 +2378,11 @@ following is the archive of language subtag registration templates.
       <file type="template">mo-20081125.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>moe</value>
+      <file type="template">moe.txt</file>
+      <type>language</type>
+    </record>
     <record date="2010-03-24">
       <value>mof</value>
       <file type="template">mof.txt</file>
@@ -2006,6 +2396,21 @@ following is the archive of language subtag registration templates.
     <record date="2011-08-24">
       <value>moz</value>
       <file type="template">moz.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>mpb</value>
+      <file type="template">mpb.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>mpc</value>
+      <file type="template">mpc.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>mpj</value>
+      <file type="template">mpj.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -2072,7 +2477,17 @@ following is the archive of language subtag registration templates.
       <value>mxx</value>
       <file type="template">mxx.txt</file>
       <type>language</type>
-    </record>    
+    </record>  
+    <record date="2019-04-30">
+      <value>myd</value>
+      <file type="template">myd.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>myi</value>
+      <file type="template">myi.txt</file>
+      <type>language</type>
+    </record>
     <record date="2013-09-23">
       <value>myq</value>
       <file type="template">myq.txt</file>
@@ -2108,14 +2523,34 @@ following is the archive of language subtag registration templates.
       <file type="template">nat.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>nay</value>
+      <file type="template">nay.txt</file>
+      <type>language</type>
+    </record>
     <record date="2011-08-24">
       <value>nbf</value>
       <file type="template">nbf.txt</file>
       <type>language</type>
-    </record>    
+    </record>  
+    <record date="2019-04-30">
+      <value>nbj</value>
+      <file type="template">nbj.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>nbr</value>
+      <file type="template">nbr.txt</file>
+      <type>language</type>
+    </record>
     <record date="2013-09-23">
       <value>nbx</value>
       <file type="template">nbx.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>nck</value>
+      <file type="template">nck.txt</file>
       <type>language</type>
     </record>
     <record date="2018-03-20">
@@ -2152,7 +2587,17 @@ following is the archive of language subtag registration templates.
       <value>ngh</value>
       <file type="template">ngh.txt</file>
       <type>language</type>
-    </record>   
+    </record>
+    <record date="2018-10-31">
+      <value>ngh</value>
+      <file type="template">ngh-2018-10-28.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>ngh</value>
+      <file type="template">ngh-2019-04-30.txt</file>
+      <type>language</type>
+    </record>
     <record date="2013-09-23">
       <value>ngk</value>
       <file type="template">ngk.txt</file>
@@ -2176,6 +2621,11 @@ following is the archive of language subtag registration templates.
     <record date="2009-04-07">
       <value>nic</value>
       <file type="template">nic.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>nig</value>
+      <file type="template">nig.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -2223,9 +2673,19 @@ following is the archive of language subtag registration templates.
       <file type="template">nmn.txt</file>
       <type>language</type>
     </record>
+    <record date="2018-10-31">
+      <value>nmn</value>
+      <file type="template">nmn-2018-10-28.txt</file>
+      <type>language</type>
+    </record>
     <record date="2015-02-18">
       <value>nmw</value>
       <file type="template">nmw.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>nns</value>
+      <file type="template">nns.txt</file>
       <type>language</type>
     </record>
     <record date="2015-02-18">
@@ -2303,6 +2763,11 @@ following is the archive of language subtag registration templates.
       <file type="template">nru.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>nsb</value>
+      <file type="template">nsb.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>nsf</value>
       <file type="template">nsf.txt</file>
@@ -2371,6 +2836,21 @@ following is the archive of language subtag registration templates.
     <record date="2011-08-24">
       <value>nxq</value>
       <file type="template">nxq.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>nxu</value>
+      <file type="template">nxu.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>nyh</value>
+      <file type="template">nyh.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>nys</value>
+      <file type="template">nys.txt</file>
       <type>language</type>
     </record>
     <record date="2018-03-20">
@@ -2448,6 +2928,11 @@ following is the archive of language subtag registration templates.
       <file type="template">oun.txt</file>
       <type>language</type>
     </record>
+    <record date="2018-10-31">
+      <value>oun</value>
+      <file type="template">oun-2018-10-28.txt</file>
+      <type>language</type>
+    </record>
     <record date="2016-06-21">
       <value>ovd</value>
       <file type="template">ovd.txt</file>
@@ -2488,6 +2973,11 @@ following is the archive of language subtag registration templates.
       <file type="template">pes.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>pfe</value>
+      <file type="template">pfe.txt</file>
+      <type>language</type>
+    </record>
     <record date="2015-02-18">
       <value>pgd</value>
       <file type="template">pgd.txt</file>
@@ -2513,6 +3003,11 @@ following is the archive of language subtag registration templates.
       <file type="template">phi.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>plp</value>
+      <file type="template">plp.txt</file>
+      <type>language</type>
+    </record>
     <record date="2015-02-18">
       <value>pls</value>
       <file type="template">pls.txt</file>
@@ -2532,6 +3027,11 @@ following is the archive of language subtag registration templates.
       <value>pmu</value>
       <file type="template">pmu.txt</file>
       <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>pnd</value>
+      <file type="template">pnd.txt</file>
+      <type>language</type>
     </record>    
     <record date="2013-09-23">
       <value>pnj</value>
@@ -2546,6 +3046,11 @@ following is the archive of language subtag registration templates.
     <record date="2013-09-23">
       <value>pnl</value>
       <file type="template">pnl.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>pnw</value>
+      <file type="template">pnw.txt</file>
       <type>language</type>
     </record>
     <record date="2010-03-25">
@@ -2613,6 +3118,11 @@ following is the archive of language subtag registration templates.
       <file type="template">psi.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>pti</value>
+      <file type="template">pti.txt</file>
+      <type>language</type>
+    </record>
     <record date="2014-04-10">
       <value>ptq</value>
       <file type="template">ptq.txt</file>
@@ -2657,6 +3167,16 @@ following is the archive of language subtag registration templates.
       <value>rie</value>
       <file type="template">rie.txt</file>
       <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>ril</value>
+      <file type="template">ril.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>rit</value>
+      <file type="template">rit.txt</file>
+      <type>language</type>
     </record>    
     <record date="2013-09-23">
       <value>rkw</value>
@@ -2666,6 +3186,11 @@ following is the archive of language subtag registration templates.
     <record date="2010-06-30">
       <value>rm</value>
       <file type="template">rm.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>rmb</value>
+      <file type="template">rmb.txt</file>
       <type>language</type>
     </record>
     <record date="2010-03-24">
@@ -2733,6 +3258,11 @@ following is the archive of language subtag registration templates.
       <file type="template">rxw.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>rxw</value>
+      <file type="template">rxw-2019-04-30.txt</file>
+      <type>language</type>
+    </record>
     <record date="2016-06-10">
       <value>rzh</value>
       <file type="template">rzh.txt</file>
@@ -2766,6 +3296,16 @@ following is the archive of language subtag registration templates.
     <record date="2017-03-03">
       <value>sct</value>
       <file type="template">sct.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>sdm</value>
+      <file type="template">sdm.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>sdq</value>
+      <file type="template">sdq.txt</file>
       <type>language</type>
     </record>
     <record date="2009-04-07">
@@ -2868,6 +3408,11 @@ following is the archive of language subtag registration templates.
       <file type="template">snh.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>snz</value>
+      <file type="template">snz.txt</file>
+      <type>language</type>
+    </record>
     <record date="2009-01-13">
       <value>son</value>
       <file type="template">son.txt</file>
@@ -2923,6 +3468,11 @@ following is the archive of language subtag registration templates.
       <file type="template">sty.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>suj</value>
+      <file type="template">suj.txt</file>
+      <type>language</type>
+    </record>
     <record date="2010-03-24">
       <value>sul</value>
       <file type="template">sul.txt</file>
@@ -2963,9 +3513,29 @@ following is the archive of language subtag registration templates.
       <file type="template">szs.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>szy</value>
+      <file type="template">szy.txt</file>
+      <type>language</type>
+    </record>
     <record date="2009-04-07">
       <value>tai</value>
       <file type="template">tai.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>tbb</value>
+      <file type="template">tbb.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>tbh</value>
+      <file type="template">tbh.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>tcs</value>
+      <file type="template">tcs.txt</file>
       <type>language</type>
     </record>
     <record date="2010-03-24">
@@ -3013,6 +3583,11 @@ following is the archive of language subtag registration templates.
       <file type="template">thc.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>thd</value>
+      <file type="template">thd.txt</file>
+      <type>language</type>
+    </record>
     <record date="2015-02-18">
       <value>thx</value>
       <file type="template">thx.txt</file>
@@ -3028,9 +3603,19 @@ following is the archive of language subtag registration templates.
       <file type="template">tie.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>tjj</value>
+      <file type="template">tjj.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>tjl</value>
       <file type="template">tjl.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>tjp</value>
+      <file type="template">tjp.txt</file>
       <type>language</type>
     </record>    
     <record date="2013-09-23">
@@ -3133,6 +3718,11 @@ following is the archive of language subtag registration templates.
       <file type="template">tvu.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>tvx</value>
+      <file type="template">tvx.txt</file>
+      <type>language</type>
+    </record>
     <record date="2015-02-18">
       <value>txj</value>
       <file type="template">txj.txt</file>
@@ -3163,6 +3753,16 @@ following is the archive of language subtag registration templates.
       <file type="template">ukk.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>uki</value>
+      <file type="template">uki.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>ukv</value>
+      <file type="template">ukv.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>uky</value>
       <file type="template">uky.txt</file>
@@ -3173,9 +3773,19 @@ following is the archive of language subtag registration templates.
       <file type="template">ule.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>ulk</value>
+      <file type="template">ulk.txt</file>
+      <type>language</type>
+    </record>
     <record date="2010-03-24">
       <value>ulw</value>
       <file type="template">ulw.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>umg</value>
+      <file type="template">umg.txt</file>
       <type>language</type>
     </record>    
     <record date="2013-09-23">
@@ -3197,6 +3807,16 @@ following is the archive of language subtag registration templates.
       <value>uok</value>
       <file type="template">uok.txt</file>
       <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>uss</value>
+      <file type="template">uss.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>uth</value>
+      <file type="template">uth.txt</file>
+      <type>language</type>
     </record>    
     <record date="2013-09-23">
       <value>uve</value>
@@ -3206,6 +3826,11 @@ following is the archive of language subtag registration templates.
     <record date="2015-02-18">
       <value>vaj</value>
       <file type="template">vaj.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2018-10-31">
+      <value>vaj</value>
+      <file type="template">vaj-2018-10-28.txt</file>
       <type>language</type>
     </record>
     <record date="2010-03-24">
@@ -3227,6 +3852,11 @@ following is the archive of language subtag registration templates.
       <value>wal</value>
       <file type="template">wal.txt</file>
       <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>waq</value>
+      <file type="template">waq.txt</file>
+      <type>language</type>
     </record>    
     <record date="2013-09-23">
       <value>wax</value>
@@ -3241,6 +3871,11 @@ following is the archive of language subtag registration templates.
     <record date="2017-03-03">
       <value>wbs</value>
       <file type="template">wbs.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>wbt</value>
+      <file type="template">wbt.txt</file>
       <type>language</type>
     </record>    
     <record date="2013-09-23">
@@ -3278,6 +3913,11 @@ following is the archive of language subtag registration templates.
       <file type="template">wgb.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>wgg</value>
+      <file type="template">wgg.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>wgu</value>
       <file type="template">wgu.txt</file>
@@ -3291,6 +3931,11 @@ following is the archive of language subtag registration templates.
     <record date="2016-06-10">
       <value>wha</value>
       <file type="template">wha.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>wig</value>
+      <file type="template">wig.txt</file>
       <type>language</type>
     </record>    
     <record date="2013-09-23">
@@ -3307,12 +3952,22 @@ following is the archive of language subtag registration templates.
       <value>wiw</value>
       <file type="template">wiw.txt</file>
       <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>wkr</value>
+      <file type="template">wkr.txt</file>
+      <type>language</type>
     </record>    
     <record date="2013-09-23">
       <value>wky</value>
       <file type="template">wky.txt</file>
       <type>language</type>
-    </record>    
+    </record>
+    <record date="2020-04-01">
+      <value>wlh</value>
+      <file type="template">wlh.txt</file>
+      <type>language</type>
+    </record>
     <record date="2013-09-23">
       <value>wnn</value>
       <file type="template">wnn.txt</file>
@@ -3323,9 +3978,34 @@ following is the archive of language subtag registration templates.
       <file type="template">wny.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>wny</value>
+      <file type="template">wny-2019-04-30.txt</file>
+      <type>language</type>
+    </record>
     <record date="2010-10-12">
       <value>wo</value>
       <file type="template">wo.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>woa</value>
+      <file type="template">woa.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>wrb</value>
+      <file type="template">wrb.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>wrg</value>
+      <file type="template">wrg.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>wrh</value>
+      <file type="template">wrh.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -3383,6 +4063,11 @@ following is the archive of language subtag registration templates.
       <file type="template">xam.txt</file>
       <type>language</type>
     </record>
+    <record date="2018-10-31">
+      <value>xam</value>
+      <file type="template">xam-2018-10-28.txt</file>
+      <type>language</type>
+    </record>
     <record date="2016-06-10">
       <value>xba</value>
       <file type="template">xba.txt</file>
@@ -3433,11 +4118,16 @@ following is the archive of language subtag registration templates.
       <file type="template">xby.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>xby</value>
+      <file type="template">xby-2019-04-30.txt</file>
+      <type>language</type>
+    </record>  
     <record date="2010-03-24">
       <value>xch</value>
       <file type="template">xch.txt</file>
       <type>language</type>
-    </record>    
+    </record> 
     <record date="2013-09-23">
       <value>xda</value>
       <file type="template">xda.txt</file>
@@ -3456,6 +4146,11 @@ following is the archive of language subtag registration templates.
     <record date="2015-03-06">
       <value>xeg</value>
       <file type="template">xeg.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2018-10-31">
+      <value>xeg</value>
+      <file type="template">xeg-2018-10-28.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -3538,6 +4233,11 @@ following is the archive of language subtag registration templates.
       <file type="template">xmd.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>xmh</value>
+      <file type="template">xmh.txt</file>
+      <type>language</type>
+    </record>  
     <record date="2011-08-24">
       <value>xmv</value>
       <file type="template">xmv.txt</file>
@@ -3551,6 +4251,11 @@ following is the archive of language subtag registration templates.
     <record date="2013-09-23">
       <value>xnk</value>
       <file type="template">xnk.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>xnm</value>
+      <file type="template">xnm.txt</file>
       <type>language</type>
     </record>
     <record date="2010-03-24">
@@ -3578,9 +4283,34 @@ following is the archive of language subtag registration templates.
       <file type="template">xpa.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>xpb</value>
+      <file type="template">xpb.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>xpd</value>
+      <file type="template">xpd.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>xpf</value>
+      <file type="template">xpf.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>xph</value>
+      <file type="template">xph.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>xpj</value>
       <file type="template">xpj.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>xpl</value>
+      <file type="template">xpl.txt</file>
       <type>language</type>
     </record>
     <record date="2010-03-24">
@@ -3592,7 +4322,27 @@ following is the archive of language subtag registration templates.
       <value>xpt</value>
       <file type="template">xpt.txt</file>
       <type>language</type>
-    </record>    
+    </record>
+    <record date="2020-04-01">
+      <value>xpv</value>
+      <file type="template">xpv.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>xpw</value>
+      <file type="template">xpw.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>xpx</value>
+      <file type="template">xpx.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>xpz</value>
+      <file type="template">xpz.txt</file>
+      <type>language</type>
+    </record>
     <record date="2013-09-23">
       <value>xrd</value>
       <file type="template">xrd.txt</file>
@@ -3608,6 +4358,11 @@ following is the archive of language subtag registration templates.
       <file type="template">xrq.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>xrq</value>
+      <file type="template">xrq-2020-04-01.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>xsb</value>
       <file type="template">xsb.txt</file>
@@ -3616,6 +4371,11 @@ following is the archive of language subtag registration templates.
     <record date="2015-02-18">
       <value>xsj</value>
       <file type="template">xsj.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>xsj</value>
+      <file type="template">xsj-2019-04-30.txt</file>
       <type>language</type>
     </record>    
     <record date="2013-09-23">
@@ -3628,6 +4388,11 @@ following is the archive of language subtag registration templates.
       <file type="template">xtv.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>xtz</value>
+      <file type="template">xtz.txt</file>
+      <type>language</type>
+    </record>
     <record date="2012-08-27">
       <value>xud</value>
       <file type="template">xud.txt</file>
@@ -3636,6 +4401,11 @@ following is the archive of language subtag registration templates.
     <record date="2013-09-23">
       <value>xul</value>
       <file type="template">xul.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>xul</value>
+      <file type="template">xul-2020-04-01.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -3772,7 +4542,12 @@ following is the archive of language subtag registration templates.
       <value>yhs</value>
       <file type="template">yhs.txt</file>
       <type>language</type>
-    </record>    
+    </record>
+    <record date="2019-04-30">
+      <value>yin</value>
+      <file type="template">yin.txt</file>
+      <type>language</type>
+    </record>      
     <record date="2013-09-23">
       <value>yiy</value>
       <file type="template">yiy.txt</file>
@@ -3928,9 +4703,19 @@ following is the archive of language subtag registration templates.
       <file type="template">zab.txt</file>
       <type>language</type>
     </record>
+    <record date="2020-04-01">
+      <value>zba</value>
+      <file type="template">zba.txt</file>
+      <type>language</type>
+    </record>
     <record date="2013-01-25">
       <value>zgh</value>
       <file type="template">zgh.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>zir</value>
+      <file type="template">zir.txt</file>
       <type>language</type>
     </record>
     <record date="2012-08-27">
@@ -3948,6 +4733,16 @@ following is the archive of language subtag registration templates.
       <file type="template">zil.txt</file>
       <type>language</type>
     </record>
+    <record date="2019-04-30">
+      <value>zml</value>
+      <file type="template">zml.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2019-04-30">
+      <value>zmm</value>
+      <file type="template">zmm.txt</file>
+      <type>language</type>
+    </record>  
     <record date="2010-03-24">
       <value>zrn</value>
       <file type="template">zrn.txt</file>
@@ -3967,6 +4762,21 @@ following is the archive of language subtag registration templates.
       <value>asf</value>
       <file type="template">asf-extlang.txt</file>
       <type>extlang</type>
+    </record>
+    <record date="2020-04-01">
+      <value>bbz</value>
+      <file type="template">bbz-extlang.txt</file>
+      <type>extlang</type>
+    </record>
+    <record date="2020-04-01">
+      <value>cnp</value>
+      <file type="template">cnp-extlang.txt</file>
+      <type>language</type>
+    </record>
+    <record date="2020-04-01">
+      <value>csp</value>
+      <file type="template">csp-extlang.txt</file>
+      <type>language</type>
     </record>
     <record date="2012-08-27">
       <value>gds</value>
@@ -3996,6 +4806,16 @@ following is the archive of language subtag registration templates.
     <record date="2018-03-20">
       <value>lsg</value>
       <file type="template">lsg-extlang.txt</file>
+      <type>extlang</type>
+    </record>
+    <record date="2019-04-30">
+      <value>lsn</value>
+      <file type="template">lsn-extlang.txt</file>
+      <type>extlang</type>
+    </record>
+    <record date="2019-04-30">
+      <value>lsv</value>
+      <file type="template">lsv-extlang.txt</file>
       <type>extlang</type>
     </record>
     <record date="2010-03-24">
@@ -4123,6 +4943,11 @@ following is the archive of language subtag registration templates.
       <file type="template">MF.txt</file>
       <type>region</type>
     </record>
+    <record date="2019-04-30">
+      <value>MK</value>
+      <file type="template">MK.txt</file>
+      <type>region</type>
+    </record>
     <record date="2013-02-28">
       <value>PS</value>
       <file type="template">ps.txt</file>
@@ -4213,6 +5038,11 @@ following is the archive of language subtag registration templates.
       <file type="template">bhks.txt</file>
       <type>script</type>
     </record>
+    <record date="2019-09-16">
+      <value>Chrs</value>
+      <file type="template">Chrs.txt</file>
+      <type>script</type>
+    </record>
     <record date="2017-08-15">
       <value>Cpmn</value>
       <file type="template">Cpmn.txt</file>
@@ -4221,6 +5051,11 @@ following is the archive of language subtag registration templates.
     <record date="2017-08-15">
       <value>Cprt</value>
       <file type="template">Cprt.txt</file>
+      <type>script</type>
+    </record>
+    <record date="2019-09-16">
+      <value>Diak</value>
+      <file type="template">Diak.txt</file>
       <type>script</type>
     </record>
     <record date="2017-01-19">
@@ -4236,6 +5071,11 @@ following is the archive of language subtag registration templates.
     <record date="2010-08-17">
       <value>Elba</value>
       <file type="template">elba.txt</file>
+      <type>script</type>
+    </record>
+    <record date="2018-10-31">
+      <value>Elym</value>
+      <file type="template">Elym.txt</file>
       <type>script</type>
     </record>
     <record date="2017-01-19">
@@ -4386,6 +5226,11 @@ following is the archive of language subtag registration templates.
     <record date="2013-12-13">
       <value>Mult</value>
       <file type="template">mult.txt</file>
+      <type>script</type>
+    </record>
+    <record date="2018-10-31">
+      <value>Nand</value>
+      <file type="template">Nand.txt</file>
       <type>script</type>
     </record>
     <record date="2010-04-19">
@@ -4548,6 +5393,11 @@ following is the archive of language subtag registration templates.
       <file type="template">wole.txt</file>
       <type>script</type>
     </record>
+    <record date="2019-09-16">
+      <value>Yezi</value>
+      <file type="template">Yezi.txt</file>
+      <type>script</type>
+    </record>
     <record date="2017-01-19">
       <value>Zanb</value>
       <file type="template">Zanb.txt</file>
@@ -4691,6 +5541,11 @@ following is the archive of language subtag registration templates.
     <record date="2014-01-21">
       <value>bohoric</value>
       <file type="template">bohoric-20140121.txt</file>
+      <type>variant</type>
+    </record>
+    <record date="2019-04-03">
+      <value>bornholm</value>
+      <file type="template">bornholm.txt</file>
       <type>variant</type>
     </record>
     <record date="2018-04-23">
@@ -4916,6 +5771,11 @@ following is the archive of language subtag registration templates.
     <record date="2009-09-09">
       <value>pamaka</value>
       <file type="template">pamaka.txt</file>
+      <type>variant</type>
+    </record>
+    <record date="2020-03-16">
+      <value>peano</value>
+      <file type="template">peano.txt</file>
       <type>variant</type>
     </record>
     <record date="2010-10-12">

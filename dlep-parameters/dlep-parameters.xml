@@ -4,13 +4,20 @@
 <registry xmlns="http://www.iana.org/assignments" id="dlep-parameters">
   <title>Dynamic Link Exchange Protocol (DLEP) Parameters</title>
   <created>2017-04-03</created>
-  <updated>2017-09-28</updated>
+  <updated>2020-03-30</updated>
   
   <registry id="signal-type-values">
     <title>Signal Type Values</title>
     <xref type="rfc" data="rfc8175"/>
-    <registration_rule>Specification Required</registration_rule>
-    <expert>Stan Ratliff, Rick Taylor</expert>
+    <range>
+      <value>3-65519</value>
+      <registration_rule>Specification Required</registration_rule>
+    </range>
+    <range>
+      <value>65520-65534</value>
+      <registration_rule>Private Use</registration_rule>
+    </range>
+    <expert>Rick Taylor</expert>
     <record date="2017-04-03">
       <value>0</value>
       <description>Reserved</description>
@@ -45,8 +52,15 @@
   <registry id="message-type-values">
     <title>Message Type Values</title>
     <xref type="rfc" data="rfc8175"/>
-    <registration_rule>Specification Required</registration_rule>
-    <expert>Stan Ratliff, Rick Taylor</expert>
+    <range>
+      <value>17-65519</value>
+      <registration_rule>Specification Required</registration_rule>
+    </range>
+    <range>
+      <value>65520-65534</value>
+      <registration_rule>Private Use</registration_rule>
+    </range>
+    <expert>Rick Taylor</expert>
     <record date="2017-04-03">
       <value>0</value>
       <description>Reserved</description>
@@ -151,8 +165,15 @@
   <registry id="data-item-type-values">
     <title>Data Item Type Values</title>
     <xref type="rfc" data="rfc8175"/>
-    <registration_rule>Specification Required</registration_rule>
-    <expert>Stan Ratliff, Rick Taylor</expert>
+    <range>
+      <value>26-65407</value>
+      <registration_rule>Specification Required</registration_rule>
+    </range>
+    <range>
+      <value>65408-65534</value>
+      <registration_rule>Private Use</registration_rule>
+    </range>
+    <expert>Rick Taylor</expert>
     <record date="2017-04-03">
       <value>0</value>
       <description>Reserved</description>
@@ -258,8 +279,48 @@
       <description>Maximum Transmission Unit (MTU)</description>
       <xref type="rfc" data="rfc8175"/>
     </record>
+    <record date="2019-05-14">
+      <value>21</value>
+      <description>Hop Count</description>
+      <xref type="rfc" data="rfc8629"/>
+    </record>
+    <record date="2019-05-14">
+      <value>22</value>
+      <description>Hop Control</description>
+      <xref type="rfc" data="rfc8629"/>
+    </record>
+    <record date="2019-06-20">
+      <value>23</value>
+      <description>Queue Parameters</description>
+      <xref type="rfc" data="rfc8651"/>
+    </record>
+    <record date="2019-06-20">
+      <value>24</value>
+      <description>Pause</description>
+      <xref type="rfc" data="rfc8651"/>
+    </record>
+    <record date="2019-06-20">
+      <value>25</value>
+      <description>Restart</description>
+      <xref type="rfc" data="rfc8651"/>
+    </record>
+    <record date="2019-09-25">
+      <value>26</value>
+      <description>Link Identifier Length</description>
+      <xref type="rfc" data="rfc8703"/>
+    </record>
+    <record date="2019-09-25">
+      <value>27</value>
+      <description>Link Identifier</description>
+      <xref type="rfc" data="rfc8703"/>
+    </record>
+    <record date="2019-11-21">
+      <value>28</value>
+      <description>Latency Range</description>
+      <xref type="rfc" data="rfc8757"/>
+    </record>
     <record>
-      <value>21-65407</value>
+      <value>29-65407</value>
       <description>Unassigned</description>
     </record>
     <record date="2017-04-03">
@@ -277,8 +338,23 @@
   <registry id="status-code-values">
     <title>Status Code Values</title>
     <xref type="rfc" data="rfc8175"/>
-    <registration_rule>Specification Required</registration_rule>
-    <expert>Stan Ratliff, Rick Taylor</expert>
+    <range>
+      <value>4-111</value>
+      <registration_rule>Specification Required</registration_rule>
+    </range>
+    <range>
+      <value>112-127</value>
+      <registration_rule>Private Use</registration_rule>
+    </range>
+    <range>
+      <value>133-239</value>
+      <registration_rule>Specification Required</registration_rule>
+    </range>
+    <range>
+      <value>240-254</value>
+      <registration_rule>Private Use</registration_rule>
+    </range>
+    <expert>Rick Taylor</expert>
     <record date="2017-04-03">
       <value>0</value>
       <mode>Continue</mode>
@@ -366,15 +442,42 @@
   <registry id="extension-type-values">
     <title>Extension Type Values</title>
     <xref type="rfc" data="rfc8175"/>
-    <registration_rule>Specification Required</registration_rule>
-    <expert>Stan Ratliff, Rick Taylor</expert>
+    <range>
+      <value>2-65519</value>
+      <registration_rule>Specification Required</registration_rule>
+    </range>
+    <range>
+      <value>65520-65534</value>
+      <registration_rule>Private Use</registration_rule>
+    </range>
+    <expert>Rick Taylor</expert>
     <record date="2017-04-03">
       <value>0</value>
       <description>Reserved</description>
       <xref type="rfc" data="rfc8175"/>
     </record>
+    <record date="2019-05-14">
+      <value>1</value>
+      <description>Multi-Hop Forwarding</description>
+      <xref type="rfc" data="rfc8629"/>
+    </record>
+    <record date="2019-06-20">
+      <value>2</value>
+      <description>Control-Plane-Based Pause</description>
+      <xref type="rfc" data="rfc8651"/>
+    </record>
+    <record date="2019-09-25">
+      <value>3</value>
+      <description>Link Identifiers</description>
+      <xref type="rfc" data="rfc8703"/>
+    </record>
+    <record date="2019-11-21">
+      <value>4</value>
+      <description>Latency Range</description>
+      <xref type="rfc" data="rfc8757"/>
+    </record>
     <record>
-      <value>1-65519</value>
+      <value>5-65519</value>
       <description>Unassigned</description>
     </record>
     <record date="2017-04-03">
@@ -393,7 +496,7 @@
     <title>IPv4 Connection Point Flags</title>
     <xref type="rfc" data="rfc8175"/>
     <registration_rule>Specification Required</registration_rule>
-    <expert>Stan Ratliff, Rick Taylor</expert>
+    <expert>Rick Taylor</expert>
     <record date="2017-04-03">
       <value>0-6</value>
       <description>Unassigned</description>
@@ -409,7 +512,7 @@
     <title>IPv6 Connection Point Flags</title>
     <xref type="rfc" data="rfc8175"/>
     <registration_rule>Specification Required</registration_rule>
-    <expert>Stan Ratliff, Rick Taylor</expert>
+    <expert>Rick Taylor</expert>
     <record date="2017-04-03">
       <value>0-6</value>
       <description>Unassigned</description>
@@ -425,7 +528,7 @@
     <title>Peer Type Flags</title>
     <xref type="rfc" data="rfc8175"/>
     <registration_rule>Specification Required</registration_rule>
-    <expert>Stan Ratliff, Rick Taylor</expert>
+    <expert>Rick Taylor</expert>
     <record date="2017-04-03">
       <value>0-6</value>
       <description>Unassigned</description>
@@ -441,7 +544,7 @@
     <title>IPv4 Address Flags</title>
     <xref type="rfc" data="rfc8175"/>
     <registration_rule>Specification Required</registration_rule>
-    <expert>Stan Ratliff, Rick Taylor</expert>
+    <expert>Rick Taylor</expert>
     <record date="2017-04-03">
       <value>0-6</value>
       <description>Unassigned</description>
@@ -457,7 +560,7 @@
     <title>IPv6 Address Flags</title>
     <xref type="rfc" data="rfc8175"/>
     <registration_rule>Specification Required</registration_rule>
-    <expert>Stan Ratliff, Rick Taylor</expert>
+    <expert>Rick Taylor</expert>
     <record date="2017-04-03">
       <value>0-6</value>
       <description>Unassigned</description>
@@ -473,7 +576,7 @@
     <title>IPv4 Attached Subnet Flags</title>
     <xref type="rfc" data="rfc8175"/>
     <registration_rule>Specification Required</registration_rule>
-    <expert>Stan Ratliff, Rick Taylor</expert>
+    <expert>Rick Taylor</expert>
     <record date="2017-04-03">
       <value>0-6</value>
       <description>Unassigned</description>
@@ -489,7 +592,7 @@
     <title>IPv6 Attached Subnet Flags</title>
     <xref type="rfc" data="rfc8175"/>
     <registration_rule>Specification Required</registration_rule>
-    <expert>Stan Ratliff, Rick Taylor</expert>
+    <expert>Rick Taylor</expert>
     <record date="2017-04-03">
       <value>0-6</value>
       <description>Unassigned</description>
@@ -498,6 +601,92 @@
       <value>7</value>
       <description>Add/Drop indicator</description>
       <xref type="rfc" data="rfc8175"/>
+    </record>
+  </registry>
+  
+  <registry id="hop-control-actions-values">
+    <title>Hop Control Actions Values</title>
+    <xref type="rfc" data="rfc8629"/>
+    <range>
+      <value>4-65519</value>
+      <registration_rule>Specification Required</registration_rule>
+    </range>
+    <range>
+      <value>65520-65534</value>
+      <registration_rule>Private Use</registration_rule>
+    </range>
+    <expert>Rick Taylor</expert>
+    <record date="2019-05-14">
+      <value>0</value>
+      <action>Reset</action>
+      <xref type="rfc" data="rfc8629"/>
+    </record>
+    <record date="2019-05-14">
+      <value>1</value>
+      <action>Terminate</action>
+      <xref type="rfc" data="rfc8629"/>
+    </record>
+    <record date="2019-05-14">
+      <value>2</value>
+      <action>Direct Connection</action>
+      <xref type="rfc" data="rfc8629"/>
+    </record>
+    <record date="2019-05-14">
+      <value>3</value>
+      <action>Suppress Forwarding</action>
+      <xref type="rfc" data="rfc8629"/>
+    </record>
+    <record>
+      <value>4-65519</value>
+      <action>Unassigned</action>
+    </record>
+    <record>
+      <value>65520-65534</value>
+      <action>Reserved for Private Use</action>
+      <xref type="rfc" data="rfc8629"/>
+    </record>
+    <record date="2019-05-14">
+      <value>65535</value>
+      <action>Reserved</action>
+      <xref type="rfc" data="rfc8629"/>
+    </record>
+  </registry>
+
+  <registry id="queue-parameters-sub-data-item-type-values">
+    <title>Queue Parameter Sub-Data Item Type Values</title>
+    <xref type="rfc" data="rfc8651"/>
+    <range>
+      <value>2-65407</value>
+      <registration_rule>Specification Required</registration_rule>
+    </range>
+    <range>
+      <value>65408-65534</value>
+      <registration_rule>Private Use</registration_rule>
+    </range>
+    <expert>Unassigned</expert>
+    <record date="2019-06-20">
+      <value>0</value>
+      <description>Reserved</description>
+      <xref type="rfc" data="rfc8651"/>
+    </record>
+    <record date="2019-06-20">
+      <value>1</value>
+      <description>Queue Parameter</description>
+      <xref type="rfc" data="rfc8651"/>
+    </record>
+    <record>
+      <value>2-65407</value>
+      <description>Unassigned</description>
+    </record>
+    <record date="2019-06-20">
+      <value>65408-65534</value>
+      <description>Reserved for Private Use</description>
+      <xref type="rfc" data="rfc8651"/>
+    </record>
+    <record date="2019-06-20">
+      <value>65535</value>
+      <description>Reserved</description>
+      <xref type="rfc" data="rfc8651"/>
     </record>
   </registry>
 

@@ -4,12 +4,19 @@
 <registry xmlns="http://www.iana.org/assignments" id="babel">
   <title>Babel Routing Protocol</title>
   <created>2015-04-14</created>
-  <updated>2018-01-30</updated>
+  <updated>2018-12-26</updated>
   
   <registry id="tlv-types">
     <title>Babel TLV Types</title>
     <xref type="rfc" data="rfc7557"/>
-    <registration_rule>Specification Required</registration_rule>
+    <range>
+      <value>0-223</value>
+      <registration_rule>Specification Required</registration_rule>
+    </range>
+    <range>
+      <value>224-254</value>
+      <registration_rule>Experimental Use</registration_rule>
+    </range>
     <expert>Juliusz Chroboczek, Donald Eastlake</expert>
     <record date="2015-04-14">
       <value>0</value>
@@ -91,8 +98,28 @@
       <description>Source-specific Seqno Request</description>
       <xref type="draft" data="draft-boutier-babel-source-specific"/>
     </record>
+    <record date="2018-12-26">
+      <value>16</value>
+      <description>HMAC</description>
+      <xref type="draft" data="draft-ietf-babel-hmac"/>
+    </record>
+    <record date="2018-12-26">
+      <value>17</value>
+      <description>PC</description>
+      <xref type="draft" data="draft-ietf-babel-hmac"/>
+    </record>
+    <record date="2018-12-26">
+      <value>18</value>
+      <description>Challenge Request</description>
+      <xref type="draft" data="draft-ietf-babel-hmac"/>
+    </record>
+    <record date="2018-12-26">
+      <value>19</value>
+      <description>Challenge Reply</description>
+      <xref type="draft" data="draft-ietf-babel-hmac"/>
+    </record>
     <record>
-      <value>16-223</value>
+      <value>20-223</value>
       <description>Unassigned</description>
     </record>
     <record date="2015-04-14">
@@ -110,7 +137,14 @@
   <registry id="sub-tlv-types">
     <title>Babel Sub-TLV Types</title>
     <xref type="rfc" data="rfc7557"/>
-    <registration_rule>Specification Required</registration_rule>
+    <range>
+      <value>0-223</value>
+      <registration_rule>Specification Required</registration_rule>
+    </range>
+    <range>
+      <value>224-254</value>
+      <registration_rule>Experimental Use</registration_rule>
+    </range>
     <expert>Juliusz Chroboczek, Donald Eastlake</expert>
     <record date="2015-04-14">
       <value>0</value>

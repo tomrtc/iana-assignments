@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="rfb">
   <title>Remote Framebuffer (RFB)</title>
   <created>2010-12-08</created>
-  <updated>2018-06-21</updated>
+  <updated>2019-11-07</updated>
 
   
   <registry id="rfb-1">
@@ -93,9 +93,37 @@
       <refs/>
     </record>
     <record>
-      <type>128-255</type>
+      <type>128</type>
       <name>RealVNC</name>
       <refs>historic assignment</refs>
+    </record>
+    <record>
+      <type>129</type>
+      <name>RealVNC</name>
+      <refs>historic assignment</refs>
+    </record>
+    <record date="2019-11-07">
+      <type>129</type>
+      <name>Tight Unix Login Authentication</name>
+      <refs><xref type="person" data="Samuel_Mannehed"/></refs>
+    </record>
+    <record>
+      <type>130-134</type>
+      <name>RealVNC</name>
+      <refs>historic assignment</refs>
+    </record>
+    <record>
+      <type>135-191</type>
+      <name>Unassigned</name>
+    </record>
+    <record>
+      <type>192</type>
+      <name>RealVNC</name>
+      <refs>historic assignment</refs>
+    </record>
+    <record>
+      <type>193-255</type>
+      <name>Unassigned</name>
     </record>
   </registry>
   
@@ -183,9 +211,14 @@
       <refs>historic assignment</refs>
     </record>
     <record>
-      <type>151-247</type>
+      <type>151-246</type>
       <name>Unassigned</name>
       <refs/>
+    </record>
+    <record date="2019-04-24">
+      <type>247</type>
+      <name>Dell-EMC</name>
+      <refs><xref type="person" data="Rajeshkumar_Patel"/></refs>
     </record>
     <record>
       <type>248</type>
@@ -298,9 +331,14 @@
       <refs>historic assignment</refs>
     </record>
     <record>
-      <type>174-247</type>
+      <type>174-246</type>
       <name>Unassigned</name>
       <refs/>
+    </record>
+    <record date="2019-04-24">
+      <type>247</type>
+      <name>Dell-EMC</name>
+      <refs><xref type="person" data="Rajeshkumar_Patel"/></refs>
     </record>
     <record>
       <type>248</type>
@@ -543,6 +581,11 @@
       <name>CursorWithAlpha</name>
       <refs><xref type="person" data="Tristan_Richardson"/></refs>
     </record>
+    <record date="2018-10-12">
+      <type>-315</type>
+      <name>ColorMap</name>
+      <refs><xref type="person" data="Tristan_Richardson"/></refs>
+    </record>
     <record>
       <type>-412 to -512</type>
       <name>TurboVNC fine-grained quality level</name>
@@ -612,6 +655,16 @@
       <name>Michael Stein</name>
       <uri>mailto:mvs&amp;apple.com</uri>
       <updated>2011-11-02</updated>
+    </person>
+    <person id="Rajeshkumar_Patel">
+      <name>Rajeshkumar Patel</name>
+      <uri>mailto:rajesh_z_patel&amp;Dell.com</uri>
+      <updated>2019-04-24</updated>
+    </person>
+    <person id="Samuel_Mannehed">
+      <name>Samuel Mannehed</name>
+      <uri>mailto:samuel&amp;cendio.se</uri>
+      <updated>2019-11-07</updated>
     </person>
     <person id="Tristan_Richardson">
       <name>Tristan Richardson</name>

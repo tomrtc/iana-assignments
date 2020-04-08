@@ -4,7 +4,7 @@
            2002-01
 
    Last Updated
-           2018-08-03
+           2020-03-10
 
    Available Formats
            [IMG]
@@ -94,6 +94,8 @@
      * UUI Packages
      * UUI Content Parameters
      * UUI Encoding Parameters
+     * Push Notification Service (PNS)
+     * SIP AlertMsg-Error Codes
 
 Header Fields
 
@@ -129,7 +131,7 @@ Header Fields
 
           Range         Registration Procedures
    Informational Header Expert Review
-     Standard Header    Standards Action
+   Standard Header      Standards Action
 
                  Header Name               compact                        Reference
    Accept                                          [RFC3261]
@@ -138,6 +140,7 @@ Header Fields
    Accept-Language                                 [RFC3261]
    Accept-Resource-Priority                        [RFC4412]
    Alert-Info                                      [RFC3261]
+   AlertMsg-Error                                  [RFC-ietf-ecrit-data-only-ea-22]
    Allow                                           [RFC3261]
    Allow-Events                            u       [RFC6665]
    Answer-Mode                                     [RFC5373]
@@ -184,6 +187,7 @@ Header Fields
    P-Asserted-Service                              [RFC6050]
    P-Associated-URI                                [RFC7315]
    P-Called-Party-ID                               [RFC7315]
+   P-Charge-Info                                   [RFC8496]
    P-Charging-Function-Addresses                   [RFC7315]
    P-Charging-Vector                               [RFC7315]
    P-DCS-Trace-Party-ID                            [RFC5503]
@@ -198,7 +202,7 @@ Header Fields
    P-Private-Network-Indication                    [RFC7316]
    P-Profile-Key                                   [RFC5002]
    P-Refused-URI-List                              [RFC5318]
-   P-Served-User                                   [RFC5502]
+   P-Served-User                                   [RFC5502] [RFC8498]
    P-User-Database                                 [RFC4457]
    P-Visited-Network-ID                            [RFC7315]
    Path                                            [RFC3327]
@@ -206,6 +210,7 @@ Header Fields
    Policy-Contact                                  [RFC6794]
    Policy-ID                                       [RFC6794]
    Priority                                        [RFC3261]
+   Priority-Share                                  [3GPP TS 24.229 v13.16.0] [Frederic_Firmin]
    Priv-Answer-Mode                                [RFC5373]
    Privacy                                         [RFC3323]
    Proxy-Authenticate                              [RFC3261]
@@ -308,11 +313,11 @@ Option Tags
    Note
 
  Option tags are used in header fields such as Require,
-   Supported, Proxy-Require, and Unsupported in support of
-   SIP compatibility mechanisms for extensions. The option
-   tag itself is a string that is associated with a particular
-   SIP option (that is, an extension).
-   It identifies the option to SIP endpoints.
+ Supported, Proxy-Require, and Unsupported in support of SIP
+ compatibility mechanisms for extensions. The option tag
+ itself is a string that is associated with a particular SIP
+ option (that is, an extension). It identifies the option to
+ SIP endpoints.
 
 
    Available Formats
@@ -539,16 +544,16 @@ Response Codes
            [IMG]
            CSV
 
-   Response Code           Description            Reference
+   Response Code               Description                          Reference
    100           Trying
    180           Ringing
    181           Call Is Being Forwarded
    182           Queued
    183           Session Progress
-   199           Early Dialog Terminated          [RFC6228]
+   199           Early Dialog Terminated                 [RFC6228]
    200           OK
-   202           Accepted (Deprecated)            [RFC6665]
-   204           No Notification                  [RFC5839]
+   202           Accepted (Deprecated)                   [RFC6665]
+   204           No Notification                         [RFC5839]
    300           Multiple Choices
    301           Moved Permanently
    302           Moved Temporarily
@@ -564,28 +569,29 @@ Response Codes
    407           Proxy Authentication Required
    408           Request Timeout
    410           Gone
-   412           Conditional Request Failed       [RFC3903]
+   412           Conditional Request Failed              [RFC3903]
    413           Request Entity Too Large
    414           Request-URI Too Long
    415           Unsupported Media Type
    416           Unsupported URI Scheme
-   417           Unknown Resource-Priority        [RFC4412]
+   417           Unknown Resource-Priority               [RFC4412]
    420           Bad Extension
    421           Extension Required
-   422           Session Interval Too Small       [RFC4028]
+   422           Session Interval Too Small              [RFC4028]
    423           Interval Too Brief
-   424           Bad Location Information         [RFC6442]
-   428           Use Identity Header              [RFC8224]
-   429           Provide Referrer Identity        [RFC3892]
-   430           Flow Failed                      [RFC5626]
-   433           Anonymity Disallowed             [RFC5079]
-   436           Bad Identity Info                [RFC8224]
-   437           Unsupported Credential           [RFC8224]
-   438           Invalid Identity Header          [RFC8224]
-   439           First Hop Lacks Outbound Support [RFC5626]
-   440           Max-Breadth Exceeded             [RFC5393]
-   469           Bad Info Package                 [RFC6086]
-   470           Consent Needed                   [RFC5360]
+   424           Bad Location Information                [RFC6442]
+   425           Bad Alert Message                       [RFC-ietf-ecrit-data-only-ea-22]
+   428           Use Identity Header                     [RFC8224]
+   429           Provide Referrer Identity               [RFC3892]
+   430           Flow Failed                             [RFC5626]
+   433           Anonymity Disallowed                    [RFC5079]
+   436           Bad Identity Info                       [RFC8224]
+   437           Unsupported Credential                  [RFC8224]
+   438           Invalid Identity Header                 [RFC8224]
+   439           First Hop Lacks Outbound Support        [RFC5626]
+   440           Max-Breadth Exceeded                    [RFC5393]
+   469           Bad Info Package                        [RFC6086]
+   470           Consent Needed                          [RFC5360]
    480           Temporarily Unavailable
    481           Call/Transaction Does Not Exist
    482           Loop Detected
@@ -595,10 +601,10 @@ Response Codes
    486           Busy Here
    487           Request Terminated
    488           Not Acceptable Here
-   489           Bad Event                        [RFC6665]
+   489           Bad Event                               [RFC6665]
    491           Request Pending
    493           Undecipherable
-   494           Security Agreement Required      [RFC3329]
+   494           Security Agreement Required             [RFC3329]
    500           Server Internal Error
    501           Not Implemented
    502           Bad Gateway
@@ -606,12 +612,14 @@ Response Codes
    504           Server Time-out
    505           Version Not Supported
    513           Message Too Large
-   580           Precondition Failure             [RFC3312]
+   555           Push Notification Service Not Supported [RFC8599]
+   580           Precondition Failure                    [RFC3312]
    600           Busy Everywhere
    603           Decline
    604           Does Not Exist Anywhere
    606           Not Acceptable
-   607           Unwanted                         [RFC8197]
+   607           Unwanted                                [RFC8197]
+   608           Rejected                                [RFC8688]
 
 SIP Privacy Header Field Values
 
@@ -637,8 +645,12 @@ SIP Privacy Header Field Values
 
 Security Mechanism Names
 
+   Registration Procedure(s)
+
+ IETF Review
+
    Reference
-           [RFC3329 Section 6]
+           [RFC3329]
 
    Available Formats
            [IMG]
@@ -653,8 +665,12 @@ Security Mechanism Names
 
 Compression Schemes
 
+   Registration Procedure(s)
+
+ Standards Action
+
    Reference
-           [RFC3486 Section 11]
+           [RFC3486]
 
    Available Formats
            [IMG]
@@ -699,6 +715,10 @@ SIP/SIPS URI Parameters
    ob             No                [RFC5626]
    param[n]       No                [RFC4240]
    play           No                [RFC4240]
+   pn-param       No                [RFC8599]
+   pn-prid        No                [RFC8599]
+   pn-provider    No                [RFC8599]
+   pn-purr        No                [RFC8599]
    postbody       No                [RFC5552]
    repeat         No                [RFC4240]
    sg             No                [RFC6140]
@@ -713,7 +733,7 @@ Header Field Parameters and Parameter Values
 
    Registration Procedure(s)
 
- RFC Required
+ IETF Review
 
    Reference
            [RFC3968]
@@ -722,191 +742,199 @@ Header Field Parameters and Parameter Values
            [IMG]
            CSV
 
-           Header Field                Parameter Name        Predefined Values                       Reference
-   Accept                        q                           No                [RFC3261]
-   Accept-Encoding               q                           No                [RFC3261]
-   Accept-Language               q                           No                [RFC3261]
-   Alert-Info                    appearance                  No                [RFC7463]
-   Answer-Mode                   require                     No                [RFC5373]
-   Authorization                 algorithm                   Yes               [RFC3261][RFC3310]
-   Authorization                 auts                        No                [RFC3310]
-   Authorization                 cnonce                      No                [RFC3261]
-   Authorization                 nc                          No                [RFC3261]
-   Authorization                 nonce                       No                [RFC3261]
-   Authorization                 opaque                      No                [RFC3261]
-   Authorization                 qop                         Yes               [RFC3261]
-   Authorization                 realm                       No                [RFC3261]
-   Authorization                 response                    No                [RFC3261]
-   Authorization                 uri                         No                [RFC3261]
-   Authorization                 username                    No                [RFC3261]
-   Authentication-Info           cnonce                      No                [RFC3261]
-   Authentication-Info           nc                          No                [RFC3261]
-   Authentication-Info           nextnonce                   No                [RFC3261]
-   Authentication-Info           qop                         Yes               [RFC3261]
-   Authentication-Info           rspauth                     No                [RFC3261]
-   Call-Info                     m                           Yes               [RFC6910]
-   Call-Info                     purpose                     Yes               [RFC3261][RFC5367][RFC6910][RFC6993][RFC7082][RFC7852]
-   Contact                       expires                     No                [RFC3261]
-   Contact                       mp                          No                [RFC7044]
-   Contact                       np                          No                [RFC7044]
-   Contact                       pub-gruu                    No                [RFC5627]
-   Contact                       q                           No                [RFC3261]
-   Contact                       rc                          No                [RFC7044]
-   Contact                       reg-id                      No                [RFC5626]
-   Contact                       temp-gruu                   No                [RFC5627]
-   Contact                       temp-gruu-cookie            No                [RFC6140]
-   Content-Disposition           handling                    Yes               [RFC3204][RFC3261][RFC3459][RFC5621]
-   Event                         adaptive-min-rate           No                [RFC6446]
-   Event                         body                        Yes               [RFC5989]
-   Event                         call-id                     No                [RFC4235]
-   Event                         effective-by                No                [RFC6080]
-   Event                         from-tag                    No                [RFC4235]
-   Event                         id                          No                [RFC6665]
-   Event                         include-session-description No                [RFC4235]
-   Event                         max-rate                    No                [RFC6446]
-   Event                         min-rate                    No                [RFC6446]
-   Event                         model                       No                [RFC6080]
-   Event                         profile-type                Yes               [RFC6080]
-   Event                         shared                      No                [RFC7463]
-   Event                         to-tag                      No                [RFC4235]
-   Event                         vendor                      No                [RFC6080]
-   Event                         version                     No                [RFC6080]
-   Feature-Caps                  fcap-name [7]               No                [RFC6809]
-   From                          tag                         No                [RFC3261]
-   Geolocation-Error             code                        Yes               [RFC6442]
-   History-Info                  mp                          No                [RFC7044]
-   History-Info                  np                          No                [RFC7044]
-   History-Info                  rc                          No                [RFC7044]
-   P-Access-Network-Info         cgi-3gpp                    No                [RFC7315]
-   P-Access-Network-Info         ci-3gpp2                    No                [RFC7315]
-   P-Access-Network-Info         ci-3gpp2-femto              No                [RFC7315]
-   P-Access-Network-Info         dsl-location                No                [RFC7315]
-   P-Access-Network-Info         dvb-rcs2-node-id            No                [RFC7315]
-   P-Access-Network-Info         eth-location                No                [RFC7315]
-   P-Access-Network-Info         fiber-location              No                [RFC7315]
-   P-Access-Network-Info         gstn-location               No                [RFC7315]
-   P-Access-Network-Info         i-wlan-node-id              No                [RFC7315]
-   P-Access-Network-Info         local-time-zone             No                [RFC7315]
-   P-Access-Network-Info         operator-specific-GI        No                [RFC7315]
-   P-Access-Network-Info         utran-cell-id-3gpp          No                [RFC7315]
-   P-Access-Network-Info         utran-sai-3gpp              No                [RFC7315]
-   P-Charging-Function-Addresses ccf                         No                [RFC7315]
-   P-Charging-Function-Addresses ccf-2                       No                [RFC7315]
-   P-Charging-Function-Addresses ecf                         No                [RFC7315]
-   P-Charging-Function-Addresses ecf-2                       No                [RFC7315]
-   P-Charging-Vector             icid-value                  No                [RFC7315]
-   P-Charging-Vector             icid-generated-at           No                [RFC7315]
-   P-Charging-Vector             orig-ioi                    No                [RFC7315]
-   P-Charging-Vector             related-icid                No                [RFC7315]
-   P-Charging-Vector             related-icid-generated-at   No                [RFC7315]
-   P-Charging-Vector             term-ioi                    No                [RFC7315]
-   P-Charging-Vector             transit-ioi                 No                [RFC7315]
-   P-DCS-Billing-Info            called                      No                [RFC5503]
-   P-DCS-Billing-Info            calling                     No                [RFC5503]
-   P-DCS-Billing-Info            charge                      No                [RFC5503]
-   P-DCS-Billing-Info            jip                         No                [RFC5503]
-   P-DCS-Billing-Info            locroute                    No                [RFC5503]
-   P-DCS-Billing-Info            rksgroup                    No                [RFC5503]
-   P-DCS-Billing-Info            routing                     No                [RFC5503]
-   P-DCS-LAES                    bcid                        No                [RFC5503]
-   P-DCS-LAES                    cccid                       No                [RFC5503]
-   P-DCS-LAES                    content                     No                [RFC5503]
-   P-DCS-LAES                    key (OBSOLETED)             No                [RFC3603][RFC5503]
-   P-DCS-Redirect                count                       No                [RFC5503]
-   P-DCS-Redirect                redirector-uri              No                [RFC5503]
-   P-DCS-Trace-Party-ID          timestamp                   No                [RFC5503]
-   P-Refused-URI-List            members                     No                [RFC5318]
-   Policy-Contact                non-cacheable               Yes               [RFC6794]
-   Priv-Answer-Mode              require                     No                [RFC5373]
-   Proxy-Authenticate            algorithm                   Yes               [RFC3261][RFC3310]
-   Proxy-Authenticate            domain                      No                [RFC3261]
-   Proxy-Authenticate            nonce                       No                [RFC3261]
-   Proxy-Authenticate            opaque                      No                [RFC3261]
-   Proxy-Authenticate            qop                         Yes               [RFC3261]
-   Proxy-Authenticate            realm                       No                [RFC3261]
-   Proxy-Authenticate            stale                       Yes               [RFC3261]
-   Proxy-Authorization           algorithm                   Yes               [RFC3261][RFC3310]
-   Proxy-Authorization           auts                        No                [RFC3310]
-   Proxy-Authorization           cnonce                      No                [RFC3261]
-   Proxy-Authorization           nc                          No                [RFC3261]
-   Proxy-Authorization           nonce                       No                [RFC3261]
-   Proxy-Authorization           opaque                      No                [RFC3261]
-   Proxy-Authorization           qop                         Yes               [RFC3261]
-   Proxy-Authorization           realm                       No                [RFC3261]
-   Proxy-Authorization           response                    No                [RFC3261]
-   Proxy-Authorization           uri                         No                [RFC3261]
-   Proxy-Authorization           username                    No                [RFC3261]
-   Reason                        cause                       Yes               [RFC3326]
-   Reason                        text                        No                [RFC3326]
-   Retry-After                   duration                    No                [RFC3261]
-   Security-Client               alg                         Yes               [RFC3329]
-   Security-Client               ealg                        Yes               [RFC3329]
-   Security-Client               d-alg                       Yes               [RFC3329]
-   Security-Client               d-qop                       Yes               [RFC3329]
-   Security-Client               d-ver                       No                [RFC3329]
-   Security-Client               mod                         Yes               [RFC3329]
-   Security-Client               port1                       No                [RFC3329]
-   Security-Client               port2                       No                [RFC3329]
-   Security-Client               prot                        Yes               [RFC3329]
-   Security-Client               q                           No                [RFC3329]
-   Security-Client               spi                         No                [RFC3329]
-   Security-Server               alg                         Yes               [RFC3329]
-   Security-Server               ealg                        Yes               [RFC3329]
-   Security-Server               d-alg                       Yes               [RFC3329]
-   Security-Server               d-qop                       Yes               [RFC3329]
-   Security-Server               d-ver                       No                [RFC3329]
-   Security-Server               mod                         Yes               [RFC3329]
-   Security-Server               port1                       No                [RFC3329]
-   Security-Server               port2                       No                [RFC3329]
-   Security-Server               prot                        Yes               [RFC3329]
-   Security-Server               q                           No                [RFC3329]
-   Security-Server               spi                         No                [RFC3329]
-   Security-Verify               alg                         Yes               [RFC3329]
-   Security-Verify               ealg                        Yes               [RFC3329]
-   Security-Verify               d-alg                       Yes               [RFC3329]
-   Security-Verify               d-qop                       Yes               [RFC3329]
-   Security-Verify               d-ver                       No                [RFC3329]
-   Security-Verify               mod                         Yes               [RFC3329]
-   Security-Verify               port1                       No                [RFC3329]
-   Security-Verify               port2                       No                [RFC3329]
-   Security-Verify               prot                        Yes               [RFC3329]
-   Security-Verify               q                           No                [RFC3329]
-   Security-Verify               spi                         No                [RFC3329]
-   Session-ID                    remote                      No                [RFC7989]
-   Subscription-State            adaptive-min-rate           No                [RFC6446]
-   Subscription-State            expires                     No                [RFC6665]
-   Subscription-State            max-rate                    No                [RFC6446]
-   Subscription-State            min-rate                    No                [RFC6446]
-   Subscription-State            reason                      Yes               [RFC6665]
-   Subscription-State            retry-after                 No                [RFC6665]
-   Target-Dialog                 local-tag                   No                [RFC4538]
-   Target-Dialog                 remote-tag                  No                [RFC4538]
-   To                            tag                         No                [RFC3261]
-   Trigger-Consent               target-uri                  No                [RFC5360]
-   User-to-User                  content                     No                [RFC7433]
-   User-to-User                  encoding                    Yes               [RFC7433]
-   User-to-User                  purpose                     No                [RFC7433]
-   Via                           alias                       No                [RFC5923]
-   Via                           branch                      No                [RFC3261]
-   Via                           comp                        Yes               [RFC3486]
-   Via                           keep                        No                [RFC6223]
-   Via                           maddr                       No                [RFC3261]
-   Via                           oc                          Yes               [RFC7339]
-   Via                           oc-algo                     Yes               [RFC7339][RFC7415]
-   Via                           oc-seq                      Yes               [RFC7339]
-   Via                           oc-validity                 Yes               [RFC7339]
-   Via                           received                    No                [RFC3261][RFC7118]
-   Via                           received-realm              No                [RFC8055]
-   Via                           rport                       No                [RFC3581]
-   Via                           sigcomp-id                  No                [RFC5049]
-   Via                           ttl                         No                [RFC3261]
-   WWW-Authenticate              algorithm                   Yes               [RFC3261][RFC3310]
-   WWW-Authenticate              domain                      Yes               [RFC3261]
-   WWW-Authenticate              nonce                       No                [RFC3261]
-   WWW-Authenticate              opaque                      No                [RFC3261]
-   WWW-Authenticate              qop                         Yes               [RFC3261]
-   WWW-Authenticate              realm                       No                [RFC3261]
-   WWW-Authenticate              stale                       Yes               [RFC3261]
+           Header Field                Parameter Name          Predefined Values                               Reference
+   Accept                        q                           No                     [RFC3261]
+   Accept-Encoding               q                           No                     [RFC3261]
+   Accept-Language               q                           No                     [RFC3261]
+   Alert-Info                    appearance                  No                     [RFC7463]
+   AlertMsg-Error                code                        no                     [RFC-ietf-ecrit-data-only-ea-22]
+   Answer-Mode                   require                     No                     [RFC5373]
+   Authorization                 algorithm                   Yes                    [RFC3261][RFC3310]
+   Authorization                 auts                        No                     [RFC3310]
+   Authorization                 cnonce                      No                     [RFC3261]
+   Authorization                 nc                          No                     [RFC3261]
+   Authorization                 nonce                       No                     [RFC3261]
+   Authorization                 opaque                      No                     [RFC3261]
+   Authorization                 qop                         Yes                    [RFC3261]
+   Authorization                 realm                       No                     [RFC3261]
+   Authorization                 response                    No                     [RFC3261]
+   Authorization                 uri                         No                     [RFC3261]
+   Authorization                 username                    No                     [RFC3261]
+   Authentication-Info           cnonce                      No                     [RFC3261]
+   Authentication-Info           nc                          No                     [RFC3261]
+   Authentication-Info           nextnonce                   No                     [RFC3261]
+   Authentication-Info           qop                         Yes                    [RFC3261]
+   Authentication-Info           rspauth                     No                     [RFC3261]
+   Call-Info                     m                           Yes                    [RFC6910]
+   Call-Info                     purpose                     Yes                    [RFC3261][RFC5367][RFC6910][RFC6993][RFC7082][RFC7852][RFC8688]
+   Contact                       expires                     No                     [RFC3261]
+   Contact                       mp                          No                     [RFC7044]
+   Contact                       np                          No                     [RFC7044]
+   Contact                       pub-gruu                    No                     [RFC5627]
+   Contact                       q                           No                     [RFC3261]
+   Contact                       rc                          No                     [RFC7044]
+   Contact                       reg-id                      No                     [RFC5626]
+   Contact                       temp-gruu                   No                     [RFC5627]
+   Contact                       temp-gruu-cookie            No                     [RFC6140]
+   Content-Disposition           handling                    Yes                    [RFC3204][RFC3261][RFC3459][RFC5621]
+   Event                         adaptive-min-rate           No                     [RFC6446]
+   Event                         body                        Yes                    [RFC5989]
+   Event                         call-id                     No                     [RFC4235]
+   Event                         effective-by                No                     [RFC6080]
+   Event                         from-tag                    No                     [RFC4235]
+   Event                         id                          No                     [RFC6665]
+   Event                         include-session-description No                     [RFC4235]
+   Event                         max-rate                    No                     [RFC6446]
+   Event                         min-rate                    No                     [RFC6446]
+   Event                         model                       No                     [RFC6080]
+   Event                         profile-type                Yes                    [RFC6080]
+   Event                         shared                      No                     [RFC7463]
+   Event                         to-tag                      No                     [RFC4235]
+   Event                         vendor                      No                     [RFC6080]
+   Event                         version                     No                     [RFC6080]
+   Feature-Caps                  fcap-name [7]               No                     [RFC6809]
+   From                          tag                         No                     [RFC3261]
+   Geolocation                   loc-src                     No                     [RFC-ietf-sipcore-locparam-06]
+   Geolocation-Error             code                        Yes                    [RFC6442]
+   History-Info                  mp                          No                     [RFC7044]
+   History-Info                  np                          No                     [RFC7044]
+   History-Info                  rc                          No                     [RFC7044]
+   P-Access-Network-Info         cgi-3gpp                    No                     [RFC7315]
+   P-Access-Network-Info         ci-3gpp2                    No                     [RFC7315]
+   P-Access-Network-Info         ci-3gpp2-femto              No                     [RFC7315]
+   P-Access-Network-Info         dsl-location                No                     [RFC7315]
+   P-Access-Network-Info         dvb-rcs2-node-id            No                     [RFC7315]
+   P-Access-Network-Info         eth-location                No                     [RFC7315]
+   P-Access-Network-Info         fiber-location              No                     [RFC7315]
+   P-Access-Network-Info         gstn-location               No                     [RFC7315]
+   P-Access-Network-Info         i-wlan-node-id              No                     [RFC7315]
+   P-Access-Network-Info         local-time-zone             No                     [RFC7315]
+   P-Access-Network-Info         operator-specific-GI        No                     [RFC7315]
+   P-Access-Network-Info         utran-cell-id-3gpp          No                     [RFC7315]
+   P-Access-Network-Info         utran-sai-3gpp              No                     [RFC7315]
+   P-Charging-Function-Addresses ccf                         No                     [RFC7315]
+   P-Charging-Function-Addresses ccf-2                       No                     [RFC7315]
+   P-Charging-Function-Addresses ecf                         No                     [RFC7315]
+   P-Charging-Function-Addresses ecf-2                       No                     [RFC7315]
+   P-Charging-Vector             icid-value                  No                     [RFC7315]
+   P-Charging-Vector             icid-generated-at           No                     [RFC7315]
+   P-Charging-Vector             orig-ioi                    No                     [RFC7315]
+   P-Charging-Vector             related-icid                No                     [RFC7315]
+   P-Charging-Vector             related-icid-generated-at   No                     [RFC7315]
+   P-Charging-Vector             term-ioi                    No                     [RFC7315]
+   P-Charging-Vector             transit-ioi                 No                     [RFC7315]
+   P-DCS-Billing-Info            called                      No                     [RFC5503]
+   P-DCS-Billing-Info            calling                     No                     [RFC5503]
+   P-DCS-Billing-Info            charge                      No                     [RFC5503]
+   P-DCS-Billing-Info            jip                         No                     [RFC5503]
+   P-DCS-Billing-Info            locroute                    No                     [RFC5503]
+   P-DCS-Billing-Info            rksgroup                    No                     [RFC5503]
+   P-DCS-Billing-Info            routing                     No                     [RFC5503]
+   P-DCS-LAES                    bcid                        No                     [RFC5503]
+   P-DCS-LAES                    cccid                       No                     [RFC5503]
+   P-DCS-LAES                    content                     No                     [RFC5503]
+   P-DCS-LAES                    key (OBSOLETED)             No                     [RFC3603][RFC5503]
+   P-DCS-Redirect                count                       No                     [RFC5503]
+   P-DCS-Redirect                redirector-uri              No                     [RFC5503]
+   P-DCS-Trace-Party-ID          timestamp                   No                     [RFC5503]
+   P-Refused-URI-List            members                     No                     [RFC5318]
+   P-Served-User                 sescase                     Yes                    [RFC5502]
+   P-Served-User                 regstate                    Yes                    [RFC5502]
+   P-Served-User                 orig-cdiv                   No                     [RFC8498]
+   Policy-Contact                non-cacheable               Yes                    [RFC6794]
+   Priv-Answer-Mode              require                     No                     [RFC5373]
+   Proxy-Authenticate            algorithm                   Yes                    [RFC3261][RFC3310]
+   Proxy-Authenticate            domain                      No                     [RFC3261]
+   Proxy-Authenticate            nonce                       No                     [RFC3261]
+   Proxy-Authenticate            opaque                      No                     [RFC3261]
+   Proxy-Authenticate            qop                         Yes                    [RFC3261]
+   Proxy-Authenticate            realm                       No                     [RFC3261]
+   Proxy-Authenticate            stale                       Yes                    [RFC3261]
+   Proxy-Authorization           algorithm                   Yes                    [RFC3261][RFC3310]
+   Proxy-Authorization           auts                        No                     [RFC3310]
+   Proxy-Authorization           cnonce                      No                     [RFC3261]
+   Proxy-Authorization           nc                          No                     [RFC3261]
+   Proxy-Authorization           nonce                       No                     [RFC3261]
+   Proxy-Authorization           opaque                      No                     [RFC3261]
+   Proxy-Authorization           qop                         Yes                    [RFC3261]
+   Proxy-Authorization           realm                       No                     [RFC3261]
+   Proxy-Authorization           response                    No                     [RFC3261]
+   Proxy-Authorization           uri                         No                     [RFC3261]
+   Proxy-Authorization           username                    No                     [RFC3261]
+   Reason                        cause                       Yes                    [RFC3326]
+   Reason                        location                    Yes                    [RFC8606]
+   Reason                        text                        No                     [RFC3326]
+   Retry-After                   duration                    No                     [RFC3261]
+   Security-Client               alg                         Yes                    [RFC3329]
+   Security-Client               ealg                        Yes                    [RFC3329]
+   Security-Client               d-alg                       Yes                    [RFC3329]
+   Security-Client               d-qop                       Yes                    [RFC3329]
+   Security-Client               d-ver                       No                     [RFC3329]
+   Security-Client               mod                         Yes                    [RFC3329]
+   Security-Client               port1                       No                     [RFC3329]
+   Security-Client               port2                       No                     [RFC3329]
+   Security-Client               prot                        Yes                    [RFC3329]
+   Security-Client               q                           No                     [RFC3329]
+   Security-Client               spi                         No                     [RFC3329]
+   Security-Server               alg                         Yes                    [RFC3329]
+   Security-Server               ealg                        Yes                    [RFC3329]
+   Security-Server               d-alg                       Yes                    [RFC3329]
+   Security-Server               d-qop                       Yes                    [RFC3329]
+   Security-Server               d-ver                       No                     [RFC3329]
+   Security-Server               mod                         Yes                    [RFC3329]
+   Security-Server               port1                       No                     [RFC3329]
+   Security-Server               port2                       No                     [RFC3329]
+   Security-Server               prot                        Yes                    [RFC3329]
+   Security-Server               q                           No                     [RFC3329]
+   Security-Server               spi                         No                     [RFC3329]
+   Security-Verify               alg                         Yes                    [RFC3329]
+   Security-Verify               ealg                        Yes                    [RFC3329]
+   Security-Verify               d-alg                       Yes                    [RFC3329]
+   Security-Verify               d-qop                       Yes                    [RFC3329]
+   Security-Verify               d-ver                       No                     [RFC3329]
+   Security-Verify               mod                         Yes                    [RFC3329]
+   Security-Verify               port1                       No                     [RFC3329]
+   Security-Verify               port2                       No                     [RFC3329]
+   Security-Verify               prot                        Yes                    [RFC3329]
+   Security-Verify               q                           No                     [RFC3329]
+   Security-Verify               spi                         No                     [RFC3329]
+   Session-ID                    logme                       No (no values are      [RFC8497]
+                                                             allowed)
+   Session-ID                    remote                      No                     [RFC7989]
+   Subscription-State            adaptive-min-rate           No                     [RFC6446]
+   Subscription-State            expires                     No                     [RFC6665]
+   Subscription-State            max-rate                    No                     [RFC6446]
+   Subscription-State            min-rate                    No                     [RFC6446]
+   Subscription-State            reason                      Yes                    [RFC6665]
+   Subscription-State            retry-after                 No                     [RFC6665]
+   Target-Dialog                 local-tag                   No                     [RFC4538]
+   Target-Dialog                 remote-tag                  No                     [RFC4538]
+   To                            tag                         No                     [RFC3261]
+   Trigger-Consent               target-uri                  No                     [RFC5360]
+   User-to-User                  content                     No                     [RFC7433]
+   User-to-User                  encoding                    Yes                    [RFC7433]
+   User-to-User                  purpose                     No                     [RFC7433]
+   Via                           alias                       No                     [RFC5923]
+   Via                           branch                      No                     [RFC3261]
+   Via                           comp                        Yes                    [RFC3486]
+   Via                           keep                        No                     [RFC6223]
+   Via                           maddr                       No                     [RFC3261]
+   Via                           oc                          Yes                    [RFC7339]
+   Via                           oc-algo                     Yes                    [RFC7339][RFC7415]
+   Via                           oc-seq                      Yes                    [RFC7339]
+   Via                           oc-validity                 Yes                    [RFC7339]
+   Via                           received                    No                     [RFC3261][RFC7118]
+   Via                           received-realm              No                     [RFC8055]
+   Via                           rport                       No                     [RFC3581]
+   Via                           sigcomp-id                  No                     [RFC5049]
+   Via                           ttl                         No                     [RFC3261]
+   WWW-Authenticate              algorithm                   Yes                    [RFC3261][RFC3310]
+   WWW-Authenticate              domain                      Yes                    [RFC3261]
+   WWW-Authenticate              nonce                       No                     [RFC3261]
+   WWW-Authenticate              opaque                      No                     [RFC3261]
+   WWW-Authenticate              qop                         Yes                    [RFC3261]
+   WWW-Authenticate              realm                       No                     [RFC3261]
+   WWW-Authenticate              stale                       Yes                    [RFC3261]
 
 URI Purposes
 
@@ -2060,7 +2088,7 @@ SIP Forum User Agent Configuration Parameters
 
           Range        Registration Procedures
    begins with 'sfua-' RFC Required
-     all other names   First Come First Served
+   all other names     First Come First Served
 
    Parameter Name                                                       Description                                                       Reference
                   The URN identifying the User Agent, constructed as specified in section 4.1 of [RFC5626] "Managing Client-Initiated
@@ -2183,7 +2211,7 @@ Reason Codes
 
    Registration Procedure(s)
 
- RFC Required
+ Standards Action
 
    Reference
            [RFC6665]
@@ -2394,6 +2422,23 @@ Global Feature-Capability Indicator Registration Tree
    g.3gpp.mcptt.ambient-listening-call-release request or a SIP 200 (OK) response to a SIP INVITE request         v14.5.0][Frederic_Firmin]
                                                indicates that the MCPTT server is capable of receiving a SIP BYE
                                                from an MCPTT client to release an ambient-listening call.
+                                               This feature-capability indicator, when included in a Feature-Caps
+                                               header field as specified in IETF [RFC6809] in a SIP response to a
+   g.3gpp.dynamic-e-stn-drvcc                  SIP INVITE request, indicates support to transfer the session to   [3GPP TS 24.237][Frederic_Firmin]
+                                               the circuit switched (CS) domain using the Emergency Session
+                                               Transfer Number for DRVCC digit string.
+                                               This feature-capability indicator when used in a Feature-Caps
+                                               header field of a SIP request or a SIP response indicates that: 1.
+                                               the functional entity including the feature-capability indicator
+                                               in the SIP message supports the PS to CS SRVCC for terminating
+   g.3gpp.ps2cs-srvcc-term-pre-alerting        calls in pre-alerting phase; and 2. all entities of which the      [3GPP TS 24.237][Frederic_Firmin]
+                                               functional entity including the feature-capability indicator in
+                                               the SIP message is aware of being requested to support the feature
+                                               do support the PS to CS SRVCC for terminating calls in
+                                               pre-alerting phase.
+                                               When included in a Feature-Caps header field in SIP requests or    [3GPP TS 24.229
+   g.3gpp.priority-share                       SIP responses, the sender indicates that priority sharing is       13.16.0][Frederic_Firmin]
+                                               supported.
 
 SIP Feature-Capability Indicator Registration Tree
 
@@ -2408,9 +2453,28 @@ SIP Feature-Capability Indicator Registration Tree
            [IMG]
            CSV
 
-    Name                                                            Description                                                           Reference
-   sip.607 This feature-capability indicator, when included in a Feature-Caps header field of a REGISTER response, indicates that the     [RFC8197]
-           server supports, and will process, the 607 (Unwanted) response code.
+      Name                                                            Description                                                         Reference
+   sip.607     This feature-capability indicator, when included in a Feature-Caps header field of a REGISTER response, indicates that the [RFC8197]
+               server supports, and will process, the 607 (Unwanted) response code.
+               This feature-capability indicator, when inserted in a Feature-Caps header field of a SIP REGISTER request or a SIP 2xx
+   sip.pns     response to a REGISTER request, denotes that the entity associated with the indicator supports the SIP push mechanism and  [RFC8599]
+               the type of push notification service conveyed by the indicator value.
+               This feature-capability indicator, when inserted in a SIP 2xx response to a SIP REGISTER request, denotes that the entity
+   sip.vapid   associated with the indicator supports the Voluntary Application Server Identification (VAPID) mechanism when the entity   [RFC8599]
+               requests that a push notification be sent to a SIP UA. The indicator value is a public key identifying the entity, which
+               can be used by a SIP UA to restrict subscriptions to that entity.
+               This feature-capability indicator, when inserted in a SIP 2xx response to a SIP REGISTER request, denotes that the entity
+               associated with the indicator expects to receive binding-refresh REGISTER requests for the binding from the SIP UA
+   sip.pnsreg  associated with the binding before the binding expires, even if the entity does not request that a push notification be    [RFC8599]
+               sent to the SIP UA in order to trigger the binding-refresh REGISTER requests. The indicator value conveys the minimum time
+               (given in seconds) prior to the binding expiration when the UA MUST send the REGISTER request.
+               This feature-capability indicator, when inserted in a SIP 2xx response to a SIP REGISTER request, conveys that the entity
+   sip.pnspurr associated with the indicator will store information that can be used to associate a mid-dialog SIP request with the       [RFC8599]
+               binding information in the REGISTER request. The indicator value is an identifier that can be used as a key to retrieve
+               the binding information.
+               This feature-capability indicator, when included in a Feature-Caps header field of an INVITE request, indicates that the
+   sip.608     entity associated with the indicator will be responsible for indicating to the caller any information contained in the 608 [RFC8688]
+               SIP response code, specifically, the value referenced by the Call-Info header.
 
 Priority Header Field Values
 
@@ -2523,13 +2587,58 @@ UUI Encoding Parameters
    Encoding                Description                Reference
    hex      The UUI data is encoded using hexadecimal [RFC7433]
 
+Push Notification Service (PNS)
+
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Christer Holmberg
+
+   Reference
+           [RFC8599]
+
+   Available Formats
+           [IMG]
+           CSV
+
+    Value               Description               Reference
+   apns    Apple Push Notification service        [RFC8599]
+   fcm     Firebase Cloud Messaging               [RFC8599]
+   webpush Generic Event Delivery Using HTTP Push [RFC8599]
+
+SIP AlertMsg-Error Codes
+
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Unassigned
+
+   Reference
+           [RFC-ietf-ecrit-data-only-ea-22]
+
+   Available Formats
+           [IMG]
+           CSV
+
+   Code                     Default Reason Phrase                                 Reference
+   100  "Cannot Process the Alert Payload"                             [RFC-ietf-ecrit-data-only-ea-22]
+   101  "Alert Payload was not present or could not be found"          [RFC-ietf-ecrit-data-only-ea-22]
+   102  "Not enough information to determine the purpose of the alert" [RFC-ietf-ecrit-data-only-ea-22]
+   103  "Alert Payload was corrupted"                                  [RFC-ietf-ecrit-data-only-ea-22]
+
                                                                         People
 
           ID                    Name                        Contact URI            Last Updated
    [_3GPP]           3GPP Specifications Manager mailto:3gppContact&etsi.org       2017-06-02
    [Adam_Roach]      Adam Roach                  mailto:adam&nostrum.com           2013-02-26
    [Cullen_Jennings] Cullen Jennings             mailto:fluffy&cisco.com
-   [Frederic_Firmin] Frederic Firmin             mailto:frederic.firmin&etsi.org   2018-03-02
+   [Frederic_Firmin] Frederic Firmin             mailto:frederic.firmin&etsi.org   2019-05-28
    [Jon_Peterson]    Jon Peterson                mailto:jon.peterson&neustar.biz
    [Mary_Barnes]     Mary Barnes                 mailto:mary.ietf.barnes&gmail.com 2013-06-18
 

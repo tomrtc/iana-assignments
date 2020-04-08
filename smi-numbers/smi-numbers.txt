@@ -1,7 +1,7 @@
                                      Structure of Management Information (SMI) Numbers (MIB Module Registrations)
 
    Last Updated
-           2018-08-15
+           2020-04-02
 
    Note
 
@@ -26,6 +26,10 @@
 
  The network management object identifiers are under the iso (1), org
  (3), dod (6), internet (1), or 1.3.6.1, branch of the name space.
+
+ 1.3 is listed below as "org" in accordance with RFC 1157.  In the OID
+ specification, ITU-T recommendation X.660, the ASN.1 notation for 1.3
+ is "identified-organization".
 
  1                   iso
  1.3                 org
@@ -63,11 +67,10 @@
      * SMI Network Management MGMT Codes
 
           * SMI Network Management MGMT Codes Internet-standard MIB
-          * Prefix: iso.org.dod.internet.mgmt.mib-2.interface.ifTable.ifEntry.ifType
 
-     * ifType definitions
+     * ifType Definitions
 
-          * Internet-standard MIB - mib-2.interface.ifTable.ifEntry.ifType.tunnelType
+          * tunnelType Definitions
 
      * Internet-standard MIB - Transmission Group
 
@@ -100,7 +103,7 @@
 
           * SMI Private Enterprise Codes
 
-     * SMI Security Codes
+     * SMI Security Codes (including S/MIME, PKIX and LTANS)
 
           * SMI Security for Integrity Codes
           * SMI Security for Confidentiality Codes
@@ -119,6 +122,7 @@
           * SMI Security for X.400 Encoded Information Types (EIT) for S/MIME objects (1.2.840.113549.1.9.16.10)
           * SMI Security for S/MIME Capabilities (other than cryptographic algorithms) (1.2.840.113549.1.9.16.11)
           * SMI Security for S/MIME Portable Symmetric Key Container (PSKC) Attributes (1.2.840.113549.1.9.16.12)
+          * SMI Security for S/MIME Other Recipient Info Identifiers (1.2.840.113549.1.9.16.13)
           * SMI Security for Mechanism SPKM Codes
           * SMI Security for Mechanism MSP-Based IDUP (MIM) Codes
           * SMI Security for PKIX
@@ -152,6 +156,7 @@
           * SMI Security for PKIX Proxy Certificate Policy Languages
           * SMI Security for PKIX Proxy Matching Rules
           * SMI Security for PKIX Subject Key Identifier Semantics
+          * SMI Security for SCEP Attribute Identifiers
           * SMI Security for PKIX Access Descriptor
           * SMI Security for PKIX Online Certificate Status Protocol (OCSP)
           * SMI Security for Mechanism IPsec Codes
@@ -500,46 +505,12 @@ SMI Network Management MGMT Codes
      239   swmMIB                      SOFTWIRE-MESH-MIB                       [RFC7856]
      240   dsliteMIB                   DSLite-MIB                              [RFC7870]
      241   ptpbaseMIB                  PTPBASE-MIB                             [RFC8173]
+     242   mapMIB                      MAP-E-MIB                               [RFC8389]
+     243   mvpnMIB                     BGP-MPLS-LAYER3-VPN-MULTICAST-MIB       [RFC8503]
+     244   l2L3VpnMcastTCMIB           L2L3-VPN-MULTICAST-TC-MIB               [RFC8502]
+     245   l2L3VpnMcastMIB             L2L3-VPN-MULTICAST-MIB                  [RFC8502]
 
-  Prefix: iso.org.dod.internet.mgmt.mib-2.interface.ifTable.ifEntry.ifType
-
-   Registration Procedure(s)
-
- Not Defined ?
-
-   Description
-
- iso.org.dod.internet.mgmt.mib-2.interface.ifTable.ifEntry.ifType (1.3.6.1.2.1.2.2.1.3)
-
-   Reference
-           [Not Defined ?]
-
-   Note
-
- For a functional mib language definition please see the following:
- [IANA registry ianaiftype-mib]
-
-         Rules for real mib names:
-
-                 #NAME?
-                 "-if its made of several words,"
-                  the second and later word's first letter is uppercase
-                 #NAME?
-                 #NAME?
-                 #NAME?
-                         Thus by way of example we have:
-                         traif           kosher
-                         -----           ------
-                         ddn-x25         "ddnX25(4),"
-                         FDDI            "fddi(15),"
-                         smds-dxi        "smdsDxi(43),"
-                         IEEE802.11      "ieee80211(71),"
-                 "-Finally, the last item in the list has no comma,"
-                  while all previous items have a comma
-
-   Registry is empty.
-
-ifType definitions
+ifType Definitions
 
    Registration Procedure(s)
 
@@ -549,22 +520,50 @@ ifType definitions
 
  Dave Thaler (primary), Dan Romascanu (secondary)
 
+   Description
+
+ iso.org.dod.internet.mgmt.mib-2.interface.ifTable.ifEntry.ifType (1.3.6.1.2.1.2.2.1.3)
+
    Reference
-           [RFC1213][RFC2863][RFC7224]
+           [RFC1213][RFC2863][RFC7224][RFC-thaler-iftype-reg-07]
 
    Note
 
- For every ifType registration, the corresponding transmission number value
- should be registered or marked "Reserved." In addition, the [IANAifType-MIB]
- and [iana-if-type YANG] modules should be updated in accordance with [RFC2863]
- and [RFC7224], respectively.
+ For future ifType assignments, an OID-subtree assignment MIB-II's 'transmission'
+ subtree will be made with the same value. In addition, the [IANAifType-MIB] and
+ [iana-if-type YANG] modules should be updated in accordance with [RFC2863] and
+ [RFC7224], respectively.
+
+
+   Note
+
+ For a functional mib language definition please see the following:
+ [IANA registry ianaiftype-mib]
+
+       Rules for real mib names:
+
+           #NAME?
+           "-if its made of several words,"
+           the second and later word's first letter is uppercase
+           #NAME?
+           #NAME?
+           #NAME?
+                   Thus by way of example we have:
+                   traif           kosher
+                   -----           ------
+                   ddn-x25         "ddnX25(4),"
+                   FDDI            "fddi(15),"
+                   smds-dxi        "smdsDxi(43),"
+                   IEEE802.11      "ieee80211(71),"
+           "-Finally, the last item in the list has no comma,"
+            while all previous items have a comma
 
 
    Available Formats
            [IMG]
            CSV
 
-Decimal             Name                           Description                                                                     References
+Decimal             Name                           Description                                                                           References
    1    other                         none of the following                 [RFC1213]
    2    regular1822                   BBN Report 1822                       [RFC1213]
    3    hdh1822                       BBN Report 1822                       [RFC1213]
@@ -801,28 +800,31 @@ Decimal             Name                           Description                  
   227   lmp                           Link Management Protocol              [RFC4327]
   228   cblVectaStar                  Cambridge Broadband Networks Limited  [John_Naylon]
                                       VectaStar
-                                      CATV Modular CMTS Downstream          [Eduardo_Cardona]["Data-Over-Cable Service Interface Specifications: M-CMTS Operations Support System Interface
-  229   docsCableMCmtsDownstream      Interface                             Specification, CM-SP-M-OSSI-I01-050805", DOCSIS, August
-                                                                            2005.][http://www.cablemodem.com/specifications][http://www.cablelabs.com/specifications/archives/docsis.html]
+                                      CATV Modular CMTS Downstream          [Eduardo_Cardona]["Data-Over-Cable Service Interface Specifications: M-CMTS Operations Support System Interface Specification,
+  229   docsCableMCmtsDownstream      Interface                             CM-SP-M-OSSI-I01-050805", DOCSIS, August
+                                                                            2005.][http://www.cablemodem.com/specifications][https://www.cablelabs.com/specifications/archives/docsis.html]
                                       Asymmetric Digital Subscriber Loop
   230   adsl2                         Version 2 (DEPRECATED - REPLACED BY   [RFC4706]
                                       238)
   231   macSecControlledIF            MACSecControlled                      [Paul_Congdon]
   232   macSecUncontrolledIF          MACSecUncontrolled                    [Paul_Congdon]
   233   aviciOpticalEther             Avici Optical Ethernet Aggregate      [Somen_Bhattacharya]
-  234   atmbond                       atmbond                               [http://www.itu.int/rec/T-REC-G.998.1-200501-I/en]
+  234   atmbond                       atmbond                               [https://www.itu.int/rec/T-REC-G.998.1-200501-I/en]
   235   voiceFGDOS                    voice FGD Operator Services           [Lizzie_Cheung]
   236   mocaVersion1                  MultiMedia over Coax Alliance         [Ladd_Wardani]
   237   ieee80216WMAN                 IEEE 802.16 WMAN interface            [http://standards.ieee.org/getieee802/802.16.html]
                                       Asymmetric Digital Subscriber Loop
   238   adsl2plus                     Version 2 -- Version 2 Plus and all   [RFC4706]
                                       variants
-  239   dvbRcsMacLayer                DVB-RCS MAC Layer                     [RFC5728][ETSI EN 301 790][http://satlabs.org/pdf/SatLabs_System_Recommendations_v2.0_M&C.pdf]
-  240   dvbTdm                        DVB Satellite TDM                     [RFC5728][ETSI EN 300 421][ETSI EN 302 307][http://satlabs.org/pdf/SatLabs_System_Recommendations_v2.0_M&C.pdf]
-  241   dvbRcsTdma                    DVB-RCS TDMA                          [RFC5728][ETSI EN 301 790][ETSI EN 300 421][http://satlabs.org/pdf/SatLabs_System_Recommendations_v2.0_M&C.pdf]
+  239   dvbRcsMacLayer                DVB-RCS MAC Layer                     [RFC5728][ETSI EN 301
+                                                                            790][https://web.archive.org/web/20181229131835/http://satlabs.org/pdf/SatLabs_System_Recommendations_v2.0_M&C.pdf]
+  240   dvbTdm                        DVB Satellite TDM                     [RFC5728][ETSI EN 300 421][ETSI EN 302
+                                                                            307][https://web.archive.org/web/20181229131835/http://satlabs.org/pdf/SatLabs_System_Recommendations_v2.0_M&C.pdf]
+  241   dvbRcsTdma                    DVB-RCS TDMA                          [RFC5728][ETSI EN 301 790][ETSI EN 300
+                                                                            421][https://web.archive.org/web/20181229131835/http://satlabs.org/pdf/SatLabs_System_Recommendations_v2.0_M&C.pdf]
   242   x86Laps                       LAPS based on ITU-T X.86/Y.1323       [Orly_Nicklass][http://grouper.ieee.org/groups/802/3/ad_hoc/etholaps/public/docs/opening_report_0301.pdf]
-  243   wwanPP                        3GPP WWAN                             [Gabriel_Montenegro][http://www.3gpp.org/ftp/specs/archive/23_series/23.060/23060-740.zip]
-  244   wwanPP2                       3GPP2 WWAN                            [Gabriel_Montenegro][http://www.3gpp2.org/Public_html/specs/C.S0017-005-A_v1.0_040617.pdf]
+  243   wwanPP                        3GPP WWAN                             [Gabriel_Montenegro][https://www.3gpp.org/ftp/specs/archive/23_series/23.060/23060-740.zip]
+  244   wwanPP2                       3GPP2 WWAN                            [Gabriel_Montenegro][http://www.3gpp2.org/Public_html/Specs/C.S0017-005-A_v1.0_040617.pdf]
   245   voiceEBS                      voice P-phone EBS physical interface  [Tom_Chou]
   246   ifPwType                      Pseudowire interface type             [RFC5601]
   247   ILAN                          Internal LAN on a bridge per IEEE     [Glenn_Parsons][http://www.ieee802.org/1/files/private/ap-drafts/d3/802-1ap-D3-4.pdf]
@@ -840,12 +842,12 @@ Decimal             Name                           Description                  
   253   capwapDot11Bss                WLAN BSS Interface                    [RFC5834]
   254   capwapWtpVirtualRadio         WTP Virtual Radio Interface           [RFC5833]
   255   bits                          bitsport                              [Du_Feng]
-  256   docsCableUpstreamRfPort       DOCSIS CATV Upstream RF Port          [Michael_Patrick][http://www.cablelabs.com/specifications/CM-SP-EQAM-PMI-I01-081209.pdf]
+  256   docsCableUpstreamRfPort       DOCSIS CATV Upstream RF Port          [Michael_Patrick][https://www.cablelabs.com/specifications/CM-SP-EQAM-PMI-I01-081209.pdf]
   257   cableDownstreamRfPort         CATV downstream RF port               [Michael_Patrick]
   258   vmwareVirtualNic              VMware Virtual Network Interface      [Mike_MacFaden]
   259   ieee802154                    IEEE 802.15.4 WPAN interface          [Juergen_Schoenwaelde]["IEEE Std. 802.15.4-2006", October 2006.]
-  260   otnOdu                        OTN Optical Data Unit                 [Jim_Vance][http://www.itu.int/ITU-T/studygroups/com15/otn/OTNtutorial.pdf]
-  261   otnOtu                        OTN Optical channel Transport Unit    [Jim_Vance][http://www.itu.int/ITU-T/studygroups/com15/otn/OTNtutorial.pdf]
+  260   otnOdu                        OTN Optical Data Unit                 [Jim_Vance][https://www.itu.int/ITU-T/studygroups/com15/otn/OTNtutorial.pdf]
+  261   otnOtu                        OTN Optical channel Transport Unit    [Jim_Vance][https://www.itu.int/ITU-T/studygroups/com15/otn/OTNtutorial.pdf]
   262   ifVfiType                     VPLS Forwarding Instance Interface    [Manas_Pati]
                                       Type
   263   g9981                         G.998.1 bonded interface              [RFC6768][RFC Errata 3591]
@@ -857,10 +859,10 @@ Decimal             Name                           Description                  
                                       interface
   269   aluEponLogicalLink            The emulation of a point-to-point     [Karel_Meijfroidt]
                                       link over the EPON layer
-  270   aluGponOnu                    GPON Optical Network Unit             [Karel_Meijfroidt][http://www.itu.int/rec/T-REC-G.984.2/en]
-  271   aluGponPhysicalUni            GPON physical User to Network         [Karel_Meijfroidt][http://www.itu.int/rec/T-REC-G.984.2/en]
+  270   aluGponOnu                    GPON Optical Network Unit             [Karel_Meijfroidt][https://www.itu.int/rec/T-REC-G.984.2/en]
+  271   aluGponPhysicalUni            GPON physical User to Network         [Karel_Meijfroidt][https://www.itu.int/rec/T-REC-G.984.2/en]
                                       interface
-  272   vmwareNicTeam                 VMware NIC Team                       [Michael_MacFaden][http://www.vmware.com/pdf/esx2_NIC_Teaming.pdf]
+  272   vmwareNicTeam                 VMware NIC Team                       [Michael_MacFaden][https://www.vmware.com/pdf/esx2_NIC_Teaming.pdf]
                                       The corresponding transmission value
   273   Reserved                      is allocated according to the         [RFC6825]
                                       following reference.
@@ -873,27 +875,35 @@ Decimal             Name                           Description                  
                                       The corresponding transmission value
   276   Reserved                      is allocated according to the         [RFC7257]
                                       following reference.
-  277   docsOfdmDownstream            CATV Downstream OFDM interface        [http://www.cablelabs.com/specification/cable-modem-operations-support-system-interface-specification][Miguel_O_Alvarez]
-  278   docsOfdmaUpstream             CATV Upstream OFDMA interface         [http://www.cablelabs.com/specification/cable-modem-operations-support-system-interface-specification][Miguel_O_Alvarez]
+  277   docsOfdmDownstream            CATV Downstream OFDM interface        [https://www.cablelabs.com/specification/cable-modem-operations-support-system-interface-specification][Miguel_O_Alvarez]
+  278   docsOfdmaUpstream             CATV Upstream OFDMA interface         [https://www.cablelabs.com/specification/cable-modem-operations-support-system-interface-specification][Miguel_O_Alvarez]
   279   gfast                         G.fast port                           [ITU-T G.9701]
   280   sdci                          SDCI (IO-Link)                        [IEC 61131-9 Edition 1.0 2013-09][Markus_Rentschler]
   281   xboxWireless                  Xbox wireless                         [Brandon_Jiang]
-  282   fastdsl                       FastDSL                               [BBF TR-355][William_Lupton]
+  282   fastdsl                       FastDSL                               [BBF TR-355][Broadband_Forum]
   283   docsCableScte55d1FwdOob       Cable SCTE 55-1 OOB Forward Channel   [https://www.scte.org/documents/pdf/Standards/ANSI_SCTE-55-1-2009.pdf][Brian_Hedstrom]
   284   docsCableScte55d1RetOob       Cable SCTE 55-1 OOB Return Channel    [https://www.scte.org/documents/pdf/Standards/ANSI_SCTE-55-1-2009.pdf][Brian_Hedstrom]
-  285   docsCableScte55d2DsOob        Cable SCTE 55-2 OOB Downstream        [http://www.scte.org/documents/pdf/Standards/ANSI_SCTE%2055-2%202008.pdf][Brian_Hedstrom]
+  285   docsCableScte55d2DsOob        Cable SCTE 55-2 OOB Downstream        [https://web.archive.org/web/20190822104256/http://www.scte.org/documents/pdf/Standards/ANSI_SCTE%2055-2%202008.pdf][Brian_Hedstrom]
                                       Channel
-  286   docsCableScte55d2UsOob        Cable SCTE 55-2 OOB Upstream Channel  [http://www.scte.org/documents/pdf/Standards/ANSI_SCTE%2055-2%202008.pdf][Brian_Hedstrom]
+  286   docsCableScte55d2UsOob        Cable SCTE 55-2 OOB Upstream Channel  [https://web.archive.org/web/20190822104256/http://www.scte.org/documents/pdf/Standards/ANSI_SCTE%2055-2%202008.pdf][Brian_Hedstrom]
   287   docsCableNdf                  Cable Narrowband Digital Forward      [http://www.cablelabs.com/wp-content/uploads/specdocs/CM-SP-R-OOB-I04-160923.pdf][Brian_Hedstrom]
   288   docsCableNdr                  Cable Narrowband Digital Return       [http://www.cablelabs.com/wp-content/uploads/specdocs/CM-SP-R-OOB-I04-160923.pdf][Brian_Hedstrom]
-  289   ptm                           Packet Transfer Mode                  [ITU-T G.993.1, Annex H][ITU-T G.993.2][ITU-T G.9701][William_Lupton]
-  290   ghn                           G.hn port                             [ITU-T G.9961][William_Lupton]
+  289   ptm                           Packet Transfer Mode                  [ITU-T G.993.1, Annex H][ITU-T G.993.2][ITU-T G.9701][Broadband_Forum]
+  290   ghn                           G.hn port                             [ITU-T G.9961][Broadband_Forum]
   291   otnOtsi                       Optical Tributary Signal              [ITU-T G.959.1][Koteswara_Boyapati]
   292   otnOtuc                       OTN OTUCn                             [ITU-T G.709/Y.1331][Koteswara_Boyapati]
   293   otnOduc                       OTN ODUC                              [ITU-T G.709][Koteswara_Boyapati]
   294   otnOtsig                      OTN OTUC Signal                       [ITU-T G.709][Koteswara_Boyapati]
+  295   microwaveCarrierTermination   air interface of a single microwave   [RFC8561]
+                                      carrier
+  296   microwaveRadioLinkTerminal    radio link interface for one or       [RFC8561]
+                                      several aggregated microwave carriers
+  297   ieee8021axDrni                IEEE 802.1AX Distributed Resilient    [IEEE 802.1AX-Rev-d2-0][John_Messenger]
+                                      Network Interface
+  298   ax25                          AX.25 network interfaces              [AX.25 Link Access Protocol for Amateur Packet Radio version 2.2][Iain_Learmonth]
+  299   ieee19061nanocom              Nanoscale and Molecular Communication [IEEE 1906.1-2015][Stephen_F_Bush]
 
-  Internet-standard MIB - mib-2.interface.ifTable.ifEntry.ifType.tunnelType
+  tunnelType Definitions
 
    Registration Procedure(s)
 
@@ -908,7 +918,13 @@ Decimal             Name                           Description                  
  iso.org.dod.internet.mgmt.mib-2.interface.ifTable.ifEntry.ifType.tunnelType (1.3.6.1.2.1.2.2.1.3.131)
 
    Reference
-           [RFC4087]
+           [RFC4087][RFC8675][RFC-thaler-iftype-reg-07]
+
+   Note
+
+ When this registry is modified, the YANG module [iana-tunnel-type]
+ must be updated as defined in [RFC8675].
+
 
    Note
 
@@ -933,32 +949,30 @@ Decimal             Name                           Description                  
      "-Finally, the last item in the list has no comma,"
       while all previous items have a comma
 
+
    Available Formats
            [IMG]
            CSV
 
-   Decimal     Name         Description                                                    References
-      1    other        none of the          [RFC4087]
-                        following
-      2    direct       no intermediate      [RFC4087]
-                        header
-      3    gre          GRE encapsulation    [RFC4087]
-      4    minimal      Minimal              [RFC4087]
-                        encapsulation
-      5    l2tp         L2TP encapsulation   [RFC4087]
-      6    pptp         PPTP encapsulation   [RFC4087]
-      7    l2f          L2F encapsulation    [RFC4087]
-      8    udp          UDP encapsulation    [RFC4087]
-      9    atmp         ATMP encapsulation   [RFC4087]
-     10    msdp         MSDP encapsulation   [RFC4087]
-     11    sixToFour    6to4 encapsulation   [RFC4087]
-     12    sixOverFour  6over4 encapsulation [RFC4087]
-     13    isatap       ISATAP encapsulation [RFC4087]
-     14    teredo       Teredo encapsulation [RFC4087]
-     15    ipHttps      IPHTTPS              [Sean_Siler][http://msdn.microsoft.com/en-us/library/dd358571(PROT.10).aspx][Microsoft Corporation,
-                                             "IP over HTTPS (IP-HTTPS) Tunneling Protocol Specification"]
-     16    softwireMesh softwire mesh tunnel [RFC7856]
-     17    dsLite       DS-Lite tunnel       [RFC7870]
+   Decimal     Name          Description                                                 References
+      1    other        none of the following  [RFC4087]
+      2    direct       no intermediate header [RFC2003][RFC4213]
+      3    gre          GRE encapsulation      [RFC1701][RFC1702][RFC7676]
+      4    minimal      Minimal encapsulation  [RFC2004]
+      5    l2tp         L2TP encapsulation     [RFC2661]
+      6    pptp         PPTP encapsulation     [RFC2637]
+      7    l2f          L2F encapsulation      [RFC2341]
+      8    udp          UDP encapsulation      [RFC1234][RFC8085]
+      9    atmp         ATMP encapsulation     [RFC2107]
+     10    msdp         MSDP encapsulation     [RFC3618]
+     11    sixToFour    6to4 encapsulation     [RFC3056]
+     12    sixOverFour  6over4 encapsulation   [RFC2529]
+     13    isatap       ISATAP encapsulation   [RFC5214]
+     14    teredo       Teredo encapsulation   [RFC4380]
+     15    ipHttps      IPHTTPS                [Sean_Siler][Microsoft Corporation, "IP over HTTPS (IP-HTTPS) Tunneling Protocol Specification]
+     16    softwireMesh softwire mesh tunnel   [RFC5565]
+     17    dsLite       DS-Lite tunnel         [RFC6333]
+     18    aplusp       A+P encapsulation      [RFC6346]
 
 Internet-standard MIB - Transmission Group
 
@@ -971,97 +985,103 @@ Internet-standard MIB - Transmission Group
  Dave Thaler (primary), Dan Romascanu (secondary)
 
    Reference
-           [RFC1213]
+           [RFC1213][RFC-thaler-iftype-reg-07]
 
    Note
 
- For every transmission number registration, the corresponding
- ifType value should be registered or marked "Reserved."
+ For future transmission number assignments, an 'ifType' will be
+ made with the same value.
 
    Available Formats
            [IMG]
            CSV
 
-   Decimal       Name                    Description                                                 References
-      5    x25              X.25                                  [RFC1382]
-      7    dot3             Ethernet-like Objects                 [RFC3635]
-      8    IEEE802.4        Token Bus-like Objects                [RFC1230][RFC1239]
-      9    dot5             Token Ring-like Objects               [RFC1748]
-     15    FDDI             FDDI Objects                          [RFC1512][Jeffrey_Case]
-     16    lapb             LAP B                                 [RFC1381]
-     18    ds1              T1 Carrier Objects                    [RFC4805]
-     19    e1               E1 Carrier Objects                    [RFC4805]
-     20    isdnMib          ISDN MIB                              [RFC2127]
-     21    dialControlMib   Dial Control MIB                      [RFC2128]
-     23    ppp              Point-to-Point Protocol               [RFC1471]
-     30    ds3              DS3/E3 Interface Objects              [RFC3896]
-     31    sip              SMDS Interface Objects                [RFC1694]
-     32    frame-relay      Frame Relay Objects                   [RFC2115][Caralyn_Brown]
-     33    RS-232           RS-232 Objects                        [RFC1659]
-     34    Parallel         Parallel Printer Objects              [RFC1660]
-     35    arcnet           ARC network
-     36    arcnet-plus      ARC network plus
-     37    atm              ATM
-     38    MIOX25           MIOX25                                [RFC1461]
-     39    sonetMIB         SONET MIB                             [RFC3592]
-     44    frnetservMIB     Frame Relay Service MIB for DCE       [RFC1604]
-     45    dot12MIB         IEEE 802.12                           [RFC2020]
-     46    ipoaMIB          IPOA-MIB                              [RFC2320]
-     47    mfrMIB           FR-MFR-MIB                            [RFC3020]
-     48    hdsl2ShdslMIB    HDSL2-SHDSL-LINE-MIB                  [RFC4319]
-     49    apsMIB           APS-MIB                               [RFC3498]
-    50-55  Reserved         Reserved
-     56    fcMgmtMIB        fcMgmtMIB                             [RFC4044]
-    57-80  Reserved         Reserved
-     81    ds0              DS0-MIB                               [RFC2494]
-     82    ds0bundle        DS0Bundle-MIB                         [RFC2494]
-    83-93  Reserved         Reserved
-     94    adslmib          adslMIB                               [RFC2662]
-     95    l2tp             L2TP-MIB                              [RFC3371]
-     96    Reserved         Reserved
-     97    vdslMIB          VDSL-LINE-MIB                         [RFC3728]
-   98-126  Reserved         Reserved
-     127   docsIfMib        DOCS IF MIB                           [RFC2670]
-   128-130 Reserved         Reserved
-     131   tunnelMIB        IP Tunnel MIB                         [RFC2667]
-     132   coffee           coffee pot                            [RFC2325]
-     133   optIfMibModule   OPT-IF-MIB                            [RFC3591]
-     134   etherWisMIB      ETHER-WIS MIB                         [RFC3637]
-   135-165 Reserved         Reserved
-     166   mplsStdMIB       MPLS STD MIB                          [RFC3811]
-   167-183 Reserved         Reserved
-     184   propBWAp2Mp      PropBroadbandWirelessAccesspt2Multipt [http://standards.ieee.org/getieee802/802.16.html]
-   185-199 Reserved         Reserved
-     200   teLinkStdMIB     TE-LINK-STD-MIB                       [RFC4220]
-   201-223 Reserved         Reserved
-     224   fcipMIB          FCIP-MGMT-MIB                         [RFC4404]
-   225-226 Reserved         Reserved
-     227   lmpMIB           LMP-MIB                               [RFC4327]
-     228   vdslExtSCMMIB    VDSL-LINE-EXT-SCM-MIB                 [RFC4069]
-     229   vdslExtMCMMIB    VDSL-LINE-EXT-MCM-MIB                 [RFC4070]
-     230   ifcpMgmtMIB      IFCP-MGMT-MIB                         [RFC6173]
-   231-237 Reserved         Reserved
-     238   adsl2MIB         ADSL2-LINE-MIB                        [RFC4706]
-     239   dvbRcsMib        DVB-RCS-MIB                           [RFC5728][ETSI EN 301
-                                                                  790][http://satlabs.org/pdf/SatLabs_System_Recommendations_v2.0_M&C.pdf]
-   240-245 Reserved         Reserved
-     246   pwStdMIB         PW-STD-MIB                            [RFC5601]
-   247-250 Reserved         Reserved
-     251   vdsl2MIB         VDSL2-LINE-MIB                        [RFC5650]
-   252-262 Reserved         Reserved
-     263   Reserved         Reserved                              [RFC6768][RFC Errata 3591]
-     264   Reserved         Reserved                              [RFC6767][RFC Errata 3589]
-     265   Reserved         Reserved                              [RFC6766][RFC Errata 3588]
-   266-272 Reserved         Reserved
-     273   TED-MIB          TED-MIB                               [RFC6825]
-     274   VPLS-GENERIC-MIB VPLS-GENERIC-MIB                      [RFC7257]
-     275   VPLS-LDP-MIB     VPLS-LDP-MIB                          [RFC7257]
-     276   VPLS-BGP-MIB MIB VPLS-BGP-MIB                          [RFC7257]
-   277-290 Reserved         Reserved
-     291   otnOtsi          Optical Tributary Signal              [ITU-T G.959.1][Koteswara_Boyapati]
-     292   otnOtuc          OTN OTUCn                             [ITU-T G.709/Y.1331][Koteswara_Boyapati]
-     293   otnOduc          OTN ODUC                              [ITU-T G.709][Koteswara_Boyapati]
-     294   otnOtsig         OTN OTUC Signal                       [ITU-T G.709][Koteswara_Boyapati]
+Decimal       Name                    Description                                                                  References
+   5    x25              X.25                                  [RFC1382]
+   7    dot3             Ethernet-like Objects                 [RFC3635]
+   8    IEEE802.4        Token Bus-like Objects                [RFC1230][RFC1239]
+   9    dot5             Token Ring-like Objects               [RFC1748]
+  15    FDDI             FDDI Objects                          [RFC1512][Jeffrey_Case]
+  16    lapb             LAP B                                 [RFC1381]
+  18    ds1              T1 Carrier Objects                    [RFC4805]
+  19    e1               E1 Carrier Objects                    [RFC4805]
+  20    isdnMib          ISDN MIB                              [RFC2127]
+  21    dialControlMib   Dial Control MIB                      [RFC2128]
+  23    ppp              Point-to-Point Protocol               [RFC1471]
+  30    ds3              DS3/E3 Interface Objects              [RFC3896]
+  31    sip              SMDS Interface Objects                [RFC1694]
+  32    frame-relay      Frame Relay Objects                   [RFC2115][Caralyn_Brown]
+  33    RS-232           RS-232 Objects                        [RFC1659]
+  34    Parallel         Parallel Printer Objects              [RFC1660]
+  35    arcnet           ARC network
+  36    arcnet-plus      ARC network plus
+  37    atm              ATM
+  38    MIOX25           MIOX25                                [RFC1461]
+  39    sonetMIB         SONET MIB                             [RFC3592]
+  44    frnetservMIB     Frame Relay Service MIB for DCE       [RFC1604]
+  45    dot12MIB         IEEE 802.12                           [RFC2020]
+  46    ipoaMIB          IPOA-MIB                              [RFC2320]
+  47    mfrMIB           FR-MFR-MIB                            [RFC3020]
+  48    hdsl2ShdslMIB    HDSL2-SHDSL-LINE-MIB                  [RFC4319]
+  49    apsMIB           APS-MIB                               [RFC3498]
+ 50-55  Reserved         Reserved
+  56    fcMgmtMIB        fcMgmtMIB                             [RFC4044]
+ 57-80  Reserved         Reserved
+  81    ds0              DS0-MIB                               [RFC2494]
+  82    ds0bundle        DS0Bundle-MIB                         [RFC2494]
+ 83-93  Reserved         Reserved
+  94    adslmib          adslMIB                               [RFC2662]
+  95    l2tp             L2TP-MIB                              [RFC3371]
+  96    Reserved         Reserved
+  97    vdslMIB          VDSL-LINE-MIB                         [RFC3728]
+98-126  Reserved         Reserved
+  127   docsIfMib        DOCS IF MIB                           [RFC2670]
+128-130 Reserved         Reserved
+  131   tunnelMIB        IP Tunnel MIB                         [RFC2667]
+  132   coffee           coffee pot                            [RFC2325]
+  133   optIfMibModule   OPT-IF-MIB                            [RFC3591]
+  134   etherWisMIB      ETHER-WIS MIB                         [RFC3637]
+135-165 Reserved         Reserved
+  166   mplsStdMIB       MPLS STD MIB                          [RFC3811]
+167-183 Reserved         Reserved
+  184   propBWAp2Mp      PropBroadbandWirelessAccesspt2Multipt [http://standards.ieee.org/getieee802/802.16.html]
+185-199 Reserved         Reserved
+  200   teLinkStdMIB     TE-LINK-STD-MIB                       [RFC4220]
+201-223 Reserved         Reserved
+  224   fcipMIB          FCIP-MGMT-MIB                         [RFC4404]
+225-226 Reserved         Reserved
+  227   lmpMIB           LMP-MIB                               [RFC4327]
+  228   vdslExtSCMMIB    VDSL-LINE-EXT-SCM-MIB                 [RFC4069]
+  229   vdslExtMCMMIB    VDSL-LINE-EXT-MCM-MIB                 [RFC4070]
+  230   ifcpMgmtMIB      IFCP-MGMT-MIB                         [RFC6173]
+231-237 Reserved         Reserved
+  238   adsl2MIB         ADSL2-LINE-MIB                        [RFC4706]
+  239   dvbRcsMib        DVB-RCS-MIB                           [RFC5728][ETSI EN 301
+                                                               790][https://web.archive.org/web/20181229131835/http://satlabs.org/pdf/SatLabs_System_Recommendations_v2.0_M&C.pdf]
+240-245 Reserved         Reserved
+  246   pwStdMIB         PW-STD-MIB                            [RFC5601]
+247-250 Reserved         Reserved
+  251   vdsl2MIB         VDSL2-LINE-MIB                        [RFC5650]
+252-262 Reserved         Reserved
+  263   Reserved         Reserved                              [RFC6768][RFC Errata 3591]
+  264   Reserved         Reserved                              [RFC6767][RFC Errata 3589]
+  265   Reserved         Reserved                              [RFC6766][RFC Errata 3588]
+266-272 Reserved         Reserved
+  273   TED-MIB          TED-MIB                               [RFC6825]
+  274   VPLS-GENERIC-MIB VPLS-GENERIC-MIB                      [RFC7257]
+  275   VPLS-LDP-MIB     VPLS-LDP-MIB                          [RFC7257]
+  276   VPLS-BGP-MIB MIB VPLS-BGP-MIB                          [RFC7257]
+277-290 Reserved         Reserved
+  291   otnOtsi          Optical Tributary Signal              [ITU-T G.959.1][Koteswara_Boyapati]
+  292   otnOtuc          OTN OTUCn                             [ITU-T G.709/Y.1331][Koteswara_Boyapati]
+  293   otnOduc          OTN ODUC                              [ITU-T G.709][Koteswara_Boyapati]
+  294   otnOtsig         OTN OTUC Signal                       [ITU-T G.709][Koteswara_Boyapati]
+  295   Reserved         Reserved                              [RFC8561]
+  296   Reserved         Reserved                              [RFC8561]
+  297   ieee8021axDrni   IEEE 802.1AX Distributed Resilient    [IEEE 802.1AX-Rev-d2-0][John_Messenger]
+                         Network Interface
+  298   ax25             AX.25 network interfaces              [AX.25 Link Access Protocol for Amateur Packet Radio version 2.2][Iain_Learmonth]
+  299   ieee19061nanocom Nanoscale and Molecular Communication [IEEE 1906.1-2015][Stephen_F_Bush]
 
   MIB Transmission Group - Point-to-Point Protocol
 
@@ -1638,7 +1658,7 @@ SMI Private Codes
 
  See [IANA registry enterprise-numbers]
 
-SMI Security Codes
+SMI Security Codes (including S/MIME, PKIX and LTANS)
 
    Registration Procedure(s)
 
@@ -1655,18 +1675,21 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal    Name           Description                                                     References
-      0    Reserved                              [IANA]
-                                                 [Miller, S.P., B.C. Neuman, J.I. Schiller, and J.H. Saltzer, "Project Athena Technical Plan
-      1    kerberosV4 Kerberos version 4 objects Section E.2.1: Kerberos Authentication and Authorization System", Project Athena, MIT, December
-                                                 1987.][B_Clifford_Neuman]
-      2    kerberosV5 Kerberos version 5 objects [Kohl, J., and B.C. Neuman, "The Kerberos Network Authentication Service (V5)" work in progress,
-                                                 September 1992][B_Clifford_Neuman]
-      3    integrity  integrity algorithms       [IANA]
-      4    confide    confidentiality algorithms [IANA]
-      5    mechanisms security mechanisms        [IANA]
-      6    nametypes  name system designators    [IANA]
-      7    services   security services          [Carlisle_Adams]
+   Decimal    Name        Description                                                    References
+      0    Reserved                       [IANA]
+                      Kerberos version 4  [Miller, S.P., B.C. Neuman, J.I. Schiller, and J.H. Saltzer, "Project Athena Technical Plan Section
+      1    kerberosV4 objects             E.2.1: Kerberos Authentication and Authorization System", Project Athena, MIT, December
+                                          1987.][B_Clifford_Neuman]
+      2    kerberosV5 Kerberos version 5  [RFC4120][https://web.mit.edu/kerberos/krb5-oids/krb5-oids.asn][B_Clifford_Neuman][Greg_Hudson]
+                      objects
+      3    integrity  integrity           [IANA]
+                      algorithms
+      4    confide    confidentiality     [IANA]
+                      algorithms
+      5    mechanisms security mechanisms [IANA]
+      6    nametypes  name system         [IANA]
+                      designators
+      7    services   security services   [Carlisle_Adams]
 
   SMI Security for Integrity Codes
 
@@ -1781,6 +1804,7 @@ SMI Security Codes
      10    Encoded information types     [RFC7107]
      11    S/MIME capabilities           [RFC7107]
      12    PSKC attributes               [RFC7107]
+     13    id-ori                        [RFC8696]
 
   SMI Security for S/MIME Module Identifier (1.2.840.113549.1.9.16.0)
 
@@ -1799,7 +1823,7 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal              Description                          References
+   Decimal              Description                     References
       1    id-mod-cms                             [RFC2630]
       2    id-mod-ess                             [RFC2634]
       3    id-mod-oid                             [Reserved and Obsolete]
@@ -1863,10 +1887,14 @@ SMI Security Codes
      61    id-mod-rpkiROA                         [RFC6482]
      62    id-mod-setKeyAttributeV1               [draft-herzog-setkey]
      63    id-mod-keyPkgReceiptAndErrV2           [RFC7191]
-     64    id-mod-mts-hashsig-2013                [draft-housley-cms-mts-hash-sig]
+     64    id-mod-mts-hashsig-2013                [RFC8708]
      65    mod-sMimeSecureHeadersV1               [RFC7508]
      66    id-mod-CMS-AEADChaCha20Poly1305        [RFC8103]
      67    id-mod-cms-ecdh-alg-2017               [RFC8418]
+     68    id-mod-hkdf-oid-2019                   [RFC8619]
+     69    id-mod-cms-ori-psk-2019                [RFC8696]
+     70    CMSAlgsForSHAKE-2019                   [RFC8702]
+     71    id-mod-cbor-2019                       [RFC8769]
 
   SMI Security for S/MIME CMS Content Type (1.2.840.113549.1.9.16.1)
 
@@ -1885,7 +1913,7 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal        Description                References
+   Decimal        Description                       References
       0    id-ct-anyContentType       [RFC6010]
       1    id-ct-receipt              [RFC2634]
       2    id-ct-authData             [RFC2630]
@@ -1927,7 +1955,12 @@ SMI Security Codes
      38    id-ct-htmlWithCRLF         [RFC8358]
      39    id-ct-epub                 [RFC8358]
      40    id-ct-animaJSONVoucher     [RFC8366]
-     41    id-ct-mudtype              [RFC-ietf-opsawg-mud-25]
+     41    id-ct-mudtype              [RFC8520]
+     42    id-ct-sztpConveyedInfoXML  [RFC8572]
+     43    id-ct-sztpConveyedInfoJSON [RFC8572]
+     44    id-ct-cbor                 [RFC8769]
+     45    id-ct-cborSequence         [RFC8769]
+     46    id-ct-animaCBORVoucher     [draft-ietf-anima-constrained-voucher]
 
   SMI Security for S/MIME Attributes (1.2.840.113549.1.9.16.2)
 
@@ -2024,11 +2057,17 @@ SMI Security Codes
  Value 14, "id-alg-rsa-kem," is also referred to as "id-rsa-kem."
 
 
+   Note
+
+ Value 17, "id-alg-hss-lms-hashsig", is also referred to as
+ "id-alg-mts-hashsig".
+
+
    Available Formats
            [IMG]
            CSV
 
-   Decimal              Description                         References
+   Decimal              Description                    References
       1    id-alg-ESDHwith3DES                   [Reserved and Obsolete]
       2    id-alg-ESDHwithRC2                    [Reserved and Obsolete]
       3    id-alg-3DESwrap                       [Reserved and Obsolete]
@@ -2045,11 +2084,20 @@ SMI Security Codes
      14    id-alg-rsa-kem                        [RFC5990]
      15    id-alg-authEnc-128                    [RFC6476]
      16    id-alg-authEnc-256                    [RFC6476]
-     17    id-alg-mts-hashsig                    [draft-housley-cms-mts-hash-sig]
+     17    id-alg-hss-lms-hashsig                [RFC8708]
      18    id-alg-AEADChaCha20Poly1305           [RFC8103]
      19    dhSinglePass-stdDH-hkdf-sha256-scheme [RFC8418]
      20    dhSinglePass-stdDH-hkdf-sha384-scheme [RFC8418]
      21    dhSinglePass-stdDH-hkdf-sha512-scheme [RFC8418]
+     22    id-alg-AES-SIV-CMAC-aead-256          [RFC5297]
+     23    id-alg-AES-SIV-CMAC-aead-384          [RFC5297]
+     24    id-alg-AES-SIV-CMAC-aead-512          [RFC5297]
+     25    id-alg-AES-SIV-CMAC-wrap-256          [RFC5297]
+     26    id-alg-AES-SIV-CMAC-wrap-384          [RFC5297]
+     27    id-alg-AES-SIV-CMAC-wrap-512          [RFC5297]
+     28    id-alg-hkdf-with-sha256               [RFC8619]
+     29    id-alg-hkdf-with-sha384               [RFC8619]
+     30    id-alg-hkdf-with-sha512               [RFC8619]
 
   SMI Security for S/MIME Certificate Distribution Mechanisms (1.2.840.113549.1.9.16.4)
 
@@ -2289,6 +2337,27 @@ SMI Security Codes
      26    id-pskc-deviceUserId     [RFC6031]
      27    id-pskc-keyUserId        [RFC6031]
 
+  SMI Security for S/MIME Other Recipient Info Identifiers (1.2.840.113549.1.9.16.13)
+
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Jim Schaad (primary), Russ Housley (secondary)
+
+   Reference
+           [RFC8696]
+
+   Available Formats
+           [IMG]
+           CSV
+
+   Decimal    Description     References
+      1    id-ori-keyTransPSK [RFC8696]
+      2    id-ori-keyAgreePSK [RFC8696]
+
   SMI Security for Mechanism SPKM Codes
 
    Registration Procedure(s)
@@ -2357,32 +2426,33 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal            Description             References
-      0    Module identifiers                 [RFC7299]
-      1    PKIX certificate extensions        [RFC7299]
-      2    Policy qualifier types             [RFC7299]
-      3    Extended key purpose identifiers   [RFC7299]
-      4    CMP information types              [RFC7299]
-      5    CRMF registration                  [RFC7299]
-      6    Algorithms                         [RFC7299]
-      7    CMC controls                       [RFC7299]
-      8    Other name forms                   [RFC7299]
-      9    Personal data attribute            [RFC7299]
-     10    Attribute certificate attributes   [RFC7299]
-     11    Qualified certificate statements   [RFC7299]
-     12    CMC content types                  [RFC7299]
-     13    OIDs for TESTING ONLY              [RFC7299]
-     14    Certificate policies               [RFC7299]
-     15    CMC error types                    [RFC7299]
-     16    Revocation information types       [RFC7299]
-     17    SCVP check type                    [RFC7299]
-     18    SCVP want back types               [RFC7299]
-     19    SCVP validation policies           [RFC7299]
-     20    Other logotype identifiers         [RFC7299]
-     21    Proxy certificate policy languages [RFC7299]
-     22    Matching rules                     [RFC7299]
-     23    Subject key identifier semantics   [RFC7299]
-     48    Access descriptors                 [RFC7299]
+   Decimal                    Description                         References
+      0    Module identifiers                                [RFC7299]
+      1    PKIX certificate extensions                       [RFC7299]
+      2    Policy qualifier types                            [RFC7299]
+      3    Extended key purpose identifiers                  [RFC7299]
+      4    CMP information types                             [RFC7299]
+      5    CRMF registration                                 [RFC7299]
+      6    Algorithms                                        [RFC7299]
+      7    CMC controls                                      [RFC7299]
+      8    Other name forms                                  [RFC7299]
+      9    Personal data attribute                           [RFC7299]
+     10    Attribute certificate attributes                  [RFC7299]
+     11    Qualified certificate statements                  [RFC7299]
+     12    CMC content types                                 [RFC7299]
+     13    OIDs for TESTING ONLY                             [RFC7299]
+     14    Certificate policies                              [RFC7299]
+     15    CMC error types                                   [RFC7299]
+     16    Revocation information types                      [RFC7299]
+     17    SCVP check type                                   [RFC7299]
+     18    SCVP want back types                              [RFC7299]
+     19    SCVP validation policies                          [RFC7299]
+     20    Other logotype identifiers                        [RFC7299]
+     21    Proxy certificate policy languages                [RFC7299]
+     22    Matching rules                                    [RFC7299]
+     23    Subject key identifier semantics                  [RFC7299]
+     24    Simple Certificate Enrollment Protocol Attributes [RFC-gutmann-scep-15]
+     48    Access descriptors                                [RFC7299]
 
   SMI Security for PKIX Module Identifier
 
@@ -2405,100 +2475,102 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal           Description                   References
-      1    id-pkix1-explicit-88            [RFC2459]
-      2    id-pkix1-implicit-88            [RFC2459]
-      3    id-pkix1-explicit-93            [RFC2459]
-      4    id-pkix1-implicit-93            [RFC2459]
-      5    id-mod-crmf                     [RFC2511]
-      6    id-mod-cmc                      [RFC2797]
-      7    id-mod-kea-profile-88           [RFC2528]
-      8    id-mod-kea-profile-93           [RFC2528]
-      9    id-mod-cmp                      [RFC2510]
-     10    id-mod-qualified-cert-88        [RFC3039]
-     11    id-mod-qualified-cert-93        [RFC3039]
-     12    id-mod-attribute-cert           [RFC3281]
-     13    id-mod-tsp                      [RFC3161]
-     14    id-mod-ocsp                     [RFC3029]
-     15    id-mod-dvcs                     [RFC3029]
-     16    id-mod-cmp2000                  [RFC4210]
-     17    id-mod-pkix1-algorithms         [RFC3279]
-     18    id-mod-pkix1-explicit           [RFC3280]
-     19    id-mod-pkix1-implicit           [RFC3280]
-     20    id-mod-user-group               [Reserved and Obsolete]
-     21    id-mod-scvp                     [RFC5055]
-     22    id-mod-logotype                 [RFC3709]
-     23    id-mod-cmc2002                  [RFC5272]
-     24    id-mod-wlan-extns               [RFC3770]
-     25    id-mod-proxy-cert-extns         [RFC3820]
-     26    id-mod-ac-policies              [RFC4476]
-     27    id-mod-warranty-extn            [RFC4059]
-     28    id-mod-perm-id-88               [RFC4043]
-     29    id-mod-perm-id-93               [RFC4043]
-     30    id-mod-ip-addr-and-as-ident     [RFC3779]
-     31    id-mod-qualified-cert           [RFC3739]
-     32    id-mod-crmf2003                 [Reserved and Obsolete]
-     33    id-mod-pkix1-rsa-pkalgs         [RFC4055]
-     34    id-mod-cert-bundle              [RFC4306]
-     35    id-mod-qualified-cert-97        [RFC3739]
-     36    id-mod-crmf2005                 [RFC4210]
-     37    id-mod-wlan-extns2005           [RFC4334]
-     38    id-mod-sim2005                  [RFC4683]
-     39    id-mod-dns-srv-name-88          [RFC4985]
-     40    id-mod-dns-srv-name-93          [RFC4985]
-     41    id-mod-cmsContentConstr-88      [RFC6010]
-     42    id-mod-cmsContentConstr-93      [RFC6010]
-     43    id-mod-pkixCommon               [Reserved and Obsolete]
-     44    id-mod-pkixOtherCerts           [RFC5697]
-     45    id-mod-pkix1-algorithms2008     [RFC5480]
-     46    id-mod-clearanceConstraints     [RFC5913]
-     47    id-mod-attribute-cert-02        [RFC5912]
-     48    id-mod-ocsp-02                  [RFC5912]
-     49    id-mod-v1AttrCert-02            [RFC5912]
-     50    id-mod-cmp2000-02               [RFC5912]
-     51    id-mod-pkix1-explicit-02        [RFC5912]
-     52    id-mod-scvp-02                  [RFC5912]
-     53    id-mod-cmc2002-02               [RFC5912]
-     54    id-mod-pkix1-rsa-pkalgs-02      [RFC5912]
-     55    id-mod-crmf2005-02              [RFC5912]
-     56    id-mod-pkix1-algorithms2008-02  [RFC5912]
-     57    id-mod-pkixCommon-02            [RFC5912]
-     58    id-mod-algorithmInformation-02  [RFC5912]
-     59    id-mod-pkix1-implicit-02        [RFC5912]
-     60    id-mod-pkix1-x400address-02     [RFC5912]
-     61    id-mod-attribute-cert-v2        [RFC5755]
-     62    id-mod-sip-domain-extns2007     [RFC5924]
-     63    id-mod-cms-otherRIs-2009-88     [RFC5940]
-     64    id-mod-cms-otherRIs-2009-93     [RFC5940]
-     65    id-mod-ecprivatekey             [RFC5915]
-     66    id-mod-ocsp-agility-2009-93     [RFC6277]
-     67    id-mod-ocsp-agility-2009-88     [RFC6277]
-     68    id-mod-logotype-certimage       [RFC6170]
-     69    id-mod-pkcs10-2009              [RFC5912]
-     70    id-mod-dns-resource-record      [RFC7958]
-     71    id-mod-send-cert-extns          [RFC6494]
-     72    id-mod-ip-addr-and-as-ident-2   [RFC6268]
-     73    id-mod-wlan-extns-2             [RFC6268]
-     74    id-mod-hmac                     [RFC6268]
-     75    id-mod-enrollMsgSyntax-2011-88  [RFC6402][RFC Errata 3860]
-     76    id-mod-enrollMsgSyntax-2011-08  [RFC6402]
-     77    id-mod-pubKeySMIMECaps-88       [RFC6664]
-     78    id-mod-pubKeySMIMECaps-08       [RFC6664]
-     79    id-mod-dhSign-2012-88           [RFC6955]
-     80    id-mod-dhSign-2012-08           [RFC6955]
-     81    id-mod-ocsp-2013-88             [RFC6960]
-     82    id-mod-ocsp-2013-08             [RFC6960]
-     83    id-mod-TEST-certPolicies        [RFC7229]
-     84    id-mod-bgpsec-eku               [RFC8209]
-     85    id-mod-nai-realm-08             [RFC7585]
-     86    id-mod-tls-feature-2015         [RFC7633]
-     87    id-mod-EST-Alt-Challenge        [RFC7894]
-     88    id-mod-mudURLExtn2016           [RFC-ietf-opsawg-mud-25]
-     89    id-mod-tn-module                [RFC8226]
-     90    id-mod-ip-addr-and-as-ident-v2  [RFC8360]
-     91    id-mod-ip-addr-and-as-ident-2v2 [RFC8360]
-     92    id-mod-lamps-eai-addresses-2016 [RFC8398]
-     93    id-mod-safecurves-pkix          [RFC8410]
+   Decimal           Description                    References
+      1    id-pkix1-explicit-88             [RFC2459]
+      2    id-pkix1-implicit-88             [RFC2459]
+      3    id-pkix1-explicit-93             [RFC2459]
+      4    id-pkix1-implicit-93             [RFC2459]
+      5    id-mod-crmf                      [RFC2511]
+      6    id-mod-cmc                       [RFC2797]
+      7    id-mod-kea-profile-88            [RFC2528]
+      8    id-mod-kea-profile-93            [RFC2528]
+      9    id-mod-cmp                       [RFC2510]
+     10    id-mod-qualified-cert-88         [RFC3039]
+     11    id-mod-qualified-cert-93         [RFC3039]
+     12    id-mod-attribute-cert            [RFC3281]
+     13    id-mod-tsp                       [RFC3161]
+     14    id-mod-ocsp                      [RFC3029]
+     15    id-mod-dvcs                      [RFC3029]
+     16    id-mod-cmp2000                   [RFC4210]
+     17    id-mod-pkix1-algorithms          [RFC3279]
+     18    id-mod-pkix1-explicit            [RFC3280]
+     19    id-mod-pkix1-implicit            [RFC3280]
+     20    id-mod-user-group                [Reserved and Obsolete]
+     21    id-mod-scvp                      [RFC5055]
+     22    id-mod-logotype                  [RFC3709]
+     23    id-mod-cmc2002                   [RFC5272]
+     24    id-mod-wlan-extns                [RFC3770]
+     25    id-mod-proxy-cert-extns          [RFC3820]
+     26    id-mod-ac-policies               [RFC4476]
+     27    id-mod-warranty-extn             [RFC4059]
+     28    id-mod-perm-id-88                [RFC4043]
+     29    id-mod-perm-id-93                [RFC4043]
+     30    id-mod-ip-addr-and-as-ident      [RFC3779]
+     31    id-mod-qualified-cert            [RFC3739]
+     32    id-mod-crmf2003                  [Reserved and Obsolete]
+     33    id-mod-pkix1-rsa-pkalgs          [RFC4055]
+     34    id-mod-cert-bundle               [RFC4306]
+     35    id-mod-qualified-cert-97         [RFC3739]
+     36    id-mod-crmf2005                  [RFC4210]
+     37    id-mod-wlan-extns2005            [RFC4334]
+     38    id-mod-sim2005                   [RFC4683]
+     39    id-mod-dns-srv-name-88           [RFC4985]
+     40    id-mod-dns-srv-name-93           [RFC4985]
+     41    id-mod-cmsContentConstr-88       [RFC6010]
+     42    id-mod-cmsContentConstr-93       [RFC6010]
+     43    id-mod-pkixCommon                [Reserved and Obsolete]
+     44    id-mod-pkixOtherCerts            [RFC5697]
+     45    id-mod-pkix1-algorithms2008      [RFC5480]
+     46    id-mod-clearanceConstraints      [RFC5913]
+     47    id-mod-attribute-cert-02         [RFC5912]
+     48    id-mod-ocsp-02                   [RFC5912]
+     49    id-mod-v1AttrCert-02             [RFC5912]
+     50    id-mod-cmp2000-02                [RFC5912]
+     51    id-mod-pkix1-explicit-02         [RFC5912]
+     52    id-mod-scvp-02                   [RFC5912]
+     53    id-mod-cmc2002-02                [RFC5912]
+     54    id-mod-pkix1-rsa-pkalgs-02       [RFC5912]
+     55    id-mod-crmf2005-02               [RFC5912]
+     56    id-mod-pkix1-algorithms2008-02   [RFC5912]
+     57    id-mod-pkixCommon-02             [RFC5912]
+     58    id-mod-algorithmInformation-02   [RFC5912]
+     59    id-mod-pkix1-implicit-02         [RFC5912]
+     60    id-mod-pkix1-x400address-02      [RFC5912]
+     61    id-mod-attribute-cert-v2         [RFC5755]
+     62    id-mod-sip-domain-extns2007      [RFC5924]
+     63    id-mod-cms-otherRIs-2009-88      [RFC5940]
+     64    id-mod-cms-otherRIs-2009-93      [RFC5940]
+     65    id-mod-ecprivatekey              [RFC5915]
+     66    id-mod-ocsp-agility-2009-93      [RFC6277]
+     67    id-mod-ocsp-agility-2009-88      [RFC6277]
+     68    id-mod-logotype-certimage        [RFC6170]
+     69    id-mod-pkcs10-2009               [RFC5912]
+     70    id-mod-dns-resource-record       [RFC7958]
+     71    id-mod-send-cert-extns           [RFC6494]
+     72    id-mod-ip-addr-and-as-ident-2    [RFC6268]
+     73    id-mod-wlan-extns-2              [RFC6268]
+     74    id-mod-hmac                      [RFC6268]
+     75    id-mod-enrollMsgSyntax-2011-88   [RFC6402][RFC Errata 3860]
+     76    id-mod-enrollMsgSyntax-2011-08   [RFC6402]
+     77    id-mod-pubKeySMIMECaps-88        [RFC6664]
+     78    id-mod-pubKeySMIMECaps-08        [RFC6664]
+     79    id-mod-dhSign-2012-88            [RFC6955]
+     80    id-mod-dhSign-2012-08            [RFC6955]
+     81    id-mod-ocsp-2013-88              [RFC6960]
+     82    id-mod-ocsp-2013-08              [RFC6960]
+     83    id-mod-TEST-certPolicies         [RFC7229]
+     84    id-mod-bgpsec-eku                [RFC8209]
+     85    id-mod-nai-realm-08              [RFC7585]
+     86    id-mod-tls-feature-2015          [RFC7633]
+     87    id-mod-EST-Alt-Challenge         [RFC7894]
+     88    id-mod-mudURLExtn2016            [RFC8520]
+     89    id-mod-tn-module                 [RFC8226]
+     90    id-mod-ip-addr-and-as-ident-v2   [RFC8360]
+     91    id-mod-ip-addr-and-as-ident-2v2  [RFC8360]
+     92    id-mod-lamps-eai-addresses-2016  [RFC8398]
+     93    id-mod-safecurves-pkix           [RFC8410]
+     94    id-mod-pkix1-shakes-2019         [RFC8692]
+     95    id-mod-delegated-credential-extn [draft-ietf-tls-subcerts]
 
   SMI Security for PKIX Certificate Extension
 
@@ -2521,38 +2593,40 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal         Description                 References
-      1    id-pe-authorityInfoAccess   [RFC2459]
-      2    id-pe-biometricInfo         [RFC3039]
-      3    id-pe-qcStatements          [RFC3039]
-      4    id-pe-ac-auditIdentity      [RFC3281]
-      5    id-pe-ac-targeting          [Reserved and Obsolete]
-      6    id-pe-aaControls            [RFC3281]
-      7    id-pe-ipAddrBlocks          [RFC3779]
-      8    id-pe-autonomousSysIds      [RFC3779]
-      9    id-pe-sbgp-routerIdentifier [Reserved and Obsolete]
-     10    id-pe-ac-proxying           [RFC3281]
-     11    id-pe-subjectInfoAccess     [RFC3280]
-     12    id-pe-logotype              [RFC3709]
-     13    id-pe-wlanSSID              [RFC4334]
-     14    id-pe-proxyCertInfo         [RFC3820]
-     15    id-pe-acPolicies            [RFC4476]
-     16    id-pe-warranty              [RFC4059]
-     17    id-pe-sim                   [Reserved and Obsolete]
-     18    id-pe-cmsContentConstraints [RFC6010]
-     19    id-pe-otherCerts            [RFC5697]
-     20    id-pe-wrappedApexContinKey  [RFC5934]
-     21    id-pe-clearanceConstraints  [RFC5913]
-     22    id-pe-skiSemantics          [Reserved and Obsolete]
-     23    id-pe-nsa                   [RFC7169]
-     24    id-pe-tlsfeature            [RFC7633]
-     25    id-pe-mud-url               [RFC-ietf-opsawg-mud-25]
-     26    id-pe-TNAuthList            [RFC8226]
-     27    id-pe-JWTClaimConstraints   [RFC8226]
-     28    id-pe-ipAddrBlocks-v2       [RFC8360]
-     29    id-pe-autonomousSysIds-v2   [RFC8360]
-     30    id-pe-mudsigner             [RFC-ietf-opsawg-mud-25]
-     31    id-pe-acmeIdentifier        [draft-ietf-acme-tls-alpn]
+   Decimal                                          Description                                                          References
+      1    id-pe-authorityInfoAccess                                                                      [RFC2459]
+      2    id-pe-biometricInfo                                                                            [RFC3039]
+      3    id-pe-qcStatements                                                                             [RFC3039]
+      4    id-pe-ac-auditIdentity                                                                         [RFC3281]
+      5    id-pe-ac-targeting                                                                             [Reserved and Obsolete]
+      6    id-pe-aaControls                                                                               [RFC3281]
+      7    id-pe-ipAddrBlocks                                                                             [RFC3779]
+      8    id-pe-autonomousSysIds                                                                         [RFC3779]
+      9    id-pe-sbgp-routerIdentifier                                                                    [Reserved and Obsolete]
+     10    id-pe-ac-proxying                                                                              [RFC3281]
+     11    id-pe-subjectInfoAccess                                                                        [RFC3280]
+     12    id-pe-logotype                                                                                 [RFC3709]
+     13    id-pe-wlanSSID                                                                                 [RFC4334]
+     14    id-pe-proxyCertInfo                                                                            [RFC3820]
+     15    id-pe-acPolicies                                                                               [RFC4476]
+     16    id-pe-warranty                                                                                 [RFC4059]
+     17    id-pe-sim                                                                                      [Reserved and Obsolete]
+     18    id-pe-cmsContentConstraints                                                                    [RFC6010]
+     19    id-pe-otherCerts                                                                               [RFC5697]
+     20    id-pe-wrappedApexContinKey                                                                     [RFC5934]
+     21    id-pe-clearanceConstraints                                                                     [RFC5913]
+     22    id-pe-skiSemantics                                                                             [Reserved and Obsolete]
+     23    id-pe-nsa                                                                                      [RFC7169]
+     24    id-pe-tlsfeature                                                                               [RFC7633]
+     25    id-pe-mud-url                                                                                  [RFC8520]
+     26    id-pe-TNAuthList                                                                               [RFC8226]
+     27    id-pe-JWTClaimConstraints                                                                      [RFC8226]
+     28    id-pe-ipAddrBlocks-v2                                                                          [RFC8360]
+     29    id-pe-autonomousSysIds-v2                                                                      [RFC8360]
+     30    id-pe-mudsigner                                                                                [RFC8520]
+     31    id-pe-acmeIdentifier                                                                           [RFC8737]
+     32    id-pe-masa-url (TEMPORARY - registered 2019-02-20, extension registered 2020-01-23, expires    [draft-ietf-anima-bootstrapping-keyinfra]
+           2021-02-20)
 
   SMI Security for PKIX Policy Qualifier
 
@@ -2791,7 +2865,7 @@ SMI Security Codes
            [IMG]
            CSV
 
-   Decimal               Description                      References
+   Decimal               Description                               References
       1    id-alg-des40                             [Reserved and Obsolete]
       2    id-alg-noSignature                       [RFC2797]
       3    id-alg-dh-sig-hmac-sha1                  [RFC2875]
@@ -2808,6 +2882,11 @@ SMI Security Codes
      26    id-alg-ecdhPop-static-sha256-hmac-sha256 [RFC6955]
      27    id-alg-ecdhPop-static-sha384-hmac-sha384 [RFC6955]
      28    id-alg-ecdhPop-static-sha512-hmac-sha512 [RFC6955]
+     29    id-alg-eccsi-with-sha256                 [draft-wang-tls-raw-public-key-with-ibc]
+     30    id-RSASSA-PSS-SHAKE128                   [RFC8692]
+     31    id-RSASSA-PSS-SHAKE256                   [RFC8692]
+     32    id-ecdsa-with-shake128                   [RFC8692]
+     33    id-ecdsa-with-shake256                   [RFC8692]
 
   SMI Security for PKIX CMC Controls
 
@@ -3449,6 +3528,30 @@ SMI Security Codes
       1    id-skis-keyHash     [Reserved and Obsolete]
       2    id-skis-4BitKeyHash [Reserved and Obsolete]
       3    id-skis-keyInfoHash [Reserved and Obsolete]
+
+  SMI Security for SCEP Attribute Identifiers
+
+   Registration Procedure(s)
+
+ Specification Required
+
+   Expert(s)
+
+ Unassigned
+
+   Description
+
+ PKIX (1.3.6.1.5.5.7.24)
+
+   Reference
+           [RFC-gutmann-scep-15]
+
+   Available Formats
+           [IMG]
+           CSV
+
+   Decimal     Description           References
+      1    id-scep-failInfoText [RFC-gutmann-scep-15]
 
   SMI Security for PKIX Access Descriptor
 
@@ -4601,7 +4704,7 @@ SMI Security for Cryptographic Algorithms
 
    Expert(s)
 
- Unassigned
+ Jim Schaad
 
    Description
 
@@ -4650,6 +4753,7 @@ SMI Security for Cryptographic Algorithms
    [Bob_Stewart_2]        Bob Stewart                         mailto:STEWART&xyplex.com
    [Brandon_Jiang]        Brandon Jiang                       mailto:jiangyue&microsoft.com                     2016-05-03
    [Brian_Hedstrom]       Brian Hedstrom                      mailto:brian.hedstrom&oamtechnologies.com         2016-11-23
+   [Broadband_Forum]      Broadband Forum                     mailto:help&broadband-forum.org                   2019-12-13
    [Caralyn_Brown]        Caralyn Brown                       mailto:cbrown%25wellfleet.com@talcott.harvard.edu
    [Carlisle_Adams]       Carlisle Adams                      mailto:carlisle.adams&entrust.com                 1997-10
    [Cheenu_Srinivasan]    Cheenu Srinivasan                   mailto:cheenu&alphion.com                         2001-03
@@ -4686,6 +4790,7 @@ SMI Security for Cryptographic Algorithms
    [Gopinath_Durairaj]    Gopinath Durairaj                   mailto:gopinath.durairaj&ntc.nokia.com            1998-09
    [Gordon_Jones]         Gordon Jones                        mailto:gbjones&mail04.mitre.org
    [Graham_Higgins]       Graham Higgins                      mailto:GHiggins&quantumbridge.com                 2001-11
+   [Greg_Hudson]          Greg Hudson                         mailto:ghudson&mit.edu                            2019-03-07
    [Greg_Nakanishi]       Greg Nakanishi                      mailto:GNakanishi&gi.com                          2001-11
    [Greg_Satz]            Greg Satz                           mailto:satz&cisco.com
    [Gregory_Bathrick]     Gregory Bathrick                    mailto:bathricg&agcs.com                          1998-10
@@ -4697,6 +4802,7 @@ SMI Security for Cryptographic Algorithms
    [Hing_Kam_Lam]         Hing-Kam Lam                        mailto:hklam&lucent.com                           2002-10
    [Hongchi_Shih]         Hongchi Shih                        mailto:hshih&cisco.com                            1998-06
    [Hyeri_Koh]            Hyeri Koh                           mailto:hkoh&occamnetworks.com                     2008-10-09
+   [Iain_Learmonth]       Iain Learmonth                      mailto:irl&fsfe.org                               2019-10-16
    [IANA]                 Internet Assigned Numbers Authority mailto:iana&iana.org                              1995-06
    [IESG]                 Internet Engineering Steering Group http://www.ietf.org/iesg/                         2011-02-08
    [Italo_Busi]           Italo Busi                          mailto:Italo.Busi&alcatel.it                      2003-03
@@ -4718,6 +4824,7 @@ SMI Security for Cryptographic Algorithms
    [Joel_Gyllenskog]      Joel Gyllenskog                     mailto:jgyllens&hpdmd48.boi.hp.com
    [John_Chu]             John Chu                            mailto:jychu&watson.ibm.com
    [John_Cook]            John Cook                           mailto:cook&chipcom.com
+   [John_Messenger]       John Messenger                      mailto:jmessenger&advaoptical.com                 2019-07-16
    [John_Naylon]          John Naylon                         mailto:jbpn&cambridgebroadband.com                2005-05
    [John_Pechacek]        John Pechacek                       mailto:jmp&vnet.ibm.com                           1997-07
    [John_Renwick]         John Renwick                        mailto:jkr&netstar.com                            1995-08
@@ -4790,6 +4897,7 @@ SMI Security for Cryptographic Algorithms
    [Sidney_Antommarchi_2] Sidney Antommarchi                  mailto:sidney.antommarchi&tekelec.com             2001-10
    [Somen_Bhattacharya]   Somen Bhattacharya                  mailto:somen&avici.com                            2006-03-30
    [Stephen_Palm]         Stephen Palm                        mailto:palm&kiwin.com                             2003-01
+   [Stephen_F_Bush]       Stephen F Bush                      mailto:bushsf&research.ge.com                     2020-01-10
    [Steve_Bush]           Steve Bush                          mailto:sbush&tis1.ukans.edu                       1975-01
    [Steve_Waldbusser]     Steve Waldbusser                    mailto:sw01+&andrew.cmu.edu
    [Steven_Schwell]       Steven Schwell                      mailto:steve&atiny.ny.apertus.com                 1995-12
@@ -4804,7 +4912,6 @@ SMI Security for Cryptographic Algorithms
    [Tracy_Cox]            Tracy Cox
    [Trevor_Warwick]       Trevor Warwick                      mailto:twarwick&madge.com                         1996-02
    [Vinod_B_C]            Vinod B.C.                          mailto:vinodbc&cisco.com                          2000-03
-   [William_Lupton]       William Lupton                      mailto:wlupton&broadband-forum.org                2017-03-30
    [Xiaohua_Ma]           Xiaohua Ma                          mailto:xiaohua.a.ma&alcatel-sbell.com.cn          2008-08-12
    [Yuzo_Watanabe]        Yuzo Watanabe                       mailto:ywatanabe&zhone.com                        2001-12
    [Zvika_Zilberman]      Zvika Zilberman                     mailto:Zvika&ensemble.co.il                       2000-09

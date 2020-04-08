@@ -4,7 +4,7 @@
            2002-11-08
 
    Last Updated
-           2018-05-23
+           2020-02-28
 
    Available Formats
            [IMG]
@@ -42,7 +42,7 @@ LSP Encoding Types
            CSV
 
     Range            Registration Procedures                     Note
-    0-239  Standards Action
+   0-239   Standards Action
    240-255 Assigned temporarily for Experimental Usage Not registered with IANA
 
     Value                 Name                 Reference
@@ -115,7 +115,7 @@ Generalized PIDs (G-PID)
            CSV
 
       Range              Registration Procedures           References
-     0-31743   Standards Action                            [RFC4328]
+   0-31743     Standards Action                            [RFC4328]
    31744-32767 Assigned Temporarily for Experimental Usage [RFC4328]
    32768-65535 Standards Action                            [RFC4328]
 
@@ -320,13 +320,15 @@ Association Type
            [IMG]
            CSV
 
-    Value                      Name                          Reference
+    Value                      Name                                          Reference
       0    Reserved                                      [RFC4872]
       1    Recovery (R)                                  [RFC4872]
       2    Resource Sharing (S)                          [RFC4873][RFC6780]
       3    Double-Sided Associated Bidirectional LSP (D) [RFC7551]
       4    Single-Sided Associated Bidirectional LSP (A) [RFC7551]
-   5-65535 Unassigned
+      5    B-SFRR-Ready Association                      [RFC-ietf-mpls-summary-frr-rsvpte-09, Section 3.1]
+      6    B-SFRR-Active Association                     [RFC-ietf-mpls-summary-frr-rsvpte-09, Section 3.2]
+   7-65535 Unassigned
 
 Ethernet Switching Granularities
 
@@ -368,7 +370,8 @@ Ethernet Sender TSpec TLVs/Ethernet Flowspec TLVs
        1     Reserved                         [RFC6003]
        2     Ethernet Bandwidth Profile       [RFC6003]
        3     Layer 2 Control Protocol (L2CP)  [RFC6003]
-     4-239   Unassigned
+       4     Bandwidth Availability           [RFC8625]
+     5-239   Unassigned
     240-254  Reserved for Vendor-Specific Use [RFC6003]
       255    Reserved                         [RFC6003]
    256-65535 Not assigned at this time        [RFC6003]
@@ -548,5 +551,5 @@ Special Purpose Generalized Label Values
            [IMG]
            CSV
 
-   Pattern/Value Label Name Applicable Objects Reference
-     all-ones    Unassigned Upstream_Label     [RFC8359]
+   Pattern/Value        Label Name         Applicable Objects Reference
+     all-ones    Unassigned Upstream Label UPSTREAM_LABEL     [RFC8359]
