@@ -1326,8 +1326,12 @@ in scope represent different groups.  Nodes must join each group individually.
 address use, but are currently invalid.
 FF3X:0:0:0:0:0:0:0-FF3X:0:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF (FF3X:0::/32)
 
-FF3X:0:0:0:0:0:4000:0-FF3X:0:0:0:0:0:7FFF:FFFF - Expert Review; see registry at <xref type="uri" data="https://www.iana.org/assignments/perm-mcast-groupids"/>
-FF3X:0:0:0:0:0:8000:0-FF3X:0:0:0:0:0:FFFF:FFFF - Uses dynamic assignment according to the protocols listed in the <xref type="uri" data="https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml#dynamic-multicast-group-ids">Dynamic Multicast Group IDs</xref> registry <xref type="draft" data="RFC-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-13"/>.
+FF3X:0:0:0:0:0:4000:0-FF3X:0:0:0:0:0:7FFF:FFFF - Expert Review; see registry 
+at <xref type="uri" data="https://www.iana.org/assignments/perm-mcast-groupids"/>
+
+FF3X:0:0:0:0:0:8000:0-FF3X:0:0:0:0:0:FFFF:FFFF - Uses dynamic assignment 
+according to the protocols listed in the <xref type="uri" data="https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml#dynamic-multicast-group-ids">Dynamic Multicast Group IDs</xref> 
+registry <xref type="draft" data="RFC-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-13"/>
     </registration_rule>
     <record>
       <addr>FF3X:0:0:0:0:0:0:0-FF3X:0:0:0:0:0:3FFF:FFFF</addr>
