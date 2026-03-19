@@ -256,7 +256,7 @@ using the <xref type="uri" data="https://github.com/protocol-registries/well-kno
     <record date="2022-01-28">
       <value>gpc.json</value>
       <controller><xref type="person" data="Global_Privacy_Control_project"/></controller>
-      <xref type="uri" data="https://globalprivacycontrol.github.io/gpc-spec/"/>
+      <xref type="uri" data="https://w3c.github.io/gpc/">Global Privacy Control (GPC)</xref>
       <status>provisional</status>
       <related/>
     </record>
